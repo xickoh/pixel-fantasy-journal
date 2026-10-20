@@ -38,5 +38,6 @@ window.SHOTS = [
  {f:"oclusao_sem_acumular",t:"Oclusão sem acumular",d:"Árvores sobrepostas a 50% por igual."},
  {f:"estabulo_ordem_y_depois",t:"Ordem em Y",d:"O que está à frente do estábulo fica por cima."},
  {f:"personagens_lista",t:"Personagens",d:"Slots de personagem no menu."},
- {f:"mob_editor_loot",t:"mob_editor",d:"Campos de ranged, níveis e loot groups."}
+ {f:"mob_editor_loot",t:"mob_editor",d:"Campos de ranged, níveis e loot groups."},
+ {f:"icone_contorno",t:"Contorno da raridade",d:"O enhancement contorna o ícone na sua cor."}
 ];
