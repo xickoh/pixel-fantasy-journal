@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Regenera data/prompts.js a partir de squire/05-prompts.md (só leitura).
+"""Regenera data/prompts.js a partir de pixel_fantasy/05-prompts.md (só leitura).
 Dia de cada prompt: "Criado em", senão a data de "Enviado em", senão 2026-10-18."""
 import re, json, sys, pathlib
-SRC = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '/home/deck/vault/raw/squire/05-prompts.md')
+SRC = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '/home/deck/vault/raw/pixel_fantasy/05-prompts.md')
 OUT = pathlib.Path(__file__).resolve().parent.parent / 'data' / 'prompts.js'
 DEFAULT_DAY = '2026-10-18'
 parts = re.split(r'^## (\d+)\. (.*)$', SRC.read_text(encoding='utf8'), flags=re.M)
