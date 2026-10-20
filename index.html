@@ -10,7 +10,7 @@
 <header class="hero">
   <div class="sky"></div>
   <h1>PIXEL FANTASY <span>JOURNAL</span></h1>
-  <p>Diário de desenvolvimento de um escudeiro numa vila no meio da floresta.</p>
+  <p>Diário de desenvolvimento do Pixel Fantasy: uma vila cercada no meio de uma floresta.</p>
   <nav><a href="#features">Funcionalidades</a><a href="#shots">Capturas</a><a href="#devlog">Devlog</a></nav>
   <div class="ground"></div>
 </header>
@@ -18,8 +18,8 @@
   <section id="features"><h2>Funcionalidades</h2><div id="featureGrid" class="grid"></div></section>
   <section id="shots"><h2>Capturas</h2><div id="shotGrid" class="shots"></div></section>
   <section id="devlog"><h2>Devlog</h2>
-    <p class="note">Os prompts do jogo, agrupados por dia. Os que não têm dia registado aparecem em 18 de Outubro.</p>
-    <input id="q" type="search" placeholder="Procurar nos prompts…">
+    <p class="note">Os prompts do jogo e os commits, agrupados por dia. Os prompts sem dia registado aparecem em 18 de Outubro. Os commits atualizam-se sozinhos a cada commit do jogo.</p>
+    <input id="q" type="search" placeholder="Procurar nos prompts e nos commits…">
     <div id="days"></div>
   </section>
 </main>
@@ -27,6 +27,7 @@
 <div id="lightbox" hidden><img alt=""><p></p></div>
 <script src="data/features.js"></script>
 <script src="data/prompts.js"></script>
+<script src="data/commits.js"></script>
 <script src="app.js"></script>
 </body>
 </html>

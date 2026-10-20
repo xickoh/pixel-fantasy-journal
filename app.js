@@ -19,17 +19,26 @@ const lb=document.getElementById('lightbox');
 document.getElementById('shotGrid').onclick=e=>{const f=e.target.closest('.shot');if(!f)return;lb.querySelector('img').src=f.querySelector('img').src;lb.querySelector('p').textContent=f.querySelector('b').textContent;lb.hidden=false};
 lb.onclick=()=>lb.hidden=true;
 const daysEl=document.getElementById('days');
+const COMMIT_LIST=window.COMMITS||[];
 function render(q=''){
   q=q.toLowerCase();
-  const by={};
+  const by={},cs={};
   for(const p of PROMPTS){
     if(q&&!(p.title+' '+p.text+' '+p.n).toLowerCase().includes(q))continue;
     (by[p.day]??=[]).push(p);
   }
-  daysEl.innerHTML=Object.keys(by).sort().map(d=>{
-    const ps=by[d].sort((a,b)=>a.n-b.n);
-    return `<details class="day" ${q?'open':''}><summary><span>${dayLabel(d)}</span><span>${ps.length} prompts</span></summary><div class="entries">`+
-    ps.map(p=>`<details class="entry"><summary><span class="num">#${p.n}</span> <b>${esc(p.title)}</b> <span class="tag ${p.status==='respondido'?'':'por'}">${p.status==='respondido'?'feito':'por enviar'}</span></summary><div class="body">${p.text?md(p.text):'<p><i>Sem texto de prompt registado.</i></p>'}${p.result?`<div class="res"><b>Resultado:</b> ${inline(p.result)}</div>`:''}</div></details>`).join('')+`</div></details>`;
+  for(const c of COMMIT_LIST){
+    if(q&&!(c.msg+' '+c.hash).toLowerCase().includes(q))continue;
+    (cs[c.day]??=[]).push(c);
+  }
+  const days=[...new Set([...Object.keys(by),...Object.keys(cs)])].sort();
+  daysEl.innerHTML=days.map(d=>{
+    const ps=(by[d]||[]).sort((a,b)=>a.n-b.n),cm=cs[d]||[];
+    const counts=[ps.length?`${ps.length} prompts`:'',cm.length?`${cm.length} commits`:''].filter(Boolean).join(' · ');
+    return `<details class="day" ${q?'open':''}><summary><span>${dayLabel(d)}</span><span>${counts}</span></summary><div class="entries">`+
+    ps.map(p=>`<details class="entry"><summary><span class="num">#${p.n}</span> <b>${esc(p.title)}</b> <span class="tag ${p.status==='respondido'?'':'por'}">${p.status==='respondido'?'feito':'por enviar'}</span></summary><div class="body">${p.text?md(p.text):'<p><i>Sem texto de prompt registado.</i></p>'}${p.result?`<div class="res"><b>Resultado:</b> ${inline(p.result)}</div>`:''}</div></details>`).join('')+
+    (cm.length?`<details class="entry commits" ${q?'open':''}><summary><span class="num">git</span> <b>Commits do dia</b> <span class="tag">${cm.length}</span></summary><div class="body"><ul class="commit-list">${cm.map(c=>`<li><code>${esc(c.hash)}</code> ${inline(c.msg)}</li>`).join('')}</ul></div></details>`:'')+
+    `</div></details>`;
   }).join('')||'<p>Nada encontrado.</p>';
 }
 document.getElementById('q').oninput=e=>render(e.target.value);
