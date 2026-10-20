@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Squire Journal</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="sky"></div>
+  <h1>SQUIRE <span>JOURNAL</span></h1>
+  <p>Diário de desenvolvimento de um escudeiro numa vila no meio da floresta.</p>
+  <nav><a href="#features">Funcionalidades</a><a href="#shots">Capturas</a><a href="#devlog">Devlog</a></nav>
+  <div class="ground"></div>
+</header>
+<main>
+  <section id="features"><h2>Funcionalidades</h2><div id="featureGrid" class="grid"></div></section>
+  <section id="shots"><h2>Capturas</h2><div id="shotGrid" class="shots"></div></section>
+  <section id="devlog"><h2>Devlog</h2>
+    <p class="note">Os prompts do jogo, agrupados por dia. Os que não têm dia registado aparecem em 18 de Outubro.</p>
+    <input id="q" type="search" placeholder="Procurar nos prompts…">
+    <div id="days"></div>
+  </section>
+</main>
+<footer>Squire Journal · feito com pixels</footer>
+<div id="lightbox" hidden><img alt=""><p></p></div>
+<script src="data/features.js"></script>
+<script src="data/prompts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
