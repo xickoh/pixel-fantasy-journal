@@ -43,5 +43,6 @@ window.SHOTS = [
  {f:"casas_v2",t:"Casas v2",d:"Telhado visto de cima, trapeira, chaminé e porta junto ao canto."},
  {f:"praca_estatua",t:"Praça da vila",d:"Pedra, jardim com flores e uma estátua com repuxo."},
  {f:"praca_fonte",t:"Fonte e bancas",d:"A fonte no centro e as bancas à volta da praça."},
- {f:"quest_giver",t:"Mensageiro",d:"A primeira missão: matar 5 orcs para abrir as bancas."}
+ {f:"quest_giver",t:"Mensageiro",d:"A primeira missão: matar 5 orcs para abrir as bancas."},
+ {f:"mapa_quest",t:"Missão no mapa",d:"A estrela da missão ativa no mapa e no minimapa."}
 ];
