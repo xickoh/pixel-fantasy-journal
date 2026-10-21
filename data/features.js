@@ -32,7 +32,7 @@ window.SHOTS = [
  {f:"cavalo_montado",t:"Cavalos",d:"Montar nas quatro direções."},
  {f:"stableman",t:"Estábulo",d:"O stableman e os cavalos."},
  {f:"bau_aberto",t:"Baús",d:"Mover pilhas entre o baú e o inventário."},
- {f:"recall_efeito",t:"Recall Stone",d:"Efeito de regresso à vila."},
+ {f:"recall_efeito",t:"Recall Stone",d:"O círculo azul da chegada à vila, em jogo."},
  {f:"tocha_nova",t:"Tochas",d:"Colocáveis animados que iluminam."},
  {f:"oclusao_arvore",t:"Oclusão",d:"O que tapa o jogador fica semitransparente."},
  {f:"oclusao_sem_acumular",t:"Oclusão sem acumular",d:"Árvores sobrepostas a 50% por igual."},
