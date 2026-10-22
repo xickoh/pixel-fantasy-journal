@@ -1,6 +1,6 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
- {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, o boss Rei Esqueleto e a sua coroa"]},
+ {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, o boss Rei Esqueleto e as suas 3 armas (uma garantida), e um esqueleto aliado"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos que se escavam e terra que se volta a pôr, ciclo dia/noite","Mais difícil quanto mais longe da vila"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões, fases do mundo e lojas de compra e venda"]},
  {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots com lixo, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99"]},
@@ -63,5 +63,8 @@ window.SHOTS = [
  {f:"rei_esqueleto",t:"Rei Esqueleto",d:"O boss, a sua barra e as rachaduras do murro no chão."},
  {f:"lixo",t:"Lixo",d:"Um slot para apagar itens: Ctrl + clique."},
  {f:"minerios_castanha",t:"Minérios visíveis",d:"Veios maiores sobre a pedra castanha; a pedra comum é cinzenta."},
- {f:"terra",t:"Terra",d:"As elevações dão Terra, que levanta uma célula de terreno."}
+ {f:"terra",t:"Terra",d:"As elevações dão Terra, que levanta uma célula de terreno."},
+ {f:"osso_poder",t:"Arremesso de Osso",d:"A Espada do Rei Esqueleto atira um osso a cada golpe, com o dano da arma."},
+ {f:"foice_rodar",t:"Foice de Osso",d:"Arma à distância: a própria foice voa a rodar 5 vezes por segundo."},
+ {f:"aliado_esqueleto",t:"Esqueleto aliado",d:"O Cajado do Rei Esqueleto invoca um esqueleto de nível 20, de barra azul, que ataca quem te ataca."}
 ];
