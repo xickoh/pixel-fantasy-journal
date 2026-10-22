@@ -22,7 +22,7 @@ window.SHOTS = [
  {f:"enhancements_contorno",t:"Brilho dos enhancements",d:"Contorno e brilho na cor do enhancement, na mão e no chão."},
  {f:"item_no_chao_nome",t:"Itens no chão",d:"O nome do item ao passar o rato."},
  {f:"stats_dodge",t:"Skills",d:"Níveis, XP e estatísticas derivadas."},
- {f:"equipamento_metais",t:"Armaduras",d:"Capacete, peitoral e botas em cinco metais."},
+ {f:"equipamento_metais",t:"Armaduras",d:"Capacete, peitoral e grevas em cinco metais."},
  {f:"inimigos_nivel",t:"Nível dos inimigos",d:"Espadas cruzadas com o nível ao lado da barra de vida."},
  {f:"dungeon_entrada",t:"Entrada da dungeon",d:"A mina na floresta."},
  {f:"dungeon_dentro",t:"Dentro da dungeon",d:"Escuridão, tochas e inimigos."},
@@ -50,5 +50,6 @@ window.SHOTS = [
  {f:"nome_barra",t:"Nome sobre a barra",d:"O nome de cada monstro aparece por cima da barra de vida e do nível."},
  {f:"pergaminho",t:"Pergaminho de Regresso",d:"O feiticeiro vende-o a 100 moedas; leva-te a casa uma vez."},
  {f:"escudo_arco",t:"Bloquear com o escudo",d:"O arco branco do Escudo de Madeira, virado para onde apontas."},
- {f:"metais_paleta",t:"Metais por paleta",d:"Capacete de ouro, peitoral de diamante e botas de chumbo, tudo das tiras do ferro."}
+ {f:"metais_paleta",t:"Metais por paleta",d:"Capacete de ouro, peitoral de diamante e botas de chumbo, tudo das tiras do ferro."},
+ {f:"grevas",t:"Grevas de ferro",d:"As botas passaram a grevas: pernas e pés de ferro, no slot Pernas."}
 ];
