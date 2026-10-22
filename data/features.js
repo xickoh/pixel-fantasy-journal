@@ -1,9 +1,9 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, o boss Rei Esqueleto e a sua coroa"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos de terra que se escavam, ciclo dia/noite","Mais difícil quanto mais longe da vila"]},
- {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões e lojas de compra e venda"]},
- {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos que se escavam e terra que se volta a pôr, ciclo dia/noite","Mais difícil quanto mais longe da vila"]},
+ {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões, fases do mundo e lojas de compra e venda"]},
+ {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots com lixo, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99"]},
  {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo próprio: mais rápido e sem gastar stamina","Andar na água funda, só com a cabeça à vista","Uma dungeon em labirinto por área, com baú de recompensa"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","Testes automáticos e este journal, atualizado a cada commit"]}
@@ -60,5 +60,8 @@ window.SHOTS = [
  {f:"morte_moedas",t:"Moedas na janela de morte",d:"As moedas largadas aparecem por baixo de Morreste!"},
  {f:"chat",t:"Chat",d:"Enter para escrever; /give e /help."},
  {f:"planalto_pack",t:"Planaltos do pack",d:"O penhasco do Pixel Crawler: topo de terra e bossas."},
- {f:"rei_esqueleto",t:"Rei Esqueleto",d:"O boss, a sua barra e as rachaduras do murro no chão."}
+ {f:"rei_esqueleto",t:"Rei Esqueleto",d:"O boss, a sua barra e as rachaduras do murro no chão."},
+ {f:"lixo",t:"Lixo",d:"Um slot para apagar itens: Ctrl + clique."},
+ {f:"minerios_castanha",t:"Minérios visíveis",d:"Veios maiores sobre a pedra castanha; a pedra comum é cinzenta."},
+ {f:"terra",t:"Terra",d:"As elevações dão Terra, que levanta uma célula de terreno."}
 ];
