@@ -1,12 +1,12 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
- {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias, com níveis 1–99, arqueiros e magos","Poderes nas armas, enhancements e um altar para os trocar"]},
+ {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material (madeira, osso, ferro, ouro, diamante), poderes e enhancements"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos de terra que se escavam, ciclo dia/noite","Mais difícil quanto mais longe da vila"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões e lojas de compra e venda"]},
  {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99"]},
  {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo próprio: mais rápido e sem gastar stamina","Andar na água funda, só com a cabeça à vista","Uma dungeon em labirinto por área, com baú de recompensa"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
- {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["mob_editor, item_editor e data_editor","3 slots de mundo e de personagem, com gravação automática","Testes automáticos e este journal, atualizado a cada commit"]}
+ {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","Testes automáticos e este journal, atualizado a cada commit"]}
 ];
 // Capturas das mecânicas mais relevantes.
 window.SHOTS = [
@@ -55,5 +55,7 @@ window.SHOTS = [
  {f:"grevas",t:"Grevas de ferro",d:"As botas passaram a grevas: pernas e pés de ferro, no slot Pernas."},
  {f:"espada_madeira",t:"Espada de madeira",d:"Feita com 3 troncos na bancada."},
  {f:"minerios_pedras",t:"Pedras de minério",d:"A pedra cinzenta com veios de chumbo, ferro, ouro e diamante."},
- {f:"minerios_fornalha",t:"Minérios, barras e fornalha",d:"Os minérios, as barras dos quatro metais e a fornalha de tijolo."}
+ {f:"minerios_fornalha",t:"Minérios, barras e fornalha",d:"Os minérios, as barras dos quatro metais e a fornalha de tijolo."},
+ {f:"rato_inimigo",t:"Vida ao passar o rato",d:"Com o rato num inimigo: a barra, a vida em números e o nível."},
+ {f:"morte_moedas",t:"Moedas na janela de morte",d:"As moedas largadas aparecem por baixo de Morreste!"}
 ];
