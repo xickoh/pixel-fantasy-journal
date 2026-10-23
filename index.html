@@ -10,26 +10,61 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header class="hero">
-  <canvas id="scene" aria-hidden="true"></canvas>
-  <div class="hero-text">
-    <p class="kicker">⚔ Diário de desenvolvimento ⚔</p>
-    <h1>PIXEL <span>FANTASY</span><small>JOURNAL</small></h1>
-    <p class="lead">Uma vila cercada no meio de uma floresta, cheia de monstros, magia e masmorras. Aqui fica o que se forja, dia a dia.</p>
-    <nav><a href="#features">Funcionalidades</a><a href="#shots">Capturas</a><a href="#devlog">Devlog</a></nav>
+<nav class="topbar">
+  <a class="brand" href="#top"><img src="img/art/sword.png" alt=""> Pixel Fantasy</a>
+  <div class="links"><a href="#features">Grimório</a><a href="#shots">Galeria</a><a href="#devlog">Crónicas</a></div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="sun"></div>
+  <div class="mountains"></div>
+  <img class="castle" src="img/art/castle.png" alt="">
+  <div class="hill"></div>
+  <div class="hero-grid">
+    <div class="hero-text">
+      <p class="kicker">✦ Diário de desenvolvimento ✦</p>
+      <h1>PIXEL <span>FANTASY</span><small>JOURNAL</small></h1>
+      <p class="lead">Uma vila cercada no meio de uma floresta, com monstros, magia, masmorras e um dragão que ninguém quer acordar.</p>
+      <div class="cta"><a class="btn" href="#features">Abrir o grimório</a><a class="btn alt" href="#devlog">Ler as crónicas</a></div>
+    </div>
+    <img class="dragon" src="img/art/dragon.png" alt="Um dragão vermelho de asas abertas">
+  </div>
+  <div class="turf">
+    <img class="s wiz" src="img/art/wizard.png" alt=""><img class="s sl1" src="img/art/slime_g.png" alt=""><img class="s sl2" src="img/art/slime_b.png" alt="">
+    <img class="s mu1" src="img/art/mushroom.png" alt=""><img class="s mu2" src="img/art/mushroom.png" alt=""><img class="s sl3" src="img/art/slime_r.png" alt="">
   </div>
 </header>
-<main>
-  <section id="features"><h2 data-icon="sword">Funcionalidades</h2><div id="featureGrid" class="grid"></div></section>
-  <section id="shots"><h2 data-icon="gem">Capturas</h2><div id="shotGrid" class="shots"></div></section>
-  <section id="devlog"><h2 data-icon="tome">Devlog</h2>
+
+<section id="features" class="zone magic">
+  <div class="wrap">
+    <div class="zone-head"><h2>Grimório de funcionalidades</h2><div class="deco"><img src="img/art/bat.png" alt=""><img src="img/art/potion.png" alt=""><img src="img/art/gem.png" alt=""></div></div>
+    <p class="intro">Só os pontos-chave do que o jogo já faz.</p>
+    <div id="featureGrid" class="grid"></div>
+  </div>
+</section>
+
+<section id="shots" class="zone meadow">
+  <div class="wrap">
+    <div class="zone-head"><h2>Galeria do reino</h2><div class="deco"><img src="img/art/slime_g2.png" alt=""><img src="img/art/mushroom.png" alt=""><img src="img/art/slime_b.png" alt=""></div></div>
+    <p class="intro">Capturas tiradas no próprio jogo. Clica para ampliar.</p>
+    <div id="shotGrid" class="shots"></div>
+  </div>
+</section>
+
+<section id="devlog" class="zone lair">
+  <div class="wrap">
+    <div class="zone-head"><h2>Crónicas do dragão</h2><div class="deco"><img src="img/art/skull.png" alt=""><img src="img/art/dragon_mid.png" class="mini" alt=""><img src="img/art/tome.png" alt=""></div></div>
+    <p class="intro">O devlog por dia: os prompts e os commits do jogo.</p>
     <input id="q" type="search" placeholder="Procurar nos prompts e nos commits…">
     <div id="days"></div>
-  </section>
-</main>
-<footer><canvas id="grass" aria-hidden="true"></canvas><p>⚔ Pixel Fantasy Journal · forjado com pixels, magia e um dragão muito vermelho ⚔</p></footer>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-row"><img src="img/art/skull.png" alt=""><img src="img/art/dragon_mid.png" class="mini" alt=""><img src="img/art/bat.png" alt=""></div>
+  <p>⚔ Pixel Fantasy Journal · forjado com pixels, magia e um dragão muito vermelho ⚔</p>
+</footer>
 <div id="lightbox" hidden><img alt=""><p></p></div>
-<script src="pixel.js"></script>
 <script src="data/features.js"></script>
 <script src="data/prompts.js"></script>
 <script src="data/commits.js"></script>
