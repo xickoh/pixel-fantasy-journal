@@ -1,6 +1,6 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
- {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, o boss Rei Esqueleto e as suas 3 armas (uma garantida), e um esqueleto aliado"]},
+ {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos que se escavam e terra que se volta a pôr, ciclo dia/noite","Mais difícil quanto mais longe da vila"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões, fases do mundo e lojas de compra e venda"]},
  {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots com lixo, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99"]},
@@ -72,5 +72,7 @@ window.SHOTS = [
  {f:"tooltip_espada",t:"Tooltip mais compacto",d:"Margens finas e o inventário com a mesma largura em todos os separadores."},
  {f:"estabulo_cavalo_adereco",t:"Cavalo do estábulo",d:"Agora é um adereço que respira à frente do estábulo; monta-se só o teu cavalo."},
  {f:"altar_floresta",t:"Altares na floresta",d:"Altares dos poderes espalhados pela floresta, além do da vila."},
- {f:"mapa_nevoa_depois",t:"Névoa no mapa",d:"O mapa fica a preto onde ainda não estiveste; /reveal_map mostra tudo."}
+ {f:"mapa_nevoa_depois",t:"Névoa no mapa",d:"O mapa fica a preto onde ainda não estiveste; /reveal_map mostra tudo."},
+ {f:"orc_gigante_murro",t:"Orc Gigante",d:"O segundo boss: um murro que estica o braço 3 vezes a sua altura, uma investida e uma chuva de pedras."},
+ {f:"orc_gigante_pedras",t:"Chuva de pedras",d:"As sombras avisam onde caem as pedras do Orc Gigante."}
 ];
