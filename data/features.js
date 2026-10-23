@@ -74,5 +74,7 @@ window.SHOTS = [
  {f:"altar_floresta",t:"Altares na floresta",d:"Altares dos poderes espalhados pela floresta, além do da vila."},
  {f:"mapa_nevoa_depois",t:"Névoa no mapa",d:"O mapa fica a preto onde ainda não estiveste; /reveal_map mostra tudo."},
  {f:"orc_gigante_murro",t:"Orc Gigante",d:"O segundo boss: um murro que estica o braço 3 vezes a sua altura, uma investida e uma chuva de pedras."},
- {f:"orc_gigante_pedras",t:"Chuva de pedras",d:"As sombras avisam onde caem as pedras do Orc Gigante."}
+ {f:"orc_gigante_pedras",t:"Chuva de pedras",d:"As sombras avisam onde caem as pedras do Orc Gigante."},
+ {f:"tres_cavalos",t:"Três cavalos",d:"Castanho, preto e branco no estábulo: o branco é o mais rápido."},
+ {f:"espada_rei_na_mao",t:"Espada do Rei na mão",d:"A espada na mão tem o mesmo desenho do ícone."}
 ];
