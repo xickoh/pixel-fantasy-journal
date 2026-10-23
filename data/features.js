@@ -66,5 +66,11 @@ window.SHOTS = [
  {f:"terra",t:"Terra",d:"As elevações dão Terra, que levanta uma célula de terreno."},
  {f:"osso_poder",t:"Arremesso de Osso",d:"A Espada do Rei Esqueleto atira um osso a cada golpe, com o dano da arma."},
  {f:"foice_rodar",t:"Foice de Osso",d:"Arma à distância: a própria foice voa a rodar 5 vezes por segundo."},
- {f:"aliado_esqueleto",t:"Esqueleto aliado",d:"O Cajado do Rei Esqueleto invoca um esqueleto de nível 20, de barra azul, que ataca quem te ataca."}
+ {f:"aliado_esqueleto",t:"Esqueleto aliado",d:"O Cajado do Rei Esqueleto invoca um esqueleto de nível 20, de barra azul, que ataca quem te ataca."},
+ {f:"hud_cooldowns",t:"Cooldowns em relógio",d:"A poção e a vida do aliado contam no HUD como nos MMOs: um ponteiro que varre o ícone."},
+ {f:"chat_linhas",t:"Avisos no chat",d:"O que apanhas do chão a laranja e cada nível novo a verde."},
+ {f:"tooltip_espada",t:"Tooltip mais compacto",d:"Margens finas e o inventário com a mesma largura em todos os separadores."},
+ {f:"estabulo_cavalo_adereco",t:"Cavalo do estábulo",d:"Agora é um adereço que respira à frente do estábulo; monta-se só o teu cavalo."},
+ {f:"altar_floresta",t:"Altares na floresta",d:"Altares dos poderes espalhados pela floresta, além do da vila."},
+ {f:"mapa_nevoa_depois",t:"Névoa no mapa",d:"O mapa fica a preto onde ainda não estiveste; /reveal_map mostra tudo."}
 ];
