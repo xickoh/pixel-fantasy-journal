@@ -7,7 +7,8 @@ const MECHANICS = [
    lead: "Morrer não apaga o progresso, mas custa moedas.",
    points: [
      "Passados 2 s, renasces junto à fogueira da vila com a vida cheia.",
-     "Largas {s.death_gold_drop|pct} das moedas numa pilha onde morreste. Não desaparece sozinha e qualquer jogador a pode apanhar.",
+     "Largas {s.death_gold_drop|pct} das moedas (no nível 1 de Morte; {s.death_gold_drop_level_99|pct} no 99) numa pilha onde morreste. Não desaparece sozinha e qualquer jogador a pode apanhar.",
+     "Voltas mais lento durante {s.death_slow_seconds} s: -{s.death_slow_level_1|pct} no nível 1 de Morte, nada no 99. Também a cavalo; o dash não.",
      "Fica uma lápide (\"RIP\" e o teu nome) onde morreste. Cada jogador guarda as últimas {s.max_graves}; a mais antiga desaparece.",
      "Numa masmorra, também renasces na vila. A cavalo, desmontas no sítio da morte.",
    ]},
