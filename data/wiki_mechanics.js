@@ -65,6 +65,12 @@ const MECHANICS = [
      "A Velocidade dá +{s.speed_bonus_per_level|pct} de velocidade por nível. A Mineração e o Corte de madeira dão +{s.gathering_bonus_per_level|pct} de velocidade a recolher por nível.",
      "A Resistência dá +{s.resistance_defense_per_level} de defesa por nível.",
    ]},
+  {id: "morte_skill", title: "A skill Morte", icon: "☠", src: "docs/player.md · The Death skill",
+   lead: "Sobe a matar e tira proveito das lápides.",
+   points: [
+     "Cada inimigo que matas dá {s.death_xp_per_kill} XP de Morte (um chefe dá mais). Os abates dos aliados não contam.",
+     "Uma lápide parte-se em 5 pedras logo no nível 1. A partir do nível 10, dá barras de ouro: 1 por cada 10 níveis (10 no nível 99).",
+   ]},
   {id: "fabrico", title: "Fabrico", icon: "🔨", src: "docs/items.md · Crafting",
    lead: "Das matérias-primas ao equipamento.",
    points: [
