@@ -70,6 +70,7 @@ const MECHANICS = [
    lead: "Sobe a matar e tira proveito das lápides.",
    points: [
      "Cada inimigo que matas dá {s.death_xp_per_kill} XP de Morte (um chefe dá mais). Os abates dos aliados não contam.",
+     "A partir do nível {s.death_grave_sense_level}, sentes as tuas sepulturas: aparecem no mapa e no minimapa, e o mapa diz a que distância está a mais perto.",
      "Uma lápide parte-se em 5 pedras logo no nível 1. A partir do nível 10, dá barras de ouro: 1 por cada 10 níveis (10 no nível 99).",
    ]},
   {id: "fabrico", title: "Fabrico", icon: "🔨", src: "docs/items.md · Crafting",
