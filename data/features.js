@@ -82,5 +82,6 @@ window.SHOTS = [
  {f:"poder_chamas",t:"Poderes das armas à distância",d:"Vampirismo, chamas que queimam com o tempo e setas que perfuram vários inimigos."},
  {f:"hud_madeira",t:"HUD de madeira",d:"Retrato, barras de vida, stamina e dash, relógio em pergaminho, minimapa redondo e hotbar com pregos."},
  {f:"tab_fabrico",t:"Menu do Tab",d:"Separadores com ícones, categorias pequenas e o detalhe da receita com o botão Fabricar."},
- {f:"tab_skills",t:"Skills em madeira",d:"Barras de XP em moldura de madeira e o resumo num pergaminho."}
+ {f:"tab_skills",t:"Skills em madeira",d:"Barras de XP em moldura de madeira e o resumo num pergaminho."},
+ {f:"armas_na_mao",t:"Armas na mão",d:"A espada descansa ao lado da perna e a lança em pé; a mão vê-se por cima do cabo."}
 ];
