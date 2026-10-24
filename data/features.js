@@ -3,7 +3,7 @@ window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming, limites das áreas e zoom no jogador","Waypoints em cada bioma: descobrem-se ao chegar perto e viaja-se entre eles pelo mapa","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área: acampamentos, ruínas, ermitões, santuários e veios ricos"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casa do jogador, quadro de encomendas com contratos diários e melhorias da vila pagas com moedas","Aldeões com personalidade e rotina: mercado ao meio-dia, taverna à noite, conversas em balões","Mercado com preços do dia, reforja no ferreiro, descanso na taverna e um Treinador de poderes"]},
- {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting de largura fixa e comparação de itens no tooltip","Minérios que pedem a picareta do anterior, fornalha, armaduras em cinco metais e de couro","9 skills com XP de 1 a 99, vida que regenera, poderes nas armas e plantas que ensinam receitas"]},
+ {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting de largura fixa e comparação de itens no tooltip","Minérios que pedem a picareta do anterior, fornalha, armaduras em cinco metais e de couro","10 skills com XP de 1 a 99 (a Morte sobe a matar e dá poderes), vida que regenera, poderes nas armas e plantas que ensinam receitas"]},
  {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo no slot de montada (H): mais rápido, sem stamina; um golpe forte atira-te ao chão","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, minimapa redondo e menu do Tab com ícones","Testes automáticos e este journal, atualizado a cada commit"]}
@@ -104,5 +104,13 @@ window.SHOTS = [
  {f:"melhorias_vila",t:"Melhorias da vila",d:"Forja, mercado, torre de vigia, poço curativo, taverna e estábulo, cada uma com o seu edifício."},
  {f:"melhorias_menu",t:"Comprar melhorias",d:"No quadro de encomendas: qualquer jogador paga e fica para todos."},
  {f:"waypoint",t:"Waypoints",d:"Um obelisco por bioma: as runas acendem-se quando chegas perto."},
- {f:"waypoint_viagem",t:"Viajar",d:"No waypoint, o mapa lista os encontrados: escolhe e vais lá."}
+ {f:"waypoint_viagem",t:"Viajar",d:"No waypoint, o mapa lista os encontrados: escolhe e vais lá."},
+ {f:"requisitos",t:"Requisitos",d:"O que falta a vermelho e o que já tens a cinzento; clique esquerdo seleciona, direito fabrica."},
+ {f:"fabrico_todas",t:"Todas as receitas",d:"Desmarca a categoria para ver tudo, pesquisa por nome e os fabricados há pouco primeiro."},
+ {f:"faca_estocada",t:"Facas que estocam",d:"Cada arma tem a sua espera entre golpes; as facas são as mais rápidas e estocam de perto."},
+ {f:"skill_morte",t:"A skill Morte",d:"Sobe a matar inimigos; títulos aos 25, 50, 75 e 99."},
+ {f:"morte_ouro",t:"Lápides em ouro",d:"Com a Morte, uma lápide dá pedra e, a partir do nível 10, barras de ouro."},
+ {f:"morte_aura",t:"Almas e aura",d:"A barra de almas cheia, a lentidão depois de morrer e a aura do nível 75."},
+ {f:"cemiterio",t:"Cemitério",d:"Sepulturas que se partem, esqueletos de guarda e um baú no meio."},
+ {f:"skills_hover",t:"Stats por skill",d:"Passa o rato numa skill e vês só o que ela muda."}
 ];
