@@ -48,6 +48,7 @@ const MECHANICS = [
      "A defesa tira uma parte do dano, nunca tudo: dano × K ÷ (K + defesa), com K = {s.defense_constant}. Defesa {s.defense_constant} reduz um golpe para metade. Um golpe tira sempre pelo menos 1.",
      "Crítico: faz dano ×{s.crit_multiplier}. As chances base são {s.crit_chance_melee|pct} (corpo a corpo), {s.crit_chance_ranged|pct} (arco) e {s.crit_chance_magic|pct} (magia).",
      "Sem arma, dás socos ({s.punch_damage} de dano). Os escudos bloqueiam golpes na direção que apontas.",
+     "Cada arma de corpo a corpo tem a sua espera entre golpes (ver \"Ataca a cada\" em cada arma): a espada de madeira 1,5 s, as facas as mais rápidas. As facas estocam como as lanças, mas de perto.",
      "Chama (queimadura) e Tiro Perfurante têm as suas regras: ver os poderes de arma.",
    ]},
   {id: "dash", title: "Dash e esquiva", icon: "💨", src: "docs/player.md · Dash and dodge",
