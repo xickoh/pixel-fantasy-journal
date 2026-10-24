@@ -122,5 +122,6 @@ window.SHOTS = [
  {f:"chuva",t:"Chuva",d:"Gotas finas e o céu mais azulado; o ícone do clima ao lado do relógio."},
  {f:"nevoeiro",t:"Nevoeiro",d:"Uma névoa que se move devagar, mais densa nas bordas."},
  {f:"visao",t:"Visão",d:"Vês para onde olhas; o tronco da árvore tapa o que está atrás."},
- {f:"lentidao_icone",t:"Lentidão",d:"Depois de morrer, uma bota roxa e o tempo que falta; a animação de andar abranda na mesma proporção."}
+ {f:"lentidao_icone",t:"Lentidão",d:"Depois de morrer, uma bota roxa e o tempo que falta; a animação de andar abranda na mesma proporção."},
+ {f:"blocos_terra",t:"Blocos de terra",d:"Blocos juntos partilham um só topo, com o contorno só nas bordas; sozinho, um bloco é um montinho."}
 ];

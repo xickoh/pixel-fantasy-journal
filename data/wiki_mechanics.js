@@ -155,7 +155,7 @@ const MECHANICS = [
    lead: "A vila fica numa floresta; para lá dela há deserto.",
    points: [
      "O mundo é gerado a partir de uma semente: rios, lagos, planaltos e estradas.",
-     "Nos mundos novos os planaltos cobrem cerca de 10% de cada área e nunca tapam minérios, altares nem pontos de interesse. Com a picareta escavam-se célula a célula e dão Terra.",
+     "Nos mundos novos os planaltos cobrem cerca de 10% de cada área e nunca tapam minérios, altares nem pontos de interesse. São blocos de terra: com a picareta escavam-se bloco a bloco (10 golpes) e dão Terra; com Terra pões blocos novos, que se juntam aos vizinhos num só topo.",
      "Cada zona do mapa tem as suas famílias e os seus níveis de inimigos: orcs e esqueletos na floresta, múmias no deserto. A tabela de zonas está na aba Inimigos.",
      "Os inimigos têm nível, que lhes faz subir vida, dano, defesa e velocidade.",
    ]},
