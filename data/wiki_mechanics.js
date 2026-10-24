@@ -33,6 +33,7 @@ const MECHANICS = [
      "Vida máxima: {s.max_health_level_1} no nível 1 até {s.max_health_level_99} no nível 99, numa curva que sobe cada vez mais depressa.",
      "A vida regenera sozinha {s.health_regen_share_per_minute|pct} do máximo por minuto, em combate ou a andar.",
      "A experiência de Vida vem do dano que sofres (depois da armadura), {s.health_xp_per_damage} XP por ponto.",
+     "Ritmo das skills: a Vida e a Esquiva ganham o XP inteiro; todas as outras (Velocidade, Corte, Mineração, Força, Arco, Resistência, Magia, Morte) ganham 10% do XP de cada ação. Os prémios de contratos e missões entram inteiros.",
      "A comida e as poções curam já. Q usa a melhor cura do inventário. A poção tem {s.potion_cooldown} s de espera.",
    ]},
   {id: "stamina", title: "Stamina e correr", icon: "⚡", src: "docs/player.md · Gathering, skills and stamina",
@@ -69,7 +70,7 @@ const MECHANICS = [
   {id: "morte_skill", title: "A skill Morte", icon: "☠", src: "docs/player.md · The Death skill",
    lead: "Sobe a matar e tira proveito das lápides.",
    points: [
-     "Cada inimigo que matas dá {s.death_xp_per_kill} XP de Morte (um chefe dá mais). Os abates dos aliados não contam.",
+     "Cada inimigo que matas dá {s.death_xp_per_kill} XP de Morte antes do ritmo da skill (10%, ou seja um décimo disso; um chefe dá mais). Os abates dos aliados não contam.",
      "A partir do nível {s.death_grave_sense_level}, sentes as tuas sepulturas: aparecem no mapa e no minimapa, e o mapa diz a que distância está a mais perto.",
      "A partir do nível {s.death_last_stand_level}, um golpe que te mataria deixa-te com 1 de vida. Depois recarrega: um dia de jogo no nível 40, 3 horas no 99.",
      "Ceifar: cada abate cura até {s.death_reap_heal_level_99|pct} da vida máxima e dá até {s.death_reap_stamina_level_99|pct} de stamina (no nível 99; um chefe dá {s.death_reap_boss_factor}x).",
