@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Pixel Fantasy Wiki</title>
+<meta name="description" content="A wiki do Pixel Fantasy: itens, inimigos, aldeões, mecânicas e números do jogo.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="wikipage">
+<nav class="topbar">
+  <a class="brand" href="index.html"><img src="img/art/sword.png" alt=""> Pixel Fantasy</a>
+  <div class="links"><a href="index.html#features">Grimório</a><a href="index.html#shots">Galeria</a><a href="index.html#devlog">Crónicas</a><a href="wiki.html" class="here">Wiki</a></div>
+</nav>
+
+<header class="wikihead">
+  <div class="wrap">
+    <div class="wikihead-row">
+      <img src="img/art/tome.png" alt="">
+      <div>
+        <p class="kicker">✦ Enciclopédia do reino ✦</p>
+        <h1>WIKI</h1>
+        <p class="lead">Itens, inimigos, aldeões e as regras do jogo. Os números saem dos dados do jogo.</p>
+      </div>
+      <img class="mini" src="img/art/dragon_mid.png" alt="">
+    </div>
+  </div>
+  <div class="turf thin"></div>
+</header>
+
+<main class="zone magic wikibody">
+  <div class="wrap">
+    <div class="tabs" id="tabs" role="tablist"></div>
+    <div class="wikibar">
+      <input id="wq" type="search" placeholder="Procurar…" autocomplete="off">
+      <div id="chips" class="chips"></div>
+    </div>
+    <p id="count" class="note"></p>
+    <div id="out"></div>
+    <p id="stamp" class="note stamp"></p>
+  </div>
+</main>
+
+<footer>
+  <div class="foot-row"><img src="img/art/skull.png" alt=""><img src="img/art/dragon_mid.png" class="mini" alt=""><img src="img/art/bat.png" alt=""></div>
+  <p>⚔ Pixel Fantasy Wiki · gerada a partir dos dados do jogo ⚔</p>
+</footer>
+<script src="data/wiki_data.js"></script>
+<script src="data/wiki_mechanics.js"></script>
+<script src="wiki.js"></script>
+</body>
+</html>

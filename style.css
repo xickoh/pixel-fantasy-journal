@@ -109,6 +109,64 @@ footer{text-align:center;background:url(img/art/brick.png) 0 0/64px;border-top:8
 .foot-row{display:flex;justify-content:center;align-items:flex-end;gap:26px;margin-bottom:16px}.foot-row img{height:46px}.foot-row img.mini{height:64px}
 footer p{margin:0;font-size:10px;line-height:1.9;color:var(--gold);text-shadow:2px 2px 0 var(--line)}
 
+/* wiki */
+.links a.here{background:var(--red);box-shadow:0 0 0 3px var(--line)}
+.wikihead{position:relative;overflow:hidden;padding:34px 0 70px;background:linear-gradient(#1c1240 0 25%,#3a1f5e 25% 55%,#7a2f6e 55% 80%,#c9506a 80%)}
+.wikihead-row{display:flex;align-items:center;gap:26px;flex-wrap:wrap}
+.wikihead-row>img{height:120px}.wikihead-row>img.mini{height:150px;margin-left:auto}
+.wikihead h1{margin:0;font-size:clamp(30px,8vw,64px);letter-spacing:6px;color:var(--gold);text-shadow:0 5px 0 var(--gold2),4px 5px 0 var(--line),-3px 0 0 var(--line),3px 0 0 var(--line),0 -3px 0 var(--line)}
+.wikihead .lead{margin:10px 0 0;font-size:25px;max-width:560px}
+.turf.thin{height:56px;background:url(img/art/grass_edge.png) 0 0/128px 120px repeat-x;bottom:-8px}
+.turf.thin::after{display:none}
+.wikibody{padding-top:34px}
+.tabs{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.tab{font:inherit;font-family:"Press Start 2P","Courier New",monospace;font-size:12px;padding:12px 14px;background:var(--stone);color:var(--light);border:0;cursor:pointer;box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line)}
+.tab:hover{filter:brightness(1.25)}.tab.on{background:var(--red);color:var(--light);transform:translateY(-3px)}
+.wikibar{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:8px}
+#wq{flex:1 1 260px;padding:12px 14px;font:inherit;font-size:24px;background:var(--parch);color:var(--ink);border:0;box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset 0 4px 0 0 #0002}
+#wq::placeholder{color:#6b5a3a}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{font:inherit;font-size:21px;padding:4px 10px;background:var(--parch2);color:var(--ink);border:0;cursor:pointer;box-shadow:0 0 0 3px var(--line)}
+.chip.on{background:var(--gold)}
+.chip:hover{filter:brightness(1.1)}
+.wikibody .note{margin:10px 0 22px}
+.wgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:28px;margin-bottom:34px}
+.wgrid.mech{grid-template-columns:repeat(auto-fill,minmax(380px,1fr))}
+.wcard{position:relative;margin:4px;padding:16px 16px 14px;background:var(--parch);color:var(--ink);box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset 0 0 0 4px var(--parch2),inset 0 0 0 7px var(--violet),0 0 30px #8f5bff44}
+.wcard.weapon,.wcard.tool{box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset 0 0 0 4px var(--parch2),inset 0 0 0 7px var(--c-red),0 0 30px #b3262b44}
+.wcard.equipment{box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset 0 0 0 4px var(--parch2),inset 0 0 0 7px var(--c-blue),0 0 30px #2d5f9a44}
+.wcard.food,.wcard.potion{box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset 0 0 0 4px var(--parch2),inset 0 0 0 7px var(--c-green),0 0 30px #3f7d2a44}
+.wcard.enemy{box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset 0 0 0 4px var(--parch2),inset 0 0 0 7px var(--c-orange),0 0 30px #c9702a44}
+.wcard.boss{box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset 0 0 0 4px var(--parch2),inset 0 0 0 7px var(--red),0 0 40px #ff3a2a77}
+.wcard header{display:flex;align-items:flex-start;justify-content:space-between;gap:10px;flex-wrap:wrap;margin:2px 4px 8px}
+.wcard h3{margin:0;font-size:12px;line-height:1.6;color:var(--red2)}
+.pill{display:inline-block;padding:2px 8px;font-size:19px;line-height:1.1;background:var(--violet);color:var(--light);box-shadow:0 0 0 3px var(--line);white-space:nowrap}
+.pill.red{background:var(--red)}.pill.green{background:var(--c-green)}.pill.blue{background:var(--c-blue)}.pill.gray{background:var(--stone)}
+.tags{display:flex;gap:10px;flex-wrap:wrap;margin:6px 4px 10px}
+.wcard .en{margin:-4px 4px 8px;font-size:19px;opacity:.65}
+.wcard .desc{margin:4px 4px 8px;font-size:23px;line-height:1.1}
+.wcard .src{margin:10px 4px 0;font-size:18px;opacity:.6}
+.stats{margin:6px 4px 8px;padding:6px 10px;background:#0002}
+.srow{display:flex;justify-content:space-between;gap:14px;padding:2px 0}
+.stats dt{opacity:.8}.stats dd{margin:0;font-weight:700;text-align:right}
+.info{list-style:none;margin:6px 4px 0;padding:0}
+.info li{margin:6px 0;font-size:21px;line-height:1.1}
+.info li b{color:var(--red2)}
+.wcard.mechanic .info li{position:relative;padding-left:18px;font-size:23px}
+.wcard.mechanic .info li::before{content:"";position:absolute;left:2px;top:6px;width:8px;height:8px;background:var(--violet);box-shadow:0 0 0 2px var(--line)}
+.tablebox{overflow-x:auto;margin:6px 4px 30px}
+.lv{width:100%;border-collapse:collapse;font-size:21px;background:#0002}
+.lv th{font-family:"Press Start 2P","Courier New",monospace;font-size:9px;text-align:left;padding:7px 8px;background:var(--red2);color:var(--light)}
+.lv td{padding:3px 8px;border-bottom:2px solid #0003}
+.wcard .lv{margin-top:4px}
+.wikipage .lv{color:var(--ink)}
+.wcard .lv td:first-child{font-weight:700}
+.tablebox .lv{background:var(--parch);color:var(--ink)}
+.lv caption{caption-side:top;text-align:left;font-size:22px;padding:6px 2px;color:var(--light)}
+h2.sub{margin:30px 0 14px;font-size:clamp(13px,2.4vw,18px)}
+.stamp{margin-top:40px;font-size:19px}
+@media(max-width:520px){.wgrid,.wgrid.mech{grid-template-columns:1fr}.wikihead-row>img.mini{display:none}.tab{font-size:10px;padding:10px}}
+
 @media(max-width:820px){.hero-grid{grid-template-columns:1fr;padding-top:34px}.dragon{max-width:340px}.castle{width:150px;right:4%}.sun{width:150px;height:150px}.topbar .brand span{display:none}}
 @media(max-width:520px){.shots{grid-template-columns:1fr}body{font-size:20px}.links a{padding:8px 6px}.turf .wiz{height:70px}.hero-grid{padding-bottom:160px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
