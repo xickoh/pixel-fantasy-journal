@@ -121,6 +121,7 @@ const MECHANICS = [
      "Cada área tem uma entrada de mina. Lá dentro há 7–11 salas, 1–3 inimigos por sala e tochas nas paredes.",
      "O baú fica na sala mais distante da entrada: a melhor arma, moedas (100 a 2000) e comida. Nas masmorras da floresta pode vir lá uma Pedra de Regresso (10%).",
      "Um inimigo morto numa masmorra não volta: ela fica limpa.",
+     "Dentro de uma masmorra, o mapa (M) e o minimapa mostram a planta dela, só com o que já viste; o que viste fica guardado para a próxima visita.",
      "A masmorra do Rei Esqueleto (mundos novos): só tem esqueletos e, na sala do fundo, uma câmara selada com uma porta com uma coroa gravada. Abre quando destróis 15 esqueletos lá dentro (missão «Para dentro da escuridão»); lá dentro está o altar onde a Coroa acorda o Rei.",
      "Armadilhas: espinhos no chão (32% da vida de um jogador ao nível da masmorra) e lança-setas nas paredes (24%). Um dash passa pelos espinhos; o escudo para as setas.",
    ]},
