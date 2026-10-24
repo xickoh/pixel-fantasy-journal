@@ -119,6 +119,7 @@ const MECHANICS = [
      "Cada área tem uma entrada de mina. Lá dentro há 7–11 salas, 1–3 inimigos por sala e tochas nas paredes.",
      "O baú fica na sala mais distante da entrada: a melhor arma, moedas (100 a 2000) e comida. Nas masmorras da floresta pode vir lá uma Pedra de Regresso (10%).",
      "Um inimigo morto numa masmorra não volta: ela fica limpa.",
+     "Armadilhas: espinhos no chão (32% da vida de um jogador ao nível da masmorra) e lança-setas nas paredes (24%). Um dash passa pelos espinhos; o escudo para as setas.",
    ]},
   {id: "pois", title: "Pontos de interesse", icon: "🏕", src: "docs/world.md · Points of interest",
    lead: "Coisas para descobrir fora da vila.",
