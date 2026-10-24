@@ -27,6 +27,8 @@ SLOTS = {"head": "Cabeça", "chest": "Peito", "legs": "Pernas", "off_hand": "Mã
 WEAPON_TYPES = {0: "Corpo a corpo", 1: "À distância", 2: "Mágica"}
 FAMILIES = {"orc": "Orcs", "skeleton": "Esqueletos", "mummy": "Múmias"}
 BIOMES = {"forest": "Floresta", "desert": "Deserto"}
+SHOP_VILLAGER = {"tavern": "estalajadeiro", "blacksmith_weapons": "ferreiro", "wizard": "feiticeiro",
+                 "stableman": "tratador", "greengrocer": "mercearia", "butcher": "talho", "baker": "padaria"}
 STATIONS = {"": "À mão", "crafting_table": "Bancada de Trabalho", "furnace": "Fornalha"}
 
 
@@ -79,16 +81,16 @@ def main():
     for e in raw["enemies"]:
         for line in e.get("loot_table", []):
             for iid in line["items"]:
-                drops.setdefault(iid, []).append({"enemy": tr(e["name"]), "chance": line["chance"],
+                drops.setdefault(iid, []).append({"enemy": tr(e["name"]), "id": e["id"], "chance": line["chance"],
                                                   "min": line["min"], "max": line["max"], "boss": e["boss"]})
 
     # --- who sells what
     sold = {}
     for s in raw["stores"]:
         for it in s["items"]:
-            sold.setdefault(it["id"], []).append({"shop": tr(s["name"]), "price": it["price"]})
+            sold.setdefault(it["id"], []).append({"shop": tr(s["name"]), "who": SHOP_VILLAGER.get(s["file"], ""), "price": it["price"]})
         for o in s["offers"]:
-            sold.setdefault(o["item"], []).append({"shop": tr(s["name"]), "price": o["price"], "amount": o.get("amount", 1)})
+            sold.setdefault(o["item"], []).append({"shop": tr(s["name"]), "who": SHOP_VILLAGER.get(s["file"], ""), "price": o["price"], "amount": o.get("amount", 1)})
 
     recipes = {}
     for r in raw["recipes"]:
@@ -165,11 +167,13 @@ def main():
             add("Pilha", it["stackable_number"])
         row = {"id": it["id"], "name": tr(it["name"]), "name_en": it["name"], "cat": it["category"],
                "desc": tr(it.get("description", "")), "stats": stats}
+        if it.get("teaches"):
+            row["teaches"] = it["teaches"]
         if it["id"] in recipes:
             r = recipes[it["id"]]
             row["recipe"] = {"amount": r["amount"], "station": STATIONS.get(r["station"], iname(r["station"])),
                              "hidden": r.get("hidden", False),
-                             "ing": [[iname(k), v] for k, v in r["ingredients"].items()]}
+                             "ing": [[iname(k), v, k] for k, v in r["ingredients"].items()]}
         if it["id"] in sold:
             row["sold"] = sold[it["id"]]
         if it["id"] in drops:
@@ -184,13 +188,13 @@ def main():
     for e in raw["enemies"]:
         loot = []
         for line in e.get("loot_table", []):
-            loot.append({"items": [iname(i) for i in line["items"]], "chance": line["chance"], "min": line["min"],
+            loot.append({"items": [[iname(i), i] for i in line["items"]], "chance": line["chance"], "min": line["min"],
                          "max": line["max"], "weapon": line["weapon_drop"]})
         enemies.append({
             "id": e["id"], "name": tr(e["name"]), "family": FAMILIES.get(e.get("family", ""), e.get("family", "")),
             "biome": BIOMES.get(e.get("biome", "forest"), e.get("biome", "forest")), "boss": e["boss"],
             "archetype": e.get("archetype", ""), "ranged": bool(e.get("ranged")),
-            "weapon": iname(e["weapon_id"]) if e.get("weapon_id") else "",
+            "weapon": iname(e["weapon_id"]) if e.get("weapon_id") else "", "weapon_id": e.get("weapon_id", ""),
             "speed": e.get("speed", 45), "detection": e.get("detection_radius", 140), "windup": e.get("windup_time", 0.1),
             "knockback_reduction": e.get("knockback_reduction", 0), "crit": e.get("crit", 0),
             "weight": e.get("spawn_weight", 1), "shot_damage_l1": e.get("shot_damage_l1"),
@@ -201,23 +205,23 @@ def main():
 
     # --- villagers: the roles come from the shops' data
     rules = raw["store_rules"]
-    shop_items = lambda stock: [iname(i) for i in stock.get("items", [])] + [iname(o["item"]) for o in stock.get("offers", [])]
+    shop_items = lambda stock: [[iname(i), i] for i in stock.get("items", [])] + [[iname(o["item"]), o["item"]] for o in stock.get("offers", [])]
     villagers = [
-        {"name": "Quem dá as missões", "where": "Junto à fogueira da vila", "does": "Dá as missões da história; a primeira abre as bancas do mercado.",
+        {"id": "missoes", "name": "Quem dá as missões", "where": "Junto à fogueira da vila", "does": "Dá as missões da história; a primeira abre as bancas do mercado.",
          "sells": []},
-        {"name": "Estalajadeiro", "where": "Taberna", "does": "Vende comida e bebida; descansa-se aqui por %s moedas (uma vez por dia)." % rules.get("rest_price", "?"),
+        {"id": "estalajadeiro", "name": "Estalajadeiro", "where": "Taberna", "does": "Vende comida e bebida; descansa-se aqui por %s moedas (uma vez por dia)." % rules.get("rest_price", "?"),
          "sells": shop_items(rules.get("innkeeper_stock", {}))},
-        {"name": "Ferreiro", "where": "Forja", "does": "Vende armas, escudo, armaduras e munição; refaz o encantamento das peças.",
+        {"id": "ferreiro", "name": "Ferreiro", "where": "Forja", "does": "Vende armas, escudo, armaduras e munição; refaz o encantamento das peças.",
          "sells": shop_items(rules.get("blacksmith_stock", {}))},
-        {"name": "Feiticeiro", "where": "Na vila (torre do feiticeiro)", "does": "Vende poções e pergaminhos de regresso.",
+        {"id": "feiticeiro", "name": "Feiticeiro", "where": "Na vila (torre do feiticeiro)", "does": "Vende poções e pergaminhos de regresso.",
          "sells": shop_items(rules.get("wizard_stock", {}))},
-        {"name": "Tratador de cavalos", "where": "Estábulo", "does": "Vende cavalos.",
+        {"id": "tratador", "name": "Tratador de cavalos", "where": "Estábulo", "does": "Vende cavalos.",
          "sells": shop_items(rules.get("stableman_stock", {}))},
     ]
     for stock in rules.get("stocks", []):
-        villagers.append({"name": tr(stock["name"]), "where": "Mercado da vila (bancas)",
+        villagers.append({"id": {"Greengrocer": "mercearia", "Butcher": "talho", "Baker": "padaria"}.get(stock["name"], stock["name"].lower()), "name": tr(stock["name"]), "where": "Mercado da vila (bancas)",
                           "does": "Um em cada %s aldeões é vendedor de comida." % rules.get("store_every", 3),
-                          "sells": [iname(i) for i in stock.get("items", [])]})
+                          "sells": [[iname(i), i] for i in stock.get("items", [])]})
     for v in villagers:
         v["name"] = tr(v["name"])
     personalities = [{"name": tr(p.get("tone", p["id"])), "id": p["id"],

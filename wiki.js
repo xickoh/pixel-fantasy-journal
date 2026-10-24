@@ -1,24 +1,51 @@
 // A wiki: lê WIKI (data/wiki_data.js, gerado a partir dos dados do jogo) e MECHANICS (data/wiki_mechanics.js, à mão).
+// Cada item, inimigo, aldeão e mecânica tem a sua página: wiki.html#itens/sword, #inimigos/orc_axe, #aldeoes/ferreiro, #mecanicas/morte.
 (function () {
   const $ = (id) => document.getElementById(id);
-  const out = $('out'), q = $('wq'), chips = $('chips'), count = $('count');
+  const out = $('out'), q = $('wq'), chips = $('chips'), count = $('count'), bar = $('wikibar'), tabsEl = $('tabs');
   const TABS = [
     ['itens', 'Itens'], ['inimigos', 'Inimigos'], ['aldeoes', 'Aldeões'],
     ['mecanicas', 'Mecânicas'], ['numeros', 'Números'],
   ];
   const LEVELS = ['1', '10', '20', '30', '40'];
+  const ARCH = {balanced: 'Equilibrado', tank: 'Resistente', fast: 'Rápido', armored: 'Blindado', brute: 'Bruto'};
+  const FAM = {orc: 'Orcs', skeleton: 'Esqueletos', mummy: 'Múmias'};
   let tab = 'itens', cat = '';
+
+  const ITEMS = {}; WIKI.items.forEach((i) => { ITEMS[i.id] = i; });
+  const ENEMIES = {}; WIKI.enemies.forEach((e) => { ENEMIES[e.id] = e; });
+  const VILLAGERS = {}; WIKI.villagers.forEach((v) => { VILLAGERS[v.id] = v; });
+  const MECH = {}; MECHANICS.forEach((m) => { MECH[m.id] = m; });
 
   function h(tag, cls, kids) {
     const e = document.createElement(tag);
     if (cls) e.className = cls;
     (Array.isArray(kids) ? kids : kids == null ? [] : [kids]).forEach((k) => {
+      if (k == null) return;
       e.appendChild(typeof k === 'string' || typeof k === 'number' ? document.createTextNode(String(k)) : k);
     });
     return e;
   }
   const norm = (s) => String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
   const fmt = (n) => (typeof n === 'number' ? (Number.isInteger(n) ? String(n) : String(+n.toFixed(2)).replace('.', ',')) : String(n));
+  const pct = (x) => fmt(Math.round(x * 100)) + '%';
+  function link(kind, id, text) {
+    const a = h('a', 'wl', text);
+    a.href = '#' + kind + '/' + id;
+    return a;
+  }
+  // "a, b, c" with each one a link when it has a page
+  function list(pairs, kind, sep) {
+    const span = h('span');
+    pairs.forEach((p, i) => {
+      if (i) span.appendChild(document.createTextNode(sep || ', '));
+      const [name, id] = p;
+      span.appendChild(id && (kind === 'itens' ? ITEMS[id] : ENEMIES[id]) ? link(kind, id, name) : document.createTextNode(name));
+    });
+    return span;
+  }
+  function pill(text, cls) { return h('span', 'pill ' + (cls || ''), text); }
+  function row(label, content) { return h('li', null, [h('b', null, label + ': '), content]); }
 
   // {s.key} / {r.key}, with |pct (0.5 -> 50%) and |min (seconds -> minutes)
   function fill(text) {
@@ -31,13 +58,11 @@
     });
   }
 
-  function pill(text, cls) { return h('span', 'pill ' + (cls || ''), text); }
-
   // --- itens
-  function itemCard(it) {
-    const c = h('article', 'wcard ' + it.cat);
-    const head = h('header', null, [h('h3', null, it.name), pill(WIKI.categories[it.cat] || it.cat)]);
-    c.appendChild(head);
+  function itemCard(it, full) {
+    const c = h('article', 'wcard ' + it.cat + (full ? ' detail' : ''));
+    c.appendChild(h('header', null, [full ? h('h1', null, it.name) : h('h3', null, link('itens', it.id, it.name)),
+      pill(WIKI.categories[it.cat] || it.cat)]));
     if (it.name_en && it.name_en !== it.name) c.appendChild(h('p', 'en', it.name_en));
     if (it.desc) c.appendChild(h('p', 'desc', it.desc));
     if (it.stats.length) {
@@ -47,15 +72,45 @@
     }
     const info = h('ul', 'info');
     if (it.recipe) {
-      const ing = it.recipe.ing.map(([n, k]) => k + '× ' + n).join(', ');
-      info.appendChild(h('li', null, [h('b', null, it.recipe.hidden ? 'Fabrico (planta): ' : 'Fabrico: '),
-        (it.recipe.amount > 1 ? it.recipe.amount + '× ← ' : '') + ing + ' · ' + it.recipe.station]));
+      const ing = h('span');
+      it.recipe.ing.forEach(([n, k, id], i) => {
+        if (i) ing.appendChild(document.createTextNode(', '));
+        ing.appendChild(document.createTextNode(k + '× '));
+        ing.appendChild(ITEMS[id] ? link('itens', id, n) : document.createTextNode(n));
+      });
+      info.appendChild(row(it.recipe.hidden ? 'Fabrico (planta)' : 'Fabrico',
+        h('span', null, [it.recipe.amount > 1 ? it.recipe.amount + '× ← ' : '', ing, ' · ' + it.recipe.station])));
     }
-    if (it.sold) info.appendChild(h('li', null, [h('b', null, 'Compra: '),
-      it.sold.map((s) => s.shop + ' ' + s.price + ' moedas' + (s.amount > 1 ? ' (' + s.amount + ')' : '')).join(' · ')]));
-    if (it.drops) info.appendChild(h('li', null, [h('b', null, 'Largado por: '),
-      it.drops.map((d) => d.enemy + ' (' + fmt(Math.round(d.chance * 100)) + '%' + (d.max > 1 ? ', ' + d.min + '–' + d.max : '') + ')').join(' · ')]));
-    if (it.sell) info.appendChild(h('li', null, [h('b', null, 'Vende por: '), it.sell + ' moedas']));
+    if (it.sold) {
+      const span = h('span');
+      it.sold.forEach((s, i) => {
+        if (i) span.appendChild(document.createTextNode(' · '));
+        span.appendChild(s.who && VILLAGERS[s.who] ? link('aldeoes', s.who, s.shop) : document.createTextNode(s.shop));
+        span.appendChild(document.createTextNode(' ' + s.price + ' moedas' + (s.amount > 1 ? ' (' + s.amount + ')' : '')));
+      });
+      info.appendChild(row('Compra', span));
+    }
+    if (it.drops) {
+      const span = h('span');
+      it.drops.forEach((d, i) => {
+        if (i) span.appendChild(document.createTextNode(' · '));
+        span.appendChild(link('inimigos', d.id, d.enemy));
+        span.appendChild(document.createTextNode(' (' + pct(d.chance) + (d.max > 1 ? ', ' + d.min + '–' + d.max : '') + ')'));
+      });
+      info.appendChild(row('Largado por', span));
+    }
+    if (it.sell) info.appendChild(row('Vende por', it.sell + ' moedas'));
+    if (full) {
+      if (it.teaches && ITEMS[it.teaches]) info.appendChild(row('Ensina a fazer', link('itens', it.teaches, ITEMS[it.teaches].name)));
+      const teachers = WIKI.items.filter((o) => o.teaches === it.id);
+      if (teachers.length) info.appendChild(row('Ensinado por', list(teachers.map((o) => [o.name, o.id]), 'itens')));
+      const uses = WIKI.items.filter((o) => o.recipe && o.recipe.ing.some((g) => g[2] === it.id));
+      if (uses.length) info.appendChild(row('Usado para fazer', list(uses.map((o) => [o.name, o.id]), 'itens')));
+      if (it.cat === 'weapon' || it.cat === 'tool' || it.cat === 'equipment') {
+        const holders = WIKI.enemies.filter((e) => e.weapon_id === it.id);
+        if (holders.length) info.appendChild(row('Usado por', list(holders.map((e) => [e.name, e.id]), 'inimigos')));
+      }
+    }
     if (info.children.length) c.appendChild(info);
     return c;
   }
@@ -69,35 +124,67 @@
   }
 
   // --- inimigos
-  function enemyCard(e) {
-    const c = h('article', 'wcard enemy' + (e.boss ? ' boss' : ''));
-    c.appendChild(h('header', null, [h('h3', null, e.name), e.boss ? pill('Chefe', 'red') : pill(e.family)]));
-    const tags = h('p', 'tags', [pill(e.biome, 'green'), e.ranged ? pill('À distância', 'blue') : pill('Corpo a corpo', 'blue')]);
-    if (e.weapon) tags.appendChild(pill(e.weapon, 'gray'));
-    c.appendChild(tags);
+  function levelTable(e) {
     const t = h('table', 'lv');
-    t.appendChild(h('thead', null, h('tr', null, [h('th', null, 'Nível')].concat(['Vida', 'Dano', 'Defesa', 'Veloc.'].map((x) => h('th', null, x))))));
+    t.appendChild(h('thead', null, h('tr', null, ['Nível', 'Vida', 'Dano', 'Defesa', 'Veloc.'].map((x) => h('th', null, x)))));
     const body = h('tbody');
     LEVELS.forEach((lv) => {
       const r = e.levels[lv];
-      if (!r) return;
-      body.appendChild(h('tr', null, [lv, r.health, r.damage, fmt(r.defense), fmt(r.speed)].map((x) => h('td', null, String(x)))));
+      if (r) body.appendChild(h('tr', null, [lv, r.health, r.damage, fmt(r.defense), fmt(r.speed)].map((x) => h('td', null, String(x)))));
     });
     t.appendChild(body);
-    c.appendChild(t);
+    return t;
+  }
+
+  function enemyCard(e, full) {
+    const c = h('article', 'wcard enemy' + (e.boss ? ' boss' : '') + (full ? ' detail' : ''));
+    c.appendChild(h('header', null, [full ? h('h1', null, e.name) : h('h3', null, link('inimigos', e.id, e.name)),
+      e.boss ? pill('Chefe', 'red') : pill(e.family)]));
+    const tags = h('p', 'tags', [pill(e.biome, 'green'), e.ranged ? pill('À distância', 'blue') : pill('Corpo a corpo', 'blue')]);
+    if (e.weapon) tags.appendChild(e.weapon_id && ITEMS[e.weapon_id] ? h('span', 'pill gray', link('itens', e.weapon_id, e.weapon)) : pill(e.weapon, 'gray'));
+    c.appendChild(tags);
+    c.appendChild(levelTable(e));
     const info = h('ul', 'info');
-    info.appendChild(h('li', null, [h('b', null, 'Vê-te a: '), fmt(e.detection) + ' px · pausa antes do golpe ' + fmt(e.windup) + ' s']));
-    if (e.shot_damage_l1) info.appendChild(h('li', null, [h('b', null, 'Disparo (nv 1): '), e.shot_damage_l1 + ' de dano']));
-    if (e.knockback_reduction) info.appendChild(h('li', null, [h('b', null, 'Empurrão: '), 'resiste a ' + fmt(Math.round(e.knockback_reduction * 100)) + '%']));
-    if (e.boss_health_x) info.appendChild(h('li', null, [h('b', null, 'Vida: '), '×' + fmt(e.boss_health_x) + ' a do tipo base']));
-    if (e.crit) info.appendChild(h('li', null, [h('b', null, 'Crítico: '), fmt(Math.round(e.crit * 100)) + '%']));
-    const loot = e.loot.map((l) => {
-      const what = l.weapon ? 'a sua arma' : l.items.length > 3 ? l.items.slice(0, 3).join(', ') + '…' : l.items.join(', ');
-      return what + ' (' + fmt(Math.round(l.chance * 100)) + '%' + (l.max > 1 ? ', ' + l.min + '–' + l.max : '') + ')';
-    });
-    if (loot.length) info.appendChild(h('li', null, [h('b', null, 'Larga: '), loot.join(' · ')]));
+    info.appendChild(row('Vê-te a', fmt(e.detection) + ' px · pausa antes do golpe ' + fmt(e.windup) + ' s'));
+    if (e.shot_damage_l1) info.appendChild(row('Disparo (nv 1)', e.shot_damage_l1 + ' de dano'));
+    if (e.knockback_reduction) info.appendChild(row('Empurrão', 'resiste a ' + pct(e.knockback_reduction)));
+    if (e.boss_health_x) info.appendChild(row('Vida', '×' + fmt(e.boss_health_x) + ' a do tipo base'));
+    if (e.crit) info.appendChild(row('Crítico', pct(e.crit)));
+    if (full) {
+      info.appendChild(row('Velocidade base', fmt(e.speed) + ' px/s'));
+      info.appendChild(row('Aparece', 'peso ' + fmt(e.weight) + ' · ' + e.biome));
+      if (e.archetype) info.appendChild(row('Tipo de crescimento', ARCH[e.archetype] || e.archetype));
+    }
+    if (e.loot.length) {
+      const span = h('span');
+      e.loot.forEach((l, i) => {
+        if (i) span.appendChild(document.createTextNode(' · '));
+        if (l.weapon) span.appendChild(document.createTextNode('a sua arma'));
+        else span.appendChild(list(full ? l.items : l.items.slice(0, 3), 'itens'));
+        if (!full && l.items.length > 3) span.appendChild(document.createTextNode('…'));
+        span.appendChild(document.createTextNode(' (' + pct(l.chance) + (l.max > 1 ? ', ' + l.min + '–' + l.max : '') + ')'));
+      });
+      info.appendChild(row('Larga', span));
+    }
+    if (full) {
+      const kin = WIKI.enemies.filter((o) => o.family === e.family && o.id !== e.id);
+      if (kin.length) info.appendChild(row('Mesma família', list(kin.map((o) => [o.name, o.id]), 'inimigos')));
+    }
     c.appendChild(info);
     return c;
+  }
+
+  function spawnTable() {
+    const t = h('table', 'lv wide');
+    t.appendChild(h('caption', null, 'Que inimigos aparecem em cada zona (peso relativo)'));
+    t.appendChild(h('thead', null, h('tr', null, ['Níveis', 'Famílias'].map((x) => h('th', null, x)))));
+    const body = h('tbody');
+    WIKI.spawn_rows.forEach((r) => {
+      const fams = Object.entries(r.families).map(([k, v]) => (FAM[k] || k) + ' ×' + fmt(v)).join(' · ');
+      body.appendChild(h('tr', null, [(r.level_min || 1) + '–' + r.level_max, fams].map((x) => h('td', null, x))));
+    });
+    t.appendChild(body);
+    return h('div', 'tablebox', t);
   }
 
   function renderEnemies(f) {
@@ -107,69 +194,64 @@
     const g = h('div', 'wgrid');
     rows.forEach((e) => g.appendChild(enemyCard(e)));
     wrap.appendChild(g);
-    if (!f && WIKI.spawn_rows.length) {
-      const t = h('table', 'lv wide');
-      t.appendChild(h('caption', null, 'Que inimigos aparecem em cada zona (peso relativo)'));
-      t.appendChild(h('thead', null, h('tr', null, ['Níveis', 'Famílias'].map((x) => h('th', null, x)))));
-      const body = h('tbody');
-      WIKI.spawn_rows.forEach((r) => {
-        const fams = Object.entries(r.families).map(([k, v]) => ({orc: 'Orcs', skeleton: 'Esqueletos', mummy: 'Múmias'}[k] || k) + ' ×' + fmt(v)).join(' · ');
-        body.appendChild(h('tr', null, [(r.level_min || 1) + '–' + r.level_max, fams].map((x) => h('td', null, x))));
-      });
-      t.appendChild(body);
-      wrap.appendChild(h('div', 'tablebox', t));
-    }
+    if (!f && WIKI.spawn_rows.length) wrap.appendChild(spawnTable());
     return wrap;
   }
 
   // --- aldeões
+  function villagerCard(v, full) {
+    const c = h('article', 'wcard villager' + (full ? ' detail' : ''));
+    c.appendChild(h('header', null, [full ? h('h1', null, v.name) : h('h3', null, link('aldeoes', v.id, v.name)), pill(v.where, 'gray')]));
+    c.appendChild(h('p', 'desc', v.does));
+    if (v.sells.length) c.appendChild(h('p', null, [h('b', null, 'Vende: '), list(v.sells, 'itens')]));
+    return c;
+  }
+
+  function personalityCard(p) {
+    const c = h('article', 'wcard villager');
+    c.appendChild(h('header', null, h('h3', null, p.name)));
+    const ul = h('ul', 'info');
+    p.greetings.forEach((s) => ul.appendChild(h('li', null, '“' + s + '”')));
+    c.appendChild(ul);
+    return c;
+  }
+
   function renderVillagers(f) {
     const wrap = h('div');
-    const rows = WIKI.villagers.filter((v) => !f || norm(v.name + ' ' + v.where + ' ' + v.does + ' ' + v.sells.join(' ')).includes(f));
+    const rows = WIKI.villagers.filter((v) => !f || norm(v.name + ' ' + v.where + ' ' + v.does + ' ' + v.sells.map((s) => s[0]).join(' ')).includes(f));
     count.textContent = rows.length + ' papéis · os aldeões não têm vida nem dano: não lutam, vendem, dão missões e conversam';
     const g = h('div', 'wgrid');
-    rows.forEach((v) => {
-      const c = h('article', 'wcard villager');
-      c.appendChild(h('header', null, [h('h3', null, v.name), pill(v.where, 'gray')]));
-      c.appendChild(h('p', 'desc', v.does));
-      if (v.sells.length) c.appendChild(h('p', null, [h('b', null, 'Vende: '), v.sells.join(', ')]));
-      g.appendChild(c);
-    });
+    rows.forEach((v) => g.appendChild(villagerCard(v)));
     wrap.appendChild(g);
     if (!f) {
       wrap.appendChild(h('h2', 'sub', 'Personalidades'));
       wrap.appendChild(h('p', 'note', 'Cada aldeão tem uma, escolhida pela semente do mundo e pelo nome. Define as falas.'));
       const pg = h('div', 'wgrid');
-      WIKI.personalities.forEach((p) => {
-        const c = h('article', 'wcard villager');
-        c.appendChild(h('header', null, h('h3', null, p.name)));
-        const ul = h('ul', 'info');
-        p.greetings.forEach((s) => ul.appendChild(h('li', null, '“' + s + '”')));
-        c.appendChild(ul);
-        pg.appendChild(c);
-      });
+      WIKI.personalities.forEach((p) => pg.appendChild(personalityCard(p)));
       wrap.appendChild(pg);
     }
     return wrap;
   }
 
   // --- mecânicas
+  function mechCard(m, full) {
+    const c = h('article', 'wcard mechanic' + (full ? ' detail' : ''));
+    const title = m.icon + ' ' + m.title;
+    c.appendChild(h('header', null, [full ? h('h1', null, title) : h('h3', null, link('mecanicas', m.id, title))]));
+    c.appendChild(h('p', 'desc', m.lead));
+    const ul = h('ul', 'info');
+    m.points.forEach((p) => ul.appendChild(h('li', null, fill(p))));
+    c.appendChild(ul);
+    c.appendChild(h('p', 'src', 'Fonte: ' + m.src));
+    return c;
+  }
+
   function renderMechanics(f) {
     const wrap = h('div');
     const rows = MECHANICS.filter((m) => !f || norm(m.title + ' ' + m.lead + ' ' + m.points.join(' ')).includes(f));
     count.textContent = rows.length + ' mecânicas';
     const g = h('div', 'wgrid mech');
-    rows.forEach((m) => {
-      const c = h('article', 'wcard mechanic');
-      c.id = 'm-' + m.id;
-      c.appendChild(h('header', null, [h('h3', null, m.icon + ' ' + m.title)]));
-      c.appendChild(h('p', 'desc', m.lead));
-      const ul = h('ul', 'info');
-      m.points.forEach((p) => ul.appendChild(h('li', null, fill(p))));
-      c.appendChild(ul);
-      c.appendChild(h('p', 'src', 'Fonte: ' + m.src));
-      g.appendChild(c);
-    });
+    rows.forEach((m) => g.appendChild(mechCard(m)));
     wrap.appendChild(g);
     if (!f) {
       wrap.appendChild(h('h2', 'sub', 'Missões'));
@@ -225,6 +307,10 @@
   }
 
   const VIEWS = {itens: renderItems, inimigos: renderEnemies, aldeoes: renderVillagers, mecanicas: renderMechanics, numeros: renderNumbers};
+  const DETAIL = {
+    itens: [ITEMS, itemCard, 'Itens'], inimigos: [ENEMIES, enemyCard, 'Inimigos'],
+    aldeoes: [VILLAGERS, villagerCard, 'Aldeões'], mecanicas: [MECH, mechCard, 'Mecânicas'],
+  };
 
   function drawChips() {
     chips.textContent = '';
@@ -233,33 +319,64 @@
     cats.forEach(([k, label]) => {
       const b = h('button', 'chip' + (k === cat ? ' on' : ''), label);
       b.type = 'button';
-      b.onclick = () => { cat = k; draw(); };
+      b.onclick = () => { cat = k; drawList(); };
       chips.appendChild(b);
     });
   }
 
-  function draw() {
-    $('tabs').querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.tab === tab));
+  function drawList() {
     drawChips();
     out.textContent = '';
     out.appendChild(VIEWS[tab](norm(q.value.trim())));
   }
 
-  function go(t) {
+  function drawDetail(kind, id) {
+    const [table, build, label] = DETAIL[kind];
+    const entry = table[id];
+    out.textContent = '';
+    count.textContent = '';
+    chips.textContent = '';
+    const back = link(kind, '', '');
+    back.href = '#' + kind;
+    back.className = 'wl back';
+    back.textContent = '← ' + label;
+    out.appendChild(back);
+    if (!entry) {
+      out.appendChild(h('p', 'note', 'Esta página não existe (já não está nos dados do jogo).'));
+      return;
+    }
+    document.title = (entry.name || entry.title) + ' · Pixel Fantasy Wiki';
+    const wrap = h('div', 'detailwrap');
+    wrap.appendChild(build(entry, true));
+    if (kind === 'inimigos' && !entry.boss && WIKI.spawn_rows.length) wrap.appendChild(spawnTable());
+    out.appendChild(wrap);
+    window.scrollTo(0, 0);
+  }
+
+  function route() {
+    const [t, id] = location.hash.slice(1).split('/');
     tab = VIEWS[t] ? t : 'itens';
-    if (location.hash.slice(1) !== tab) history.replaceState(null, '', '#' + tab);
-    draw();
+    tabsEl.querySelectorAll('button').forEach((b) => b.classList.toggle('on', b.dataset.tab === tab));
+    document.title = 'Pixel Fantasy Wiki';
+    if (id && DETAIL[tab]) {
+      bar.hidden = true;
+      drawDetail(tab, decodeURIComponent(id));
+    } else {
+      bar.hidden = false;
+      count.hidden = false;
+      drawList();
+    }
   }
 
   TABS.forEach(([id, label]) => {
     const b = h('button', 'tab', label);
     b.type = 'button';
     b.dataset.tab = id;
-    b.onclick = () => go(id);
-    $('tabs').appendChild(b);
+    b.onclick = () => { q.value = ''; location.hash = '#' + id; if (location.hash === '#' + id) route(); };
+    tabsEl.appendChild(b);
   });
-  q.addEventListener('input', draw);
-  window.addEventListener('hashchange', () => go(location.hash.slice(1)));
+  q.addEventListener('input', drawList);
+  window.addEventListener('hashchange', route);
   $('stamp').textContent = 'Gerada a ' + WIKI.generated + ' a partir do jogo (commit ' + WIKI.game_commit + '). Os preços são os base: o mercado do dia mexe-lhes.';
-  go(location.hash.slice(1) || 'itens');
+  route();
 })();

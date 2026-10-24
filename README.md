@@ -11,6 +11,7 @@ Site estático (abrir `index.html`) com as funcionalidades do jogo Pixel Fantasy
 
 `wiki.html` (+ `wiki.js`): itens, inimigos, aldeões, mecânicas e números do jogo.
 
+- Cada item, inimigo, aldeão e mecânica tem a sua página: `wiki.html#itens/<id>`, `#inimigos/<id>`, `#aldeoes/<id>`, `#mecanicas/<id>` (uma só página, rota pelo hash; as páginas nascem dos dados, não há ficheiros por entrada).
 - `data/wiki_data.js`: **gerado**, não se edita. `python3 tools/build_wiki.py` corre o Godot em headless (`tools/export_wiki.gd` e `.tscn`, que leem os `.tres` do jogo pelas classes do jogo) e junta as traduções pt de `translations/strings.csv`. Precisa do flatpak `org.godotengine.Godot`; o jogo está em `PF_GAME` (por defeito `/home/deck/Documents/pixel_fantasy`).
 - `python3 tools/build_wiki.py --check`: diz se a wiki está desatualizada em relação ao jogo (exit 1 se estiver).
 - `data/wiki_mechanics.js`: as regras que não estão nos dados (morte, dormir, comércio...), à mão, em pt-PT. As marcas `{s.chave}` e `{r.chave}` (com `|pct` e `|min`) vão buscar o valor aos dados, por isso os números não envelhecem.
