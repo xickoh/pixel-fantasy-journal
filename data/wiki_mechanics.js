@@ -129,6 +129,7 @@ const MECHANICS = [
    points: [
      "Acampamentos de inimigos, ruínas com plantas, veios de minério ricos, um ermita e santuários espalham-se pelo mapa.",
      "Cemitérios (mundos novos): muitas sepulturas que se partem e dão lápides, esqueletos de guarda e um baú que abre quando morrem. Com a Morte no nível {s.death_graveyard_sense_level}, as sepulturas com achados brilham.",
+     "Nos mundos novos, caixas e barris à volta dos pontos de interesse (e os do acampamento junto à fogueira) partem-se com qualquer golpe: a caixa dá moedas, troncos, ossos ou pedra; o barril comida, às vezes uma poção. Pouco: o baú continua a ser o prémio.",
      "Waypoints: um obelisco em cada bioma e outro na vila. Acende-se quando chegas perto e, a partir daí, viajas entre os que encontraste pelo mapa.",
    ]},
   {id: "chefes", title: "Chefes", icon: "👑", src: "docs/enemies.md · Skeleton King, Giant Orc",
