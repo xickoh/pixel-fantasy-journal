@@ -1,7 +1,7 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos que se escavam e terra que se volta a pôr, ciclo dia/noite","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área (acampamentos, ruínas)"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos que se escavam e terra que se volta a pôr, ciclo dia/noite","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área (acampamentos, ruínas, ermitões)"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões, fases do mundo e lojas de compra e venda"]},
  {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots com lixo, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99, poderes nas armas e plantas escondidas que ensinam receitas"]},
  {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo próprio: mais rápido e sem gastar stamina","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa"]},
@@ -84,6 +84,7 @@ window.SHOTS = [
  {f:"tab_fabrico",t:"Menu do Tab",d:"Separadores com ícones, categorias pequenas e o detalhe da receita com o botão Fabricar."},
  {f:"tab_skills",t:"Skills em madeira",d:"Barras de XP em moldura de madeira e o resumo num pergaminho."},
  {f:"armas_na_mao",t:"Armas na mão",d:"A espada descansa ao lado da perna e a lança em pé; a mão vê-se por cima do cabo."},
+ {f:"ermitao",t:"Ermitão",d:"Um homem estranho numa cabana isolada: traz-lhe o que pede e dá-te um poder de arma raro."},
  {f:"ruinas",t:"Ruínas",d:"Pedras partidas, potes e uma câmara selada: a chave está no acampamento da área; lá dentro, plantas de receitas escondidas."},
  {f:"acampamento",t:"Acampamentos",d:"Uma fogueira, caixotes, um baú trancado e orcs do nível da área: mata-os todos e o baú abre."}
 ];
