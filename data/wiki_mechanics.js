@@ -78,6 +78,7 @@ const MECHANICS = [
      "Exumar: partir a sepultura de outro (não a tua) pode dar um achado: moedas, comida, barras ou uma espada. A chance vai de 0 a {s.death_exhume_chance_level_99|pct} no nível 99.",
      "Os inimigos de elite e os chefes que matas podem largar uma lápide: até {s.death_gravestone_drop_level_99|pct} no nível 99 (os chefes contam a dobrar). Os inimigos comuns nunca.",
      "A lápide vende-se por mais com o nível: 20 moedas no nível 1, 60 no 99.",
+     "Desmontar (nível {s.death_salvage_level}): um item fabricado desfaz-se numa parte dos seus ingredientes, 25% a 75% conforme o nível (botão direito no item, \"Desmontar\").",
      "Uma lápide parte-se em 5 pedras logo no nível 1. A partir do nível 10, dá barras de ouro: 1 por cada 10 níveis (10 no nível 99).",
    ]},
   {id: "fabrico", title: "Fabrico", icon: "🔨", src: "docs/items.md · Crafting",
