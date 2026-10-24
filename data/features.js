@@ -1,10 +1,11 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
- {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming, limites das áreas e zoom no jogador","Waypoints em cada bioma: descobrem-se ao chegar perto e viaja-se entre eles pelo mapa","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área: acampamentos, ruínas, ermitões, santuários e veios ricos"]},
+ {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado","Visão limitada: um cone para onde olhas, tapado por árvores, rochas e paredes"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming, limites das áreas e zoom no jogador","Waypoints em cada bioma: descobrem-se ao chegar perto e viaja-se entre eles pelo mapa","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área: acampamentos, ruínas, ermitões, santuários e veios ricos","Clima (limpo, chuva, nevoeiro) por seed e bioma; planaltos em 10% do mapa; caixas e barris que se partem"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casa do jogador, quadro de encomendas com contratos diários e melhorias da vila pagas com moedas","Aldeões com personalidade e rotina: mercado ao meio-dia, taverna à noite, conversas em balões","Mercado com preços do dia, reforja no ferreiro, descanso na taverna e um Treinador de poderes"]},
  {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting de largura fixa e comparação de itens no tooltip","Minérios que pedem a picareta do anterior, fornalha, armaduras em cinco metais e de couro","10 skills com XP de 1 a 99 (a Morte sobe a matar e dá poderes), vida que regenera, poderes nas armas e plantas que ensinam receitas"]},
- {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo no slot de montada (H): mais rápido, sem stamina; um golpe forte atira-te ao chão","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa"]},
+ {icon:"📜",color:"purple",title:"História",items:["9 missões do Mensageiro até ao Rei Esqueleto: entregas, portões de níveis, o mapa do ermitão","A masmorra do Rei: câmara selada, altar e a Coroa forjada pela missão","O Orc Gigante é opcional: boatos, um corno partido nos acampamentos e um contrato raro"]},
+ {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo no slot de montada (H): mais rápido, sem stamina; um golpe forte atira-te ao chão","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa","Mapa da masmorra com nevoeiro próprio, guardado entre visitas"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, minimapa redondo e menu do Tab com ícones","Testes automáticos e este journal, atualizado a cada commit"]}
 ];
@@ -112,5 +113,14 @@ window.SHOTS = [
  {f:"morte_ouro",t:"Lápides em ouro",d:"Com a Morte, uma lápide dá pedra e, a partir do nível 10, barras de ouro."},
  {f:"morte_aura",t:"Almas e aura",d:"A barra de almas cheia, a lentidão depois de morrer e a aura do nível 75."},
  {f:"cemiterio",t:"Cemitério",d:"Sepulturas que se partem, esqueletos de guarda e um baú no meio."},
- {f:"skills_hover",t:"Stats por skill",d:"Passa o rato numa skill e vês só o que ela muda."}
+ {f:"skills_hover",t:"Stats por skill",d:"Passa o rato numa skill e vês só o que ela muda."},
+ {f:"apanhar_tudo",t:"Apanhar tudo",d:"Um botão no baú passa tudo para o inventário num só pedido ao host."},
+ {f:"planaltos_10",t:"Planaltos",d:"Nos mundos novos cobrem 10% do mapa e nunca tapam minérios (amarelo) nem pontos de interesse (rosa)."},
+ {f:"masmorra_rei",t:"A masmorra do Rei",d:"Só esqueletos; a câmara selada (roxo) com a porta da coroa e o altar no meio."},
+ {f:"caixas_partir",t:"Caixas e barris",d:"Junto aos pontos de interesse partem-se com qualquer golpe e largam um pouco de loot."},
+ {f:"mapa_masmorra",t:"Mapa da masmorra",d:"Dentro de uma masmorra o mapa mostra a planta dela, só o que já viste."},
+ {f:"chuva",t:"Chuva",d:"Gotas finas e o céu mais azulado; o ícone do clima ao lado do relógio."},
+ {f:"nevoeiro",t:"Nevoeiro",d:"Uma névoa que se move devagar, mais densa nas bordas."},
+ {f:"visao",t:"Visão",d:"Vês para onde olhas; o tronco da árvore tapa o que está atrás."},
+ {f:"lentidao_icone",t:"Lentidão",d:"Depois de morrer, uma bota roxa e o tempo que falta; a animação de andar abranda na mesma proporção."}
 ];
