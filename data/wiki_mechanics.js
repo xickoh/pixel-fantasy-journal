@@ -26,6 +26,7 @@ const MECHANICS = [
      "Um dia de jogo dura {s.day_length|min} minutos reais. Um novo jogo começa às {s.new_game_hour}h.",
      "As rotinas dos aldeões, as lojas, a luz e o crescer dos tocos contam em horas de jogo. Os cooldowns e os nascimentos de inimigos contam em segundos reais.",
      "Na vila, os inimigos não entram: a muralha de troncos protege-a.",
+     "Visão: vês {s.vision_radius} px num cone de {s.vision_angle}° para onde olhas (o rato, ou a direção com o comando) e um pequeno círculo à tua volta; árvores, rochas e paredes tapam o que está atrás. O resto fica escuro. Em casa não há cone; nas Opções podes desligar a visão limitada.",
      "Clima: limpo, chuva ou nevoeiro, em blocos de 3 a 8 horas de jogo. Na floresta: 60% limpo, 25% chuva, 15% nevoeiro; no deserto nunca chove. O primeiro dia é sempre limpo. O ícone ao lado do relógio diz qual está; nas Opções podes desligar os efeitos visuais.",
      "De dia há no máximo 40 inimigos vivos no mundo; à noite até 120. Ao anoitecer vão nascendo aos poucos; ao amanhecer os que sobram não desaparecem de repente, só deixam de nascer novos.",
    ]},
