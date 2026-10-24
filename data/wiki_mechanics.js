@@ -54,7 +54,7 @@ const MECHANICS = [
    lead: "Um salto rápido que atravessa inimigos.",
    points: [
      "Espaço faz um dash de {s.dash_distance} px em {s.dash_duration} s. Durante o dash não levas dano nem empurrões e atravessas os inimigos.",
-     "A espera do dash vai de {s.dash_cooldown_level_1} s (nível 1 de Esquiva) a {s.dash_cooldown_level_99} s (nível 99). Cada dash dá XP de Esquiva.",
+     "A espera do dash vai de {s.dash_cooldown_level_1} s (nível 1 de Esquiva) a {s.dash_cooldown_level_99} s (nível 99). Cada dash dá {s.dodge_xp_per_dash_level} XP de Esquiva por nível que já tens.",
      "A esquiva (chance de evitar um golpe) vai de 0% até {s.dodge_max_chance|pct} no nível 99. Um golpe esquivado não faz dano nem empurra.",
    ]},
   {id: "skills", title: "Skills", icon: "📈", src: "docs/player.md · Skills",
