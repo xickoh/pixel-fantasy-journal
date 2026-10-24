@@ -26,6 +26,7 @@ const MECHANICS = [
      "Um dia de jogo dura {s.day_length|min} minutos reais. Um novo jogo começa às {s.new_game_hour}h.",
      "As rotinas dos aldeões, as lojas, a luz e o crescer dos tocos contam em horas de jogo. Os cooldowns e os nascimentos de inimigos contam em segundos reais.",
      "Na vila, os inimigos não entram: a muralha de troncos protege-a.",
+     "De dia há no máximo 40 inimigos vivos no mundo; à noite até 120. Ao anoitecer vão nascendo aos poucos; ao amanhecer os que sobram não desaparecem de repente, só deixam de nascer novos.",
    ]},
   {id: "vida", title: "Vida e regeneração", icon: "❤", src: "docs/player.md · Skills, Health regeneration",
    lead: "A vida cresce com o nível de Vida e volta sozinha.",
