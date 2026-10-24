@@ -121,6 +121,7 @@ const MECHANICS = [
      "Cada área tem uma entrada de mina. Lá dentro há 7–11 salas, 1–3 inimigos por sala e tochas nas paredes.",
      "O baú fica na sala mais distante da entrada: a melhor arma, moedas (100 a 2000) e comida. Nas masmorras da floresta pode vir lá uma Pedra de Regresso (10%).",
      "Um inimigo morto numa masmorra não volta: ela fica limpa.",
+     "A masmorra do Rei Esqueleto (mundos novos): só tem esqueletos e, na sala do fundo, uma câmara selada com uma porta com uma coroa gravada. Abre quando destróis 15 esqueletos lá dentro (missão «Para dentro da escuridão»); lá dentro está o altar onde a Coroa acorda o Rei.",
      "Armadilhas: espinhos no chão (32% da vida de um jogador ao nível da masmorra) e lança-setas nas paredes (24%). Um dash passa pelos espinhos; o escudo para as setas.",
    ]},
   {id: "pois", title: "Pontos de interesse", icon: "🏕", src: "docs/world.md · Points of interest",
@@ -133,7 +134,8 @@ const MECHANICS = [
   {id: "chefes", title: "Chefes", icon: "👑", src: "docs/enemies.md · Skeleton King, Giant Orc",
    lead: "Dois chefes, chamados a pedido.",
    points: [
-     "O Rei Esqueleto e o Orc Gigante invocam-se fora da vila com a Coroa do Esqueleto e o Corno de Guerra Orc. Só há um chefe vivo de cada vez.",
+     "O Orc Gigante invoca-se fora da vila com o Corno de Guerra Orc; é opcional. Nos mundos novos a receita do corno está escondida: aprende-se com uma planta (ruínas ou um contrato raro).",
+     "O Rei Esqueleto: nos mundos novos a Coroa vem da missão «A coroa de ossos» e só funciona no altar da masmorra dele. Nos mundos antigos fabrica-se e invoca-se fora da vila. Só há um chefe vivo de cada vez.",
      "Têm muita vida, quase não se deixam empurrar e largam armas que só eles dão.",
    ]},
   {id: "missoes", title: "Missões", icon: "📜", src: "docs/quests.md",
@@ -141,6 +143,9 @@ const MECHANICS = [
    points: [
      "Quem dá as missões está junto à fogueira. A primeira (matar orcs) devolve a paz à vila e abre as bancas do mercado.",
      "A missão ativa aparece no mapa com uma estrela. O painel de contratos da vila tem trabalhos extra.",
+     "Nos mundos novos a história segue em 9 missões até ao Rei Esqueleto: entregar ossos, chegar a níveis de skills (o HUD mostra cada uma a vermelho até chegares), ajudar o ermitão (revela a masmorra do Rei no mapa), destruir esqueletos nessa masmorra, trazer ossos e ouro para a Coroa e, por fim, matar o Rei.",
+     "Os níveis pedidos: Vida 10 e Força 10; depois Vida 20, Resistência 10 e Mineração 10; por fim Vida 30, Força 20 e Esquiva 10. Quem entrega tem de os ter.",
+     "Se perderes a Coroa durante a última missão, o Mensageiro forja outra pelos mesmos 20 ossos e barra de ouro.",
    ]},
   {id: "mundo", title: "Mundo e inimigos", icon: "🗺", src: "docs/world.md, docs/enemies.md",
    lead: "A vila fica numa floresta; para lá dela há deserto.",
