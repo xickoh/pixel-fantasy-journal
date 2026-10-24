@@ -1,10 +1,10 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos que se escavam e terra que se volta a pôr, ciclo dia/noite","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área: acampamentos, ruínas, ermitões, santuários e veios ricos"]},
- {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões, fases do mundo e lojas de compra e venda"]},
- {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots com lixo, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99, poderes nas armas e plantas escondidas que ensinam receitas"]},
- {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo próprio: mais rápido e sem gastar stamina","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming, limites das áreas e zoom no jogador","Waypoints em cada bioma: descobrem-se ao chegar perto e viaja-se entre eles pelo mapa","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área: acampamentos, ruínas, ermitões, santuários e veios ricos"]},
+ {icon:"🏘️",color:"orange",title:"Vila",items:["Casa do jogador, quadro de encomendas com contratos diários e melhorias da vila pagas com moedas","Aldeões com personalidade e rotina: mercado ao meio-dia, taverna à noite, conversas em balões","Mercado com preços do dia, reforja no ferreiro, descanso na taverna e um Treinador de poderes"]},
+ {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting de largura fixa e comparação de itens no tooltip","Minérios que pedem a picareta do anterior, fornalha, armaduras em cinco metais e de couro","9 skills com XP de 1 a 99, vida que regenera, poderes nas armas e plantas que ensinam receitas"]},
+ {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo no slot de montada (H): mais rápido, sem stamina; um golpe forte atira-te ao chão","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, minimapa redondo e menu do Tab com ícones","Testes automáticos e este journal, atualizado a cada commit"]}
 ];
@@ -88,5 +88,21 @@ window.SHOTS = [
  {f:"veio_rico",t:"Veio rico",d:"Minério da fila seguinte, trancado até morrer o monstro de elite que o guarda."},
  {f:"ermitao",t:"Ermitão",d:"Um homem estranho numa cabana isolada: traz-lhe o que pede e dá-te um poder de arma raro."},
  {f:"ruinas",t:"Ruínas",d:"Pedras partidas, potes e uma câmara selada: a chave está no acampamento da área; lá dentro, plantas de receitas escondidas."},
- {f:"acampamento",t:"Acampamentos",d:"Uma fogueira, caixotes, um baú trancado e orcs do nível da área: mata-os todos e o baú abre."}
+ {f:"acampamento",t:"Acampamentos",d:"Uma fogueira, caixotes, um baú trancado e orcs do nível da área: mata-os todos e o baú abre."},
+ {f:"contratos",t:"Quadro de Encomendas",d:"3 a 5 contratos por dia junto à fogueira: matar, entregar, limpar acampamentos e dungeons."},
+ {f:"casa_jogador",t:"Casa do jogador",d:"Uma casa à venda na vila, com cama, baú grande e prateleira de troféus."},
+ {f:"menu_inicial",t:"Menu inicial",d:"Botões de madeira com uma seta no escolhido, também com o comando."},
+ {f:"tooltip_comparacao",t:"Comparar itens",d:"O tooltip mostra a diferença para o que tens equipado, a verde ou a vermelho."},
+ {f:"brilho_armas",t:"Brilho na mão",d:"Armas melhoradas brilham na mão, sem contorno."},
+ {f:"crafting_largura",t:"Crafting sem saltos",d:"A janela tem sempre a mesma largura; os ingredientes passam para outra linha."},
+ {f:"mapa_zoom",t:"Mapa ao abrir",d:"O mapa abre 10x mais perto, centrado no jogador."},
+ {f:"mapa_limites",t:"Limites das áreas",d:"Linhas finas entre as áreas, só onde já estiveste."},
+ {f:"picaretas",t:"Picaretas por nível",d:"Chumbo, ferro e ouro: cada minério pede a picareta do anterior."},
+ {f:"mercado",t:"Preços do dia",d:"Cada categoria muda de preço por dia; uma seta no encaixe e \"Hoje: +11%\" no tooltip."},
+ {f:"conversa_aldeoes",t:"Conversas",d:"Dois aldeões parados falam à vez, em balões, quando estás por perto."},
+ {f:"treinador",t:"Treinador",d:"Faz a tarefa dele, paga, e aprendes um poder de arma."},
+ {f:"melhorias_vila",t:"Melhorias da vila",d:"Forja, mercado, torre de vigia, poço curativo, taverna e estábulo, cada uma com o seu edifício."},
+ {f:"melhorias_menu",t:"Comprar melhorias",d:"No quadro de encomendas: qualquer jogador paga e fica para todos."},
+ {f:"waypoint",t:"Waypoints",d:"Um obelisco por bioma: as runas acendem-se quando chegas perto."},
+ {f:"waypoint_viagem",t:"Viajar",d:"No waypoint, o mapa lista os encontrados: escolhe e vais lá."}
 ];
