@@ -3,10 +3,10 @@ window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming","Rios, lagos, planaltos que se escavam e terra que se volta a pôr, ciclo dia/noite","Mais difícil quanto mais longe da vila"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casas com interiores, taberna, ferreiro e torre do wizard","Aldeões com rotina diária: trabalho, fogueira às 21h, cama às 22h","Mensageiro com missões, fases do mundo e lojas de compra e venda"]},
- {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots com lixo, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99"]},
- {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo próprio: mais rápido e sem gastar stamina","Andar na água funda, só com a cabeça à vista","Uma dungeon em labirinto por área, com baú de recompensa"]},
+ {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots com lixo, crafting por categorias e colocáveis","Minérios, fornalha e armaduras em cinco metais","9 skills com XP de 1 a 99, e poderes nas armas (vampirismo, chamas, perfuração)"]},
+ {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo próprio: mais rápido e sem gastar stamina","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
- {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","Testes automáticos e este journal, atualizado a cada commit"]}
+ {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, minimapa redondo e menu do Tab com ícones","Testes automáticos e este journal, atualizado a cada commit"]}
 ];
 // Capturas das mecânicas mais relevantes.
 window.SHOTS = [
@@ -76,5 +76,11 @@ window.SHOTS = [
  {f:"orc_gigante_murro",t:"Orc Gigante",d:"O segundo boss: um murro que estica o braço 3 vezes a sua altura, uma investida e uma chuva de pedras."},
  {f:"orc_gigante_pedras",t:"Chuva de pedras",d:"As sombras avisam onde caem as pedras do Orc Gigante."},
  {f:"tres_cavalos",t:"Três cavalos",d:"Castanho, preto e branco no estábulo: o branco é o mais rápido."},
- {f:"espada_rei_na_mao",t:"Espada do Rei na mão",d:"A espada na mão tem o mesmo desenho do ícone."}
+ {f:"espada_rei_na_mao",t:"Espada do Rei na mão",d:"A espada na mão tem o mesmo desenho do ícone."},
+ {f:"cavalo_baixo",t:"Cavalo de frente",d:"Montado a olhar para baixo, a cabeça do cavalo passa à frente das pernas do jogador."},
+ {f:"dungeon_potes",t:"Potes e armadilhas",d:"Potes que se partem com moedas e comida, espinhos e lança-setas nas dungeons, agora com o dobro do tamanho."},
+ {f:"poder_chamas",t:"Poderes das armas à distância",d:"Vampirismo, chamas que queimam com o tempo e setas que perfuram vários inimigos."},
+ {f:"hud_madeira",t:"HUD de madeira",d:"Retrato, barras de vida, stamina e dash, relógio em pergaminho, minimapa redondo e hotbar com pregos."},
+ {f:"tab_fabrico",t:"Menu do Tab",d:"Separadores com ícones, categorias pequenas e o detalhe da receita com o botão Fabricar."},
+ {f:"tab_skills",t:"Skills em madeira",d:"Barras de XP em moldura de madeira e o resumo num pergaminho."}
 ];
