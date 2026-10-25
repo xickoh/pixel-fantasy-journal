@@ -46,8 +46,12 @@
 <section id="shots" class="zone meadow">
   <div class="wrap">
     <div class="zone-head"><h2>Galeria do reino</h2><div class="deco"><img src="img/art/slime_g2.png" alt=""><img src="img/art/mushroom.png" alt=""><img src="img/art/slime_b.png" alt=""></div></div>
-    <p class="intro">Capturas tiradas no próprio jogo. Clica para ampliar.</p>
-    <div id="shotGrid" class="shots"></div>
+    <p class="intro">Capturas tiradas no próprio jogo, as mais recentes primeiro. Clica para ampliar.</p>
+    <div class="carousel">
+      <div class="carbar"><button type="button" id="shotPrev" class="carbtn" aria-label="Página anterior">◀</button><span id="shotInfo" class="carinfo"></span><button type="button" id="shotNext" class="carbtn" aria-label="Página seguinte">▶</button></div>
+      <div id="shotGrid" class="shots"></div>
+      <div class="carbar"><button type="button" class="carbtn" onclick="document.getElementById('shotPrev').click()" aria-label="Página anterior">◀</button><div id="shotDots" class="dots"></div><button type="button" class="carbtn" onclick="document.getElementById('shotNext').click()" aria-label="Página seguinte">▶</button></div>
+    </div>
   </div>
 </section>
 

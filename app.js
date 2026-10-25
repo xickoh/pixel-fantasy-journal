@@ -14,8 +14,26 @@ function md(t){
 const MONTH=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const dayLabel=d=>{const[y,m,x]=d.split('-');return `${+x} de ${MONTH[m-1]} de ${y}`};
 document.getElementById('featureGrid').innerHTML=FEATURES.map(f=>`<div class="card ${f.color}"><h3>${f.icon} ${f.title}</h3><ul>${f.items.map(i=>`<li>${esc(i)}</li>`).join('')}</ul></div>`).join('');
-document.getElementById('shotGrid').innerHTML=SHOTS.map(s=>`<figure class="shot" data-f="${s.f}"><img src="img/${s.f}.png" alt="${esc(s.t)}" loading="lazy"><figcaption><b>${esc(s.t)}</b><span>${esc(s.d)}</span></figcaption></figure>`).join('');
+// Galeria: as capturas mais recentes primeiro (o SHOTS cresce no fim), 9 por página num carrossel
+const SHOTS_DESC=SHOTS.slice().reverse(),PER=9,PAGES=Math.ceil(SHOTS_DESC.length/PER);
+let shotPage=0;
+const shotEl=document.getElementById('shotGrid'),shotInfo=document.getElementById('shotInfo'),shotDots=document.getElementById('shotDots');
+const shotCard=s=>`<figure class="shot" data-f="${s.f}"><img src="img/${s.f}.png" alt="${esc(s.t)}" loading="lazy"><figcaption><b>${esc(s.t)}</b><span>${esc(s.d)}</span></figcaption></figure>`;
+function showShots(p){
+  shotPage=(p+PAGES)%PAGES;
+  shotEl.innerHTML=SHOTS_DESC.slice(shotPage*PER,shotPage*PER+PER).map(shotCard).join('');
+  const a=shotPage*PER+1,b=Math.min(a+PER-1,SHOTS_DESC.length);
+  shotInfo.textContent=`${a}–${b} de ${SHOTS_DESC.length}`;
+  shotDots.innerHTML=Array.from({length:PAGES},(_,i)=>`<button type="button" class="dot${i===shotPage?' on':''}" data-p="${i}" aria-label="Página ${i+1}"></button>`).join('');
+}
+document.getElementById('shotPrev').onclick=()=>showShots(shotPage-1);
+document.getElementById('shotNext').onclick=()=>showShots(shotPage+1);
+shotDots.onclick=e=>{const d=e.target.closest('.dot');if(d)showShots(+d.dataset.p)};
+document.addEventListener('keydown',e=>{if(!lb.hidden||e.target.closest('input'))return;const r=document.getElementById('shots').getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;if(e.key==='ArrowLeft')showShots(shotPage-1);if(e.key==='ArrowRight')showShots(shotPage+1)});
+let sx=null;shotEl.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
+shotEl.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)>60)showShots(shotPage+(dx<0?1:-1))});
 const lb=document.getElementById('lightbox');
+showShots(0);
 document.getElementById('shotGrid').onclick=e=>{const f=e.target.closest('.shot');if(!f)return;lb.querySelector('img').src=f.querySelector('img').src;lb.querySelector('p').textContent=f.querySelector('b').textContent;lb.hidden=false};
 lb.onclick=()=>lb.hidden=true;
 const daysEl=document.getElementById('days');
