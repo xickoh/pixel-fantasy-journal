@@ -127,5 +127,8 @@ window.SHOTS = [
  {f:"armadura_madeira",t:"Armadura de madeira",d:"A armadura mais barata, só de troncos: ao lado do couro e do chumbo."},
  {f:"purificador",t:"Purificador de ossos",d:"Uma campa vira ossos purificados; usá-los dá XP de Morte (10% da barra, até 5000)."},
  {f:"sorte",t:"Sorte",d:"A skill nova: mais moedas dos monstros (5x a 15x), mais críticos e mais loot."},
+ {f:"terreno_materiais",t:"Terreno",d:"Os planaltos são de terra, pedra ou minério; as rachas mostram quanto falta para partir um bloco."},
+ {f:"veio_ferro",t:"Veio de ferro",d:"Uma montanha de pedra com alguns blocos de ferro: só a picareta de chumbo os parte."},
+ {f:"rachas",t:"Rachas",d:"Cada golpe abre mais o bloco; terra e pedra partem-se em 6 golpes, os minérios em mais."},
  {f:"blocos_terra",t:"Blocos de terra",d:"Blocos juntos partilham um só topo, com o contorno só nas bordas; sozinho, um bloco é um montinho."}
 ];

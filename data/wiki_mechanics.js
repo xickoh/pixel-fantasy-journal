@@ -160,6 +160,8 @@ const MECHANICS = [
   {id: "mundo", title: "Mundo e inimigos", icon: "🗺", src: "docs/world.md, docs/enemies.md",
    lead: "A vila fica numa floresta; para lá dela há deserto.",
    points: [
+     "Terreno (mundos novos): os planaltos são de terra, pedra ou minério (chumbo, ferro, ouro, diamante) e podem tapar parte de uma estrada, mas fica sempre um corredor aberto. Não há pedras nem minérios soltos: parte o terreno com a picareta. Terra e pedra levam 6 golpes com a picareta de madeira; chumbo 8, ferro 10, ouro 12 e diamante 16 de força, e cada minério pede a picareta do metal anterior. Cada golpe dá XP de Mineração, as rachas mostram quanto falta, e ao partir aparece o chão que estava por baixo.",
+     "Os minérios aparecem por linha: a primeira só tem terra e pedra; o chumbo e o ferro vêm na segunda; o ouro e o diamante mais acima e no deserto. Num planalto de minério só uns poucos blocos são o metal, o resto é pedra.",
      "O mundo é gerado a partir de uma semente: rios, lagos, planaltos e estradas.",
      "Nos mundos novos os planaltos cobrem cerca de 10% de cada área e nunca tapam minérios, altares nem pontos de interesse. São blocos de terra: com a picareta escavam-se bloco a bloco (10 golpes) e dão Terra; com Terra pões blocos novos, que se juntam aos vizinhos num só topo.",
      "Cada zona do mapa tem as suas famílias e os seus níveis de inimigos: orcs e esqueletos na floresta, múmias no deserto. A tabela de zonas está na aba Inimigos.",
