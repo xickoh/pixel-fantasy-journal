@@ -1,6 +1,6 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
- {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado","Visão limitada: à tua volta, tapada só por blocos de terra, muralha e paredes das masmorras"]},
+ {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Impacto nos golpes (pausa, abanão, números de dano) e partículas por material","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado","Visão limitada: à tua volta, tapada só por blocos de terra, muralha e paredes das masmorras"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming, limites das áreas e zoom no jogador","Waypoints em cada bioma: descobrem-se ao chegar perto e viaja-se entre eles pelo mapa","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área: acampamentos, ruínas, ermitões, santuários e veios ricos","Clima (limpo, chuva, nevoeiro) por seed e bioma; planaltos em 10% do mapa; caixas e barris que se partem"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casa do jogador, quadro de encomendas com contratos diários e melhorias da vila pagas com moedas","Aldeões com personalidade e rotina: mercado ao meio-dia, taverna à noite, conversas em balões","Mercado com preços do dia, reforja no ferreiro, descanso na taverna e um Treinador de poderes"]},
  {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting de largura fixa e comparação de itens no tooltip","Minérios que pedem a picareta do anterior, fornalha, armaduras em cinco metais e de couro","10 skills com XP de 1 a 99 (a Morte sobe a matar e dá poderes), vida que regenera, poderes nas armas e plantas que ensinam receitas"]},
@@ -137,5 +137,7 @@ window.SHOTS = [
  {f:"blocos_terra",t:"Blocos de terra",d:"Blocos juntos partilham um só topo, com o contorno só nas bordas; sozinho, um bloco é um montinho."},
  {f:"premium_fontes_inventario",t:"Fontes bitmap",d:"m5x7 no corpo, Pixel Operator nos títulos e no texto pequeno: tudo pelo tema, sem desfocar."},
  {f:"premium_bolha_estados",t:"Bolhas e estados",d:"As falas dos aldeões em pergaminho com bico; a bênção e o abrandamento em molduras de madeira."},
- {f:"premium_fontes_comparacao",t:"Escolha da fonte",d:"A folha comparativa: m5x7, Pixel Operator e Silkscreen sobre o HUD e o Tab."}
+ {f:"premium_fontes_comparacao",t:"Escolha da fonte",d:"A folha comparativa: m5x7, Pixel Operator e Silkscreen sobre o HUD e o Tab."},
+ {f:"premium_impacto",t:"Impacto",d:"Pausa curta no golpe, abanão da câmara, números de dano a saltar (dourado no crítico) e faíscas por material."},
+ {f:"premium_mortes",t:"Mortes",d:"Os esqueletos desfazem-se em ossos, os orcs num puff de pó; música por zona e hora, ambiente e vozes por família."}
 ];
