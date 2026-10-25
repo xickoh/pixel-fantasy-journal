@@ -161,5 +161,6 @@ window.SHOTS = [
  {f:"sombra_noite",t:"A sombra de noite",d:"De noite a sombra fica a metade (a noite já escurece o chão)."},
  {f:"popup_centro",t:"Popup no clique",d:"O menu de um aldeão abre centrado onde se clicou."},
  {f:"popup_canto",t:"Popup junto ao canto",d:"Perto da borda o menu encosta, sem sair do ecrã."},
- {f:"popup_sem_rato",t:"Popup sem rato",d:"Com a tecla F ou o comando o menu abre sobre o aldeão, nunca no canto do ecrã."}
+ {f:"popup_sem_rato",t:"Popup sem rato",d:"Com a tecla F ou o comando o menu abre sobre o aldeão, nunca no canto do ecrã."},
+ {f:"capacetes_icones",t:"Ícones dos capacetes",d:"Cada capacete (madeira, couro, bronze, chumbo, ferro, ouro, diamante): o ícone é o mesmo desenho que o boneco veste, nas cores do material."}
 ];
