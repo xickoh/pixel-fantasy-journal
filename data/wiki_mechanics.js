@@ -100,6 +100,7 @@ const MECHANICS = [
   {id: "comercio", title: "Comércio", icon: "🪙", src: "docs/village.md · Shops, services",
    lead: "Compra, vende e reforja.",
    points: [
+     "O preço da comida vai de {r.min_price} moedas (a cura mais pequena) a {r.max_price} (a maior), pela raiz quadrada da cura: as frutas curam de 2 (cereja) a 200 (melancia), por isso a cura cresce muito mais depressa do que o preço.",
      "Vendes qualquer coisa por {r.sell_share|pct} do preço da loja. O que nenhuma loja vende paga {r.unsold_price} moedas. As moedas não se vendem.",
      "O mercado muda cada dia: cada categoria vale entre 0,8× e 1,25× e, em 5% dos dias, uma categoria sobe 1,5×. Os preços da wiki são os base.",
      "O ferreiro reforja uma peça por {r.reforge_base} moedas mais {r.reforge_share|pct} do preço dela. Sai um encantamento novo ao acaso, que pode ser pior.",
