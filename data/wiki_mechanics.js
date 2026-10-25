@@ -34,7 +34,7 @@ const MECHANICS = [
   {id: "vida", title: "Vida e regeneração", icon: "❤", src: "docs/player.md · Skills, Health regeneration",
    lead: "A vida cresce com o nível de Vida e volta sozinha.",
    points: [
-     "Vida máxima: {s.max_health_level_1} no nível 1 até {s.max_health_level_99} no nível 99, numa curva que sobe cada vez mais depressa.",
+     "Vida máxima: {s.max_health_level_1} no nível 1 até {s.max_health_level_99} no nível 99, numa curva que sobe cada vez mais depressa; nunca passa de {s.max_health_cap}, mesmo com o equipamento e a bênção. Os inimigos têm a sua própria curva de vida ({s.enemy_health_level_99} no nível 99) e o dano deles acompanha a tua, por isso um golpe tira a mesma parte da vida de um jogador do mesmo nível.",
      "A vida regenera sozinha {s.health_regen_share_per_minute|pct} do máximo por minuto, em combate ou a andar.",
      "A experiência de Vida vem do dano que sofres (depois da armadura), {s.health_xp_per_damage} XP por ponto.",
      "Ritmo das skills: a Vida e a Esquiva ganham 20% do XP de cada ação; todas as outras (Velocidade, Corte, Mineração, Força, Arco, Resistência, Magia, Morte) ganham 10% do XP de cada ação. Os prémios de contratos e missões entram inteiros.",
@@ -70,7 +70,7 @@ const MECHANICS = [
   {id: "skills", title: "Skills", icon: "📈", src: "docs/player.md · Skills",
    lead: "Treinas o que usas, do nível 1 ao 99.",
    points: [
-     "Sorte: os monstros largam {s.enemy_coin_multiplier}x as moedas da sua tabela, e a Sorte multiplica isso de 1 (nível 1) a {s.luck_coins_level_99} (nível 99). Também soma até {s.luck_crit_level_99|pct} à chance de crítico (no máximo {s.luck_crit_cap|pct}) e até duplica a chance do loot que não é garantido. Sobe quando esquivas um ataque, quando atravessas um inimigo com o dash, quando acertas um crítico e quando o Último fôlego te salva.",
+     "Sorte: os monstros largam {s.enemy_coin_multiplier}x as moedas da sua tabela, e a Sorte multiplica isso de 1 (nível 1) a {s.luck_coins_level_99} (nível 99). Também soma até {s.luck_crit_level_99|pct} à chance de crítico (no máximo {s.luck_crit_cap|pct}) e até duplica a chance do loot que não é garantido. Sobe quando esquivas um ataque, quando atravessas um inimigo com o dash, quando acertas um crítico e quando o Último fôlego te salva, mas muito devagar (a skill mais lenta do jogo).",
      "Vida (dano sofrido), Velocidade (correr), Corte de madeira e Mineração (cada pancada), Força, Pontaria e Magia (dano causado), Resistência (dano e stamina gastos) e Esquiva (dashes).",
      "A Velocidade dá +{s.speed_bonus_per_level|pct} de velocidade por nível. A Mineração e o Corte de madeira dão +{s.gathering_bonus_per_level|pct} de velocidade a recolher por nível.",
      "A Resistência dá +{s.resistance_defense_per_level} de defesa por nível.",
