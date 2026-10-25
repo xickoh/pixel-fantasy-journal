@@ -146,5 +146,6 @@ window.SHOTS = [
  {f:"premium_mapa_pergaminho",t:"Mapa em pergaminho",d:"O mapa do mundo em tinta sobre papel velho: o desconhecido em branco, a água azul-escura."},
  {f:"premium_dicas",t:"Primeiros passos",d:"Começo modesto (a espada lendária é a recompensa da primeira missão), dicas que aparecem uma vez e sempre um objetivo à vista; áreas com nome e direção, sem coordenadas."},
  {f:"capacete_i",t:"Capacete de ferro",d:"O desenho \"I\": nasal com guardas das faces e coifa de malha, em todas as animações."},
- {f:"capacete_i_morte",t:"O capacete cai",d:"Na morte o capacete cai para o chão ao lado da cabeça; o peitoral e as greaves ficam no corpo deitado."}
+ {f:"capacete_i_morte",t:"O capacete cai",d:"Na morte o capacete cai para o chão ao lado da cabeça; o peitoral e as greaves ficam no corpo deitado."},
+ {f:"numeros_dano",t:"Números de dano",d:"Cada golpe mostra o dano real com o ícone do tipo (espada, seta, magia, osso, armadilha, fogo); o crítico maior e dourado, o dano recebido a vermelho com um coração partido."}
 ];
