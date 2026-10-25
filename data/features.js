@@ -143,5 +143,6 @@ window.SHOTS = [
  {f:"premium_noite_luz",t:"Noite com luz",d:"A fogueira a tremeluzir, lanternas nas portas das casas e uma noite azul em vez de preta."},
  {f:"premium_por_do_sol",t:"Pôr do sol",d:"Nascer e pôr do sol quentes e curtos; sombras projetadas nas árvores e casas, pirilampos, borboletas e fumo nas chaminés."},
  {f:"premium_menu",t:"Menu inicial",d:"Logótipo em pixel art sobre um canto da vila ao fim da tarde, ao vivo: fogueira, um aldeão a passar, a câmara a deslizar."},
- {f:"premium_mapa_pergaminho",t:"Mapa em pergaminho",d:"O mapa do mundo em tinta sobre papel velho: o desconhecido em branco, a água azul-escura."}
+ {f:"premium_mapa_pergaminho",t:"Mapa em pergaminho",d:"O mapa do mundo em tinta sobre papel velho: o desconhecido em branco, a água azul-escura."},
+ {f:"premium_dicas",t:"Primeiros passos",d:"Começo modesto (a espada lendária é a recompensa da primeira missão), dicas que aparecem uma vez e sempre um objetivo à vista; áreas com nome e direção, sem coordenadas."}
 ];
