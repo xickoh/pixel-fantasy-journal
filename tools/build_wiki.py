@@ -21,9 +21,9 @@ TMP = ROOT / ".wiki_tmp"
 CATEGORIES = {
     "weapon": "Armas", "tool": "Ferramentas", "equipment": "Equipamento", "food": "Comida", "potion": "Poções",
     "magic": "Magia", "mount": "Montadas", "placeable": "Colocáveis", "material": "Materiais", "ammo": "Munição",
-    "loot": "Saque", "blueprint": "Plantas", "weapon_power": "Poderes de arma",
+    "loot": "Saque", "blueprint": "Plantas", "weapon_power": "Poderes de arma", "pet": "Pets",
 }
-SLOTS = {"head": "Cabeça", "chest": "Peito", "legs": "Pernas", "off_hand": "Mão secundária", "mount": "Montada"}
+SLOTS = {"head": "Cabeça", "chest": "Peito", "legs": "Pernas", "off_hand": "Mão secundária", "mount": "Montada", "pet": "Pet"}
 WEAPON_TYPES = {0: "Corpo a corpo", 1: "À distância", 2: "Mágica"}
 FAMILIES = {"orc": "Orcs", "skeleton": "Esqueletos", "mummy": "Múmias"}
 BIOMES = {"forest": "Floresta", "desert": "Deserto"}

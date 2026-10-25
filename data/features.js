@@ -175,5 +175,9 @@ window.SHOTS = [
  {f:"ranged_arco",t:"Arco: Ranged",d:"As armas que disparam têm o atributo Ranged (e não Strength); a Archery (ou a Magic nos cajados) soma-lhe."},
  {f:"ranged_cajado",t:"Cajado: Ranged",d:"O cajado lê o Ranged e a Magic."},
  {f:"ordenar_antes",t:"Antes de ordenar",d:"O inventário desarrumado com um baú aberto."},
- {f:"ordenar_depois",t:"Ordenar",d:"O botão Sort junta as pilhas e ordena por tipo e nome, sem mexer na barra de itens."}
+ {f:"ordenar_depois",t:"Ordenar",d:"O botão Sort junta as pilhas e ordena por tipo e nome, sem mexer na barra de itens."},
+ {f:"pets_seguem",t:"Pets",d:"Um pet equipado segue o jogador; não tem vida, nada lhe bate e não muda nenhum número do jogo."},
+ {f:"pets_equipamento",t:"A ranhura do pet",d:"O separador Equipamento ganhou a ranhura Pet."},
+ {f:"pet_lenhador_folha",t:"Pet Lenhador",d:"Um orc lenhador simpático: gorro e camisa de xadrez vermelhos, barba e machado às costas; parado e a andar nas três direções."},
+ {f:"pet_tocha_folha",t:"Pet Tocha",d:"A tocha com cara, braços e pernas; a chama anima-se com os frames da tocha."}
 ];
