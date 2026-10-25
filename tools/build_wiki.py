@@ -122,6 +122,8 @@ def main():
         if it["category"] == "weapon" or it["category"] == "tool":
             if "strength" in sv:  # prompt 391: the weapons' strength; each hit 1 to it (390)
                 add("Força", "%s (dano 1–%s)" % (num(sv["strength"][1]), num(sv["strength"][1])))
+            if "ranged" in sv:  # prompt 439: a weapon that shoots, its ranged (with Archery or Magic)
+                add("À distância", "%s (dano 1–%s)" % (num(sv["ranged"][1]), num(sv["ranged"][1])))
             if "weapon_type" in it or it["category"] == "weapon":
                 add("Tipo", WEAPON_TYPES.get(it.get("weapon_type", 0), "Corpo a corpo"))
             if "reach" in sv:

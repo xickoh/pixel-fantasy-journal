@@ -171,5 +171,7 @@ window.SHOTS = [
  {f:"fabrico_final_pt",t:"Fabrico depois",d:"Os requisitos na letra pequena 3x5 e a bancada do tamanho dos outros ícones (pt)."},
  {f:"fabrico_final_en",t:"Crafting after (en)",d:"O mesmo em inglês."},
  {f:"data_editor_receita",t:"Receitas no data_editor",d:"No separador Items, a secção Recipe: os ingredientes, a quantidade, a estação e os requisitos de cada receita do item, com validação e Nova/Apagar."},
- {f:"recompensa_espada_madeira",t:"Recompensa da primeira missão",d:"A espada de madeira lendária com o poder Slash Through: o dash faz o dano da arma pelo caminho."}
+ {f:"recompensa_espada_madeira",t:"Recompensa da primeira missão",d:"A espada de madeira lendária com o poder Slash Through: o dash faz o dano da arma pelo caminho."},
+ {f:"ranged_arco",t:"Arco: Ranged",d:"As armas que disparam têm o atributo Ranged (e não Strength); a Archery (ou a Magic nos cajados) soma-lhe."},
+ {f:"ranged_cajado",t:"Cajado: Ranged",d:"O cajado lê o Ranged e a Magic."}
 ];

@@ -156,7 +156,7 @@ func _items() -> Array:
 		d["name"] = item.display_name
 		d["path"] = path.trim_prefix("res://")
 		d["category"] = String(item.category)
-		if item.strength > 0 or item.defense > 0 or item.damage_reduction > 0 or item.max_health_bonus > 0:
+		if item.weapon_power() > 0 or item.defense > 0 or item.damage_reduction > 0 or item.max_health_bonus > 0:
 			d["stat_values"] = _json(ItemStats.stat_values(item, &""), 1)
 		var rules = load("res://data/store_rules.tres")
 		if rules != null and item.category != &"loot" and item.category != &"weapon_power":
