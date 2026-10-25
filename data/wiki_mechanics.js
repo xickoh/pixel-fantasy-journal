@@ -177,6 +177,7 @@ const MECHANICS = [
      "O mundo é gerado a partir de uma semente: rios, lagos, planaltos e estradas.",
      "Mundo maciço (mundos novos, desde a versão 31): o mundo começa todo fechado, um só bloco de terra, e a geração escava nele a vila, os rios e lagos com margens, as estradas, clareiras com corredores para cada masmorra, altar, waypoint e ponto de interesse, e clareiras da floresta e do deserto até cerca de 40% de cada área ficar aberto. Algumas clareiras ficam seladas, sem corredor, com uma veia: só lá se chega a escavar. Dentro do maciço há bolsas de pedra e veias de minério, metade à vista e metade escondidas, que não aparecem no mapa antes de as alcançares.",
      "Nos mundos novos os planaltos cobrem cerca de 10% de cada área e nunca tapam minérios, altares nem pontos de interesse. São blocos de terra: com a picareta escavam-se bloco a bloco (10 golpes) e dão Terra; com Terra pões blocos novos, que se juntam aos vizinhos num só topo.",
+     "Glossário (o quinto separador do inventário): todos os itens, receitas, inimigos e pets do jogo, com um \"?\" no que ainda não encontraste. Um item conta quando o tens no inventário; uma receita quando tens o item que ela faz (as escondidas quando as aprendes); um inimigo quando lhe bates ou ele te bate.",
      "Cada zona do mapa tem as suas famílias e os seus níveis de inimigos: orcs e esqueletos na floresta, múmias no deserto. A tabela de zonas está na aba Inimigos.",
      "Os inimigos têm nível, que lhes faz subir vida, dano, defesa e velocidade.",
    ]},

@@ -181,5 +181,8 @@ window.SHOTS = [
  {f:"pet_lenhador_folha",t:"Pet Lenhador",d:"Um orc lenhador simpático: gorro e camisa de xadrez vermelhos, barba e machado às costas; parado e a andar nas três direções."},
  {f:"pet_tocha_folha",t:"Pet Tocha",d:"A tocha com cara, braços e pernas; a chama anima-se com os frames da tocha."},
  {f:"pet_lenhador_corta",t:"O Pet Lenhador corta",d:"Enquanto cortas uma árvore, o Lenhador dá-lhe murros (metade da tua força). Cada árvore abatida tem 1% de dar o pet."},
- {f:"pet_tocha_noite",t:"O Pet Tocha ilumina",d:"Uma tocha ambulante: a luz da tocha presa ao pet. Cada tocha posta tem 1% de dar o pet."}
+ {f:"pet_tocha_noite",t:"O Pet Tocha ilumina",d:"Uma tocha ambulante: a luz da tocha presa ao pet. Cada tocha posta tem 1% de dar o pet."},
+ {f:"glossario_items",t:"Glossário",d:"Um separador novo: todos os itens, receitas, inimigos e pets, com \"?\" no que ainda não encontraste, contadores e pesquisa."},
+ {f:"glossario_unknown",t:"Ainda por encontrar",d:"Um \"?\" não revela nada: nem o nome, nem a descrição."},
+ {f:"glossario_enemies",t:"Inimigos no glossário",d:"A vida e o dano de cada tipo, do nível 1 ao mais alto."}
 ];
