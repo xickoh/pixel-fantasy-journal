@@ -15,7 +15,7 @@ const MECHANICS = [
   {id: "dormir", title: "Dormir e descansar", icon: "🛏", src: "docs/items.md · Bed, docs/village.md · Rest",
    lead: "Duas maneiras de passar a noite e recuperar a vida.",
    points: [
-     "Cama: colocável feito com 3 troncos. Só se dorme à noite, das {s.sleep_from_hour}h às {s.sleep_until_hour}h. Clicar com o botão direito na cama escurece o ecrã e põe o relógio às {s.wake_hour}h do dia seguinte.",
+     "Cama: colocável feito com 3 troncos, que só se pode pôr dentro da casa do jogador. Só se dorme à noite, das {s.sleep_from_hour}h às {s.sleep_until_hour}h. Clicar com o botão direito na cama escurece o ecrã e põe o relógio às {s.wake_hour}h do dia seguinte.",
      "Dormir cura-te ({s.sleep_heal|pct} da vida) e faz crescer de novo os tocos das árvores cortadas, porque as horas passam.",
      "Descansar na taberna custa {r.rest_price} moedas, uma vez por dia e também de dia. Avança {r.rest_hours} h, cura como uma noite de sono e dá a bênção \"Bem Descansado\" (+10% de vida máxima durante um dia).",
      "Os aldeões também dormem na cama deles. Se falares com um, acorda e volta a deitar-se uns 20 s depois da última palavra.",
