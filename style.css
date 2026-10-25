@@ -100,6 +100,9 @@ h2{margin:0;font-size:clamp(15px,3vw,24px);line-height:1.5;text-transform:upperc
 .body{padding:6px 16px 14px;border-top:4px solid var(--line);font-size:23px}
 .body p{margin:8px 0}.body ul{margin:6px 0;padding-left:22px}
 .body code{background:#0002;padding:0 4px}
+code{overflow-wrap:anywhere;word-break:break-word}
+.body,.res,.commit-list li{overflow-wrap:anywhere;min-width:0}
+.entry,.day{max-width:100%}
 .res{margin-top:12px;padding:10px;background:#3f7d2a22;border-left:8px solid var(--c-green);font-size:22px}
 .commit-list{list-style:none;padding-left:0!important}
 .commit-list li{margin:5px 0;font-size:21px}
