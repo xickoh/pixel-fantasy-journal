@@ -74,6 +74,7 @@ const MECHANICS = [
      "Vida (dano sofrido), Velocidade (correr), Corte de madeira e Mineração (cada pancada), Força, Pontaria e Magia (dano causado), Resistência (dano e stamina gastos) e Esquiva (dashes).",
      "A Velocidade dá +{s.speed_bonus_per_level|pct} de velocidade por nível. A Mineração e o Corte de madeira dão +{s.gathering_bonus_per_level|pct} de velocidade a recolher por nível.",
      "A Resistência dá +{s.resistance_defense_per_level} de defesa por nível.",
+     "Para vestir armadura é preciso nível de Resistência, pelo material: madeira 1, couro 3, bronze 5, chumbo 8, ferro 11, ouro 15, diamante 20 (o escudo de madeira 1). Sem o nível, a peça fica no inventário com um cadeado; uma peça já vestida mantém-se. Um personagem novo começa sem armadura.",
    ]},
   {id: "morte_skill", title: "A skill Morte", icon: "☠", src: "docs/player.md · The Death skill",
    lead: "Sobe a matar e tira proveito das campas.",

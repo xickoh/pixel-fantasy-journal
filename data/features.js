@@ -148,5 +148,6 @@ window.SHOTS = [
  {f:"capacete_i",t:"Capacete de ferro",d:"O desenho \"I\": nasal com guardas das faces e coifa de malha, em todas as animações."},
  {f:"capacete_i_morte",t:"O capacete cai",d:"Na morte o capacete cai para o chão ao lado da cabeça; o peitoral e as greaves ficam no corpo deitado."},
  {f:"numeros_dano",t:"Números de dano",d:"Cada golpe mostra o dano real com o ícone do tipo (espada, seta, magia, osso, armadilha, fogo); o crítico maior e dourado, o dano recebido a vermelho com um coração partido."},
- {f:"data_editor_start",t:"Kit inicial no data_editor",d:"O separador Start: os itens com que um personagem novo começa (quantidade, ranhura, melhoria), o equipamento vestido e o nível inicial de cada skill, com validação."}
+ {f:"data_editor_start",t:"Kit inicial no data_editor",d:"O separador Start: os itens com que um personagem novo começa (quantidade, ranhura, melhoria), o equipamento vestido e o nível inicial de cada skill, com validação."},
+ {f:"requisito_resistencia",t:"Armadura com nível",d:"Cada material pede nível de Resistência (madeira 1 a diamante 20): sem ele a peça fica no inventário com um cadeado e o aviso \"Needs Resistance 20\"; o tooltip mostra o requisito a vermelho."}
 ];

@@ -169,6 +169,8 @@ func _items() -> Array:
 			d["ally"] = _props(item.ally, 1)
 		if item.teaches_recipe != null and item.teaches_recipe.result != null:
 			d["teaches"] = String(item.teaches_recipe.result.id)
+		if Requirements.skill_of(item) >= 0:  # prompts 425 and 426: the skill level it needs (the game's rule)
+			d["requires"] = [Skills.NAMES[Requirements.skill_of(item)], Requirements.level_of(item)]
 		rows.append(d)
 	return rows
 

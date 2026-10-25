@@ -147,6 +147,8 @@ def main():
                 add("Dano à distância", "+%s%%" % num(sv["ranged_bonus"][1]))
             if it.get("block_arc"):
                 add("Bloqueia", "sim (botão direito)")
+        if it.get("requires"):  # prompts 425 and 426: the skill level it needs to be worn or used
+            add("Requer", "%s %s" % (tr(it["requires"][0]), it["requires"][1]))
         if it.get("cure"):
             add("Cura", "+%s" % it["cure"])
         if it.get("teleports_home"):
