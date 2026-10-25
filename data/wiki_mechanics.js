@@ -149,6 +149,7 @@ const MECHANICS = [
   {id: "missoes", title: "Missões", icon: "📜", src: "docs/quests.md",
    lead: "A história: um feiticeiro abriu um portal e a vila sofre.",
    points: [
+     "Há dois magos: o do portal, que trouxe as criaturas, e o mago da vila, que vende poções. Fala com ele várias vezes, e de novo depois de cada fase da história: as conversas dele deixam perceber porque é que nenhum inimigo entra na vila.",
      "Quem dá as missões está junto à fogueira. A primeira (matar orcs) devolve a paz à vila e abre as bancas do mercado.",
      "A missão ativa aparece no mapa com uma estrela. O painel de contratos da vila tem trabalhos extra.",
      "Nos mundos novos a história segue em 9 missões até ao Rei Esqueleto: entregar ossos, chegar a níveis de skills (o HUD mostra cada uma a vermelho até chegares), ajudar o ermitão (revela a masmorra do Rei no mapa), destruir esqueletos nessa masmorra, trazer ossos e ouro para a Coroa e, por fim, matar o Rei.",
