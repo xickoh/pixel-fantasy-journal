@@ -256,7 +256,8 @@ func _quests() -> Array:
 	if book != null:
 		var j: Variant = _json(book, 0)
 		if j is Dictionary:
-			for v in j.values():
-				if v is Array:
-					rows = v
+			# the story's quests, then the other givers' (prompt 396: side_quests, each with its giver)
+			for key in ["quests", "side_quests"]:
+				if j.get(key) is Array:
+					rows.append_array(j[key])
 	return rows
