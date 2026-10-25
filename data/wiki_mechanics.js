@@ -9,7 +9,7 @@ const MECHANICS = [
      "Passados 2 s, renasces junto à fogueira da vila com a vida cheia.",
      "Largas {s.death_gold_drop|pct} das moedas (no nível 1 de Morte; {s.death_gold_drop_level_99|pct} no 99) numa pilha onde morreste. Não desaparece sozinha e qualquer jogador a pode apanhar.",
      "Voltas mais lento durante {s.death_slow_seconds} s: -{s.death_slow_level_1|pct} no nível 1 de Morte, nada no 99. Também a cavalo; o dash não. O HUD mostra um ícone de bota roxa com o tempo que falta; a animação de andar fica mais lenta na mesma proporção.",
-     "Fica uma campa (\"RIP\" e o teu nome) onde morreste. Cada jogador guarda as últimas {s.max_graves}; a mais antiga desaparece.",
+     "Fica uma campa (\"RIP\" e o teu nome) onde morreste. Cada jogador guarda as últimas {s.max_graves}; a mais antiga desaparece. As tuas campas aparecem no teu mapa e no minimapa (mesmo por explorar); as dos outros jogadores não.",
      "Numa masmorra, também renasces na vila. A cavalo, desmontas no sítio da morte.",
    ]},
   {id: "dormir", title: "Dormir e descansar", icon: "🛏", src: "docs/items.md · Bed, docs/village.md · Rest",
@@ -78,7 +78,7 @@ const MECHANICS = [
    lead: "Sobe a matar e tira proveito das campas.",
    points: [
      "Cada inimigo que matas dá {s.death_xp_per_kill} XP de Morte antes do ritmo da skill (10%, ou seja um décimo disso; um chefe dá mais). Os abates dos aliados não contam.",
-     "A partir do nível {s.death_grave_sense_level}, sentes as tuas sepulturas: aparecem no mapa e no minimapa, e o mapa diz a que distância está a mais perto.",
+     "A partir do nível {s.death_grave_sense_level}, sentes as tuas sepulturas: o mapa diz a que distância está a mais perto.",
      "A partir do nível {s.death_last_stand_level}, um golpe que te mataria deixa-te com 1 de vida. Depois recarrega: um dia de jogo no nível 40, 3 horas no 99.",
      "Ceifar: cada abate cura até {s.death_reap_heal_level_99|pct} da vida máxima e dá até {s.death_reap_stamina_level_99|pct} de stamina (no nível 99; um chefe dá {s.death_reap_boss_factor}x).",
      "Almas (nível {s.death_souls_level}): cada abate enche a barra de almas; cheia, o golpe seguinte faz +100% a +300% de dano. Perdes as almas ao morrer.",
