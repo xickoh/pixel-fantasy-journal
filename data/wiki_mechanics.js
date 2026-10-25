@@ -49,6 +49,7 @@ const MECHANICS = [
   {id: "combate", title: "Combate e dano", icon: "⚔", src: "docs/combat.md · The formula",
    lead: "Dano da arma, mais a skill, menos a defesa.",
    points: [
+     "A arma de um inimigo depende do nível: até ao 6 de madeira, do 7 de osso, do 20 de ouro (do mesmo tipo, se existir; nunca abaixo da do tipo). O dano não muda com o material, mas a arma que larga (1%) é a que tem na mão.",
      "Um inimigo que te vê (ao alcance da sua deteção, 140 px na maioria) fica alertado e persegue-te até três vezes essa distância; depois volta a calmo. Os inimigos sem arma dão murros: param perto, preparam o golpe e batem uma vez a cada 1,2 s (já não magoam só por tocar).",
      "As armas têm Força (era «dano»). Com a skill da arma (Força, Arco ou Magia) dá a força total, que é o máximo de um golpe: cada golpe, flecha ou projétil tira um valor sorteado de 1 a esse máximo (em média metade). Um crítico multiplica o valor sorteado. Os inimigos tiram sempre o mesmo.",
      "O dano é o da arma (com o encantamento) mais a skill do tipo de arma: Força (corpo a corpo e socos), Pontaria (arcos) e Magia (cajados). Cada nível acrescenta {s.skill_damage_per_level|pct} ao dano da arma.",
