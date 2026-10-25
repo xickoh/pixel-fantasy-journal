@@ -155,5 +155,8 @@ window.SHOTS = [
  {f:"mapa_macico",t:"Mundo maciço",d:"Desde a versão 31 o mundo nasce todo fechado e escava-se: a vila, rios, estradas, clareiras ligadas por corredores, cerca de 40% aberto."},
  {f:"macico_vila",t:"A borda da clareira da vila",d:"O maciço com a face de 2 blocos; a visão entra um pouco no terreno para se ver a primeira fila."},
  {f:"macico_masmorra",t:"Clareira de uma masmorra",d:"Cada masmorra, altar, waypoint e ponto de interesse tem a sua clareira e um corredor até à vila."},
- {f:"macico_veia",t:"Veia à vista",d:"Bolsas de pedra e veias de minério dentro do maciço: metade à vista, metade escondida."}
+ {f:"macico_veia",t:"Veia à vista",d:"Bolsas de pedra e veias de minério dentro do maciço: metade à vista, metade escondida."},
+ {f:"sombra_antes",t:"Sem sombra",d:"A face de um planalto antes do prompt 428: o chão em frente com o mesmo brilho."},
+ {f:"sombra_dia",t:"Sombra em frente da face",d:"Uma faixa escura junto ao pé da face, a desvanecer para baixo, e uma tira fina à direita do bloco."},
+ {f:"sombra_noite",t:"A sombra de noite",d:"De noite a sombra fica a metade (a noite já escurece o chão)."}
 ];
