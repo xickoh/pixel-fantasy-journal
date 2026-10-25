@@ -24,6 +24,7 @@ const MECHANICS = [
    lead: "O mundo tem relógio.",
    points: [
      "Um dia de jogo dura {s.day_length|min} minutos reais. Um novo jogo começa às {s.new_game_hour}h.",
+     "Um personagem novo começa com machado, picareta, espada de madeira e 20 moedas. A espada lendária é a recompensa da primeira missão (Paz para a aldeia).",
      "As rotinas dos aldeões, as lojas, a luz e o crescer dos tocos contam em horas de jogo. Os cooldowns e os nascimentos de inimigos contam em segundos reais.",
      "Na vila, os inimigos não entram: a muralha de troncos protege-a.",
      "Visão: vês à tua volta, para todos os lados, até onde o ecrã mostra, e um pequeno círculo de {s.vision_near_radius} px sempre. Só os blocos de terra (e os planaltos), a muralha da vila e as paredes das masmorras tapam o que está atrás; árvores, rochas e casas não. O resto fica escuro. Em casa não há escuro; nas Opções podes desligar a visão limitada.",
