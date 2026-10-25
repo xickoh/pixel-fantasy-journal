@@ -150,5 +150,10 @@ window.SHOTS = [
  {f:"numeros_dano",t:"Números de dano",d:"Cada golpe mostra o dano real com o ícone do tipo (espada, seta, magia, osso, armadilha, fogo); o crítico maior e dourado, o dano recebido a vermelho com um coração partido."},
  {f:"data_editor_start",t:"Kit inicial no data_editor",d:"O separador Start: os itens com que um personagem novo começa (quantidade, ranhura, melhoria), o equipamento vestido e o nível inicial de cada skill, com validação."},
  {f:"requisito_resistencia",t:"Armadura com nível",d:"Cada material pede nível de Resistência (madeira 1 a diamante 20): sem ele a peça fica no inventário com um cadeado e o aviso \"Needs Resistance 20\"; o tooltip mostra o requisito a vermelho."},
- {f:"requisito_forca",t:"Armas com nível",d:"Cada arma pede nível da sua skill pelo dano por segundo (madeira 1, ferro 11, a espada do Rei Esqueleto 20): sem ele leva-se mas não se ataca."}
+ {f:"requisito_forca",t:"Armas com nível",d:"Cada arma pede nível da sua skill pelo dano por segundo (madeira 1, ferro 11, a espada do Rei Esqueleto 20): sem ele leva-se mas não se ataca."},
+ {f:"mapa_v30",t:"Mapa antes (versão 30)",d:"Planaltos soltos a cobrir 10% de cada área."},
+ {f:"mapa_macico",t:"Mundo maciço",d:"Desde a versão 31 o mundo nasce todo fechado e escava-se: a vila, rios, estradas, clareiras ligadas por corredores, cerca de 40% aberto."},
+ {f:"macico_vila",t:"A borda da clareira da vila",d:"O maciço com a face de 2 blocos; a visão entra um pouco no terreno para se ver a primeira fila."},
+ {f:"macico_masmorra",t:"Clareira de uma masmorra",d:"Cada masmorra, altar, waypoint e ponto de interesse tem a sua clareira e um corredor até à vila."},
+ {f:"macico_veia",t:"Veia à vista",d:"Bolsas de pedra e veias de minério dentro do maciço: metade à vista, metade escondida."}
 ];
