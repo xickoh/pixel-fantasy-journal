@@ -158,5 +158,8 @@ window.SHOTS = [
  {f:"macico_veia",t:"Veia à vista",d:"Bolsas de pedra e veias de minério dentro do maciço: metade à vista, metade escondida."},
  {f:"sombra_antes",t:"Sem sombra",d:"A face de um planalto antes do prompt 428: o chão em frente com o mesmo brilho."},
  {f:"sombra_dia",t:"Sombra em frente da face",d:"Uma faixa escura junto ao pé da face, a desvanecer para baixo, e uma tira fina à direita do bloco."},
- {f:"sombra_noite",t:"A sombra de noite",d:"De noite a sombra fica a metade (a noite já escurece o chão)."}
+ {f:"sombra_noite",t:"A sombra de noite",d:"De noite a sombra fica a metade (a noite já escurece o chão)."},
+ {f:"popup_centro",t:"Popup no clique",d:"O menu de um aldeão abre centrado onde se clicou."},
+ {f:"popup_canto",t:"Popup junto ao canto",d:"Perto da borda o menu encosta, sem sair do ecrã."},
+ {f:"popup_sem_rato",t:"Popup sem rato",d:"Com a tecla F ou o comando o menu abre sobre o aldeão, nunca no canto do ecrã."}
 ];
