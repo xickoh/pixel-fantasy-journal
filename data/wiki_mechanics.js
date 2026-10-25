@@ -28,7 +28,7 @@ const MECHANICS = [
      "Na vila, os inimigos não entram: a muralha de troncos protege-a.",
      "Visão: vês {s.vision_radius} px à tua volta, para todos os lados, e um pequeno círculo de {s.vision_near_radius} px sempre. Só os blocos de terra (e os planaltos), a muralha da vila e as paredes das masmorras tapam o que está atrás; árvores, rochas e casas não. O resto fica escuro. Em casa não há escuro; nas Opções podes desligar a visão limitada.",
      "Clima: limpo, chuva ou nevoeiro, em blocos de 3 a 8 horas de jogo. Na floresta: 60% limpo, 25% chuva, 15% nevoeiro; no deserto nunca chove. O primeiro dia é sempre limpo. O ícone ao lado do relógio diz qual está; nas Opções podes desligar os efeitos visuais.",
-     "De dia há no máximo 40 inimigos vivos no mundo; à noite até 120. Ao anoitecer vão nascendo aos poucos; ao amanhecer os que sobram não desaparecem de repente, só deixam de nascer novos.",
+     "Cada área enche-se de inimigos uma vez por visita: até 40 se lá entras de dia, até 120 se entras à noite. Os que matas não renascem enquanto lá estiveres, nem se dormires; sai para outra área e volta, e a primeira volta a ter inimigos. Em multijogador, a área só se renova quando nenhum jogador está nela.",
    ]},
   {id: "vida", title: "Vida e regeneração", icon: "❤", src: "docs/player.md · Skills, Health regeneration",
    lead: "A vida cresce com o nível de Vida e volta sozinha.",
