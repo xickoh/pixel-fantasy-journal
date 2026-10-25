@@ -7,7 +7,7 @@ window.FEATURES = [
  {icon:"📜",color:"purple",title:"História",items:["9 missões do Mensageiro até ao Rei Esqueleto: entregas, portões de níveis, o mapa do ermitão","A masmorra do Rei: câmara selada, altar e a Coroa forjada pela missão","O Orc Gigante é opcional: boatos, um corno partido nos acampamentos e um contrato raro"]},
  {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo no slot de montada (H): mais rápido, sem stamina; um golpe forte atira-te ao chão","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa","Mapa da masmorra com nevoeiro próprio, guardado entre visitas"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
- {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en; o kit inicial (itens, equipamento e nível das skills) no separador Start","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, fontes bitmap nítidas, uma só paleta e cursor próprio em pixel art","Testes automáticos e este journal, atualizado a cada commit"]}
+ {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en; o kit inicial (itens, equipamento e nível das skills) no separador Start; as receitas de cada item no separador Items","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, fontes bitmap nítidas, uma só paleta e cursor próprio em pixel art","Testes automáticos e este journal, atualizado a cada commit"]}
 ];
 // Capturas das mecânicas mais relevantes.
 window.SHOTS = [
@@ -169,5 +169,6 @@ window.SHOTS = [
  {f:"dash_esquiva",t:"O dash esquiva tudo",d:"Durante o dash nenhum golpe, flecha ou área acerta, em qualquer nível de Esquiva: aparece Dodge."},
  {f:"fabrico_before_pt",t:"Fabrico antes",d:"Os requisitos na letra do corpo e o ícone da bancada a sair do encaixe."},
  {f:"fabrico_final_pt",t:"Fabrico depois",d:"Os requisitos na letra pequena 3x5 e a bancada do tamanho dos outros ícones (pt)."},
- {f:"fabrico_final_en",t:"Crafting after (en)",d:"O mesmo em inglês."}
+ {f:"fabrico_final_en",t:"Crafting after (en)",d:"O mesmo em inglês."},
+ {f:"data_editor_receita",t:"Receitas no data_editor",d:"No separador Items, a secção Recipe: os ingredientes, a quantidade, a estação e os requisitos de cada receita do item, com validação e Nova/Apagar."}
 ];
