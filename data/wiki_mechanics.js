@@ -49,6 +49,7 @@ const MECHANICS = [
   {id: "combate", title: "Combate e dano", icon: "⚔", src: "docs/combat.md · The formula",
    lead: "Dano da arma, mais a skill, menos a defesa.",
    points: [
+     "As armas têm Força (era «dano»). Com a skill da arma (Força, Arco ou Magia) dá a força total, que é o máximo de um golpe: cada golpe, flecha ou projétil tira um valor sorteado de 1 a esse máximo (em média metade). Um crítico multiplica o valor sorteado. Os inimigos tiram sempre o mesmo.",
      "O dano é o da arma (com o encantamento) mais a skill do tipo de arma: Força (corpo a corpo e socos), Pontaria (arcos) e Magia (cajados). Cada nível acrescenta {s.skill_damage_per_level|pct} ao dano da arma.",
      "A defesa tira uma parte do dano, nunca tudo: dano × K ÷ (K + defesa), com K = {s.defense_constant}. Defesa {s.defense_constant} reduz um golpe para metade. Um golpe tira sempre pelo menos 1.",
      "Crítico: faz dano ×{s.crit_multiplier}. As chances base são {s.crit_chance_melee|pct} (corpo a corpo), {s.crit_chance_ranged|pct} (arco) e {s.crit_chance_magic|pct} (magia).",

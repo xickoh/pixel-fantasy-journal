@@ -110,8 +110,8 @@ def main():
             stats.append([label, value])
 
         if it["category"] == "weapon" or it["category"] == "tool":
-            if "damage" in sv:
-                add("Dano", num(sv["damage"][1]))
+            if "strength" in sv:  # prompt 391: the weapons' strength; each hit 1 to it (390)
+                add("Força", "%s (dano 1–%s)" % (num(sv["strength"][1]), num(sv["strength"][1])))
             if "weapon_type" in it or it["category"] == "weapon":
                 add("Tipo", WEAPON_TYPES.get(it.get("weapon_type", 0), "Corpo a corpo"))
             if "reach" in sv:
