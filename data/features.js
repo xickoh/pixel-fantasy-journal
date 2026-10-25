@@ -173,5 +173,7 @@ window.SHOTS = [
  {f:"data_editor_receita",t:"Receitas no data_editor",d:"No separador Items, a secção Recipe: os ingredientes, a quantidade, a estação e os requisitos de cada receita do item, com validação e Nova/Apagar."},
  {f:"recompensa_espada_madeira",t:"Recompensa da primeira missão",d:"A espada de madeira lendária com o poder Slash Through: o dash faz o dano da arma pelo caminho."},
  {f:"ranged_arco",t:"Arco: Ranged",d:"As armas que disparam têm o atributo Ranged (e não Strength); a Archery (ou a Magic nos cajados) soma-lhe."},
- {f:"ranged_cajado",t:"Cajado: Ranged",d:"O cajado lê o Ranged e a Magic."}
+ {f:"ranged_cajado",t:"Cajado: Ranged",d:"O cajado lê o Ranged e a Magic."},
+ {f:"ordenar_antes",t:"Antes de ordenar",d:"O inventário desarrumado com um baú aberto."},
+ {f:"ordenar_depois",t:"Ordenar",d:"O botão Sort junta as pilhas e ordena por tipo e nome, sem mexer na barra de itens."}
 ];
