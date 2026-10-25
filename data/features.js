@@ -162,5 +162,8 @@ window.SHOTS = [
  {f:"popup_centro",t:"Popup no clique",d:"O menu de um aldeão abre centrado onde se clicou."},
  {f:"popup_canto",t:"Popup junto ao canto",d:"Perto da borda o menu encosta, sem sair do ecrã."},
  {f:"popup_sem_rato",t:"Popup sem rato",d:"Com a tecla F ou o comando o menu abre sobre o aldeão, nunca no canto do ecrã."},
- {f:"capacetes_icones",t:"Ícones dos capacetes",d:"Cada capacete (madeira, couro, bronze, chumbo, ferro, ouro, diamante): o ícone é o mesmo desenho que o boneco veste, nas cores do material."}
+ {f:"capacetes_icones",t:"Ícones dos capacetes",d:"Cada capacete (madeira, couro, bronze, chumbo, ferro, ouro, diamante): o ícone é o mesmo desenho que o boneco veste, nas cores do material."},
+ {f:"dica_tree",t:"Dica com o ícone do rato",d:"As dicas mostram o botão esquerdo do rato (desenhado em pixel art) onde diziam J; com o comando, o botão do comando."},
+ {f:"dica_enemy",t:"Dica do inimigo",d:"O ícone na frase, as outras teclas em texto."},
+ {f:"dica_tree_k",t:"Tecla remapeada",d:"Se o ataque for para outra tecla, a dica mostra essa tecla."}
 ];
