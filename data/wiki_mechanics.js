@@ -36,7 +36,7 @@ const MECHANICS = [
      "Vida máxima: {s.max_health_level_1} no nível 1 até {s.max_health_level_99} no nível 99, numa curva que sobe cada vez mais depressa.",
      "A vida regenera sozinha {s.health_regen_share_per_minute|pct} do máximo por minuto, em combate ou a andar.",
      "A experiência de Vida vem do dano que sofres (depois da armadura), {s.health_xp_per_damage} XP por ponto.",
-     "Ritmo das skills: a Vida e a Esquiva ganham o XP inteiro; todas as outras (Velocidade, Corte, Mineração, Força, Arco, Resistência, Magia, Morte) ganham 10% do XP de cada ação. Os prémios de contratos e missões entram inteiros.",
+     "Ritmo das skills: a Vida e a Esquiva ganham 20% do XP de cada ação; todas as outras (Velocidade, Corte, Mineração, Força, Arco, Resistência, Magia, Morte) ganham 10% do XP de cada ação. Os prémios de contratos e missões entram inteiros.",
      "A comida e as poções curam já. Q usa a melhor cura do inventário. A poção tem {s.potion_cooldown} s de espera.",
    ]},
   {id: "stamina", title: "Stamina e correr", icon: "⚡", src: "docs/player.md · Gathering, skills and stamina",
@@ -60,7 +60,7 @@ const MECHANICS = [
    lead: "Um salto rápido que atravessa inimigos.",
    points: [
      "Espaço faz um dash de {s.dash_distance} px em {s.dash_duration} s. Durante o dash não levas dano nem empurrões e atravessas os inimigos.",
-     "A espera do dash vai de {s.dash_cooldown_level_1} s (nível 1 de Esquiva) a {s.dash_cooldown_level_99} s (nível 99). Cada dash dá {s.dodge_xp_per_dash_level} XP de Esquiva por nível que já tens.",
+     "A espera do dash vai de {s.dash_cooldown_level_1} s (nível 1 de Esquiva) a {s.dash_cooldown_level_99} s (nível 99). O alcance vai de {s.dash_distance_level_1} px (nível 1) a {s.dash_distance_level_99} px (nível 99). Cada dash dá {s.dodge_xp_per_dash_level} XP de Esquiva por nível que já tens, antes do ritmo da skill.",
      "A esquiva (chance de evitar um golpe) vai de 0% até {s.dodge_max_chance|pct} no nível 99. Um golpe esquivado não faz dano nem empurra.",
    ]},
   {id: "skills", title: "Skills", icon: "📈", src: "docs/player.md · Skills",
