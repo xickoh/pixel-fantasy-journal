@@ -126,7 +126,7 @@ const MECHANICS = [
      "Um inimigo morto numa masmorra não volta: ela fica limpa.",
      "Dentro de uma masmorra, o mapa (M) e o minimapa mostram a planta dela, só com o que já viste; o que viste fica guardado para a próxima visita.",
      "A masmorra do Rei Esqueleto (mundos novos): só tem esqueletos e, na sala do fundo, uma câmara selada com uma porta com uma coroa gravada. Abre quando destróis 15 esqueletos lá dentro (missão «Para dentro da escuridão»); lá dentro está o altar onde a Coroa acorda o Rei.",
-     "Armadilhas: espinhos no chão (32% da vida de um jogador ao nível da masmorra) e lança-setas nas paredes (24%). Um dash passa pelos espinhos; o escudo para as setas.",
+     "Armadilhas: espinhos no chão e lança-setas nas paredes. Tiram 3 (espinhos) e 2,5 (setas) por cada nível da masmorra, e a tua defesa reduz como num golpe. Um dash passa pelos espinhos; o escudo para as setas.",
    ]},
   {id: "pois", title: "Pontos de interesse", icon: "🏕", src: "docs/world.md · Points of interest",
    lead: "Coisas para descobrir fora da vila.",
