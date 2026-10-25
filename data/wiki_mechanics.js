@@ -69,6 +69,7 @@ const MECHANICS = [
   {id: "skills", title: "Skills", icon: "📈", src: "docs/player.md · Skills",
    lead: "Treinas o que usas, do nível 1 ao 99.",
    points: [
+     "Sorte: os monstros largam {s.enemy_coin_multiplier}x as moedas da sua tabela, e a Sorte multiplica isso de 1 (nível 1) a {s.luck_coins_level_99} (nível 99). Também soma até {s.luck_crit_level_99|pct} à chance de crítico (no máximo {s.luck_crit_cap|pct}) e até duplica a chance do loot que não é garantido. Sobe quando esquivas um ataque, quando atravessas um inimigo com o dash, quando acertas um crítico e quando o Último fôlego te salva.",
      "Vida (dano sofrido), Velocidade (correr), Corte de madeira e Mineração (cada pancada), Força, Pontaria e Magia (dano causado), Resistência (dano e stamina gastos) e Esquiva (dashes).",
      "A Velocidade dá +{s.speed_bonus_per_level|pct} de velocidade por nível. A Mineração e o Corte de madeira dão +{s.gathering_bonus_per_level|pct} de velocidade a recolher por nível.",
      "A Resistência dá +{s.resistance_defense_per_level} de defesa por nível.",
