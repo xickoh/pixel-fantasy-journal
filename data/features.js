@@ -141,5 +141,7 @@ window.SHOTS = [
  {f:"premium_impacto",t:"Impacto",d:"Pausa curta no golpe, abanão da câmara, números de dano a saltar (dourado no crítico) e faíscas por material."},
  {f:"premium_mortes",t:"Mortes",d:"Os esqueletos desfazem-se em ossos, os orcs num puff de pó; música por zona e hora, ambiente e vozes por família."},
  {f:"premium_noite_luz",t:"Noite com luz",d:"A fogueira a tremeluzir, lanternas nas portas das casas e uma noite azul em vez de preta."},
- {f:"premium_por_do_sol",t:"Pôr do sol",d:"Nascer e pôr do sol quentes e curtos; sombras projetadas nas árvores e casas, pirilampos, borboletas e fumo nas chaminés."}
+ {f:"premium_por_do_sol",t:"Pôr do sol",d:"Nascer e pôr do sol quentes e curtos; sombras projetadas nas árvores e casas, pirilampos, borboletas e fumo nas chaminés."},
+ {f:"premium_menu",t:"Menu inicial",d:"Logótipo em pixel art sobre um canto da vila ao fim da tarde, ao vivo: fogueira, um aldeão a passar, a câmara a deslizar."},
+ {f:"premium_mapa_pergaminho",t:"Mapa em pergaminho",d:"O mapa do mundo em tinta sobre papel velho: o desconhecido em branco, a água azul-escura."}
 ];
