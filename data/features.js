@@ -179,5 +179,7 @@ window.SHOTS = [
  {f:"pets_seguem",t:"Pets",d:"Um pet equipado segue o jogador; não tem vida, nada lhe bate e não muda nenhum número do jogo."},
  {f:"pets_equipamento",t:"A ranhura do pet",d:"O separador Equipamento ganhou a ranhura Pet."},
  {f:"pet_lenhador_folha",t:"Pet Lenhador",d:"Um orc lenhador simpático: gorro e camisa de xadrez vermelhos, barba e machado às costas; parado e a andar nas três direções."},
- {f:"pet_tocha_folha",t:"Pet Tocha",d:"A tocha com cara, braços e pernas; a chama anima-se com os frames da tocha."}
+ {f:"pet_tocha_folha",t:"Pet Tocha",d:"A tocha com cara, braços e pernas; a chama anima-se com os frames da tocha."},
+ {f:"pet_lenhador_corta",t:"O Pet Lenhador corta",d:"Enquanto cortas uma árvore, o Lenhador dá-lhe murros (metade da tua força). Cada árvore abatida tem 1% de dar o pet."},
+ {f:"pet_tocha_noite",t:"O Pet Tocha ilumina",d:"Uma tocha ambulante: a luz da tocha presa ao pet. Cada tocha posta tem 1% de dar o pet."}
 ];
