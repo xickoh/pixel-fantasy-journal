@@ -147,6 +147,15 @@ const MECHANICS = [
      "O Rei Esqueleto: nos mundos novos a Coroa vem da missão «A coroa de ossos» e só funciona no altar da masmorra dele. Nos mundos antigos fabrica-se e invoca-se fora da vila. Só há um chefe vivo de cada vez.",
      "Têm muita vida, quase não se deixam empurrar e largam armas que só eles dão.",
    ]},
+  {id: "pesca", title: "Pesca", icon: "🎣", src: "docs/fishing.md",
+   lead: "Uma skill nova com um minijogo incremental: lança a cana, apanha a mordida e transforma os pontos de uma ronda em peixe.",
+   points: [
+     "Com uma cana na mão, o ataque lança a boia para a água até 3 tiles à frente. Cada peixe apanhado gasta uma Minhoca (a Cana Encantada não precisa). A mordida chega entre 4 e 12 s, mais cedo com canas melhores e com isco; tens 0,9 s para clicar.",
+     "A ronda dura 60 s: clica nos peixes (os dourados valem 10x), evita o lixo (tira 3x um clique) e apanha as pérolas. Os upgrades compram-se com os pontos e só valem nessa ronda. Levar dano acaba a ronda.",
+     "No fim, cada 200 pontos dão um peixe da categoria 1 (as categorias 2 a 5 custam o dobro cada e abrem nos níveis 10, 25, 45 e 70); o que sobra é uma chance de mais um. Acertar a mordida dá sempre pelo menos um peixe.",
+     "XP de Pesca: 1 por cada 10 pontos ganhos e 5 por peixe. Os peixes curam 20, 40, 80, 150 e 300 por categoria.",
+     "O pescador chega na fase 2: vende a Cana de Madeira (50) e Minhocas (10 por 20), e pede-te o Retrato de Família, guardado no baú das ruínas mais perto da vila. Entregá-lo dá a Cana Encantada e ensina a receita dela (3 troncos, 1 corda, 10 pós de cristal).",
+   ]},
   {id: "missoes", title: "Missões", icon: "📜", src: "docs/quests.md",
    lead: "A história: um feiticeiro abriu um portal e a vila sofre.",
    points: [

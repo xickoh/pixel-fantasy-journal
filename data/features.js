@@ -130,5 +130,9 @@ window.SHOTS = [
  {f:"terreno_materiais",t:"Terreno",d:"Os planaltos são de terra, pedra ou minério; as rachas mostram quanto falta para partir um bloco."},
  {f:"veio_ferro",t:"Veio de ferro",d:"Uma montanha de pedra com alguns blocos de ferro: só a picareta de chumbo os parte."},
  {f:"rachas",t:"Rachas",d:"Cada golpe abre mais o bloco; terra e pedra partem-se em 6 golpes, os minérios em mais."},
+ {f:"pesca_bite",t:"Pesca",d:"Lança a cana para a água e espera pela mordida; a minhoca faz morder mais depressa."},
+ {f:"pesca_minigame",t:"Minijogo da pesca",d:"60 s a apanhar peixes e a comprar upgrades com os pontos da ronda; o lixo tira pontos."},
+ {f:"pesca_result",t:"A pesca",d:"Os pontos viram peixe (200 por peixe), mais as pérolas apanhadas e o XP de Pesca."},
+ {f:"pesca_fisherman",t:"O pescador",d:"Chega na fase 2, vende canas e minhocas e pede-te a relíquia da família."},
  {f:"blocos_terra",t:"Blocos de terra",d:"Blocos juntos partilham um só topo, com o contorno só nas bordas; sozinho, um bloco é um montinho."}
 ];
