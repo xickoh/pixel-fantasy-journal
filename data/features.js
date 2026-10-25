@@ -1,6 +1,6 @@
 // Funcionalidades do jogo: só os pontos-chave (3 por cartão). Editar aqui quando uma mecânica nova é implementada.
 window.FEATURES = [
- {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado","Visão limitada: um cone para onde olhas, tapado por árvores, rochas e paredes"]},
+ {icon:"⚔️",color:"red",title:"Combate",items:["Ataque virado para o rato, dash, escudo e stamina","Orcs, esqueletos e múmias: níveis 1–20 na floresta e 20–40 no deserto","Dano por material e skills, dois bosses (Rei Esqueleto e Orc Gigante) e um esqueleto aliado","Visão limitada: à tua volta, tapada só por blocos de terra, muralha e paredes das masmorras"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta em baixo e deserto por cima, com streaming, limites das áreas e zoom no jogador","Waypoints em cada bioma: descobrem-se ao chegar perto e viaja-se entre eles pelo mapa","Mais difícil quanto mais longe da vila; 3 a 5 pontos de interesse por área: acampamentos, ruínas, ermitões, santuários e veios ricos","Clima (limpo, chuva, nevoeiro) por seed e bioma; planaltos em 10% do mapa; caixas e barris que se partem"]},
  {icon:"🏘️",color:"orange",title:"Vila",items:["Casa do jogador, quadro de encomendas com contratos diários e melhorias da vila pagas com moedas","Aldeões com personalidade e rotina: mercado ao meio-dia, taverna à noite, conversas em balões","Mercado com preços do dia, reforja no ferreiro, descanso na taverna e um Treinador de poderes"]},
  {icon:"🎒",color:"blue",title:"Itens e progressão",items:["Inventário de 40 slots, crafting de largura fixa e comparação de itens no tooltip","Minérios que pedem a picareta do anterior, fornalha, armaduras em cinco metais e de couro","10 skills com XP de 1 a 99 (a Morte sobe a matar e dá poderes), vida que regenera, poderes nas armas e plantas que ensinam receitas"]},
@@ -121,7 +121,7 @@ window.SHOTS = [
  {f:"mapa_masmorra",t:"Mapa da masmorra",d:"Dentro de uma masmorra o mapa mostra a planta dela, só o que já viste."},
  {f:"chuva",t:"Chuva",d:"Gotas finas e o céu mais azulado; o ícone do clima ao lado do relógio."},
  {f:"nevoeiro",t:"Nevoeiro",d:"Uma névoa que se move devagar, mais densa nas bordas."},
- {f:"visao",t:"Visão",d:"Vês para onde olhas; o tronco da árvore tapa o que está atrás."},
+ {f:"visao",t:"Visão",d:"Vês à tua volta; as árvores e as rochas já não tapam, só os blocos de terra e a muralha."},
  {f:"lentidao_icone",t:"Lentidão",d:"Depois de morrer, uma bota roxa e o tempo que falta; a animação de andar abranda na mesma proporção."},
  {f:"armas_inimigos",t:"Armas por nível",d:"Os inimigos mais fortes trazem armas de osso e ouro, e largam a que têm na mão."},
  {f:"armadura_madeira",t:"Armadura de madeira",d:"A armadura mais barata, só de troncos: ao lado do couro e do chumbo."},
