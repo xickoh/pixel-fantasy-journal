@@ -166,5 +166,8 @@ window.SHOTS = [
  {f:"dica_tree",t:"Dica com o ícone do rato",d:"As dicas mostram o botão esquerdo do rato (desenhado em pixel art) onde diziam J; com o comando, o botão do comando."},
  {f:"dica_enemy",t:"Dica do inimigo",d:"O ícone na frase, as outras teclas em texto."},
  {f:"dica_tree_k",t:"Tecla remapeada",d:"Se o ataque for para outra tecla, a dica mostra essa tecla."},
- {f:"dash_esquiva",t:"O dash esquiva tudo",d:"Durante o dash nenhum golpe, flecha ou área acerta, em qualquer nível de Esquiva: aparece Dodge."}
+ {f:"dash_esquiva",t:"O dash esquiva tudo",d:"Durante o dash nenhum golpe, flecha ou área acerta, em qualquer nível de Esquiva: aparece Dodge."},
+ {f:"fabrico_before_pt",t:"Fabrico antes",d:"Os requisitos na letra do corpo e o ícone da bancada a sair do encaixe."},
+ {f:"fabrico_final_pt",t:"Fabrico depois",d:"Os requisitos na letra pequena 3x5 e a bancada do tamanho dos outros ícones (pt)."},
+ {f:"fabrico_final_en",t:"Crafting after (en)",d:"O mesmo em inglês."}
 ];
