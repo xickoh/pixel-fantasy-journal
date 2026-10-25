@@ -35,6 +35,7 @@ func _run() -> void:
 		"enemy_rows": _plain("res://data/enemy_rows.tres"),
 		"store_rules": _plain("res://data/store_rules.tres"),
 		"villager_roles": _roles(),
+		"starting_kit": _plain("res://data/starting_kit.tres"),  # prompt 424
 	}
 	var f := FileAccess.open(out_path, FileAccess.WRITE)
 	if f == null:
@@ -123,7 +124,7 @@ func _json(v: Variant, depth: int) -> Variant:
 				if j != null:
 					d[str(k)] = j
 			return d
-		TYPE_ARRAY, TYPE_PACKED_STRING_ARRAY, TYPE_PACKED_FLOAT32_ARRAY:
+		TYPE_ARRAY, TYPE_PACKED_STRING_ARRAY, TYPE_PACKED_FLOAT32_ARRAY, TYPE_PACKED_INT32_ARRAY:
 			var a := []
 			for e in v:
 				var j: Variant = _json(e, depth + 1)

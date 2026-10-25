@@ -47,11 +47,12 @@
   function pill(text, cls) { return h('span', 'pill ' + (cls || ''), text); }
   function row(label, content) { return h('li', null, [h('b', null, label + ': '), content]); }
 
-  // {s.key} / {r.key}, with |pct (0.5 -> 50%) and |min (seconds -> minutes)
+  // {s.key} / {r.key} / {k.key} (k: the starting kit's texts, prompt 424), with |pct (0.5 -> 50%) and |min (seconds -> minutes)
   function fill(text) {
-    return text.replace(/\{([sr])\.(\w+)(?:\|(\w+))?\}/g, (m, set, key, f) => {
+    return text.replace(/\{([srk])\.(\w+)(?:\|(\w+))?\}/g, (m, set, key, f) => {
       const v = WIKI[set] && WIKI[set][key];
       if (v == null) return '?';
+      if (typeof v === 'string') return v;
       if (f === 'pct') return fmt(Math.round(v * 1000) / 10) + '%';
       if (f === 'min') return fmt(v / 60);
       return fmt(v);

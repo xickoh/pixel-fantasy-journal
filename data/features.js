@@ -7,7 +7,7 @@ window.FEATURES = [
  {icon:"📜",color:"purple",title:"História",items:["9 missões do Mensageiro até ao Rei Esqueleto: entregas, portões de níveis, o mapa do ermitão","A masmorra do Rei: câmara selada, altar e a Coroa forjada pela missão","O Orc Gigante é opcional: boatos, um corno partido nos acampamentos e um contrato raro"]},
  {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo no slot de montada (H): mais rápido, sem stamina; um golpe forte atira-te ao chão","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa","Mapa da masmorra com nevoeiro próprio, guardado entre visitas"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
- {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, fontes bitmap nítidas, uma só paleta e cursor próprio em pixel art","Testes automáticos e este journal, atualizado a cada commit"]}
+ {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en; o kit inicial (itens, equipamento e nível das skills) no separador Start","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, fontes bitmap nítidas, uma só paleta e cursor próprio em pixel art","Testes automáticos e este journal, atualizado a cada commit"]}
 ];
 // Capturas das mecânicas mais relevantes.
 window.SHOTS = [
@@ -147,5 +147,6 @@ window.SHOTS = [
  {f:"premium_dicas",t:"Primeiros passos",d:"Começo modesto (a espada lendária é a recompensa da primeira missão), dicas que aparecem uma vez e sempre um objetivo à vista; áreas com nome e direção, sem coordenadas."},
  {f:"capacete_i",t:"Capacete de ferro",d:"O desenho \"I\": nasal com guardas das faces e coifa de malha, em todas as animações."},
  {f:"capacete_i_morte",t:"O capacete cai",d:"Na morte o capacete cai para o chão ao lado da cabeça; o peitoral e as greaves ficam no corpo deitado."},
- {f:"numeros_dano",t:"Números de dano",d:"Cada golpe mostra o dano real com o ícone do tipo (espada, seta, magia, osso, armadilha, fogo); o crítico maior e dourado, o dano recebido a vermelho com um coração partido."}
+ {f:"numeros_dano",t:"Números de dano",d:"Cada golpe mostra o dano real com o ícone do tipo (espada, seta, magia, osso, armadilha, fogo); o crítico maior e dourado, o dano recebido a vermelho com um coração partido."},
+ {f:"data_editor_start",t:"Kit inicial no data_editor",d:"O separador Start: os itens com que um personagem novo começa (quantidade, ranhura, melhoria), o equipamento vestido e o nível inicial de cada skill, com validação."}
 ];
