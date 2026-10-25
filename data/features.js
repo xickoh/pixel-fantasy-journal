@@ -7,7 +7,7 @@ window.FEATURES = [
  {icon:"📜",color:"purple",title:"História",items:["9 missões do Mensageiro até ao Rei Esqueleto: entregas, portões de níveis, o mapa do ermitão","A masmorra do Rei: câmara selada, altar e a Coroa forjada pela missão","O Orc Gigante é opcional: boatos, um corno partido nos acampamentos e um contrato raro"]},
  {icon:"🐴",color:"yellow",title:"Cavalos, água e dungeons",items:["Cavalo no slot de montada (H): mais rápido, sem stamina; um golpe forte atira-te ao chão","Andar na água funda, só com a cabeça à vista","Dungeons em labirinto (maiores nos mundos novos), com potes, armadilhas e baú de recompensa","Mapa da masmorra com nevoeiro próprio, guardado entre visitas"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Host autoritativo por ENet, até 4 jogadores, com chat e comandos","Inimigos, itens, aldeões e hora partilhados","PvP opcional e Steamworks para o fim"]},
- {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, minimapa redondo e menu do Tab com ícones","Testes automáticos e este journal, atualizado a cada commit"]}
+ {icon:"🛠️",color:"teal",title:"Ferramentas e qualidade",items:["data_editor: inimigos, loot e itens, com nome e descrição em pt e en","3 slots de mundo e de personagem, com gravação automática","HUD de madeira e pergaminho, fontes bitmap nítidas, uma só paleta e cursor próprio em pixel art","Testes automáticos e este journal, atualizado a cada commit"]}
 ];
 // Capturas das mecânicas mais relevantes.
 window.SHOTS = [
@@ -134,5 +134,8 @@ window.SHOTS = [
  {f:"pesca_minigame",t:"Minijogo da pesca",d:"60 s a apanhar peixes e a comprar upgrades com os pontos da ronda; o lixo tira pontos."},
  {f:"pesca_result",t:"A pesca",d:"Os pontos viram peixe (200 por peixe), mais as pérolas apanhadas e o XP de Pesca."},
  {f:"pesca_fisherman",t:"O pescador",d:"Chega na fase 2, vende canas e minhocas e pede-te a relíquia da família."},
- {f:"blocos_terra",t:"Blocos de terra",d:"Blocos juntos partilham um só topo, com o contorno só nas bordas; sozinho, um bloco é um montinho."}
+ {f:"blocos_terra",t:"Blocos de terra",d:"Blocos juntos partilham um só topo, com o contorno só nas bordas; sozinho, um bloco é um montinho."},
+ {f:"premium_fontes_inventario",t:"Fontes bitmap",d:"m5x7 no corpo, Pixel Operator nos títulos e no texto pequeno: tudo pelo tema, sem desfocar."},
+ {f:"premium_bolha_estados",t:"Bolhas e estados",d:"As falas dos aldeões em pergaminho com bico; a bênção e o abrandamento em molduras de madeira."},
+ {f:"premium_fontes_comparacao",t:"Escolha da fonte",d:"A folha comparativa: m5x7, Pixel Operator e Silkscreen sobre o HUD e o Tab."}
 ];
