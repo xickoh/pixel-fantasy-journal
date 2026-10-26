@@ -193,6 +193,8 @@ window.SHOTS = [
  {f:"picareta_rato",t:"Picareta no rato",d:"O quadrado verde mostra o bloco que o golpe vai partir; cinzento fora de alcance, vermelho se a picareta é fraca."},
  {f:"veias_5x",t:"Mais veias de minério",d:"O mesmo mundo antes e depois: cinco vezes mais veias, de tamanhos diferentes."},
  {f:"esqueleto_magico",t:"Esqueleto mágico",d:"O esqueleto do cajado bate com dano mágico (o número roxo)."},
+ {f:"pesca_upgrades",t:"Upgrades à vista",d:"Com tudo comprado: gaivota, rede, cardume, corrente, brilhos dourados, ostra, ampulheta e o medidor de combo."},
+ {f:"pesca_pop",t:"O clique no peixe",d:"Os pontos sobem de onde estava o peixe, que rebenta em bolhas; o som sobe com o combo."},
  {f:"pesca_popup",t:"Upgrades da pesca",d:"Ao passar o rato num upgrade: o que dá agora, o que dá no nível seguinte e o custo."},
  {f:"mapa_casa",t:"A tua casa no mapa",d:"Depois de comprada, a casa do jogador aparece a dourado com um ícone de casa próprio."},
  {f:"visao_suave",t:"Sombra suave",d:"A sombra esbate-se sem degraus, só do lado de dentro do que vês; onde deixas de ver escurece ao longo de 10 s."}
