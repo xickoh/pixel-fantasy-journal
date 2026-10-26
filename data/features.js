@@ -185,6 +185,8 @@ window.SHOTS = [
  {f:"glossario_items",t:"Glossário",d:"Um separador novo: todos os itens, receitas, inimigos e pets, com \"?\" no que ainda não encontraste, contadores e pesquisa."},
  {f:"glossario_unknown",t:"Ainda por encontrar",d:"Um \"?\" não revela nada: nem o nome, nem a descrição."},
  {f:"glossario_enemies",t:"Inimigos no glossário",d:"A vida e o dano de cada tipo, do nível 1 ao mais alto."},
+ {f:"muralha_antes",t:"A muralha antes",d:"Os troncos das casas, deitados: parecia uma casa e não uma muralha."},
+ {f:"muralha_depois",t:"A paliçada",d:"Troncos aguçados com cordas, postes com ferro e os lados em perspetiva."},
  {f:"picareta_rato",t:"Picareta no rato",d:"O quadrado verde mostra o bloco que o golpe vai partir; cinzento fora de alcance, vermelho se a picareta é fraca."},
  {f:"veias_5x",t:"Mais veias de minério",d:"O mesmo mundo antes e depois: cinco vezes mais veias, de tamanhos diferentes."},
  {f:"esqueleto_magico",t:"Esqueleto mágico",d:"O esqueleto do cajado bate com dano mágico (o número roxo)."},
