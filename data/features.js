@@ -185,6 +185,7 @@ window.SHOTS = [
  {f:"glossario_items",t:"Glossário",d:"Um separador novo: todos os itens, receitas, inimigos e pets, com \"?\" no que ainda não encontraste, contadores e pesquisa."},
  {f:"glossario_unknown",t:"Ainda por encontrar",d:"Um \"?\" não revela nada: nem o nome, nem a descrição."},
  {f:"glossario_enemies",t:"Inimigos no glossário",d:"A vida e o dano de cada tipo, do nível 1 ao mais alto."},
+ {f:"pesca_popup",t:"Upgrades da pesca",d:"Ao passar o rato num upgrade: o que dá agora, o que dá no nível seguinte e o custo."},
  {f:"mapa_casa",t:"A tua casa no mapa",d:"Depois de comprada, a casa do jogador aparece a dourado com um ícone de casa próprio."},
  {f:"visao_suave",t:"Sombra suave",d:"A sombra esbate-se sem degraus, só do lado de dentro do que vês; onde deixas de ver escurece ao longo de 10 s."}
 ];
