@@ -199,6 +199,7 @@ window.SHOTS = [
  {f:"mapa_casa",t:"A tua casa no mapa",d:"Depois de comprada, a casa do jogador aparece a dourado com um ícone de casa próprio."},
  {f:"visao_suave",t:"Sombra suave",d:"A sombra esbate-se sem degraus, só do lado de dentro do que vês; onde deixas de ver escurece ao longo de 10 s."},
  {f:"criaturas_run",t:"As criaturas da floresta",d:"Desenhadas no estilo do pack do jogo (contorno escuro, 3-4 tons, cabeças grandes), ao lado do orc: veado, coelho, javali, lobo, aranha, os dois bandidos (o NPC encapuzado do pack recolorido), treant, fogo-fátuo e morcego."},
+ {f:"criaturas_jogo",t:"As criaturas em jogo",d:"Todas as criaturas da floresta ao lado do orc e do jogador, de pés no chão (os frames levam a margem de atlas do pack); em baixo, a escuridão da visão com a transição larga nova."},
  {f:"props_floresta",t:"Os props da floresta",d:"Ao lado do carvalho e do arbusto do pack: a árvore gigante (três copas do carvalho), o poço, a boca da gruta (rochas do pack), o tronco caído, o monte, a fogueira, as bagas, os cogumelos, a erva, a colmeia e o ninho."},
  {f:"visao_celulas",t:"Visão por células",d:"Num corredor escavado: as faces que vês acendem inteiras e o interior do maciço fica escuro, sem formas estranhas."}
 ];
