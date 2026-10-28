@@ -18,7 +18,7 @@ document.getElementById('featureGrid').innerHTML=FEATURES.map(f=>`<div class="ca
 const SHOTS_DESC=SHOTS.slice().reverse(),PER=9,PAGES=Math.ceil(SHOTS_DESC.length/PER);
 let shotPage=0;
 const shotEl=document.getElementById('shotGrid'),shotInfo=document.getElementById('shotInfo'),shotDots=document.getElementById('shotDots');
-const shotCard=s=>`<figure class="shot" data-f="${s.f}"><img src="img/${s.f}.png" alt="${esc(s.t)}" loading="lazy"><figcaption><b>${esc(s.t)}</b><span>${esc(s.d)}</span></figcaption></figure>`;
+const shotCard=s=>`<figure class="shot" data-f="${s.f}"><img src="img/${s.f}.${s.ext||"png"}" alt="${esc(s.t)}" loading="lazy"><figcaption><b>${esc(s.t)}</b><span>${esc(s.d)}</span></figcaption></figure>`;
 function showShots(p){
   shotPage=(p+PAGES)%PAGES;
   shotEl.innerHTML=SHOTS_DESC.slice(shotPage*PER,shotPage*PER+PER).map(shotCard).join('');
@@ -30,12 +30,22 @@ document.getElementById('shotPrev').onclick=()=>showShots(shotPage-1);
 document.getElementById('shotNext').onclick=()=>showShots(shotPage+1);
 shotDots.onclick=e=>{const d=e.target.closest('.dot');if(d)showShots(+d.dataset.p)};
 document.addEventListener('keydown',e=>{if(!lb.hidden||e.target.closest('input'))return;const r=document.getElementById('shots').getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;if(e.key==='ArrowLeft')showShots(shotPage-1);if(e.key==='ArrowRight')showShots(shotPage+1)});
-let sx=null;shotEl.addEventListener('touchstart',e=>{sx=e.touches[0].clientX},{passive:true});
-shotEl.addEventListener('touchend',e=>{if(sx===null)return;const dx=e.changedTouches[0].clientX-sx;sx=null;if(Math.abs(dx)>60)showShots(shotPage+(dx<0?1:-1))});
+// A página só muda quando se interage: os botões, os pontos, as setas ou um arrastar do dedo claramente na horizontal
+// (o scroll vertical da página nunca vira a página; um arrastar não abre a imagem)
+let touch=null,swiped=false;
+shotEl.addEventListener('touchstart',e=>{touch=e.touches.length===1?{x:e.touches[0].clientX,y:e.touches[0].clientY}:null},{passive:true});
+shotEl.addEventListener('touchend',e=>{if(!touch)return;const dx=e.changedTouches[0].clientX-touch.x,dy=e.changedTouches[0].clientY-touch.y;touch=null;
+  if(Math.abs(dx)>60&&Math.abs(dx)>2*Math.abs(dy)){swiped=true;setTimeout(()=>swiped=false,400);showShots(shotPage+(dx<0?1:-1))}});
 const lb=document.getElementById('lightbox');
 showShots(0);
-document.getElementById('shotGrid').onclick=e=>{const f=e.target.closest('.shot');if(!f)return;lb.querySelector('img').src=f.querySelector('img').src;lb.querySelector('p').textContent=f.querySelector('b').textContent;lb.hidden=false};
-lb.onclick=()=>lb.hidden=true;
+// Ampliar: num telemóvel (ecrã tátil) a imagem abre em ecrã inteiro; tocar de novo (ou voltar atrás) fecha
+const touchScreen=matchMedia('(pointer:coarse)').matches;
+function closeLightbox(){lb.hidden=true;if(document.fullscreenElement)document.exitFullscreen().catch(()=>{})}
+document.getElementById('shotGrid').onclick=e=>{const f=e.target.closest('.shot');if(!f||swiped)return;lb.querySelector('img').src=f.querySelector('img').src;lb.querySelector('p').textContent=f.querySelector('b').textContent;lb.hidden=false;
+  if(touchScreen){lb.classList.add('full');lb.requestFullscreen?.().catch(()=>{})}else lb.classList.remove('full')};
+lb.onclick=closeLightbox;
+document.addEventListener('fullscreenchange',()=>{if(!document.fullscreenElement&&!lb.hidden&&lb.classList.contains('full'))lb.hidden=true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&!lb.hidden)closeLightbox()});
 const daysEl=document.getElementById('days');
 const COMMIT_LIST=window.COMMITS||[];
 function render(q=''){

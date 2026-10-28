@@ -86,7 +86,8 @@ h2{margin:0;font-size:clamp(15px,3vw,24px);line-height:1.5;text-transform:upperc
 .shot b{color:var(--gold);font-size:26px}
 .shot span{display:block;font-size:21px;line-height:1.1}
 #lightbox{position:fixed;inset:0;background:#0a0610ee;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;z-index:30;cursor:zoom-out;padding:16px;font-size:26px}
-#lightbox[hidden]{display:none}#lightbox img{max-height:85vh;border:6px solid var(--gold);box-shadow:0 0 0 4px var(--line),0 0 40px #f0b83a55}
+#lightbox[hidden]{display:none}#lightbox img{max-height:85vh;max-width:100%;box-sizing:border-box;object-fit:contain;border:6px solid var(--gold);box-shadow:0 0 0 4px var(--line),0 0 40px #f0b83a55}
+#lightbox.full{padding:0;gap:4px;background:#000}#lightbox.full img{width:100vw;height:auto;max-height:calc(100vh - 40px);max-height:calc(100dvh - 40px);border:0;box-shadow:none;image-rendering:pixelated}#lightbox.full p{font-size:20px;margin:0}
 .note{opacity:.85}
 
 /* devlog: pergaminhos */
