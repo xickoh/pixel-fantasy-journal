@@ -211,5 +211,6 @@ window.SHOTS = [
  {f:"destruicao_blocos",t:"Destruição dos blocos",d:"Fendas no topo e na face a crescer com as pancadas, o clarão com pedrinhas a cada pancada e o bloco a rebentar em sete pedaços, sobre terra e pedra."},
  {f:"destruicao_blocos_anim",ext:"gif",t:"Partir um bloco",d:"Cinco pancadas, o estalo, os pedaços tingidos com a cor do material e o buraco; terra à esquerda, pedra à direita."},
  {f:"ferramentas_pedra",t:"Ferramentas de pedra",d:"Espada, picareta e machado: de madeira, de pedra e de ferro, lado a lado."},
- {f:"armas_ranged_magia",t:"Armas de ranged e magia",d:"Funda, arco curto, arco de leque, besta, arco longo e os cajados de gelo, explosão, tremor, raio e meteoros."}
+ {f:"armas_ranged_magia",t:"Armas de ranged e magia",d:"Funda, arco curto, arco de leque, besta, arco longo e os cajados de gelo, explosão, tremor, raio e meteoros."},
+ {f:"chao_terra_pedra",t:"O chão debaixo dos blocos",d:"Um buraco escavado no maciço: terra por baixo dos blocos de terra e o chão de pedra novo por baixo dos de pedra, com a junção ondulada entre os dois e as faces dos blocos assentes nele."}
 ];
