@@ -129,7 +129,10 @@
     const t = h('table', 'lv');
     t.appendChild(h('thead', null, h('tr', null, ['Nível', 'Vida', 'Dano', 'Defesa', 'Veloc.'].map((x) => h('th', null, x)))));
     const body = h('tbody');
-    LEVELS.forEach((lv) => {
+    // prompt 537: the levels it is born at (its range's ends and the usual ones within it); a boss, the usual ones
+    const [lo, hi] = e.born || [1, 99];
+    const shown = e.boss ? LEVELS : [...new Set(LEVELS.concat([lo, hi]).map(Number))].filter((lv) => lv >= lo && lv <= hi).sort((a, b) => a - b);
+    shown.forEach((lv) => {
       const r = e.levels[lv];
       if (r) body.appendChild(h('tr', null, [lv, r.health, r.damage, fmt(r.defense), fmt(r.speed)].map((x) => h('td', null, String(x)))));
     });
@@ -146,6 +149,7 @@
     c.appendChild(tags);
     c.appendChild(levelTable(e));
     const info = h('ul', 'info');
+    if (!e.boss && e.born) info.appendChild(row('Nasce no nível', e.born[0] === e.born[1] ? String(e.born[0]) : e.born[0] + '–' + e.born[1]));
     info.appendChild(row('Vê-te a', fmt(e.detection) + ' px · pausa antes do golpe ' + fmt(e.windup) + ' s'));
     if (e.shot_damage_l1) info.appendChild(row('Disparo (nv 1)', e.shot_damage_l1 + ' de dano'));
     if (e.knockback_reduction) info.appendChild(row('Empurrão', 'resiste a ' + pct(e.knockback_reduction)));
@@ -190,7 +194,7 @@
 
   function renderEnemies(f) {
     const rows = WIKI.enemies.filter((e) => !f || norm(e.name + ' ' + e.family + ' ' + e.biome).includes(f));
-    count.textContent = rows.length + ' inimigos · estatísticas por nível do inimigo (1, 10, 20, 30, 40)';
+    count.textContent = rows.length + ' inimigos · estatísticas nos níveis em que cada um nasce (as pontas do seu intervalo e 1, 10, 20, 30, 40 dentro dele)';
     const wrap = h('div');
     const g = h('div', 'wgrid');
     rows.forEach((e) => g.appendChild(enemyCard(e)));

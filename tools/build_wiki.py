@@ -212,7 +212,8 @@ def main():
             "speed": e.get("speed", 45), "detection": e.get("detection_radius", 140), "windup": e.get("windup_time", 0.1),
             "knockback_reduction": e.get("knockback_reduction", 0), "crit": e.get("crit", 0),
             "weight": e.get("spawn_weight", 1), "shot_damage_l1": e.get("shot_damage_l1"),
-            "levels": e["levels"], "loot": loot,
+            "levels": e["levels"], "born": [e.get("level_min", 1), e.get("level_max", 99)],  # prompt 537
+            "loot": loot,
             "boss_health_x": (e.get("boss_rules") or {}).get("health_multiplier"),
         })
     enemies.sort(key=lambda r: (r["boss"], r["family"], r["levels"]["1"]["health"], r["name"]))

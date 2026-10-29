@@ -205,7 +205,9 @@ func _enemies() -> Array:
 			d["archetype"] = String(e.archetype.id)
 		d["weapon_id"] = String(e.weapon.id) if e.weapon != null else ""
 		var levels := {}
-		for lv in LEVELS:
+		var at_levels: Array = LEVELS.duplicate()  # prompt 537: and the ends of the levels it is born at
+		at_levels.append_array([e.level_min, e.level_max])
+		for lv in at_levels:
 			levels[str(lv)] = {"health": e.health_at(lv), "damage": e.damage_at(lv),
 					"defense": snappedf(e.defense_at(lv), 0.01), "speed": snappedf(e.speed_at(lv), 0.1)}
 		d["levels"] = levels
