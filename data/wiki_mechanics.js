@@ -114,8 +114,9 @@ const MECHANICS = [
      "O Treinador, junto à fogueira, ensina Corte Através e Arremesso de Osso: primeiro a tarefa dele, depois as moedas.",
    ]},
   {id: "montadas", title: "Cavalos", icon: "🐎", src: "docs/player.md · Horses",
-   lead: "Três cavalos que se compram ao tratador.",
+   lead: "Três cavalos, todos do tratador: o castanho é o prémio da licença de equitação, o preto e o branco compram-se na loja dele.",
    points: [
+     "Licença de equitação: sem ela, o tratador não abre a loja e propõe uma prova (estrela amarela por cima dele). Paga-se 3000 moedas e há 3 minutos para chegar a 5 pontos sorteados nas estradas da floresta, por qualquer ordem, marcados no mapa e com uma seta à volta do jogador. Se o tempo acabar, repete-se por 500 moedas, as vezes que forem precisas. Ao chegar ao 5.º, o tratador oferece o cavalo castanho e a loja abre. A licença é do personagem; ter um cavalo no inventário não conta.",
      "Equipa um cavalo na ranhura de montada e chama-o com o item. H monta e desmonta o cavalo equipado.",
      "A cavalo, andas e corres mais depressa (ver a velocidade de cada cavalo na aba Itens).",
      "Se um golpe te acertar a cavalo, podes ser derrubado e ficar atordoado.",
