@@ -32,7 +32,7 @@ func _run() -> void:
 		"powers": _each("res://items/powers/"),
 		"enhancements": _each("res://items/enhancements/"),
 		"stats": _plain("res://data/player_stats.tres"),
-		"enemy_rows": _plain("res://data/enemy_rows.tres"),
+		"enemy_rows": _enemy_rows(),  # 2026-10-31: the rows' levels from the curve
 		"store_rules": _plain("res://data/store_rules.tres"),
 		"villager_roles": _roles(),
 		"starting_kit": _plain("res://data/starting_kit.tres"),  # prompt 424
@@ -78,6 +78,22 @@ func _each(dir: String) -> Array:
 func _plain(path: String) -> Dictionary:
 	var r := load(path)
 	return _props(r, 0, true) if r != null else {}
+
+
+## The enemies' rows (data/enemy_rows.tres) with each row's levels: since 2026-10-31 the rows hold no levels, the
+## game's curve by the distance to the village (EnemyLevels) gives them; here at the row's nearest point straight up
+## from the village and at its farthest corner (3 columns, the village in the middle of the bottom row's middle area).
+func _enemy_rows() -> Dictionary:
+	var out := _plain("res://data/enemy_rows.tres")
+	var area := Vector2(GameState.WORLD_LAYOUT.area_size)
+	var rows: Array = out.get("rows", [])
+	for r in rows.size():
+		if typeof(rows[r]) != TYPE_DICTIONARY:
+			continue
+		var levels := GameState.ENEMY_LEVELS.range_between(maxf(0.0, (r - 0.5) * area.y), Vector2(1.5 * area.x, (r + 0.5) * area.y).length())
+		rows[r]["level_min"] = levels.x
+		rows[r]["level_max"] = levels.y
+	return out
 
 
 # --- generic: the exported properties that differ from the class default ---
