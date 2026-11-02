@@ -64,6 +64,15 @@ const MECHANICS = [
      "Ranged é cadência e número de projéteis: a funda atira pedras que ricocheteiam (2 saltos, 48 px), o arco curto dispara sozinho com o botão premido, o arco de leque dispara 3 setas por 1, a besta recarrega (1,5 s, 1,0 s no nível 99) e dispara na hora um virote que atravessa um inimigo, o arco longo carrega com o botão premido (até 1 s; dano e velocidade pela tensão, no mínimo 40%; cheia atravessa 2).",
      "Magia é área e elementos (cada cajado com a sua espera; o círculo no chão mostra onde cai, até 120 px): gelo congela 2 s e abranda a 50% 3 s; explosão (bola de fogo) queima e empurra; tremor à tua volta empurra e atordoa 1 s; raio salta por 4 inimigos (6 à chuva, +50%); meteoros caem 1 s depois e também te magoam se estiveres debaixo. Os chefes nunca congelam nem ficam atordoados.",
    ]},
+  {id: "manequim", title: "Manequim de treino", icon: "🎯", src: "docs/items.md · The training dummy",
+   lead: "Um colocável para experimentar o dano das armas e dos poderes.",
+   points: [
+     "Faz-se na bancada com troncos e pedra (ver o item Manequim de Treino). Ocupa 2x1 casas e pode ser espelhado com T.",
+     "Leva dano como um inimigo: espadas, murros, flechas, feitiços, queimaduras e o Golpe Fantasma acertam-lhe, com o clarão, os números e a barra de vida. Tem muita vida, 0 de defesa e recupera-a quase de imediato; nunca morre.",
+     "Por cima dele aparece o dano do último golpe e o DPS dos últimos segundos; desaparece uns segundos depois do último golpe. Em multijogador cada jogador vê o seu.",
+     "Não se mexe, não ataca e os inimigos ignoram-no. Não dá XP, loot nem conta para missões.",
+     "Só a picareta o apanha de volta para o inventário; armas e murros não o removem.",
+   ]},
   {id: "dash", title: "Dash e esquiva", icon: "💨", src: "docs/player.md · Dash and dodge",
    lead: "Um salto rápido que atravessa inimigos.",
    points: [
