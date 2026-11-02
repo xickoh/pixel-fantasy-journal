@@ -86,13 +86,30 @@ def main():
         it = items_by_id.get(i)
         return tr(it["name"]) if it else i
 
-    # --- who drops what
+    # --- who drops what (prompt 497: a weapon line is the gear's roll: the gear's chance times the weapon's share)
+    gear = raw.get("gear", {})
+    weapon_share = gear.get("weapon_weight", 1) / ((gear.get("weapon_weight", 1) + gear.get("armour_weight", 1)) or 1)
     drops = {}
     for e in raw["enemies"]:
         for line in e.get("loot_table", []):
+            chance = line["chance"]
+            if line["weapon_drop"] and chance == 0:
+                chance = e.get("gear_chance", 0) * weapon_share
+            if chance <= 0:
+                continue
             for iid in line["items"]:
-                drops.setdefault(iid, []).append({"enemy": tr(e["name"]), "id": e["id"], "chance": line["chance"],
+                drops.setdefault(iid, []).append({"enemy": tr(e["name"]), "id": e["id"], "chance": chance,
                                                   "min": line["min"], "max": line["max"], "boss": e["boss"]})
+    # the armour by the enemies' level: each piece's levels (the rows its material is in)
+    rows_at = sorted(int(k) for k in gear.get("materials", {}))
+    gear_levels = {}
+    for i, at in enumerate(rows_at):
+        until = rows_at[i + 1] - 1 if i + 1 < len(rows_at) else None
+        row = gear["materials"][str(at)]
+        total = sum(row.values()) or 1
+        for material, weight in row.items():
+            for piece in gear.get("pieces", {}).get(material, []):
+                gear_levels.setdefault(piece, []).append({"from": at, "to": until, "share": weight / total})
 
     # --- who sells what
     sold = {}
@@ -155,6 +172,8 @@ def main():
             add("Cura", "+%s" % it["cure"])
         if it.get("teleports_home"):
             add("Efeito", "teletransporta para a vila" + (" (gasta-se)" if it.get("consumed_on_use", True) else " (não se gasta)"))
+        if it.get("grants_xp"):  # prompt 527: the Recall Scroll gives it with its recall
+            add("Dá XP de", tr(it["grants_xp"]))
         if it.get("summons"):
             add("Invoca", tr(next((e["name"] for e in raw["enemies"] if e["id"] == it["summons"]), it["summons"])))
         if it.get("horse"):
@@ -166,6 +185,9 @@ def main():
             add("Luz", "%s px" % num(it["light_radius"]))
         if it.get("placed_hits"):
             add("Parte-se com", "%s pancada(s)" % it["placed_hits"])
+        if it.get("placed_broken_by"):  # prompt 525: only these blows break it placed
+            kinds = {"pickaxe": "picareta", "punch": "soco", "weapon": "arma", "tool": "ferramenta", "projectile": "projétil", "magic": "magia"}
+            add("Só se parte com", ", ".join(kinds.get(k, k) for k in it["placed_broken_by"]))
         if it.get("boss_only"):
             add("Origem", "só um chefe o larga")
         if it.get("enhanceable"):
@@ -194,6 +216,8 @@ def main():
             row["drops"] = drops[it["id"]]
         if it.get("sell_price"):
             row["sell"] = it["sell_price"]
+        if it["id"] in gear_levels:  # prompt 497: armour dropped by the enemies of these levels
+            row["gear"] = gear_levels[it["id"]]
         items.append(row)
     items.sort(key=lambda r: (list(CATEGORIES).index(r["cat"]) if r["cat"] in CATEGORIES else 99, r["name"]))
 
@@ -202,6 +226,8 @@ def main():
     for e in raw["enemies"]:
         loot = []
         for line in e.get("loot_table", []):
+            if line["weapon_drop"] and line["chance"] == 0:
+                continue  # prompt 497: the weapon comes of the gear's roll (the enemy's "Equipamento" row)
             loot.append({"items": [[iname(i), i] for i in line["items"]], "chance": line["chance"], "min": line["min"],
                          "max": line["max"], "weapon": line["weapon_drop"]})
         enemies.append({
@@ -213,7 +239,7 @@ def main():
             "knockback_reduction": e.get("knockback_reduction", 0), "crit": e.get("crit", 0),
             "weight": e.get("spawn_weight", 1), "shot_damage_l1": e.get("shot_damage_l1"),
             "levels": e["levels"], "born": [e.get("level_min", 1), e.get("level_max", 99)],  # prompt 537
-            "loot": loot,
+            "loot": loot, "gear_chance": e.get("gear_chance", 0),
             "boss_health_x": (e.get("boss_rules") or {}).get("health_multiplier"),
         })
     enemies.sort(key=lambda r: (r["boss"], r["family"], r["levels"]["1"]["health"], r["name"]))
@@ -228,7 +254,7 @@ def main():
          "sells": shop_items(rules.get("innkeeper_stock", {}))},
         {"id": "ferreiro", "name": "Ferreiro", "where": "Forja", "does": "Vende armas, escudo, armaduras e munição; refaz o encantamento das peças.",
          "sells": shop_items(rules.get("blacksmith_stock", {}))},
-        {"id": "feiticeiro", "name": "Feiticeiro", "where": "Na vila (torre do feiticeiro)", "does": "Vende poções e pergaminhos de regresso.",
+        {"id": "feiticeiro", "name": "Feiticeiro", "where": "Na vila (torre do feiticeiro)", "does": "Vende poções, pergaminhos de regresso e o cajado de gelo.",
          "sells": shop_items(rules.get("wizard_stock", {}))},
         {"id": "tratador", "name": "Tratador de cavalos", "where": "Estábulo", "does": "Vende cavalos.",
          "sells": shop_items(rules.get("stableman_stock", {}))},
@@ -260,8 +286,11 @@ def main():
         "categories": CATEGORIES, "items": items, "enemies": enemies, "villagers": villagers,
         "personalities": personalities, "quests": quests, "blessings": blessings, "powers": powers, "enhancements": enh,
         "s": raw["stats"], "r": {k: v for k, v in rules.items() if not isinstance(v, (dict, list))},
+        # prompt 504: the +0 to +9 table's numbers ({u.key} in the mechanics)
+        "u": {k: v for k, v in (raw.get("upgrade") or {}).items() if isinstance(v, (int, float)) and not isinstance(v, bool)},
         "spawn_rows": raw.get("enemy_rows", {}).get("rows", []),
         "k": starting_kit(raw.get("starting_kit", {}), iname),
+        "gear": gear,  # prompt 497
     }
     out = ROOT / "data" / "wiki_data.js"
     text = ("// Generated by tools/build_wiki.py from the game's data. Do not edit by hand.\n"

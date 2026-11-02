@@ -49,7 +49,7 @@
 
   // {s.key} / {r.key} / {k.key} (k: the starting kit's texts, prompt 424), with |pct (0.5 -> 50%) and |min (seconds -> minutes)
   function fill(text) {
-    return text.replace(/\{([srk])\.(\w+)(?:\|(\w+))?\}/g, (m, set, key, f) => {
+    return text.replace(/\{([srku])\.(\w+)(?:\|(\w+))?\}/g, (m, set, key, f) => {
       const v = WIKI[set] && WIKI[set][key];
       if (v == null) return '?';
       if (typeof v === 'string') return v;
@@ -99,6 +99,12 @@
         span.appendChild(document.createTextNode(' (' + pct(d.chance) + (d.max > 1 ? ', ' + d.min + '–' + d.max : '') + ')'));
       });
       info.appendChild(row('Largado por', span));
+    }
+    if (it.gear) {
+      // prompt 497: armour that any enemy of these levels may drop (the gear's roll)
+      const g = WIKI.gear || {};
+      info.appendChild(row('Largado (equipamento)', it.gear.map((r) => 'nível ' + r.from + (r.to ? '–' + r.to : '+') + ' (' + pct(r.share) + ' do material)').join(' · ') +
+        ' · ' + pct(g.chance || 0) + ' por morte, metade armadura'));
     }
     if (it.sell) info.appendChild(row('Vende por', it.sell + ' moedas'));
     if (full) {
@@ -170,6 +176,13 @@
         span.appendChild(document.createTextNode(' (' + pct(l.chance) + (l.max > 1 ? ', ' + l.min + '–' + l.max : '') + ')'));
       });
       info.appendChild(row('Larga', span));
+    }
+    if (e.gear_chance) {
+      // prompt 497: one piece of gear a kill: its weapon or armour of its level's material
+      const g = WIKI.gear || {};
+      const mats = Object.keys(g.materials || {}).map((k) => 'nv ' + k + '+: ' + Object.keys(g.materials[k]).join(', ')).join(' · ');
+      info.appendChild(row('Equipamento', pct(e.gear_chance) + ' por morte (até ' + pct(g.chance_99 || 0) + ' com Sorte 99): ' +
+        (e.weapon_id ? 'a sua arma ou ' : '') + 'uma peça de armadura · ' + mats));
     }
     if (full) {
       const kin = WIKI.enemies.filter((o) => o.family === e.family && o.id !== e.id);
@@ -278,7 +291,7 @@
       });
       wrap.appendChild(bg);
       wrap.appendChild(h('h2', 'sub', 'Encantamentos'));
-      wrap.appendChild(h('p', 'note', 'Armas, ferramentas e armaduras saem com um destes; multiplicam os números da peça. “Peso” é a chance relativa de sair.'));
+      wrap.appendChild(h('p', 'note', 'Só as ferramentas saem com um destes (as armas e as armaduras vão de +0 a +9: ver a mecânica Melhoria); multiplicam os números da ferramenta. “Peso” é a chance relativa de sair.'));
       const t = h('table', 'lv');
       t.appendChild(h('thead', null, h('tr', null, ['Nome', 'Multiplicador', 'Peso'].map((x) => h('th', null, x)))));
       const body = h('tbody');
@@ -300,9 +313,9 @@
 
   // --- números
   function renderNumbers(f) {
-    const entries = Object.entries(WIKI.s).map(([k, v]) => ['s.' + k, v]).concat(Object.entries(WIKI.r).map(([k, v]) => ['r.' + k, v]));
+    const entries = Object.entries(WIKI.s).map(([k, v]) => ['s.' + k, v]).concat(Object.entries(WIKI.r).map(([k, v]) => ['r.' + k, v]), Object.entries(WIKI.u || {}).map(([k, v]) => ['u.' + k, v]));
     const rows = entries.filter(([k, v]) => !f || norm(k + ' ' + v).includes(f));
-    count.textContent = rows.length + ' constantes · StatsConfig (s) e StoreRules (r) do jogo';
+    count.textContent = rows.length + ' constantes · StatsConfig (s), StoreRules (r) e WeaponUpgrade (u) do jogo';
     const t = h('table', 'lv wide');
     t.appendChild(h('thead', null, h('tr', null, ['Chave', 'Valor'].map((x) => h('th', null, x)))));
     const body = h('tbody');

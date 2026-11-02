@@ -1,15 +1,19 @@
 #!/usr/bin/env python3
-"""Regenera data/prompts.js a partir de pixel_fantasy/05-prompts.md (só leitura) e data/commits.js
-a partir do git log do jogo (só leitura).
+"""Regenera data/prompts.js a partir dos prompts da vault (só leitura): raw/pixel_fantasy/05-prompts.md (os por
+enviar e enviados) e arquivo/pixel_fantasy/historico-prompts.md (os implementados e fechados, desde 2026-10-29);
+e data/commits.js a partir do git log do jogo (só leitura).
 Dia de cada prompt: "Criado em", senão a data de "Enviado em", senão 2026-10-18.
 Corre sozinho depois de cada commit do jogo (hook post-commit do repositório do jogo)."""
 import re, json, sys, pathlib, subprocess
-SRC = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else '/home/deck/vault/raw/pixel_fantasy/05-prompts.md')
+SRCS = [pathlib.Path(p) for p in sys.argv[1:]] or [
+    pathlib.Path('/home/deck/vault/arquivo/pixel_fantasy/historico-prompts.md'),
+    pathlib.Path('/home/deck/vault/raw/pixel_fantasy/05-prompts.md')]
 OUT = pathlib.Path(__file__).resolve().parent.parent / 'data' / 'prompts.js'
 COMMITS_OUT = OUT.parent / 'commits.js'
 GAME = pathlib.Path('/home/deck/Documents/pixel_fantasy')
 DEFAULT_DAY = '2026-10-18'
-parts = re.split(r'^## (\d+)\. (.*)$', SRC.read_text(encoding='utf8'), flags=re.M)
+text_all = '\n'.join(p.read_text(encoding='utf8') for p in SRCS if p.exists())
+parts = re.split(r'^## (\d+)\. (.*)$', text_all, flags=re.M)
 items = []
 for i in range(1, len(parts), 3):
     n, title, body = int(parts[i]), parts[i + 1].strip(), parts[i + 2]
@@ -30,6 +34,11 @@ for i in range(1, len(parts), 3):
     items.append(dict(n=n, title=title, day=day or DEFAULT_DAY, assumed=day is None,
                       status=(field('Estado') or '').strip('`'), text='\n'.join(text).strip(),
                       result=None if res in (None, '—') else res))
+# an entry being moved may be in both files for a moment: keep the first (the history's), in number order
+seen = {}
+for it in items:
+    seen.setdefault(it['n'], it)
+items = [seen[n] for n in sorted(seen)]
 OUT.write_text('window.PROMPTS = ' + json.dumps(items, ensure_ascii=False) + ';\n', encoding='utf8')
 print(len(items), 'prompts ->', OUT)
 

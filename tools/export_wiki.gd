@@ -36,6 +36,8 @@ func _run() -> void:
 		"store_rules": _plain("res://data/store_rules.tres"),
 		"villager_roles": _roles(),
 		"starting_kit": _plain("res://data/starting_kit.tres"),  # prompt 424
+		"gear": _gear(),  # prompt 497: the gear a kill drops
+		"upgrade": _plain("res://data/weapon_upgrade.tres"),  # prompt 504: the weapons' and armour's +0 to +9
 	}
 	var f := FileAccess.open(out_path, FileAccess.WRITE)
 	if f == null:
@@ -238,8 +240,30 @@ func _enemies() -> Array:
 			loot.append({"items": names, "chance": le.drop_chance(), "min": le.amount_min(), "max": le.amount_max(),
 					"weapon_drop": le.weapon_drop, "group": String(le.group.id) if le.group != null else ""})
 		d["loot_table"] = loot
+		d["gear_chance"] = GearDrops.chance(1) if GearDrops.drops_gear(e) else 0.0  # prompt 497
 		rows.append(d)
 	return rows
+
+
+## Prompt 497: the gear's rules (data/loot_rules.tres): the chance a kill, the weights, the armour's materials by
+## level (with each material's pieces), and the weapons' material by level (WeaponTiers.level_materials).
+func _gear() -> Dictionary:
+	var rules := GearDrops.rules()
+	var materials := {}
+	for at: int in rules.armour_materials:
+		var row := {}
+		for m in rules.armour_materials[at]:
+			row[String(m)] = float(rules.armour_materials[at][m])
+		materials[str(at)] = row
+	var pieces := {}
+	for at: int in rules.armour_materials:
+		for m in rules.armour_materials[at]:
+			pieces[String(m)] = GearDrops.pieces_of(m).map(func(it): return String(it.id))
+	var weapons := {}
+	for at: int in EnemyData.TIERS.level_materials:
+		weapons[str(at)] = String(EnemyData.TIERS.level_materials[at])
+	return {"chance": rules.gear_drop_chance, "chance_99": GearDrops.chance(99), "weapon_weight": rules.gear_weapon_weight,
+		"armour_weight": rules.gear_armour_weight, "materials": materials, "pieces": pieces, "weapon_materials": weapons}
 
 
 # --- shops and villagers ---
@@ -256,7 +280,7 @@ func _stores() -> Array:
 			var offers := []
 			for o in s.offers:
 				if o != null and o.item != null:
-					offers.append({"item": String(o.item.id), "amount": o.amount, "price": o.price})
+					offers.append({"item": String(o.item.id), "amount": o.amount, "price": o.total() if o.has_method("total") else o.price})
 			rows.append({"file": path.get_file().get_basename(), "name": s.name, "items": items, "offers": offers})
 	return rows
 

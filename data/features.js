@@ -2,9 +2,9 @@
 // for das principais, e então substitui ou reescreve um ponto; nunca se acrescenta uma lista de pormenores.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com escudo, dash e stamina","Orcs, esqueletos, múmias e bestas da floresta, mais fortes quanto mais longe da vila","Dois bosses: o Rei Esqueleto e o Orc Gigante"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, com dia e noite e clima","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, waypoints e masmorras em labirinto"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, com dia e noite e clima","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","9 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
- {icon:"🎒",color:"blue",title:"Progressão",items:["10 skills de 1 a 99, com Fabrico por níveis","Ferramentas, armas e armaduras de madeira, pedra e cinco metais; poderes nas armas","Cavalo, animais de estimação, pesca e gancho de abordagem"]},
+ {icon:"🎒",color:"blue",title:"Progressão",items:["10 skills de 1 a 99, com Fabrico por níveis","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, animais de estimação, pesca e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas",items:["data_editor para inimigos, itens, missões e números do jogo","Testes automáticos a cada funcionalidade","Este journal, atualizado a cada commit"]}
 ];
@@ -49,7 +49,7 @@ window.SHOTS = [
  {f:"altar",t:"Altar dos poderes",d:"Uma pedra rúnica para tirar e pôr poderes nas armas."},
  {f:"deserto",t:"Deserto",d:"Areia, cactos, rochas e estrada, nas filas de cima do mapa."},
  {f:"nome_barra",t:"Nome sobre a barra",d:"O nome de cada monstro aparece por cima da barra de vida e do nível."},
- {f:"pergaminho",t:"Pergaminho de Regresso",d:"O feiticeiro vende-o a 100 moedas; leva-te a casa uma vez."},
+ {f:"pergaminho",t:"Pergaminho de Regresso",d:"O feiticeiro vende-o a 100 moedas; leva-te a casa uma vez e dá XP de Magia."},
  {f:"escudo_arco",t:"Bloquear com o escudo",d:"O arco branco do Escudo de Madeira, virado para onde apontas."},
  {f:"metais_paleta",t:"Metais por paleta",d:"Capacete de ouro, peitoral de diamante e botas de chumbo, tudo das tiras do ferro."},
  {f:"grevas",t:"Grevas de ferro",d:"As botas passaram a grevas: pernas e pés de ferro, no slot Pernas."},
@@ -203,6 +203,8 @@ window.SHOTS = [
  {f:"visao_celulas",t:"Visão por células",d:"Num corredor escavado: as faces que vês acendem inteiras e o interior do maciço fica escuro, sem formas estranhas."},
  {f:"animais_v2",t:"Os animais da floresta, redesenhados",d:"No estilo do boneco: contorno preto, dois tons, patas que nascem do corpo. Em cima, o boneco e os animais antigos; em baixo, os novos."},
  {f:"animais_corrida",ext:"gif",t:"A corrida dos animais",d:"Oito frames por ciclo, cada pata com a sua fase (o veado, o javali e o lobo a trote, o coelho aos saltos), ao lado do boneco a correr."},
+ {f:"animais_v3",t:"Veado, javali e lobo menos fofos",d:"Ao estilo do cavalo e do pack: proporções reais, contorno quase preto, quatro tons, patas que nascem do corpo. Em cima, o cavalo, o orc e os de antes; em baixo, os novos."},
+ {f:"animais_v3_corrida",ext:"gif",t:"A nova corrida dos animais",d:"O cavalo e os três novos a trote, oito frames por ciclo."},
  {f:"transparencia_arvore",t:"Transparência suave (árvore)",d:"Atrás de uma árvore, a copa fica transparente num disco esbatido à volta do boneco, sem o recorte nítido da forma."},
  {f:"transparencia_bloco",t:"Transparência suave (bloco)",d:"Atrás do topo de um bloco de terra: as pernas veem-se por um disco esbatido, em vez de um quadrado a 50%."},
  {f:"transicao_pedra_terra",t:"Pedra na terra, sem escadas",d:"Uma bolsa de pedra dentro do maciço: a junção com a terra é ondulada, com contorno e migalhas, em vez da escada de quadrados de 16 px."},
@@ -210,7 +212,26 @@ window.SHOTS = [
  {f:"transicao_face",t:"Junção nas faces",d:"Ao perto (x4): a face de pedra entra 1-3 px, ondulada, na face de terra ao lado."},
  {f:"destruicao_blocos",t:"Destruição dos blocos",d:"Fendas no topo e na face a crescer com as pancadas, o clarão com pedrinhas a cada pancada e o bloco a rebentar em sete pedaços, sobre terra e pedra."},
  {f:"destruicao_blocos_anim",ext:"gif",t:"Partir um bloco",d:"Cinco pancadas, o estalo, os pedaços tingidos com a cor do material e o buraco; terra à esquerda, pedra à direita."},
+ {f:"destruicao_oclusao",t:"O bloco da frente tapa",d:"A pancada e o rebentar de um bloco ficam por trás do bloco que está à frente dele: só se vê o que ele não tapa."},
+ {f:"fendas_face",t:"Fendas na face",d:"A mesma fratura no topo e na face; um bloco à frente tapa a face e, escavado, as fendas voltam a ver-se."},
  {f:"ferramentas_pedra",t:"Ferramentas de pedra",d:"Espada, picareta e machado: de madeira, de pedra e de ferro, lado a lado."},
  {f:"armas_ranged_magia",t:"Armas de ranged e magia",d:"Funda, arco curto, arco de leque, besta, arco longo e os cajados de gelo, explosão, tremor, raio e meteoros."},
- {f:"chao_terra_pedra",t:"O chão debaixo dos blocos",d:"Um buraco escavado no maciço: terra por baixo dos blocos de terra e o chão de pedra novo por baixo dos de pedra, com a junção ondulada entre os dois e as faces dos blocos assentes nele."}
+ {f:"resumo_area",t:"Resumo da área",d:"O ecrã de loading ao mudar de área: o retrato do jogador, os inimigos mortos por tipo, o XP ganho por skill com as subidas de nível e as moedas."},
+ {f:"melhoria_brilho",t:"Brilho +6 a +9",d:"A mesma khopesh de ouro a +6, +7, +8 e +9: a +7 brilha pouco, a +8 muito e a +9 igual, com faíscas."},
+ {f:"ferreiro_melhorar",t:"Melhorar no ferreiro",d:"A espada no slot, só as armas e armaduras ao lado; o botão Melhorar mostra a chance, o custo e o ganho."},
+ {f:"pets_estilo_pack",t:"Os pets no estilo do pack",d:"Antes e depois: o Pet Tocha é a tocha do pack com olhos na taça, a flutuar; o Pet Lenhador um orc pequeno com contorno e sombreado do Pixel Crawler, presas, gorro e machado às costas."},
+ {f:"pets_estilo_pack_anim",ext:"gif",t:"Os pets a andar",d:"A tocha sobe e desce e inclina-se para onde vai; o lenhador mexe as pernas e balança a mão; parados, a tocha flutua e o lenhador respira."},
+ {f:"mobilia_casa",t:"Mobília nova na casa",d:"A casa do jogador mobilada com peças fabricadas com troncos: cama de casal azul, tapete, mesa redonda, armário, troféu de urso e quadro na parede."},
+ {f:"mobilia_partir",t:"Partir a mobília",d:"Um barril da casa a partir com o machado: a barra de vida e o abanão; partido, volta para o inventário."},
+ {f:"topos_cor_certa",t:"Topos à cor certa",d:"Antes e depois: o shader dos topos multiplicava a textura duas vezes; agora o topo da pedra é 969aa4 e a faixa escura entre o topo e a face desapareceu."},
+ {f:"fronteira_zona",t:"O limite da zona",d:"A faixa da zona vizinha, para lá da fronteira, sai escurecida, mais fria e com uma linha clara na fronteira, a afundar no fundo ao longe."},
+ {f:"aterrar_agua",t:"Aterrar a água",d:"Terra na margem de um lago: três células passam a chão de terra, com a margem refeita à volta, e Terra outra vez na do meio levanta um bloco normal."},
+ {f:"mapa_pedra_minerios",t:"Pedra e minérios no mapa",d:"No mapa e no minimapa a pedra é um cinzento azulado e cada minério um ponto da cor do seu metal (ouro, diamante, ferro, chumbo), mais claro; a terra fica castanha escura."},
+ {f:"elite_afixos",t:"Afixos dos elites",d:"Um Orc Axe elite Burning e Shielded: os afixos a seguir ao nome, cada um na sua cor, o contorno azul do escudo e o rasto de fogo no chão."},
+ {f:"pedra_portal",t:"Pedra do Portal",d:"Uma pedra de corrupção caída do céu, rachada, com uma onda de orcs à volta; o aviso no topo e o ícone roxo no minimapa."},
+ {f:"chao_terra_pedra",t:"O chão debaixo dos blocos",d:"Um buraco escavado no maciço: terra por baixo dos blocos de terra e o chão de pedra novo por baixo dos de pedra, com a junção ondulada entre os dois e as faces dos blocos assentes nele."},
+ {f:"blocos_cavados_juncoes",t:"Blocos escavados, sem linhas retas",d:"Os blocos partidos ou colocados refazem as junções irregulares à volta (terra, pedra e topos), como num mundo gerado assim."},
+ {f:"mapa_nevoa_escuro",t:"O mapa e a névoa",d:"As zonas por explorar a azul muito escuro, com a borda esbatida, e as linhas das áreas e da muralha da vila por cima do terreno."},
+ {f:"minimapa_areas",t:"Minimapa com as linhas das áreas",d:"O limite das áreas desenhado a castanho, só nos troços já explorados."},
+ {f:"vila_compacta",t:"A vila mais pequena",d:"A praça, a torre, as casas e a taberna mais juntas, todas as estruturas à volta da fogueira."}
 ];
