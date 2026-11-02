@@ -233,5 +233,11 @@ window.SHOTS = [
  {f:"blocos_cavados_juncoes",t:"Blocos escavados, sem linhas retas",d:"Os blocos partidos ou colocados refazem as junções irregulares à volta (terra, pedra e topos), como num mundo gerado assim."},
  {f:"mapa_nevoa_escuro",t:"O mapa e a névoa",d:"As zonas por explorar a azul muito escuro, com a borda esbatida, e as linhas das áreas e da muralha da vila por cima do terreno."},
  {f:"minimapa_areas",t:"Minimapa com as linhas das áreas",d:"O limite das áreas desenhado a castanho, só nos troços já explorados."},
- {f:"vila_compacta",t:"A vila mais pequena",d:"A praça, a torre, as casas e a taberna mais juntas, todas as estruturas à volta da fogueira."}
+ {f:"vila_compacta",t:"A vila mais pequena",d:"A praça, a torre, as casas e a taberna mais juntas, todas as estruturas à volta da fogueira."},
+ {f:"combate_rasto_ataque",t:"O rasto do golpe",d:"Um leque que varre a área da hitbox do golpe e acaba no limite dela; no lugar da shockwave."},
+ {f:"combate_impacto",t:"O golpe a acertar",d:"O inimigo pisca a branco, deforma-se com o golpe e há um clarão no ponto de contacto, com o rasto por trás."},
+ {f:"combate_barra_fantasma",t:"Barra de vida com dano fantasma",d:"A fatia de vida perdida fica um instante na barra e escoa devagar; os golpes seguidos somam-se."},
+ {f:"combate_telegrafia",t:"O inimigo avisa o golpe",d:"Um lanceiro a meio da preparação: a arma recua e o corpo também, para se ver o ataque a chegar."},
+ {f:"moedas_novas",t:"As moedas novas",d:"Moedas lisas com relevo, a rodar no chão (6 frames)."},
+ {f:"poder_phantom_strike",t:"Phantom Strike",d:"O novo poder de arma corpo a corpo, aqui numa espada: o golpe do fantasma junto ao golpe do jogador."}
 ];
