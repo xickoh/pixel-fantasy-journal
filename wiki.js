@@ -49,7 +49,7 @@
 
   // {s.key} / {r.key} / {k.key} (k: the starting kit's texts, prompt 424), with |pct (0.5 -> 50%) and |min (seconds -> minutes)
   function fill(text) {
-    return text.replace(/\{([srku])\.(\w+)(?:\|(\w+))?\}/g, (m, set, key, f) => {
+    return text.replace(/\{([srkul])\.(\w+)(?:\|(\w+))?\}/g, (m, set, key, f) => {
       const v = WIKI[set] && WIKI[set][key];
       if (v == null) return '?';
       if (typeof v === 'string') return v;
@@ -313,7 +313,7 @@
 
   // --- números
   function renderNumbers(f) {
-    const entries = Object.entries(WIKI.s).map(([k, v]) => ['s.' + k, v]).concat(Object.entries(WIKI.r).map(([k, v]) => ['r.' + k, v]), Object.entries(WIKI.u || {}).map(([k, v]) => ['u.' + k, v]));
+    const entries = Object.entries(WIKI.s).map(([k, v]) => ['s.' + k, v]).concat(Object.entries(WIKI.r).map(([k, v]) => ['r.' + k, v]), Object.entries(WIKI.u || {}).map(([k, v]) => ['u.' + k, v]), Object.entries(WIKI.l || {}).map(([k, v]) => ['l.' + k, v]));
     const rows = entries.filter(([k, v]) => !f || norm(k + ' ' + v).includes(f));
     count.textContent = rows.length + ' constantes · StatsConfig (s), StoreRules (r) e WeaponUpgrade (u) do jogo';
     const t = h('table', 'lv wide');

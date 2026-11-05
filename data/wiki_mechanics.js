@@ -1,5 +1,5 @@
 // As mecânicas do jogo, à mão (pt-PT). O que está nos dados do jogo não se escreve aqui: usa marcas
-// {s.chave} (StatsConfig, data/player_stats.tres) e {r.chave} (StoreRules, data/store_rules.tres), com
+// {s.chave} (StatsConfig, data/player_stats.tres) e {r.chave} (StoreRules, data/store_rules.tres) e {l.chave} (a licença de equitação, data/riding_license.tres), com
 // |pct (0.5 -> 50%) ou |min (segundos -> minutos). Os valores vêm de data/wiki_data.js (tools/build_wiki.py),
 // por isso mudam sozinhos quando o jogo muda. Cada secção diz de que doc do jogo vem (src).
 const MECHANICS = [
@@ -150,7 +150,7 @@ const MECHANICS = [
   {id: "montadas", title: "Cavalos", icon: "🐎", src: "docs/player.md · Horses",
    lead: "Três cavalos, todos do tratador: o castanho é o prémio da licença de equitação, o preto e o branco compram-se na loja dele.",
    points: [
-     "Licença de equitação: sem ela, o tratador não abre a loja e propõe uma prova (estrela amarela por cima dele). Paga-se 3000 moedas e há 3 minutos para chegar a 5 pontos sorteados nas estradas da floresta, por qualquer ordem, marcados no mapa e com uma seta à volta do jogador. Se o tempo acabar, repete-se por 500 moedas, as vezes que forem precisas. Ao chegar ao 5.º, o tratador oferece o cavalo castanho e a loja abre. A licença é do personagem; ter um cavalo no inventário não conta.",
+     "Licença de equitação: sem ela, o tratador não abre a loja e propõe uma prova (estrela amarela por cima dele). Paga-se {l.price} moedas e há {l.time_limit|min} minutos para chegar a {l.points} pontos sorteados nas estradas da floresta, por qualquer ordem, marcados no mapa e com uma seta à volta do jogador. Se o tempo acabar, repete-se por {l.retry_price} moedas, as vezes que forem precisas. Ao chegar ao 5.º, o tratador oferece o cavalo castanho e a loja abre. A licença é do personagem; ter um cavalo no inventário não conta.",
      "Equipa um cavalo na ranhura de montada e chama-o com o item. H monta e desmonta o cavalo equipado.",
      "A cavalo, andas e corres mais depressa (ver a velocidade de cada cavalo na aba Itens).",
      "Se um golpe te acertar a cavalo, podes ser derrubado e ficar atordoado.",

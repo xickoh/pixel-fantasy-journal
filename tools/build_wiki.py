@@ -288,6 +288,7 @@ def main():
         "s": raw["stats"], "r": {k: v for k, v in rules.items() if not isinstance(v, (dict, list))},
         # prompt 504: the +0 to +9 table's numbers ({u.key} in the mechanics)
         "u": {k: v for k, v in (raw.get("upgrade") or {}).items() if isinstance(v, (int, float)) and not isinstance(v, bool)},
+        "l": {k: v for k, v in (raw.get("riding_license") or {}).items() if isinstance(v, (int, float)) and not isinstance(v, bool)},  # prompt 593
         "spawn_rows": raw.get("enemy_rows", {}).get("rows", []),
         "k": starting_kit(raw.get("starting_kit", {}), iname),
         "gear": gear,  # prompt 497

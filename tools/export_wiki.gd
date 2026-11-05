@@ -37,6 +37,7 @@ func _run() -> void:
 		"villager_roles": _roles(),
 		"starting_kit": _plain("res://data/starting_kit.tres"),  # prompt 424
 		"gear": _gear(),  # prompt 497: the gear a kill drops
+		"riding_license": _plain("res://data/riding_license.tres"),  # prompt 593: the license's price ({l.price})
 		"upgrade": _plain("res://data/weapon_upgrade.tres"),  # prompt 504: the weapons' and armour's +0 to +9
 	}
 	var f := FileAccess.open(out_path, FileAccess.WRITE)
