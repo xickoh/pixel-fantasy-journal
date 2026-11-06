@@ -4,7 +4,7 @@ window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com escudo, dash e stamina","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, rios que sobem com a chuva, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","9 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
- {icon:"🎒",color:"blue",title:"Progressão",items:["10 skills de 1 a 99, com Fabrico por níveis","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, animais de estimação, pesca e gancho de abordagem"]},
+ {icon:"🎒",color:"blue",title:"Progressão",items:["10 skills de 1 a 99, com Fabrico por níveis","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas",items:["data_editor para inimigos, itens, missões e números do jogo","Testes automáticos a cada funcionalidade","Este journal, atualizado a cada commit"]}
 ];
@@ -242,5 +242,6 @@ window.SHOTS = [
  {f:"poder_phantom_strike",t:"Phantom Strike",d:"O novo poder de arma corpo a corpo, aqui numa espada: o golpe do fantasma junto ao golpe do jogador."},
  {f:"cascata_gruta",t:"Cascata",d:"O rio cai de um troço de terreno para uma poça funda; atrás da cortina, a gruta (aqui à vista sem a visão limitada)."},
  {f:"ruinas_afundadas",t:"Ruínas afundadas",d:"Colunas partidas a sair do lago e os pontos de mergulho: uma sombra e um brilho, só de perto."},
- {f:"oasis",t:"Oásis",d:"A única água do deserto, com palmeiras e o mercador; estar na água cura."}
+ {f:"oasis",t:"Oásis",d:"A única água do deserto, com palmeiras e o mercador; estar na água cura."},
+ {f:"jangada_cais",t:"Jangada e cais",d:"A jangada só anda na água, ao dobro da velocidade; no cais da vila trabalham o pescador e a lavadeira."}
 ];

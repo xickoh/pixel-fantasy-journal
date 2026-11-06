@@ -259,6 +259,12 @@ def main():
          "sells": shop_items(rules.get("wizard_stock", {}))},
         {"id": "tratador", "name": "Tratador de cavalos", "where": "Estábulo", "does": "Vende cavalos.",
          "sells": shop_items(rules.get("stableman_stock", {}))},
+        {"id": "pescador", "name": "Pescador", "where": "Cais da vila (8h-17h; à noite junto à fogueira)",
+         "does": "Chega na fase 2. Vende canas, minhocas, a jangada e o barco; dá as missões da relíquia de família, do rio seco e da oferenda.",
+         "sells": shop_items(next((st for st in raw["stores"] if st.get("file") == "fisherman"), {}))},
+        {"id": "lavadeira", "name": "Lavadeira", "where": "Margem do cais (8h-17h); dorme numa casa da vila",
+         "does": "Lava a roupa ajoelhada à beira da água e conta boatos do rio (pedras afundadas, crocodilos, afogados); dá a missão da carga perdida.",
+         "sells": []},
     ]
     for stock in rules.get("stocks", []):
         villagers.append({"id": {"Greengrocer": "mercearia", "Butcher": "talho", "Baker": "padaria"}.get(stock["name"], stock["name"].lower()), "name": tr(stock["name"]), "where": "Mercado da vila (bancas)",

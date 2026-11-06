@@ -240,6 +240,15 @@ const MECHANICS = [
      "Cheias: enquanto chove, os rios sobem uma célula sobre a margem e os vaus ficam água rasa (atravessam-se a metade da velocidade); a pesca nos rios morde mais depressa (70% da espera). 30 s depois de parar de chover, a água baixa.",
      "Cavar junto à água: partir um bloco encostado à água deixa-o água rasa, por isso abrem-se canais célula a célula (na margem aberta, constrói um bloco de terra e parte-o). Terra numa dessas células volta a chão.",
    ]},
+  {id: "travessia", title: "Travessia", icon: "🛶", src: "docs/world.md · Crossing the water, docs/items.md · Placing objects, docs/player.md · Horses, docs/village.md · The dock and the washerwoman, docs/quests.md · Quests by giver",
+   lead: "Formas de atravessar e construir sobre a água, e a vila a viver junto a ela. Nada disto dá peixe (o peixe só vem da pesca).",
+   points: [
+     "Ponte de Madeira (4 troncos e 1 corda na bancada, receita do rio seco): coloca-se só sobre água, uma célula por item, R escolhe a direção. Em cima anda-se como em terra: velocidade normal, sem molhar, e os orcs atravessam-na. Parte-se com a picareta e devolve o item. Onde a estrada da vila atravessa o primeiro rio já há uma ponte.",
+     "Jangada (8 troncos e 2 cordas, receita dos afogados, ou 400 moedas no pescador) e Barco (3000 moedas): vão no espaço da montada; H dentro de água sobe. A jangada anda a 2x e o barco a 3x da velocidade a pé, sem stamina nem corrente; nunca saem da água (param na margem). Pesca-se de cima deles. As piranhas mordem quem vai na jangada, não no barco; os esqueletos e afogados não te seguem. Deixada, flutua e a corrente leva-a até à margem.",
+     "Cais: um braço de água junto à vila com um pontão de tábuas e uma lanterna, ligado por um caminho; o pescador trabalha lá das 8h às 17h e do pontão pesca-se sem entrar na água. Lavadeira: ajoelhada na margem do cais das 8h às 17h, conta o que sabe do rio.",
+     "Poço dos desejos (um dos quatro centros da praça): 10 moedas, uma vez por dia: 70% nada, 25% uma poção ou comida, 4,9% uma peça de armadura do nível do mundo (+1 a +4), 0,1% uma Pérola Dourada.",
+     "Missões, por ordem: O rio seco (pescador: cava a parede de terra que fecha o cais; receita da ponte), Os afogados (quem dá as missões: 6 afogados; receita da jangada e 300 moedas), A carga perdida (lavadeira: 3 caixas no fundo do rio, onde a água brilha; Escudo de Caranguejo, que trava a língua do sapo) e A oferenda (pescador: vence o Guardião do Lago; o Tridente e o título Guarda do Lago).",
+   ]},
   {id: "acessorios", title: "Acessórios", icon: "💍", src: "docs/items.md · Accessories",
    lead: "Dois espaços de equipamento novos, Anel e Amuleto, cada acessório com um efeito passivo.",
    points: [

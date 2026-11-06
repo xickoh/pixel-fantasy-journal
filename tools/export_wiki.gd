@@ -182,8 +182,8 @@ func _items() -> Array:
 			d["sell_price"] = rules.sell_price(item)
 		if item.summons != null:
 			d["summons"] = String(item.summons.id)
-		if item.calls_horse != null:
-			d["horse"] = _props(item.calls_horse, 1)
+		if item.calls_mount != null:
+			d["horse"] = _props(item.calls_mount, 1)
 		if item.ally != null:
 			d["ally"] = _props(item.ally, 1)
 		if item.teaches_recipe != null and item.teaches_recipe.result != null:
