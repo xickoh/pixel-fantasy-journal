@@ -141,7 +141,7 @@ const MECHANICS = [
    points: [
      "Cada nível multiplica o dano da arma (ou a defesa da peça) por {u.growth}: +7 dá ×4,16 e +9 dá ×6,25. O ritmo, o alcance e o resto da arma não mudam. O nome mostra o nível: \"Espada de Ferro +7\".",
      "No ferreiro (Melhorar): passar de +n a +n+1 custa metade do preço da peça vezes {u.cost_growth} por nível já feito. Falha {u.fail_chance_0|pct} de +0 para +1, {u.fail_chance_4|pct} de +4 para +5 e {u.fail_chance_8|pct} de +8 para +9; numa falha as moedas gastam-se e a peça parte-se (perde-se; os poderes instalados voltam como itens), a não ser que tenhas uma Chama do Ferreiro no inventário: gasta-se uma e a peça fica como estava. Sem chamas, o ferreiro pergunta antes de cada tentativa. Em +9 diz Máximo. O sorteio é sempre do host.",
-     "Chama do Ferreiro: só se compra ao ferreiro, por 1000 moedas (vende-se por 500), empilha até 99 e não se fabrica. Gasta-se uma por falha, sozinha, e nunca numa tentativa bem-sucedida.",
+     "Chama do Ferreiro: já não se compra; cai sempre das Pedras do Portal partidas (1 a nível 1, até 4 a nível 99; vende-se por 500), empilha até 99 e não se fabrica. Gasta-se uma por falha, sozinha, e nunca numa tentativa bem-sucedida.",
      "O que fabricas ou compras sai +0; os inimigos, os baús, as masmorras e os acampamentos dão +0 a +4 (o +4 é o mais raro, mais provável com Sorte alta).",
      "Brilho: a +7 a peça brilha um pouco, a +8 brilha muito e a +9 brilha igual com umas faíscas à volta, na mão, vestida, no chão e no ícone.",
      "Escalões: o nível que uma arma ou armadura pede é redondo (1, 5, 10, 15, 20...). Madeira 1, pedra 5, osso 10, ferro 20, ouro 30 e diamante 40 nas armas; madeira 1, couro 5, bronze 10, chumbo 15, ferro 20, ouro 25 e diamante 30 nas armaduras. Uma arma de nível 5 a +9 dá o mesmo que uma de nível 10 a +7.",
@@ -200,7 +200,7 @@ const MECHANICS = [
      "No mundo aberto cai, em média, uma pedra a cada 8-12 minutos de jogo numa área com jogadores (nunca nas masmorras, nos interiores nem na vila). 3 s antes aparece uma marca no chão; ao cair, o ecrã treme, surge o aviso «A portal stone fell nearby!» e um ícone roxo no mapa e no minimapa.",
      "A pedra tem o nível da fila e muita vida; não se mexe nem ataca. Parte-se com qualquer arma, arco ou magia, mas não com a picareta.",
      "Enquanto está de pé, liberta uma onda de 3-5 inimigos do bioma a cada 20 s (no máximo 12 vivos à volta dela). Só vêm inimigos até 5 níveis acima ou abaixo do nível da pedra, e nunca os que fogem (coelhos, veados); se nenhum servir, a pedra não liberta ondas. Ao descer a 66% e a 33% da vida liberta uma onda extra; a dos 33% traz um elite.",
-     "Partida, as ondas param e cai o seu loot: moedas, minérios do bioma, às vezes um Fragmento do Portal e equipamento; cada jogador que lhe acertou recebe a sua parte. Se ninguém a partir em 10 minutos, desfaz-se sem loot. Não fica na gravação.",
+     "Partida, as ondas param e cai o seu loot: moedas, minérios do bioma, às vezes um Fragmento do Portal, sempre Chamas do Ferreiro (1 a nível 1, até 4 a nível 99; deixaram de se vender) e equipamento; cada jogador que lhe acertou recebe a sua parte. Se ninguém a partir em 10 minutos, desfaz-se sem loot. Não fica na gravação.",
    ]},
   {id: "pesca", title: "Pesca", icon: "🎣", src: "docs/fishing.md",
    lead: "Uma skill nova com um minijogo incremental: lança a cana, apanha a mordida e transforma os pontos de uma ronda em peixe.",

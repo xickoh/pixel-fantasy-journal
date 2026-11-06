@@ -238,7 +238,7 @@ func _enemies() -> Array:
 			var names := []
 			for it in le.possible_items():
 				names.append(String(it.id))
-			loot.append({"items": names, "chance": le.drop_chance(), "min": le.amount_min(), "max": le.amount_max(),
+			loot.append({"items": names, "chance": le.drop_chance(), "min": le.amount_at_1 if le.level_scaled else le.amount_min(), "max": le.amount_at_99 if le.level_scaled else le.amount_max(),  # prompt 602: a level-scaled line shows its range from level 1 to 99
 					"weapon_drop": le.weapon_drop, "group": String(le.group.id) if le.group != null else ""})
 		d["loot_table"] = loot
 		d["gear_chance"] = GearDrops.chance(1) if GearDrops.drops_gear(e) else 0.0  # prompt 497
