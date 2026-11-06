@@ -2,6 +2,9 @@
 // Cada item, inimigo, aldeão e mecânica tem a sua página: wiki.html#itens/sword, #inimigos/orc_axe, #aldeoes/ferreiro, #mecanicas/morte.
 (function () {
   const $ = (id) => document.getElementById(id);
+  // prompt 597: how each enemy meets the water (EnemyData.water())
+  const WATER = {avoid: 'não entra em água funda (para na margem)', sink: 'afunda e anda no fundo, sem atacar nem ser atingido',
+    swim: 'nada à superfície', never: 'não entra na água, nem na rasa', float: 'flutua: a água não lhe faz nada'};
   const out = $('out'), q = $('wq'), chips = $('chips'), count = $('count'), bar = $('wikibar'), tabsEl = $('tabs');
   const TABS = [
     ['itens', 'Itens'], ['inimigos', 'Inimigos'], ['aldeoes', 'Aldeões'],
@@ -158,6 +161,7 @@
     if (!e.boss && e.born) info.appendChild(row('Nasce no nível', e.born[0] === e.born[1] ? String(e.born[0]) : e.born[0] + '–' + e.born[1]));
     info.appendChild(row('Vê-te a', fmt(e.detection) + ' px · pausa antes do golpe ' + fmt(e.windup) + ' s'));
     if (e.shot_damage_l1) info.appendChild(row('Disparo (nv 1)', e.shot_damage_l1 + ' de dano'));
+    if (e.water) info.appendChild(row('Na água', WATER[e.water] + (e.water === 'sink' || e.water === 'swim' ? ' (' + pct(e.water_speed) + ' da velocidade)' : '')));
     if (e.knockback_reduction) info.appendChild(row('Empurrão', 'resiste a ' + pct(e.knockback_reduction)));
     if (e.boss_health_x) info.appendChild(row('Vida', '×' + fmt(e.boss_health_x) + ' a do tipo base'));
     if (e.crit) info.appendChild(row('Crítico', pct(e.crit)));
@@ -398,3 +402,4 @@
   $('stamp').textContent = 'Gerada a ' + WIKI.generated + ' a partir do jogo (commit ' + WIKI.game_commit + '). Os preços são os base: o mercado do dia mexe-lhes.';
   route();
 })();
+

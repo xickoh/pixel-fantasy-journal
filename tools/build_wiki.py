@@ -237,6 +237,7 @@ def main():
             "weapon": iname(e["weapon_id"]) if e.get("weapon_id") else "", "weapon_id": e.get("weapon_id", ""),
             "speed": e.get("speed", 45), "detection": e.get("detection_radius", 140), "windup": e.get("windup_time", 0.1),
             "knockback_reduction": e.get("knockback_reduction", 0), "crit": e.get("crit", 0),
+            "water": e.get("water", ""), "water_speed": e.get("water_speed_factor", 0.1),  # prompt 597
             "weight": e.get("spawn_weight", 1), "shot_damage_l1": e.get("shot_damage_l1"),
             "levels": e["levels"], "born": [e.get("level_min", 1), e.get("level_max", 99)],  # prompt 537
             "loot": loot, "gear_chance": e.get("gear_chance", 0),

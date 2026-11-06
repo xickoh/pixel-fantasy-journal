@@ -211,6 +211,15 @@ const MECHANICS = [
      "XP de Pesca: 1 por cada 10 pontos ganhos e 5 por peixe. Os peixes curam 20, 40, 80, 150 e 300 por categoria.",
      "O pescador chega na fase 2: vende a Cana de Madeira (50) e Minhocas (10 por 20), e pede-te o Retrato de Família, guardado no baú das ruínas mais perto da vila. Entregá-lo dá a Cana Encantada e ensina a receita dela (3 troncos, 1 corda, 10 pós de cristal).",
    ]},
+  {id: "agua", title: "Água", icon: "🌊", src: "docs/world.md · The water as a barrier, docs/player.md · The water, docs/enemies.md · The water",
+   lead: "A água é uma barreira tática: cada família de inimigos reage-lhe à sua maneira, os rios têm corrente, e pode-se mergulhar.",
+   points: [
+     "Profundidades: junto à margem (20 px) a água é rasa (metade da velocidade, um quarto do corpo coberto); mais longe é funda (10% da velocidade, só a cabeça). Os vaus debaixo das estradas são terra.",
+     "Inimigos: os orcs, bandidos e aranhas não entram em água funda (param na margem, dão a volta por terra se houver caminho até 40 células, e desistem ao fim de 4 s); os esqueletos e múmias afundam e atravessam pelo fundo, invisíveis e sem poderem ser atingidos; os lobos, javalis e animais nadam (o lobo a 80%); os arqueiros, magos e xamãs nem entram na rasa. Fugir para um rio salva dos orcs, não dos lobos nem dos esqueletos.",
+     "Corrente: só nos rios (não nos lagos): empurra a 20 px/s na água funda (metade na rasa) o jogador, os inimigos, os itens no chão (descem até sair do rio) e a boia da pesca (no máximo 24 px). O dash em água funda é uma braçada: metade da distância, sem passar pelos inimigos.",
+     "Mergulho: em água funda, mantém a tecla de interagir (F, botão direito): ficas debaixo de água, os inimigos perdem-te (os que te perseguiam vão ao último sítio onde te viram e desistem ao fim de 2 s), andas a 60% e gastas stamina como a correr; com a stamina a zero vens à tona. Debaixo de água não atacas, não pescas nem usas nada.",
+     "Molhado: ao sair da água ficas molhado 10 s (uma gota no HUD): o raio faz 1,5x o dano, o fogo metade, não pegas fogo e a tocha na mão apaga-se. As armas pesadas (montantes, machados de guerra) atacam a metade da velocidade dentro de água. A água não dá peixe: o peixe só vem da pesca.",
+   ]},
   {id: "acessorios", title: "Acessórios", icon: "💍", src: "docs/items.md · Accessories",
    lead: "Dois espaços de equipamento novos, Anel e Amuleto, cada acessório com um efeito passivo.",
    points: [

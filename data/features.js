@@ -2,7 +2,7 @@
 // for das principais, e então substitui ou reescreve um ponto; nunca se acrescenta uma lista de pormenores.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com escudo, dash e stamina","Orcs, esqueletos, múmias e bestas da floresta, mais fortes quanto mais longe da vila","Dois bosses: o Rei Esqueleto e o Orc Gigante"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, com dia e noite e clima","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, rios com corrente onde se mergulha, dia e noite e clima","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","9 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
  {icon:"🎒",color:"blue",title:"Progressão",items:["10 skills de 1 a 99, com Fabrico por níveis","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, animais de estimação, pesca e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},

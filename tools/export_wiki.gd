@@ -233,6 +233,7 @@ func _enemies() -> Array:
 		if e.ranged:
 			d["shot_damage_l1"] = e.damage_at(1, e.shot_damage)
 		d["crit"] = e.critical_chance()
+		d["water"] = String(e.water())  # prompt 597: avoid, sink, swim, never, float
 		var loot := []
 		for le in e.loot:
 			var names := []
