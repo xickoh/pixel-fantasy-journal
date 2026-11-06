@@ -239,5 +239,8 @@ window.SHOTS = [
  {f:"combate_barra_fantasma",t:"Barra de vida com dano fantasma",d:"A fatia de vida perdida fica um instante na barra e escoa devagar; os golpes seguidos somam-se."},
  {f:"combate_telegrafia",t:"O inimigo avisa o golpe",d:"Um lanceiro a meio da preparação: a arma recua e o corpo também, para se ver o ataque a chegar."},
  {f:"moedas_novas",t:"As moedas novas",d:"Moedas lisas com relevo, a rodar no chão (6 frames)."},
- {f:"poder_phantom_strike",t:"Phantom Strike",d:"O novo poder de arma corpo a corpo, aqui numa espada: o golpe do fantasma junto ao golpe do jogador."}
+ {f:"poder_phantom_strike",t:"Phantom Strike",d:"O novo poder de arma corpo a corpo, aqui numa espada: o golpe do fantasma junto ao golpe do jogador."},
+ {f:"cascata_gruta",t:"Cascata",d:"O rio cai de um troço de terreno para uma poça funda; atrás da cortina, a gruta (aqui à vista sem a visão limitada)."},
+ {f:"ruinas_afundadas",t:"Ruínas afundadas",d:"Colunas partidas a sair do lago e os pontos de mergulho: uma sombra e um brilho, só de perto."},
+ {f:"oasis",t:"Oásis",d:"A única água do deserto, com palmeiras e o mercador; estar na água cura."}
 ];
