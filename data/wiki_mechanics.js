@@ -220,6 +220,15 @@ const MECHANICS = [
      "Mergulho: em água funda, mantém a tecla de interagir (F, botão direito): ficas debaixo de água, os inimigos perdem-te (os que te perseguiam vão ao último sítio onde te viram e desistem ao fim de 2 s), andas a 60% e gastas stamina como a correr; com a stamina a zero vens à tona. Debaixo de água não atacas, não pescas nem usas nada.",
      "Molhado: ao sair da água ficas molhado 10 s (uma gota no HUD): o raio faz 1,5x o dano, o fogo metade, não pegas fogo e a tocha na mão apaga-se. As armas pesadas (montantes, machados de guerra) atacam a metade da velocidade dentro de água. A água não dá peixe: o peixe só vem da pesca.",
    ]},
+  {id: "criaturas_agua", title: "Criaturas da água", icon: "🐊", src: "docs/enemies.md · Water creatures, The Lake Guardian; docs/world.md · The water's creatures",
+   lead: "Os rios e os lagos têm perigos próprios, que nascem só na sua água; nenhuma criatura larga peixe (o peixe só vem da pesca).",
+   points: [
+     "Crocodilo do rio (rasas dos rios, filas 1-2): parece um tronco e só te vê a 24 px; então arranca a 2x dentro de água (metade em terra) e morde com força, com aviso de 0,4 s. Ao fim de 6 s em terra volta para a água. Larga Pele de Crocodilo.",
+     "Afogados (água funda dos lagos, só de noite): esqueletos verdes em grupos de 2-4 que atravessam submersos e saem junto a ti; lentos, com muita vida, somem de madrugada; às vezes um Mapa na Garrafa. Bruxa do rio (água funda dos rios, fila 2): nunca sai da água, recua se te aproximas e dispara água que te molha; larga Essência de Água.",
+     "Sapo do pântano (rasas da floresta escura): a língua puxa-te para a água e envenena; salta entre poças. Sanguessuga (água da floresta escura): agarra-se e tira 2 de vida por segundo até a arrancares (manter Interagir 1 s) ou secares fora de água.",
+     "Caranguejo gigante (margens dos lagos): lento, as pinças tiram 70% de um golpe de frente; ataca-o pelas costas. Larga Carapaça de Caranguejo (não é o caranguejo de comer). Piranhas (água funda, fila 2): um cardume que não se mata e morde quem está em água funda; sair da água resolve.",
+     "Guardião do Lago (boss, no maior lago da floresta escura): invoca-se no Altar da Água da margem com 500 moedas ou 1 Essência de Água. O corpo nunca sai da água funda e não se lhe bate: 3-5 tentáculos saem da água junto a ti, com um círculo no chão 0,8 s antes; cada tentáculo morto tira 5% da vida ao boss. A cada 25% de vida perdida, uma onda empurra e molha quem está na margem; na água funda do lago as piranhas mordem. Larga o Tridente (lança com o poder Maré: empurra o dobro e molha), 2-4 Pérolas Douradas e moedas. Enquanto não morrer, nesse lago não se pesca.",
+   ]},
   {id: "acessorios", title: "Acessórios", icon: "💍", src: "docs/items.md · Accessories",
    lead: "Dois espaços de equipamento novos, Anel e Amuleto, cada acessório com um efeito passivo.",
    points: [
