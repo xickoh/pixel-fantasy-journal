@@ -246,5 +246,6 @@ window.SHOTS = [
  {f:"jangada_cais",t:"Jangada e cais",d:"A jangada só anda na água, ao dobro da velocidade; no cais da vila trabalham o pescador e a lavadeira."},
  {f:"slot_moedas",t:"Slot das moedas",d:"As moedas saem da grelha: um espaço só delas por baixo do inventário (e na loja), que nunca enche."},
  {f:"cruz_tesouro_mapa",t:"Cruz do tesouro",d:"No mapa, a cruz do mapa do tesouro maior, com contorno escuro e a pulsar de vermelho a dourado, por cima de tudo."},
- {f:"cruz_tesouro_minimapa",t:"Cruz no minimapa",d:"Fora do alcance do minimapa, a cruz fica na borda do disco, a apontar para o tesouro."}
+ {f:"cruz_tesouro_minimapa",t:"Cruz no minimapa",d:"Fora do alcance do minimapa, a cruz fica na borda do disco, a apontar para o tesouro."},
+ {f:"altares",t:"Altares",d:"Cada altar com o seu desenho: o dos poderes das armas (espada sobre um pano), o da ilha (concha), o do Rei Esqueleto (crânio e velas), o da água (pedra rúnica) e o santuário."}
 ];
