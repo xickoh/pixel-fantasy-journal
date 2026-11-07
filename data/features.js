@@ -244,5 +244,7 @@ window.SHOTS = [
  {f:"ruinas_afundadas",t:"Ruínas afundadas",d:"Colunas partidas a sair do lago e os pontos de mergulho: uma sombra e um brilho, só de perto."},
  {f:"oasis",t:"Oásis",d:"A única água do deserto, com palmeiras e o mercador; estar na água cura."},
  {f:"jangada_cais",t:"Jangada e cais",d:"A jangada só anda na água, ao dobro da velocidade; no cais da vila trabalham o pescador e a lavadeira."},
- {f:"slot_moedas",t:"Slot das moedas",d:"As moedas saem da grelha: um espaço só delas por baixo do inventário (e na loja), que nunca enche."}
+ {f:"slot_moedas",t:"Slot das moedas",d:"As moedas saem da grelha: um espaço só delas por baixo do inventário (e na loja), que nunca enche."},
+ {f:"cruz_tesouro_mapa",t:"Cruz do tesouro",d:"No mapa, a cruz do mapa do tesouro maior, com contorno escuro e a pulsar de vermelho a dourado, por cima de tudo."},
+ {f:"cruz_tesouro_minimapa",t:"Cruz no minimapa",d:"Fora do alcance do minimapa, a cruz fica na borda do disco, a apontar para o tesouro."}
 ];
