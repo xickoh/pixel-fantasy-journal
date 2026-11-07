@@ -38,7 +38,7 @@ const MECHANICS = [
      "Vida máxima: {s.max_health_level_1} no nível 1 até {s.max_health_level_99} no nível 99, numa curva que sobe cada vez mais depressa; nunca passa de {s.max_health_cap}, mesmo com o equipamento e a bênção. Os inimigos têm a sua própria curva de vida ({s.enemy_health_level_99} no nível 99) e o dano deles acompanha a tua, por isso um golpe tira a mesma parte da vida de um jogador do mesmo nível.",
      "A vida regenera sozinha {s.health_regen_share_per_minute|pct} do máximo por minuto, em combate ou a andar.",
      "A experiência de Vida vem do dano que sofres (depois da armadura), {s.health_xp_per_damage} XP por ponto.",
-     "Ritmo das skills: a Vida, a Esquiva e a Velocidade ganham 20% do XP de cada ação; a Força ganha 15% (1,5 vezes o ritmo das outras); todas as outras (Corte, Mineração, Arco, Resistência, Magia, Morte) ganham 10% do XP de cada ação. Os prémios de contratos e missões entram inteiros.",
+     "Ritmo das skills: a Vida, a Esquiva e a Velocidade ganham 20% do XP de cada ação; a Força ganha 15% (1,5 vezes o ritmo das outras) e a Resistência 13% (1,3 vezes); todas as outras (Corte, Mineração, Arco, Magia, Morte) ganham 10% do XP de cada ação. Os prémios de contratos e missões entram inteiros.",
      "A comida e as poções curam já. Q usa a melhor cura do inventário. A poção tem {s.potion_cooldown} s de espera.",
    ]},
   {id: "stamina", title: "Stamina e correr", icon: "⚡", src: "docs/player.md · Gathering, skills and stamina",
