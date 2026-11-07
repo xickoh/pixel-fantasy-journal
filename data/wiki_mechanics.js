@@ -69,8 +69,8 @@ const MECHANICS = [
    lead: "Um colocável para experimentar o dano das armas e dos poderes.",
    points: [
      "Faz-se na bancada com troncos e pedra (ver o item Manequim de Treino). Ocupa 2x1 casas e pode ser espelhado com T.",
-     "Leva dano como um inimigo: espadas, murros, flechas, feitiços, queimaduras e o Golpe Fantasma acertam-lhe, com o clarão, os números e a barra de vida. Tem muita vida, 0 de defesa e recupera-a quase de imediato; nunca morre.",
-     "Por cima dele aparece o dano do último golpe e o DPS dos últimos segundos; desaparece uns segundos depois do último golpe. Em multijogador cada jogador vê o seu.",
+     "Leva dano como um inimigo: espadas, murros, flechas, feitiços, queimaduras e o Golpe Fantasma acertam-lhe, com o clarão, os números e a barra de vida. O número é o dano exato do golpe, igual ao que um inimigo com a mesma defesa (0) levaria; o manequim não perde vida e nunca morre.",
+     "Por cima dele aparece o dano máximo do teu ataque atual (\"Dano máx.\", muda com a arma e os níveis) e o DPS dos últimos segundos; desaparece uns segundos depois do último golpe. Em multijogador cada jogador vê o seu, com o dano calculado pelo anfitrião.",
      "Não se mexe, não ataca e os inimigos ignoram-no. Não dá XP, loot nem conta para missões.",
      "Só a picareta o apanha de volta para o inventário; armas e murros não o removem.",
    ]},
