@@ -183,7 +183,7 @@ func _items() -> Array:
 		if item.summons != null:
 			d["summons"] = String(item.summons.id)
 		if item.calls_mount != null:
-			d["horse"] = _props(item.calls_mount, 1)
+			d["horse"] = _props(item.calls_mount, 1, true)  # every factor, also the ones at the script default (prompt 614)
 		if item.ally != null:
 			d["ally"] = _props(item.ally, 1)
 		if item.teaches_recipe != null and item.teaches_recipe.result != null:
