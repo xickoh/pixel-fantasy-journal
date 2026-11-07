@@ -131,6 +131,7 @@ const MECHANICS = [
    points: [
      "O preço da comida vai de {r.min_price} moedas (a cura mais pequena) a {r.max_price} (a maior), pela raiz quadrada da cura: as frutas curam de 2 (cereja) a 200 (melancia), por isso a cura cresce muito mais depressa do que o preço.",
      "Vendes qualquer coisa por {r.sell_share|pct} do preço da loja. O que nenhuma loja vende paga {r.unsold_price} moedas. As moedas não se vendem.",
+     "As moedas têm um espaço só delas no inventário (por baixo da grelha, e no topo da loja e do ferreiro): não ocupam lugar na grelha, não se arrastam nem se largam à mão, e um inventário cheio nunca impede de as apanhar.",
      "O mercado muda cada dia: cada categoria vale entre 0,8× e 1,25× e, em 5% dos dias, uma categoria sobe 1,5×. Os preços da wiki são os base.",
      "O ferreiro melhora armas e armaduras de +n para +n+1 por moedas, com chance de falhar (ver Melhoria), e reforja uma ferramenta por {r.reforge_base} moedas mais {r.reforge_share|pct} do preço dela: sai um encantamento novo ao acaso, que pode ser pior.",
      "O que vendes a um comerciante fica à venda nessa loja.",

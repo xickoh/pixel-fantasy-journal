@@ -243,5 +243,6 @@ window.SHOTS = [
  {f:"cascata_gruta",t:"Cascata",d:"O rio cai de um troço de terreno para uma poça funda; atrás da cortina, a gruta (aqui à vista sem a visão limitada)."},
  {f:"ruinas_afundadas",t:"Ruínas afundadas",d:"Colunas partidas a sair do lago e os pontos de mergulho: uma sombra e um brilho, só de perto."},
  {f:"oasis",t:"Oásis",d:"A única água do deserto, com palmeiras e o mercador; estar na água cura."},
- {f:"jangada_cais",t:"Jangada e cais",d:"A jangada só anda na água, ao dobro da velocidade; no cais da vila trabalham o pescador e a lavadeira."}
+ {f:"jangada_cais",t:"Jangada e cais",d:"A jangada só anda na água, ao dobro da velocidade; no cais da vila trabalham o pescador e a lavadeira."},
+ {f:"slot_moedas",t:"Slot das moedas",d:"As moedas saem da grelha: um espaço só delas por baixo do inventário (e na loja), que nunca enche."}
 ];
