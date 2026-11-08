@@ -1,7 +1,7 @@
 // Funcionalidades do jogo: só as mais relevantes, 6 cartões de 3 pontos curtos. Uma mecânica nova entra só se
 // for das principais, e então substitui ou reescreve um ponto; nunca se acrescenta uma lista de pormenores.
 window.FEATURES = [
- {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com dash e stamina; feitiços de classe em F1-F4 (ninja, guerreiro), subidos no Santuário das Marés com a essência que se pesca","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
+ {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com dash e stamina; feitiços de classe em Q, E, R e T (ninja, guerreiro), subidos no Santuário das Marés com a essência que se pesca","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, rios que sobem com a chuva, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","9 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
  {icon:"🎒",color:"blue",title:"Progressão",items:["Skills de 1 a 99 e a árvore da Natureza (36 skills e 5 auras), dada pela Árvore Anciã","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca e gancho de abordagem"]},
@@ -259,7 +259,7 @@ window.SHOTS = [
  {f:"armas_espelhadas_direita",t:"Armas espelhadas à direita",d:"Virado para a direita (parado, a andar e a correr), todas as armas e ferramentas espelhadas na vertical à volta da mão: a lâmina pende para baixo e para trás. Para a esquerda fica igual."},
  {f:"arma_atras_esquerda",t:"Arma à frente ou atrás",d:"A arma e a ferramenta na mão vão à frente do corpo a andar para baixo e para a direita, e atrás dele para cima e para a esquerda (aqui, a espada virado para a esquerda)."},
  {f:"mover_durante_ataque",ext:"gif",t:"Mover-se a atacar",d:"Durante o golpe o boneco pode andar, mas a 10% da velocidade: a animação do golpe continua até ao fim e ele só desliza."},
- {f:"feiticos_hud",t:"Feitiços de classe",d:"Com a adaga (ninja) ou o escudo de madeira (guerreiro) na mão secundária, 4 feitiços em F1-F4, por cima da hotbar: a tecla, o nível e o relógio de cada um."},
+ {f:"feiticos_hud",t:"Feitiços de classe",d:"Com a adaga (ninja) ou o escudo de madeira (guerreiro) na mão secundária, 4 feitiços em Q, E, R e T, por cima da hotbar: a tecla, o nível e o relógio de cada um."},
  {f:"feiticos_nuvem",ext:"gif",t:"Nuvem Venenosa",d:"O feitiço F2 do ninja: a nuvem fica onde foi lançada e tira vida por segundo aos inimigos dentro."},
  {f:"feiticos_ciclone",ext:"gif",t:"Ciclone",d:"O F2 do guerreiro: a própria arma roda duas vezes num segundo; cada inimigo ao alcance leva o dano uma vez."},
  {f:"santuario_mares",t:"Santuário das Marés",d:"Melhoria da vila (500 moedas, fase 2): uma estátua encapuzada atrás de uma bacia com a água azul da essência, com uma luz fraca que tremeluz."},
