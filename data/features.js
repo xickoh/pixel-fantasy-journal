@@ -273,5 +273,7 @@ window.SHOTS = [
  {f:"corpos_30s",ext:"gif",t:"Os corpos ficam 30 s",d:"Um inimigo ou animal morto fica deitado no chão 30 s, por baixo dos vivos e sem bloquear nem levar golpes; depois desaparece devagar. No máximo 40 corpos de cada vez."},
  {f:"morte_sem_rodar",ext:"gif",t:"Os animais morrem sem rodar",d:"O veado, o javali, o lobo e o coelho já não rodam 90° ao morrer: as pernas dobram, o corpo assenta no chão, a cabeça cai até ao chão e o olho fecha, na mesma orientação. À esquerda antes, à direita agora."},
  {f:"compendio_tab",ext:"gif",t:"O Compêndio",d:"A wiki dentro do jogo: o último separador do menu do Tab abre-a, com itens, inimigos, aldeões, skills e feitiços, mecânicas e números, pesquisa e filtros. Os mesmos dados desta wiki, de uma só fonte."},
- {f:"compendio_item",ext:"gif",t:"Abrir no compêndio",d:"O botão direito num item (ou numa skill ou num feitiço) tem «Abrir no compêndio», que abre a entrada dele."}
+ {f:"compendio_item",ext:"gif",t:"Abrir no compêndio",d:"O botão direito num item (ou numa skill ou num feitiço) tem «Abrir no compêndio», que abre a entrada dele."},
+ {f:"saber_do_pescador",t:"Saber do Pescador",d:"Com a loja aberta, o pescador ensina 10 lições permanentes do minijogo da pesca, pagas com moedas e pérolas."},
+ {f:"ronda_com_licoes",t:"Lições na ronda",d:"As lições aprendidas aparecem como ícones ao lado da ronda, com o mesmo popup das cartas."}
 ];
