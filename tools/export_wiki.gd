@@ -39,6 +39,7 @@ func _run() -> void:
 		"gear": _gear(),  # prompt 497: the gear a kill drops
 		"riding_license": _plain("res://data/riding_license.tres"),  # prompt 593: the license's price ({l.price})
 		"upgrade": _plain("res://data/weapon_upgrade.tres"),  # prompt 504: the weapons' and armour's +0 to +9
+		"nature_tree": _nature_tree(),  # prompt 624: the Nature skill tree's 36 skills and 5 auras
 	}
 	var f := FileAccess.open(out_path, FileAccess.WRITE)
 	if f == null:
@@ -76,6 +77,17 @@ func _each(dir: String) -> Array:
 		if r != null:
 			rows.append(_props(r, 0))
 	return rows
+
+
+## Prompt 624: the Nature skill tree (data/nature_tree.tres): its branches, each skill's name, branch, max level, the
+## skill before it, its effects a level (and an aura's in combat), and how each effect reads.
+func _nature_tree() -> Dictionary:
+	var t: NatureTree = load("res://data/nature_tree.tres")
+	var skills := []
+	for s in t.skills:
+		skills.append({"id": String(s.id), "name": s.display_name, "branch": s.branch, "max": s.max_level, "aura": s.aura,
+			"requires": String(s.requires), "effects": s.effects, "combat": s.combat_effects})
+	return {"branches": t.branches, "skills": skills, "texts": t.effect_texts, "flat": t.flat_effects.map(func(e): return String(e))}
 
 
 func _plain(path: String) -> Dictionary:

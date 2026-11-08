@@ -284,6 +284,23 @@
         c.appendChild(h('p', 'desc', 'Ao acabar: ' + qd.done));
         wrap.appendChild(c);
       });
+      // prompt 624: the Nature skill tree, its 36 skills by branch (their effects at their max level) and the 5 auras
+      if (WIKI.nature && WIKI.nature.skills.length) {
+        wrap.appendChild(h('h2', 'sub', 'Árvore de skills da Natureza'));
+        wrap.appendChild(h('p', 'note', 'Um ponto por nível de Natureza; os níveis máximos somam 99, por isso no nível 99 tens tudo. Cada skill pede um ponto na anterior do seu caminho. As auras: só uma ativa de cada vez, escolhida no separador Natureza. Os valores são os do nível máximo.'));
+        WIKI.nature.branches.forEach((name, b) => {
+          wrap.appendChild(h('h3', 'sub', name));
+          const ng = h('div', 'wgrid');
+          WIKI.nature.skills.filter((s) => s.branch === b).forEach((s) => {
+            const c = h('article', 'wcard');
+            c.appendChild(h('header', null, [h('h3', null, s.name), pill((s.aura ? 'aura · ' : '') + 'máx ' + s.max)]));
+            c.appendChild(h('p', 'desc', s.effects.join(' · ')));
+            if (s.requires) c.appendChild(h('p', 'en', 'Depois de: ' + s.requires));
+            ng.appendChild(c);
+          });
+          wrap.appendChild(ng);
+        });
+      }
       wrap.appendChild(h('h2', 'sub', 'Bênçãos'));
       const bg = h('div', 'wgrid');
       WIKI.blessings.forEach((b) => {

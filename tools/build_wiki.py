@@ -287,11 +287,30 @@ def main():
     enh = [{"id": x["id"], "name": tr(x.get("display_name", x["id"])), "multiplier": x.get("multiplier", 1.0), "weight": x.get("weight", 1.0)}
            for x in raw["enhancements"]]
 
+    # prompt 624: the Nature skill tree: each skill's effects at its max level, as the game words them (pt)
+    nt = raw.get("nature_tree") or {}
+    def nature_effect(effect, value):
+        text = tr(nt.get("texts", {}).get(effect, effect))
+        if "%s" not in text:
+            return text
+        if effect in nt.get("flat", []):
+            shown = ("%+d" % round(value)) if abs(value - round(value)) < 1e-6 else ("%+.2f" % value)
+        else:
+            shown = "%+d%%" % round(value * 100)
+        return text.replace("%s", shown)
+    nature = {"branches": [tr(b) for b in nt.get("branches", [])], "skills": [
+        {"name": tr(s["name"]), "branch": s["branch"], "max": s["max"], "aura": s["aura"],
+         "requires": tr(next((o["name"] for o in nt["skills"] if o["id"] == s["requires"]), "")) if s["requires"] else "",
+         "effects": [nature_effect(e, v * s["max"]) for e, v in s["effects"].items()]
+                    + [tr("In combat: %s").replace("%s", nature_effect(e, v * s["max"])) for e, v in s["combat"].items()]}
+        for s in nt.get("skills", [])]}
+
     commit = subprocess.run(["git", "-C", str(GAME), "log", "-1", "--format=%h"], capture_output=True, text=True).stdout.strip()
     data = {
         "generated": datetime.date.today().isoformat(), "game_commit": commit,
         "categories": CATEGORIES, "items": items, "enemies": enemies, "villagers": villagers,
         "personalities": personalities, "quests": quests, "blessings": blessings, "powers": powers, "enhancements": enh,
+        "nature": nature,  # prompt 624
         "s": raw["stats"], "r": {k: v for k, v in rules.items() if not isinstance(v, (dict, list))},
         # prompt 504: the +0 to +9 table's numbers ({u.key} in the mechanics)
         "u": {k: v for k, v in (raw.get("upgrade") or {}).items() if isinstance(v, (int, float)) and not isinstance(v, bool)},
