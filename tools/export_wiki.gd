@@ -182,6 +182,8 @@ func _items() -> Array:
 		if not (r is ItemData):
 			continue
 		var item: ItemData = r
+		if item.loaned:  # prompt 641: only lent by a test (the Trial Steed), not an item to list
+			continue
 		var d := _props(item, 0)
 		d["id"] = String(item.id)
 		d["name"] = item.display_name
