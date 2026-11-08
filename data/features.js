@@ -4,7 +4,7 @@ window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com dash e stamina; feitiços de classe em F1-F4 (ninja, guerreiro), subidos no Santuário das Marés com a essência que se pesca","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, rios que sobem com a chuva, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","9 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
- {icon:"🎒",color:"blue",title:"Progressão",items:["10 skills de 1 a 99, com Fabrico por níveis","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca e gancho de abordagem"]},
+ {icon:"🎒",color:"blue",title:"Progressão",items:["Skills de 1 a 99 e a árvore da Natureza (36 skills e 5 auras), dada pela Árvore Anciã","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas",items:["data_editor para inimigos, itens, missões e números do jogo","Testes automáticos a cada funcionalidade","Este journal, atualizado a cada commit"]}
 ];
@@ -17,6 +17,9 @@ window.SHOTS = [
  {f:"interiores_169",t:"Interiores",d:"Quartos com cama, janela, mobília e decoração nas paredes."},
  {f:"inventario",t:"Inventário",d:"40 slots, hotbar em cima e o separador de menus (Inventory, Crafting, Equipment, Skills)."},
  {f:"equipamento",t:"Equipamento",d:"Capacete, peitoral, grevas e mão secundária; clicar numa peça veste-a ou tira-a."},
+ {f:"arvore_ancia",t:"A Árvore Anciã",d:"Junto à primeira cascata; o primeiro toque abre a missão do mago da vila, em 5 partes."},
+ {f:"arvore_skills_natureza",t:"Árvore da Natureza",d:"36 skills em 3 ramos, um ponto por nível de Natureza, e as 5 auras."},
+ {f:"estrelas_missoes",t:"Estrelas das missões",d:"Principais a amarelo (cinzenta em curso), secundárias a azul (azul esbatido em curso)."},
  {f:"mapa",t:"Mapa do mundo",d:"A grelha inteira: deserto por cima, floresta em baixo, dungeons a azul escuro e a vila no fundo."},
  {f:"crafting_categorias",t:"Crafting",d:"Receitas por categoria e o que cada uma pede."},
  {f:"enhancements_inventario",t:"Enhancements",d:"Itens com qualidade, críticos e tooltip detalhado."},
