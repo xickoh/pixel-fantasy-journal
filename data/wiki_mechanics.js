@@ -295,6 +295,14 @@ const MECHANICS = [
      "Uma missão pode ter vários objetivos, todos a cumprir: matar inimigos de uma família, matar um chefe, limpar um tipo de lugar, entregar itens, chegar a níveis de skills ou ter um item equipado (ou na mão). Algumas só são oferecidas a partir de certos níveis: até lá, quem as dá diz o que falta e não mostra a estrela.",
      "Se perderes a Coroa durante a última missão, o Mensageiro forja outra pelos mesmos 20 ossos e barra de ouro.",
    ]},
+  {id: "arvore_ancia", title: "A Árvore Anciã", icon: "🌳", src: "docs/world.md · The Ancient Tree, docs/quests.md · The Ancient Tree's quest",
+   lead: "A mãe da natureza, o primeiro ser vivo do mundo, ameaçada pelo mago do portal.",
+   points: [
+     "Há uma só em cada mundo, junto à primeira cascata (num mundo sem cascata, na margem do maior lago). É bem maior que as outras árvores, brilha devagar e larga pontos de luz. Não se corta nem se parte.",
+     "Ao tocar-lhe pela primeira vez (botão direito ou F) pensas, num balão de pensamento, que devias falar com alguém da vila. A partir daí o mago da vila tem uma missão secundária nova; antes disso, ela não existe.",
+     "A missão tem 5 partes: juntar 10 bagas e 5 ervas (ficam contigo); deixá-las nas raízes da árvore; afastar 6 criaturas do portal que rondam a árvore; aguentar a vaga do mago (a árvore tem uma barra de vida; cada inimigo junto dela tira-lhe vida; se chegar a zero, a árvore fica fraca mas não morre e podes tentar de novo); e destruir o Treant corrompido, o servo do mago. A árvore acorda e fala.",
+     "Com a missão concluída, tocar na árvore abre a árvore de skills da Natureza (para todos os jogadores do mundo).",
+   ]},
   {id: "mundo", title: "Mundo e inimigos", icon: "🗺", src: "docs/world.md, docs/enemies.md",
    lead: "A vila fica numa floresta; para lá dela há deserto.",
    points: [
