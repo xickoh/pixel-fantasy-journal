@@ -19,6 +19,7 @@ window.SHOTS = [
  {f:"equipamento",t:"Equipamento",d:"Capacete, peitoral, grevas e mão secundária; clicar numa peça veste-a ou tira-a."},
  {f:"arvore_ancia",t:"A Árvore Anciã",d:"Junto à primeira cascata; o primeiro toque abre a missão do mago da vila, em 5 partes."},
  {f:"arvore_skills_natureza",t:"Árvore da Natureza",d:"36 skills em 3 ramos, um ponto por nível de Natureza, e as 5 auras."},
+ {f:"auras_animadas",ext:"gif",t:"Auras da Natureza",d:"Cada aura com a sua runa a rodar no chão (carvalho, brisa, seiva arcana, fúria, vento e espinho); G troca de aura."},
  {f:"estrelas_missoes",t:"Estrelas das missões",d:"Principais a amarelo (cinzenta em curso), secundárias a azul (azul esbatido em curso)."},
  {f:"mapa",t:"Mapa do mundo",d:"A grelha inteira: deserto por cima, floresta em baixo, dungeons a azul escuro e a vila no fundo."},
  {f:"crafting_categorias",t:"Crafting",d:"Receitas por categoria e o que cada uma pede."},
