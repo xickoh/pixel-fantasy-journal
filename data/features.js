@@ -223,7 +223,7 @@ window.SHOTS = [
  {f:"fendas_face",t:"Fendas na face",d:"A mesma fratura no topo e na face; um bloco à frente tapa a face e, escavado, as fendas voltam a ver-se."},
  {f:"ferramentas_pedra",t:"Ferramentas de pedra",d:"Espada, picareta e machado: de madeira, de pedra e de ferro, lado a lado."},
  {f:"armas_ranged_magia",t:"Armas de ranged e magia",d:"Funda, arco curto, arco de leque, besta, arco longo e os cajados de gelo, explosão, tremor, raio e meteoros."},
- {f:"resumo_area",t:"Resumo da área",d:"O ecrã de loading ao mudar de área: o retrato do jogador, os inimigos mortos por tipo, o XP ganho por skill com as subidas de nível e as moedas."},
+ {f:"resumo_area",t:"Resumo da área",d:"O ecrã de loading ao mudar de bioma ou num salto (a travessia entre áreas do mesmo bioma é contínua, sem loading): o retrato do jogador, os inimigos mortos por tipo, o XP ganho por skill com as subidas de nível e as moedas."},
  {f:"melhoria_brilho",t:"Brilho +6 a +9",d:"A mesma khopesh de ouro a +6, +7, +8 e +9: a +7 brilha pouco, a +8 muito e a +9 igual, com faíscas."},
  {f:"ferreiro_melhorar",t:"Melhorar no ferreiro",d:"A espada no slot, só as armas e armaduras ao lado; o botão Melhorar mostra a chance, o custo e o ganho."},
  {f:"pets_estilo_pack",t:"Os pets no estilo do pack",d:"Antes e depois: o Pet Tocha é a tocha do pack com olhos na taça, a flutuar; o Pet Lenhador um orc pequeno com contorno e sombreado do Pixel Crawler, presas, gorro e machado às costas."},
