@@ -262,5 +262,6 @@ window.SHOTS = [
  {f:"santuario_painel",t:"Subir os feitiços",d:"No santuário, uma carta por feitiço da classe na mão secundária: os números de agora e do nível seguinte e o custo em Essência de Maré, moedas e, nos níveis 5, 8 e 10, uma pérola."},
  {f:"javali_exclamacao",ext:"gif",t:"O «!» do javali",d:"Antes da investida, o javali fica parado 0,6 s com o «!», a tinta vermelha e as pegadas no chão; só depois corre. Se o jogador fugir ou o javali for atordoado, a investida cancela-se."},
  {f:"moedas_bau",t:"Moedas nos baús",d:"Nos baús do jogador (os que põe, o da casa e o do Chester) as moedas depositam-se e levantam-se: uma quantidade, tudo, um clique ou arrastar a moeda de um lado para o outro."},
- {f:"loot_atras_blocos",t:"Loot atrás dos blocos",d:"Um item no chão tapado por um bloco (o topo do bloco à frente) vê-se por cima dele a 20%, para se saber que está lá; à frente dos blocos desenha-se normal."}
+ {f:"loot_atras_blocos",t:"Loot atrás dos blocos",d:"Um item no chão tapado por um bloco (o topo do bloco à frente) vê-se por cima dele a 20%, para se saber que está lá; à frente dos blocos desenha-se normal."},
+ {f:"visao_noite",t:"Visão à noite",d:"À noite só se vê bem até 200 px à volta do jogador, a escurecer devagar até aos 300; as tochas, a fogueira e as outras luzes abrem a vista à volta delas, a qualquer distância."}
 ];
