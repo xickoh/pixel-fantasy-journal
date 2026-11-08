@@ -124,6 +124,7 @@ const MECHANICS = [
      "Na casa do jogador a mobília já não é cenário: as peças de pé partem-se à pancada (o machado é o mais rápido) e as do chão e da parede apanham-se com o botão direito. A peça volta para o inventário e pode pôr-se de novo onde quiseres.",
      "Os tapetes ficam por baixo da outra mobília; as peças de parede só se põem na parede do fundo da tua casa; R (ou T) espelha uma peça antes de a pores; T espelha também os outros objetos colocáveis (bancada, baú, fornalha...), menos o quadro de giz e a tocha. As camas dormem todas, e só se põem dentro da casa.",
      "O baú grande e a estante de troféus só se partem vazios (\"Esvazia primeiro\"): nunca se perde nada do que lá está. Não se fabricam: são os da casa.",
+     "Moedas nos baús: nos teus baús (os que pões, o baú grande da casa e o do Chester) podes depositar e levantar moedas (uma quantidade, ou tudo). As moedas guardadas não caem quando morres e só servem para comprar depois de as levantares; «Apanhar tudo» leva-as também, e um baú apanhado deixa-as no chão. Os baús das casas dos aldeões e os de recompensa não aceitam depósitos.",
      "Tudo fica guardado no mundo e é igual para todos os jogadores; as casas dos aldeões, as oficinas e a taberna não mudam.",
    ]},
   {id: "fabrico", title: "Fabrico", icon: "🔨", src: "docs/items.md · Crafting",
