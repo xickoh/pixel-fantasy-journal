@@ -1,45 +1,22 @@
 #!/usr/bin/env python3
-"""Builds data/wiki_data.js, the wiki's numbers, from the game's own data.
+"""Builds data/wiki_data.js, the wiki's data, from the game's own compendium (prompt 649).
 
   python3 tools/build_wiki.py            runs the Godot exporter (tools/export_wiki.gd) and builds the file
   python3 tools/build_wiki.py --json F   builds it from an exporter's JSON already made (no Godot)
   python3 tools/build_wiki.py --check    builds nothing: says whether data/wiki_data.js is out of date with the
                                          game (exit 1 if it is), to run after a change to the game
 
-The items, the recipes, the enemies' stats, the shops and their prices, the villagers' lines, the quests,
-the blessings and the player's constants all come from the game's .tres files (the exporter reads them
-through the game's classes, so a stat that is worked out in code is the game's own). The names and texts
-are the game's pt translations (translations/strings.csv). What is not in the data, the mechanics, is
-written by hand in data/wiki_mechanics.js, with {s.key} marks for the numbers that are in the data.
+The game builds it: CompendiumData.build() (systems/compendium/compendium_data.gd in the game) is the one source
+of the in-game Compendium and of this wiki; tools/export_wiki.gd only runs it in Portuguese and writes it out.
+The items, the recipes, the enemies, the shops and their prices, the villagers, the skills, the spells, the quests,
+the blessings and the constants come from the game's .tres files; the mechanics' text is the game's
+data/compendium/mechanics.json (edited there, its {s.key} marks filled by the game). Nothing to edit here.
 """
-import csv, json, subprocess, sys, datetime, pathlib, os, tempfile
+import json, subprocess, sys, datetime, pathlib, os
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 GAME = pathlib.Path(os.environ.get("PF_GAME", "/home/deck/Documents/pixel_fantasy"))
 TMP = ROOT / ".wiki_tmp"
-
-CATEGORIES = {
-    "weapon": "Armas", "tool": "Ferramentas", "equipment": "Equipamento", "food": "Comida", "potion": "Poções",
-    "magic": "Magia", "mount": "Montadas", "placeable": "Colocáveis", "material": "Materiais", "ammo": "Munição",
-    "loot": "Saque", "blueprint": "Plantas", "weapon_power": "Poderes de arma", "pet": "Pets",
-}
-SLOTS = {"head": "Cabeça", "chest": "Peito", "legs": "Pernas", "off_hand": "Mão secundária", "mount": "Montada", "pet": "Pet"}
-WEAPON_TYPES = {0: "Corpo a corpo", 1: "À distância", 2: "Mágica"}
-FAMILIES = {"orc": "Orcs", "skeleton": "Esqueletos", "mummy": "Múmias"}
-BIOMES = {"forest": "Floresta", "desert": "Deserto"}
-SHOP_VILLAGER = {"tavern": "estalajadeiro", "blacksmith_weapons": "ferreiro", "wizard": "feiticeiro",
-                 "stableman": "tratador", "greengrocer": "mercearia", "butcher": "talho", "baker": "padaria"}
-STATIONS = {"": "À mão", "crafting_table": "Bancada de Trabalho", "furnace": "Fornalha"}
-
-
-def load_translations():
-    path = GAME / "translations" / "strings.csv"
-    t = {}
-    if path.exists():
-        for r in csv.reader(open(path, encoding="utf-8"), delimiter=";"):
-            if len(r) > 1 and r[1]:
-                t[r[0]] = r[1]
-    return t
 
 
 def run_exporter():
@@ -55,270 +32,14 @@ def run_exporter():
     return out
 
 
-def num(x):
-    return int(x) if isinstance(x, (int, float)) and float(x) == int(x) else round(x, 2)
-
-
-def starting_kit(kit, iname):
-    """{k.items}, {k.equipment}, {k.skills}: a new character's kit (prompt 424, data/starting_kit.tres) as text."""
-    ids, amounts = kit.get("item_ids", []), kit.get("item_amounts", [])
-    items = [iname(x) + ((" ×%d" % amounts[i]) if i < len(amounts) and amounts[i] > 1 else "") for i, x in enumerate(ids)]
-    worn = [iname(kit[s]) for s in SLOTS if kit.get(s)]
-    levels = ["%s %d" % (n.capitalize(), l) for n, l in zip(kit.get("skill_names", []), kit.get("skill_levels", []))]
-    return {"items": ", ".join(items), "equipment": ", ".join(worn) or "nada",
-            "skills": ", ".join(levels) or "todas no nível 1"}
-
-
 def main():
     if "--json" in sys.argv:
         src = pathlib.Path(sys.argv[sys.argv.index("--json") + 1])
     else:
         src = run_exporter()
-    raw = json.load(open(src, encoding="utf-8"))
-    T = load_translations()
-
-    def tr(s):
-        return T.get(s, s) if s else s
-
-    items_by_id = {i["id"]: i for i in raw["items"]}
-
-    def iname(i):
-        it = items_by_id.get(i)
-        return tr(it["name"]) if it else i
-
-    # --- who drops what (prompt 497: a weapon line is the gear's roll: the gear's chance times the weapon's share)
-    gear = raw.get("gear", {})
-    weapon_share = gear.get("weapon_weight", 1) / ((gear.get("weapon_weight", 1) + gear.get("armour_weight", 1)) or 1)
-    drops = {}
-    for e in raw["enemies"]:
-        for line in e.get("loot_table", []):
-            chance = line["chance"]
-            if line["weapon_drop"] and chance == 0:
-                chance = e.get("gear_chance", 0) * weapon_share
-            if chance <= 0:
-                continue
-            for iid in line["items"]:
-                drops.setdefault(iid, []).append({"enemy": tr(e["name"]), "id": e["id"], "chance": chance,
-                                                  "min": line["min"], "max": line["max"], "boss": e["boss"]})
-    # the armour by the enemies' level: each piece's levels (the rows its material is in)
-    rows_at = sorted(int(k) for k in gear.get("materials", {}))
-    gear_levels = {}
-    for i, at in enumerate(rows_at):
-        until = rows_at[i + 1] - 1 if i + 1 < len(rows_at) else None
-        row = gear["materials"][str(at)]
-        total = sum(row.values()) or 1
-        for material, weight in row.items():
-            for piece in gear.get("pieces", {}).get(material, []):
-                gear_levels.setdefault(piece, []).append({"from": at, "to": until, "share": weight / total})
-
-    # --- who sells what
-    sold = {}
-    for s in raw["stores"]:
-        for it in s["items"]:
-            sold.setdefault(it["id"], []).append({"shop": tr(s["name"]), "who": SHOP_VILLAGER.get(s["file"], ""), "price": it["price"]})
-        for o in s["offers"]:
-            sold.setdefault(o["item"], []).append({"shop": tr(s["name"]), "who": SHOP_VILLAGER.get(s["file"], ""), "price": o["price"], "amount": o.get("amount", 1)})
-
-    recipes = {}
-    for r in raw["recipes"]:
-        recipes[r["result"]] = r
-    for it in raw["items"]:
-        tr_ = it.get("teaches_recipe")
-        if tr_ and tr_.get("result") and tr_["result"] not in recipes:
-            recipes[tr_["result"]] = {"result": tr_["result"], "amount": 1, "ingredients": tr_.get("ingredients", {}),
-                                      "station": tr_.get("station", ""), "hidden": True}
-
-    items = []
-    for it in raw["items"]:
-        sv = it.get("stat_values", {})
-        stats = []
-
-        def add(label, value):
-            stats.append([label, value])
-
-        if it["category"] == "weapon" or it["category"] == "tool":
-            if "strength" in sv:  # prompt 391: the weapons' strength; each hit 1 to it (390)
-                add("Força", "%s (dano 1–%s)" % (num(sv["strength"][1]), num(sv["strength"][1])))
-            if "ranged" in sv:  # prompt 439: a weapon that shoots, its ranged (with Archery or Magic)
-                add("À distância", "%s (dano 1–%s)" % (num(sv["ranged"][1]), num(sv["ranged"][1])))
-            if "weapon_type" in it or it["category"] == "weapon":
-                add("Tipo", WEAPON_TYPES.get(it.get("weapon_type", 0), "Corpo a corpo"))
-            if "reach" in sv:
-                add("Alcance", "%s px" % num(sv["reach"][1]))
-            if "shot_time" in sv:
-                add("Tempo entre disparos", "%s s" % num(sv["shot_time"][1]))
-            if "crit" in sv:
-                add("Crítico", "%s%%" % num(sv["crit"][1]))
-            if it.get("ammo_used"):
-                add("Munição", iname(it["ammo_used"]))
-            if it.get("mining_tier"):
-                add("Nível de mineração", it["mining_tier"])
-        if it["category"] == "equipment":
-            if it.get("equip_slot"):
-                add("Ranhura", SLOTS.get(it["equip_slot"], it["equip_slot"]))
-            if "defense" in sv:
-                add("Defesa", num(sv["defense"][1]))
-            if "damage_taken" in sv:
-                add("Dano sofrido", "-%s" % num(sv["damage_taken"][1]))
-            if "max_health" in sv:
-                add("Vida máxima", "+%s" % num(sv["max_health"][1]))
-            if "ranged_bonus" in sv:
-                add("Dano à distância", "+%s%%" % num(sv["ranged_bonus"][1]))
-            if it.get("block_arc"):
-                add("Bloqueia", "sim (botão direito)")
-        if it.get("requires"):  # prompts 425 and 426: the skill level it needs to be worn or used
-            add("Requer", "%s %s" % (tr(it["requires"][0]), it["requires"][1]))
-        if it.get("cure"):
-            add("Cura", "+%s" % it["cure"])
-        if it.get("teleports_home"):
-            add("Efeito", "teletransporta para a vila" + (" (gasta-se)" if it.get("consumed_on_use", True) else " (não se gasta)"))
-        if it.get("grants_xp"):  # prompt 527: the Recall Scroll gives it with its recall
-            add("Dá XP de", tr(it["grants_xp"]))
-        if it.get("summons"):
-            add("Invoca", tr(next((e["name"] for e in raw["enemies"] if e["id"] == it["summons"]), it["summons"])))
-        if it.get("horse"):
-            h = it["horse"]
-            add("Velocidade a cavalo", "andar x%s · correr x%s" % (num(h.get("walk_factor", 0)), num(h.get("run_factor", 0))))
-        if it.get("ally"):
-            add("Invoca aliado", "sim")
-        if it.get("light_radius"):
-            add("Luz", "%s px" % num(it["light_radius"]))
-        if it.get("placed_hits"):
-            add("Parte-se com", "%s pancada(s)" % it["placed_hits"])
-        if it.get("placed_broken_by"):  # prompt 525: only these blows break it placed
-            kinds = {"pickaxe": "picareta", "punch": "soco", "weapon": "arma", "tool": "ferramenta", "projectile": "projétil", "magic": "magia"}
-            add("Só se parte com", ", ".join(kinds.get(k, k) for k in it["placed_broken_by"]))
-        if it.get("boss_only"):
-            add("Origem", "só um chefe o larga")
-        if it.get("enhanceable"):
-            add("Melhorável", "sim")
-        if it.get("factory_powers"):
-            ps = []
-            for k, v in it["factory_powers"].items():
-                ps += v
-            add("Poderes de fábrica", ", ".join(tr(next((p["display_name"] for p in raw["powers"] if p["id"] == x), x)) for x in ps))
-        if it.get("teaches"):
-            add("Ensina", iname(it["teaches"]))
-        if it.get("stackable_number") and it["stackable_number"] > 1:
-            add("Pilha", it["stackable_number"])
-        row = {"id": it["id"], "name": tr(it["name"]), "name_en": it["name"], "cat": it["category"],
-               "desc": tr(it.get("description", "")), "stats": stats}
-        if it.get("teaches"):
-            row["teaches"] = it["teaches"]
-        if it["id"] in recipes:
-            r = recipes[it["id"]]
-            row["recipe"] = {"amount": r["amount"], "station": STATIONS.get(r["station"], iname(r["station"])),
-                             "hidden": r.get("hidden", False),
-                             "ing": [[iname(k), v, k] for k, v in r["ingredients"].items()]}
-        if it["id"] in sold:
-            row["sold"] = sold[it["id"]]
-        if it["id"] in drops:
-            row["drops"] = drops[it["id"]]
-        if it.get("sell_price"):
-            row["sell"] = it["sell_price"]
-        if it["id"] in gear_levels:  # prompt 497: armour dropped by the enemies of these levels
-            row["gear"] = gear_levels[it["id"]]
-        items.append(row)
-    items.sort(key=lambda r: (list(CATEGORIES).index(r["cat"]) if r["cat"] in CATEGORIES else 99, r["name"]))
-
-    # --- enemies
-    enemies = []
-    for e in raw["enemies"]:
-        loot = []
-        for line in e.get("loot_table", []):
-            if line["weapon_drop"] and line["chance"] == 0:
-                continue  # prompt 497: the weapon comes of the gear's roll (the enemy's "Equipamento" row)
-            loot.append({"items": [[iname(i), i] for i in line["items"]], "chance": line["chance"], "min": line["min"],
-                         "max": line["max"], "weapon": line["weapon_drop"]})
-        enemies.append({
-            "id": e["id"], "name": tr(e["name"]), "family": FAMILIES.get(e.get("family", ""), e.get("family", "")),
-            "biome": BIOMES.get(e.get("biome", "forest"), e.get("biome", "forest")), "boss": e["boss"],
-            "archetype": e.get("archetype", ""), "ranged": bool(e.get("ranged")),
-            "weapon": iname(e["weapon_id"]) if e.get("weapon_id") else "", "weapon_id": e.get("weapon_id", ""),
-            "speed": e.get("speed", 45), "detection": e.get("detection_radius", 140), "windup": e.get("windup_time", 0.1),
-            "knockback_reduction": e.get("knockback_reduction", 0), "crit": e.get("crit", 0),
-            "water": e.get("water", ""), "water_speed": e.get("water_speed_factor", 0.1),  # prompt 597
-            "weight": e.get("spawn_weight", 1), "shot_damage_l1": e.get("shot_damage_l1"),
-            "levels": e["levels"], "born": [e.get("level_min", 1), e.get("level_max", 99)],  # prompt 537
-            "loot": loot, "gear_chance": e.get("gear_chance", 0),
-            "boss_health_x": (e.get("boss_rules") or {}).get("health_multiplier"),
-        })
-    enemies.sort(key=lambda r: (r["boss"], r["family"], r["levels"]["1"]["health"], r["name"]))
-
-    # --- villagers: the roles come from the shops' data
-    rules = raw["store_rules"]
-    shop_items = lambda stock: [[iname(i), i] for i in stock.get("items", [])] + [[iname(o["item"]), o["item"]] for o in stock.get("offers", [])]
-    villagers = [
-        {"id": "missoes", "name": "Quem dá as missões", "where": "Junto à fogueira da vila", "does": "Dá as missões da história; a primeira abre as bancas do mercado.",
-         "sells": []},
-        {"id": "estalajadeiro", "name": "Estalajadeiro", "where": "Taberna", "does": "Vende comida e bebida; descansa-se aqui por %s moedas (uma vez por dia)." % rules.get("rest_price", "?"),
-         "sells": shop_items(rules.get("innkeeper_stock", {}))},
-        {"id": "ferreiro", "name": "Ferreiro", "where": "Forja", "does": "Vende armas, escudo, armaduras e munição; refaz o encantamento das peças.",
-         "sells": shop_items(rules.get("blacksmith_stock", {}))},
-        {"id": "feiticeiro", "name": "Feiticeiro", "where": "Na vila (torre do feiticeiro)", "does": "Vende poções, pergaminhos de regresso e o cajado de gelo.",
-         "sells": shop_items(rules.get("wizard_stock", {}))},
-        {"id": "tratador", "name": "Tratador de cavalos", "where": "Estábulo", "does": "Vende cavalos.",
-         "sells": shop_items(rules.get("stableman_stock", {}))},
-        {"id": "pescador", "name": "Pescador", "where": "Cais da vila (8h-17h; à noite junto à fogueira)",
-         "does": "Chega na fase 2. Vende canas, minhocas, a jangada e o barco; dá as missões da relíquia de família, do rio seco e da oferenda.",
-         "sells": shop_items(next((st for st in raw["stores"] if st.get("file") == "fisherman"), {}))},
-        {"id": "lavadeira", "name": "Lavadeira", "where": "Margem do cais (8h-17h); dorme numa casa da vila",
-         "does": "Lava a roupa ajoelhada à beira da água e conta boatos do rio (pedras afundadas, crocodilos, afogados); dá a missão da carga perdida.",
-         "sells": []},
-    ]
-    for stock in rules.get("stocks", []):
-        villagers.append({"id": {"Greengrocer": "mercearia", "Butcher": "talho", "Baker": "padaria"}.get(stock["name"], stock["name"].lower()), "name": tr(stock["name"]), "where": "Mercado da vila (bancas)",
-                          "does": "Um em cada %s aldeões é vendedor de comida." % rules.get("store_every", 3),
-                          "sells": [[iname(i), i] for i in stock.get("items", [])]})
-    for v in villagers:
-        v["name"] = tr(v["name"])
-    personalities = [{"name": tr(p.get("tone", p["id"])), "id": p["id"],
-                      "greetings": [tr(g) for g in p.get("greetings", [])],
-                      "reactions": {k: [tr(x) for x in v] for k, v in p.get("reactions", {}).items()}}
-                     for p in raw["personalities"]]
-
-    quests = [{"id": q["id"], "title": tr(q.get("title", "")), "goal": q.get("goal", "kill"), "target": q.get("target", ""),
-               "count": q.get("count", 1), "request": tr(q.get("request_text", "")), "done": tr(q.get("done_text", "")),
-               "effect": q.get("effect", "")} for q in raw["quests"]]
-    blessings = [{"id": b["id"], "name": tr(b["display_name"]), "desc": tr(b.get("description", "")),
-                  "effects": b.get("effects", {}), "minutes": b.get("duration_minutes", 1440), "shrine": b.get("at_shrine", True)}
-                 for b in raw["blessings"]]
-    powers = [{"id": p["id"], "name": tr(p["display_name"]), "desc": tr(p.get("description", ""))} for p in raw["powers"]]
-    enh = [{"id": x["id"], "name": tr(x.get("display_name", x["id"])), "multiplier": x.get("multiplier", 1.0), "weight": x.get("weight", 1.0)}
-           for x in raw["enhancements"]]
-
-    # prompt 624: the Nature skill tree: each skill's effects at its max level, as the game words them (pt)
-    nt = raw.get("nature_tree") or {}
-    def nature_effect(effect, value):
-        text = tr(nt.get("texts", {}).get(effect, effect))
-        if "%s" not in text:
-            return text
-        if effect in nt.get("flat", []):
-            shown = ("%+d" % round(value)) if abs(value - round(value)) < 1e-6 else ("%+.2f" % value)
-        else:
-            shown = "%+d%%" % round(value * 100)
-        return text.replace("%s", shown)
-    nature = {"branches": [tr(b) for b in nt.get("branches", [])], "skills": [
-        {"name": tr(s["name"]), "branch": s["branch"], "max": s["max"], "aura": s["aura"],
-         "requires": tr(next((o["name"] for o in nt["skills"] if o["id"] == s["requires"]), "")) if s["requires"] else "",
-         "effects": [nature_effect(e, v * s["max"]) for e, v in s["effects"].items()]
-                    + [tr("In combat: %s").replace("%s", nature_effect(e, v * s["max"])) for e, v in s["combat"].items()]}
-        for s in nt.get("skills", [])]}
-
+    data = json.load(open(src, encoding="utf-8"))
     commit = subprocess.run(["git", "-C", str(GAME), "log", "-1", "--format=%h"], capture_output=True, text=True).stdout.strip()
-    data = {
-        "generated": datetime.date.today().isoformat(), "game_commit": commit,
-        "categories": CATEGORIES, "items": items, "enemies": enemies, "villagers": villagers,
-        "personalities": personalities, "quests": quests, "blessings": blessings, "powers": powers, "enhancements": enh,
-        "nature": nature,  # prompt 624
-        "s": raw["stats"], "r": {k: v for k, v in rules.items() if not isinstance(v, (dict, list))},
-        # prompt 504: the +0 to +9 table's numbers ({u.key} in the mechanics)
-        "u": {k: v for k, v in (raw.get("upgrade") or {}).items() if isinstance(v, (int, float)) and not isinstance(v, bool)},
-        "l": {k: v for k, v in (raw.get("riding_license") or {}).items() if isinstance(v, (int, float)) and not isinstance(v, bool)},  # prompt 593
-        "spawn_rows": raw.get("enemy_rows", {}).get("rows", []),
-        "k": starting_kit(raw.get("starting_kit", {}), iname),
-        "gear": gear,  # prompt 497
-    }
+    data = {"generated": datetime.date.today().isoformat(), "game_commit": commit, **data}
     out = ROOT / "data" / "wiki_data.js"
     text = ("// Generated by tools/build_wiki.py from the game's data. Do not edit by hand.\n"
             "const WIKI = " + json.dumps(data, ensure_ascii=False, separators=(",", ":")) + ";\n")
@@ -337,7 +58,7 @@ def main():
                 print("wiki: out of date in '%s'" % k)
         sys.exit(1)
     out.write_text(text, encoding="utf-8")
-    print("wiki: %d items, %d enemies, %d villager roles, %d quests -> %s" % (len(items), len(enemies), len(villagers), len(quests), out))
+    print("wiki: %d items, %d enemies, %d villager roles, %d mechanics -> %s" % (len(data["items"]), len(data["enemies"]), len(data["villagers"]), len(data["mechanics"]), out))
 
 
 if __name__ == "__main__":

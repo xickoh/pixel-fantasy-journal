@@ -1,4 +1,4 @@
-// A wiki: lê WIKI (data/wiki_data.js, gerado a partir dos dados do jogo) e MECHANICS (data/wiki_mechanics.js, à mão).
+// A wiki: lê WIKI (data/wiki_data.js, gerado pelo compêndio do jogo: CompendiumData, com as mecânicas já preenchidas).
 // Cada item, inimigo, aldeão e mecânica tem a sua página: wiki.html#itens/sword, #inimigos/orc_axe, #aldeoes/ferreiro, #mecanicas/morte.
 (function () {
   const $ = (id) => document.getElementById(id);
@@ -8,7 +8,7 @@
   const out = $('out'), q = $('wq'), chips = $('chips'), count = $('count'), bar = $('wikibar'), tabsEl = $('tabs');
   const TABS = [
     ['itens', 'Itens'], ['inimigos', 'Inimigos'], ['aldeoes', 'Aldeões'],
-    ['mecanicas', 'Mecânicas'], ['numeros', 'Números'],
+    ['habilidades', 'Skills e feitiços'], ['mecanicas', 'Mecânicas'], ['numeros', 'Números'],
   ];
   const LEVELS = ['1', '10', '20', '30', '40'];
   const ARCH = {balanced: 'Equilibrado', tank: 'Resistente', fast: 'Rápido', armored: 'Blindado', brute: 'Bruto'};
@@ -18,7 +18,9 @@
   const ITEMS = {}; WIKI.items.forEach((i) => { ITEMS[i.id] = i; });
   const ENEMIES = {}; WIKI.enemies.forEach((e) => { ENEMIES[e.id] = e; });
   const VILLAGERS = {}; WIKI.villagers.forEach((v) => { VILLAGERS[v.id] = v; });
+  const MECHANICS = WIKI.mechanics;
   const MECH = {}; MECHANICS.forEach((m) => { MECH[m.id] = m; });
+  const SKILLS = {}; WIKI.skills.concat(WIKI.spells).forEach((s) => { SKILLS[s.id] = s; });
 
   function h(tag, cls, kids) {
     const e = document.createElement(tag);
@@ -49,18 +51,6 @@
   }
   function pill(text, cls) { return h('span', 'pill ' + (cls || ''), text); }
   function row(label, content) { return h('li', null, [h('b', null, label + ': '), content]); }
-
-  // {s.key} / {r.key} / {k.key} (k: the starting kit's texts, prompt 424), with |pct (0.5 -> 50%) and |min (seconds -> minutes)
-  function fill(text) {
-    return text.replace(/\{([srkul])\.(\w+)(?:\|(\w+))?\}/g, (m, set, key, f) => {
-      const v = WIKI[set] && WIKI[set][key];
-      if (v == null) return '?';
-      if (typeof v === 'string') return v;
-      if (f === 'pct') return fmt(Math.round(v * 1000) / 10) + '%';
-      if (f === 'min') return fmt(v / 60);
-      return fmt(v);
-    });
-  }
 
   // --- itens
   function itemCard(it, full) {
@@ -255,6 +245,42 @@
     return wrap;
   }
 
+  // --- skills e feitiços (prompt 649: as mesmas entradas do compêndio do jogo)
+  function skillCard(s, full) {
+    const spell = s.at_1 !== undefined;
+    const c = h('article', 'wcard' + (full ? ' detail' : ''));
+    c.appendChild(h('header', null, [full ? h('h1', null, s.name) : h('h3', null, link('habilidades', s.id, s.name)),
+      pill(spell ? s.class + ' · máx ' + s.max : 'Skill')]));
+    if (spell) {
+      c.appendChild(h('p', 'desc', s.desc));
+      const ul = h('ul', 'info');
+      ul.appendChild(row('Nível 1', s.at_1.join(' · ')));
+      ul.appendChild(row('Nível ' + s.max, s.at_max.join(' · ')));
+      c.appendChild(ul);
+    } else {
+      const ul = h('ul', 'info');
+      if (s.raises.length) ul.appendChild(row('Sobe', s.raises.join(', ')));
+      ul.appendChild(row('Ritmo de XP', '×' + fmt(s.xp_rate)));
+      c.appendChild(ul);
+    }
+    return c;
+  }
+
+  function renderSkills(f) {
+    const pick = (l) => l.filter((s) => !f || norm(s.name + ' ' + (s.desc || '') + ' ' + (s.class || '')).includes(f));
+    const sk = pick(WIKI.skills), sp = pick(WIKI.spells);
+    count.textContent = sk.length + ' skills · ' + sp.length + ' feitiços';
+    const wrap = h('div');
+    const g = h('div', 'wgrid');
+    sk.forEach((s) => g.appendChild(skillCard(s)));
+    wrap.appendChild(g);
+    wrap.appendChild(h('h2', 'sub', 'Feitiços de classe'));
+    const g2 = h('div', 'wgrid');
+    sp.forEach((s) => g2.appendChild(skillCard(s)));
+    wrap.appendChild(g2);
+    return wrap;
+  }
+
   // --- mecânicas
   function mechCard(m, full) {
     const c = h('article', 'wcard mechanic' + (full ? ' detail' : ''));
@@ -262,7 +288,7 @@
     c.appendChild(h('header', null, [full ? h('h1', null, title) : h('h3', null, link('mecanicas', m.id, title))]));
     c.appendChild(h('p', 'desc', m.lead));
     const ul = h('ul', 'info');
-    m.points.forEach((p) => ul.appendChild(h('li', null, fill(p))));
+    m.points.forEach((p) => ul.appendChild(h('li', null, p)));
     c.appendChild(ul);
     c.appendChild(h('p', 'src', 'Fonte: ' + m.src));
     return c;
@@ -345,10 +371,10 @@
     return h('div', 'tablebox', t);
   }
 
-  const VIEWS = {itens: renderItems, inimigos: renderEnemies, aldeoes: renderVillagers, mecanicas: renderMechanics, numeros: renderNumbers};
+  const VIEWS = {itens: renderItems, inimigos: renderEnemies, aldeoes: renderVillagers, habilidades: renderSkills, mecanicas: renderMechanics, numeros: renderNumbers};
   const DETAIL = {
     itens: [ITEMS, itemCard, 'Itens'], inimigos: [ENEMIES, enemyCard, 'Inimigos'],
-    aldeoes: [VILLAGERS, villagerCard, 'Aldeões'], mecanicas: [MECH, mechCard, 'Mecânicas'],
+    aldeoes: [VILLAGERS, villagerCard, 'Aldeões'], habilidades: [SKILLS, skillCard, 'Skills e feitiços'], mecanicas: [MECH, mechCard, 'Mecânicas'],
   };
 
   function drawChips() {

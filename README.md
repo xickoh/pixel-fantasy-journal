@@ -9,10 +9,10 @@ Site estático (abrir `index.html`) com as funcionalidades do jogo Pixel Fantasy
 
 ## Wiki
 
-`wiki.html` (+ `wiki.js`): itens, inimigos, aldeões, mecânicas e números do jogo.
+`wiki.html` (+ `wiki.js`): itens, inimigos, aldeões, skills e feitiços, mecânicas e números do jogo. É a mesma informação do Compêndio dentro do jogo (prompt 649): os dois saem do mesmo construtor do jogo.
 
-- Cada item, inimigo, aldeão e mecânica tem a sua página: `wiki.html#itens/<id>`, `#inimigos/<id>`, `#aldeoes/<id>`, `#mecanicas/<id>` (uma só página, rota pelo hash; as páginas nascem dos dados, não há ficheiros por entrada).
-- `data/wiki_data.js`: **gerado**, não se edita. `python3 tools/build_wiki.py` corre o Godot em headless (`tools/export_wiki.gd` e `.tscn`, que leem os `.tres` do jogo pelas classes do jogo) e junta as traduções pt de `translations/strings.csv`. Precisa do flatpak `org.godotengine.Godot`; o jogo está em `PF_GAME` (por defeito `/home/deck/Documents/pixel_fantasy`).
+- Cada item, inimigo, aldeão e mecânica tem a sua página: `wiki.html#itens/<id>`, `#inimigos/<id>`, `#aldeoes/<id>`, `#habilidades/<id>`, `#mecanicas/<id>` (uma só página, rota pelo hash; as páginas nascem dos dados, não há ficheiros por entrada).
+- `data/wiki_data.js`: **gerado**, não se edita. `python3 tools/build_wiki.py` corre o Godot em headless (`tools/export_wiki.gd` e `.tscn`), que chama o `CompendiumData.build()` do jogo (`systems/compendium/compendium_data.gd`) em português e grava o resultado: nada se calcula aqui. Precisa do flatpak `org.godotengine.Godot`; o jogo está em `PF_GAME` (por defeito `/home/deck/Documents/pixel_fantasy`).
 - `python3 tools/build_wiki.py --check`: diz se a wiki está desatualizada em relação ao jogo (exit 1 se estiver).
-- `data/wiki_mechanics.js`: as regras que não estão nos dados (morte, dormir, comércio...), à mão, em pt-PT. As marcas `{s.chave}` e `{r.chave}` (com `|pct` e `|min`) vão buscar o valor aos dados, por isso os números não envelhecem.
+- As mecânicas (morte, dormir, comércio...) escrevem-se **no jogo**, em `data/compendium/mechanics.json` (en e pt por texto); as marcas `{s.chave}`, `{r.chave}`, `{k.chave}`, `{u.chave}` e `{l.chave}` (com `|pct` e `|min`) são preenchidas pelo jogo a partir dos dados. Desde o prompt 649 já não há `wiki_mechanics.js` no journal.
 - Em modo dev (vault `jarvis.md`), cada mudança no jogo que altere a informação da wiki atualiza-a na mesma mudança.
