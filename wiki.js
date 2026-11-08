@@ -360,7 +360,7 @@
 
   // --- números
   function renderNumbers(f) {
-    const entries = Object.entries(WIKI.s).map(([k, v]) => ['s.' + k, v]).concat(Object.entries(WIKI.r).map(([k, v]) => ['r.' + k, v]), Object.entries(WIKI.u || {}).map(([k, v]) => ['u.' + k, v]), Object.entries(WIKI.l || {}).map(([k, v]) => ['l.' + k, v]));
+    const entries = Object.entries(WIKI.s).map(([k, v]) => ['s.' + k, v]).concat(Object.entries(WIKI.r).map(([k, v]) => ['r.' + k, v]), Object.entries(WIKI.u || {}).map(([k, v]) => ['u.' + k, v]), Object.entries(WIKI.l || {}).map(([k, v]) => ['l.' + k, v]), Object.entries(WIKI.f || {}).map(([k, v]) => ['f.' + k, v]));
     const rows = entries.filter(([k, v]) => !f || norm(k + ' ' + v).includes(f));
     count.textContent = rows.length + ' constantes · StatsConfig (s), StoreRules (r) e WeaponUpgrade (u) do jogo';
     const t = h('table', 'lv wide');
