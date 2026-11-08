@@ -269,5 +269,6 @@ window.SHOTS = [
  {f:"visao_noite",t:"Visão à noite",d:"À noite só se vê bem até 200 px à volta do jogador, a escurecer devagar até aos 300; as tochas, a fogueira e as outras luzes abrem a vista à volta delas, a qualquer distância."},
  {f:"estilhacos_seixos",ext:"gif",t:"Blocos em seixos",d:"Ao partir, o bloco desfaz-se em seixos redondos dos seus próprios pixeis, com sombra como as rochas do pack, que rolam por quartos de volta, ressaltam uma vez e ficam pousados; o que sobra cai em grãos. À esquerda antes, à direita agora."},
  {f:"altares_pixel_crawler",t:"Altares do Pixel Crawler",d:"Os altares com peças do pack: a espada cravada no bloco de pedra (poderes), o pedestal com a concha na água (respiração), a lápide com caveira (Rei Esqueleto), a pedra rúnica (água) e o anjo do santuário."},
- {f:"corpos_30s",ext:"gif",t:"Os corpos ficam 30 s",d:"Um inimigo ou animal morto fica deitado no chão 30 s, por baixo dos vivos e sem bloquear nem levar golpes; depois desaparece devagar. No máximo 40 corpos de cada vez."}
+ {f:"corpos_30s",ext:"gif",t:"Os corpos ficam 30 s",d:"Um inimigo ou animal morto fica deitado no chão 30 s, por baixo dos vivos e sem bloquear nem levar golpes; depois desaparece devagar. No máximo 40 corpos de cada vez."},
+ {f:"morte_sem_rodar",ext:"gif",t:"Os animais morrem sem rodar",d:"O veado, o javali, o lobo e o coelho já não rodam 90° ao morrer: as pernas dobram, o corpo assenta no chão, a cabeça cai até ao chão e o olho fecha, na mesma orientação. À esquerda antes, à direita agora."}
 ];
