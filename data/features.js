@@ -265,5 +265,6 @@ window.SHOTS = [
  {f:"loot_atras_blocos",t:"Loot atrás dos blocos",d:"Um item no chão tapado por um bloco (o topo do bloco à frente) vê-se por cima dele a 20%, para se saber que está lá; à frente dos blocos desenha-se normal."},
  {f:"visao_noite",t:"Visão à noite",d:"À noite só se vê bem até 200 px à volta do jogador, a escurecer devagar até aos 300; as tochas, a fogueira e as outras luzes abrem a vista à volta delas, a qualquer distância."},
  {f:"estilhacos_seixos",ext:"gif",t:"Blocos em seixos",d:"Ao partir, o bloco desfaz-se em seixos redondos dos seus próprios pixeis, com sombra como as rochas do pack, que rolam por quartos de volta, ressaltam uma vez e ficam pousados; o que sobra cai em grãos. À esquerda antes, à direita agora."},
- {f:"altares_pixel_crawler",t:"Altares do Pixel Crawler",d:"Os altares com peças do pack: a espada cravada no bloco de pedra (poderes), o pedestal com a concha na água (respiração), a lápide com caveira (Rei Esqueleto), a pedra rúnica (água) e o anjo do santuário."}
+ {f:"altares_pixel_crawler",t:"Altares do Pixel Crawler",d:"Os altares com peças do pack: a espada cravada no bloco de pedra (poderes), o pedestal com a concha na água (respiração), a lápide com caveira (Rei Esqueleto), a pedra rúnica (água) e o anjo do santuário."},
+ {f:"corpos_30s",ext:"gif",t:"Os corpos ficam 30 s",d:"Um inimigo ou animal morto fica deitado no chão 30 s, por baixo dos vivos e sem bloquear nem levar golpes; depois desaparece devagar. No máximo 40 corpos de cada vez."}
 ];
