@@ -257,5 +257,6 @@ window.SHOTS = [
  {f:"feiticos_nuvem",ext:"gif",t:"Nuvem Venenosa",d:"O feitiço F2 do ninja: a nuvem fica onde foi lançada e tira vida por segundo aos inimigos dentro."},
  {f:"feiticos_ciclone",ext:"gif",t:"Ciclone",d:"O F2 do guerreiro: a própria arma roda duas vezes num segundo; cada inimigo ao alcance leva o dano uma vez."},
  {f:"santuario_mares",t:"Santuário das Marés",d:"Melhoria da vila (500 moedas, fase 2): uma estátua encapuzada atrás de uma bacia com a água azul da essência, com uma luz fraca que tremeluz."},
- {f:"santuario_painel",t:"Subir os feitiços",d:"No santuário, uma carta por feitiço da classe na mão secundária: os números de agora e do nível seguinte e o custo em Essência de Maré, moedas e, nos níveis 5, 8 e 10, uma pérola."}
+ {f:"santuario_painel",t:"Subir os feitiços",d:"No santuário, uma carta por feitiço da classe na mão secundária: os números de agora e do nível seguinte e o custo em Essência de Maré, moedas e, nos níveis 5, 8 e 10, uma pérola."},
+ {f:"javali_exclamacao",ext:"gif",t:"O «!» do javali",d:"Antes da investida, o javali fica parado 0,6 s com o «!», a tinta vermelha e as pegadas no chão; só depois corre. Se o jogador fugir ou o javali for atordoado, a investida cancela-se."}
 ];
