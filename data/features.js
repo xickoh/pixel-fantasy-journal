@@ -247,5 +247,6 @@ window.SHOTS = [
  {f:"slot_moedas",t:"Slot das moedas",d:"As moedas saem da grelha: um espaço só delas por baixo do inventário (e na loja), que nunca enche."},
  {f:"cruz_tesouro_mapa",t:"Cruz do tesouro",d:"No mapa, a cruz do mapa do tesouro maior, com contorno escuro e a pulsar de vermelho a dourado, por cima de tudo."},
  {f:"cruz_tesouro_minimapa",t:"Cruz no minimapa",d:"Fora do alcance do minimapa, a cruz fica na borda do disco, a apontar para o tesouro."},
- {f:"altares",t:"Altares",d:"Cada altar com o seu desenho: o dos poderes das armas (espada sobre um pano), o da ilha (concha), o do Rei Esqueleto (crânio e velas), o da água (pedra rúnica) e o santuário."}
+ {f:"altares",t:"Altares",d:"Cada altar com o seu desenho: o dos poderes das armas (espada sobre um pano), o da ilha (concha), o do Rei Esqueleto (crânio e velas), o da água (pedra rúnica) e o santuário."},
+ {f:"arma_mao_direita_lado",t:"A arma na mão direita, de lado",d:"Antes e depois, virado para a direita: a arma passa para o braço do lado da câmara (a mão direita, a mesma do golpe), inclinada para trás; o machado e a picareta com a cabeça espelhada. Para a esquerda fica igual."}
 ];
