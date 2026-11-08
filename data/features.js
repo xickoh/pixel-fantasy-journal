@@ -252,6 +252,7 @@ window.SHOTS = [
  {f:"cruz_tesouro_minimapa",t:"Cruz no minimapa",d:"Fora do alcance do minimapa, a cruz fica na borda do disco, a apontar para o tesouro."},
  {f:"altares",t:"Altares",d:"Cada altar com o seu desenho: o dos poderes das armas (espada sobre um pano), o da ilha (concha), o do Rei Esqueleto (crânio e velas), o da água (pedra rúnica) e o santuário."},
  {f:"arma_mao_direita_lado",t:"A arma na mão direita, de lado",d:"Antes e depois, virado para a direita: a arma passa para o braço do lado da câmara (a mão direita, a mesma do golpe), inclinada para trás; o machado e a picareta com a cabeça espelhada. Para a esquerda fica igual."},
+ {f:"armas_espelhadas_direita",t:"Armas espelhadas à direita",d:"Virado para a direita (parado, a andar e a correr), todas as armas e ferramentas espelhadas na vertical à volta da mão: a lâmina pende para baixo e para trás. Para a esquerda fica igual."},
  {f:"feiticos_hud",t:"Feitiços de classe",d:"Com a adaga (ninja) ou o escudo de madeira (guerreiro) na mão secundária, 4 feitiços em F1-F4, por cima da hotbar: a tecla, o nível e o relógio de cada um."},
  {f:"feiticos_nuvem",ext:"gif",t:"Nuvem Venenosa",d:"O feitiço F2 do ninja: a nuvem fica onde foi lançada e tira vida por segundo aos inimigos dentro."},
  {f:"feiticos_ciclone",ext:"gif",t:"Ciclone",d:"O F2 do guerreiro: a própria arma roda duas vezes num segundo; cada inimigo ao alcance leva o dano uma vez."},
