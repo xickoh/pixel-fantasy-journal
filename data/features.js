@@ -279,5 +279,7 @@ window.SHOTS = [
  {f:"machado_espelhado",ext:"gif",t:"Machado de frente",d:"Virado para baixo (parado, a andar e a correr) o machado e o machado de guerra de osso ficam com a cabeça para a esquerda, longe da cara, e a mão continua a agarrar o cabo."},
  {f:"machado_punho",t:"A mão no cabo do machado",d:"Ampliado: o cabo espelhado tapa o buraco do punho (o quadrado vermelho) nos machados de madeira, pedra, diamante e de osso."},
  {f:"equipamento_boneco",t:"Equipamento em boneco",d:"Os slots à volta do jogador ampliado 4x: cabeça, peito e pernas por cima do corpo, a mão secundária ao lado, amuleto e anel à esquerda, montada e mascote à direita. O boneco mostra a armadura e a arma."},
- {f:"equipamento_boneco_vazio",t:"Slots vazios",d:"Sem nada vestido, cada slot mostra em fantasma o tipo de peça que leva."}
+ {f:"equipamento_boneco_vazio",t:"Slots vazios",d:"Sem nada vestido, cada slot mostra em fantasma o tipo de peça que leva."},
+ {f:"icone_compendio",t:"Ícone do Compêndio",d:"O último separador do menu do Tab, o Compêndio, tem agora o livro azul com a estrela da folha de ícones."},
+ {f:"rasto_slash_through",ext:"gif",t:"Dash do Slash Through",d:"Sem o poder (à esquerda) e com ele (à direita), na relva e na areia: um rasto branco cortante cobre o caminho da hitbox do dash, com cortes diagonais e um contorno escuro fino que o deixa ler na areia."}
 ];
