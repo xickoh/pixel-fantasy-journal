@@ -277,5 +277,7 @@ window.SHOTS = [
  {f:"saber_do_pescador",t:"Saber do Pescador",d:"Com a loja aberta, o pescador ensina 10 lições permanentes do minijogo da pesca, pagas com moedas e pérolas."},
  {f:"ronda_com_licoes",t:"Lições na ronda",d:"As lições aprendidas aparecem como ícones ao lado da ronda, com o mesmo popup das cartas."},
  {f:"machado_espelhado",ext:"gif",t:"Machado de frente",d:"Virado para baixo (parado, a andar e a correr) o machado e o machado de guerra de osso ficam com a cabeça para a esquerda, longe da cara, e a mão continua a agarrar o cabo."},
- {f:"machado_punho",t:"A mão no cabo do machado",d:"Ampliado: o cabo espelhado tapa o buraco do punho (o quadrado vermelho) nos machados de madeira, pedra, diamante e de osso."}
+ {f:"machado_punho",t:"A mão no cabo do machado",d:"Ampliado: o cabo espelhado tapa o buraco do punho (o quadrado vermelho) nos machados de madeira, pedra, diamante e de osso."},
+ {f:"equipamento_boneco",t:"Equipamento em boneco",d:"Os slots à volta do jogador ampliado 4x: cabeça, peito e pernas por cima do corpo, a mão secundária ao lado, amuleto e anel à esquerda, montada e mascote à direita. O boneco mostra a armadura e a arma."},
+ {f:"equipamento_boneco_vazio",t:"Slots vazios",d:"Sem nada vestido, cada slot mostra em fantasma o tipo de peça que leva."}
 ];
