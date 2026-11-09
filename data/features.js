@@ -2,7 +2,7 @@
 // for das principais, e então substitui ou reescreve um ponto; nunca se acrescenta uma lista de pormenores.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com dash e stamina; feitiços de classe em Q, E, R e T (ninja, guerreiro), subidos no Santuário das Marés com a essência que se pesca","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, rios que sobem com a chuva, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, estradas e rios sinuosos, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","17 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
  {icon:"🎒",color:"blue",title:"Progressão",items:["Skills de 1 a 99 e a árvore da Natureza (36 skills e 5 auras), dada pela Árvore Anciã","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},
@@ -278,6 +278,9 @@ window.SHOTS = [
  {f:"ronda_com_licoes",t:"Lições na ronda",d:"As lições aprendidas aparecem como ícones ao lado da ronda, com o mesmo popup das cartas."},
  {f:"machado_espelhado",ext:"gif",t:"Machado de frente",d:"Virado para baixo (parado, a andar e a correr) o machado e o machado de guerra de osso ficam com a cabeça para a esquerda, longe da cara, e a mão continua a agarrar o cabo."},
  {f:"machado_punho",t:"A mão no cabo do machado",d:"Ampliado: o cabo espelhado tapa o buraco do punho (o quadrado vermelho) nos machados de madeira, pedra, diamante e de osso."},
+ {f:"caminhos_mundo",t:"Caminhos do mundo",d:"Estradas (vermelho) da vila a todas as áreas e masmorras, caminhos dos pontos de interesse (amarelo) e trilhos pequenos (azul), sinuosos como os rios."},
+ {f:"caminhos_area",t:"Caminhos de uma área",d:"A área acima da vila: a estrada atravessa a fronteira no ponto que as duas áreas tiram da seed e segue do outro lado."},
+ {f:"caminhos_estrada",t:"Estrada sinuosa",d:"Uma estrada de pedra em diagonal, escavada pelo terreno sólido, com a mesma orla orgânica de sempre."},
  {f:"equipamento_boneco",t:"Equipamento em boneco",d:"Os slots à volta do jogador ampliado 4x: cabeça, peito e pernas por cima do corpo, a mão secundária ao lado, amuleto e anel à esquerda, montada e mascote à direita. O boneco mostra a armadura e a arma."},
  {f:"equipamento_boneco_vazio",t:"Slots vazios",d:"Sem nada vestido, cada slot mostra em fantasma o tipo de peça que leva."},
  {f:"icone_compendio",t:"Ícone do Compêndio",d:"O último separador do menu do Tab, o Compêndio, tem agora o livro azul com a estrela da folha de ícones."},
