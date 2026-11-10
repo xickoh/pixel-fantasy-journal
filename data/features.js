@@ -291,4 +291,5 @@ window.SHOTS = [
  {f:"feitico_meteor_shader",t:"Partículas por shader",d:"O fogo do Meteoro e as partículas de todos os feitiços desenhados por dois shaders, em píxeis do mundo."},
  {f:"treinador_caixas",t:"Treinador em caixas",d:"Cada poder numa caixa: o que pede (tarefa e moedas), o que dás em troca e o estado."},
  {f:"equipamento_slots_direita",t:"Equipamento arrumado",d:"O boneco inteiro à esquerda e os slots numa grelha à direita."},
+ {f:"rasto_meia_lua",t:"Rasto em meia-lua",d:"O rasto da espada (em cima, antes e depois) e do murro (em baixo, antes e depois) passa a uma meia-lua: grossa no alcance, em bico nas pontas, com a parte escura da lua; o do murro mais achatado."},
 ];
