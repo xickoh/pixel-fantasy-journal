@@ -284,8 +284,8 @@ window.SHOTS = [
  {f:"equipamento_boneco",t:"Equipamento em boneco",d:"Os slots à volta do jogador ampliado 4x: cabeça, peito e pernas por cima do corpo, a mão secundária ao lado, amuleto e anel à esquerda, montada e mascote à direita. O boneco mostra a armadura e a arma."},
  {f:"equipamento_boneco_vazio",t:"Slots vazios",d:"Sem nada vestido, cada slot mostra em fantasma o tipo de peça que leva."},
  {f:"icone_compendio",t:"Ícone do Compêndio",d:"O último separador do menu do Tab, o Compêndio, tem agora o livro azul com a estrela da folha de ícones."},
- {f:"rasto_slash_through",ext:"gif",t:"Dash do Slash Through",d:"Sem o poder (à esquerda) e com ele (à direita), na relva e na areia: um rasto branco cortante cobre o caminho da hitbox do dash, com cortes diagonais e um contorno escuro fino que o deixa ler na areia."}
-{f:"grutas_teto",t:"Grutas com teto",d:"De fora só se vê a boca na parede; lá dentro o teto desaparece. Só a marreta o parte."},
+ {f:"rasto_slash_through",ext:"gif",t:"Dash do Slash Through",d:"Sem o poder (à esquerda) e com ele (à direita), na relva e na areia: um rasto branco cortante cobre o caminho da hitbox do dash, com cortes diagonais e um contorno escuro fino que o deixa ler na areia."},
+ {f:"grutas_teto",t:"Grutas com teto",d:"De fora só se vê a boca na parede; lá dentro o teto desaparece. Só a marreta o parte."},
  {f:"troll_gruta",t:"Troll das grutas",d:"Dorme numa galeria ou num poço; morto, deixa sempre o Fóssil Antigo."},
  {f:"minerios_forma",t:"Minérios com forma",d:"Cada metal com a sua forma, mais denso no centro do veio, com pó e um brilho de vez em quando."},
  {f:"feitico_meteor_shader",t:"Partículas por shader",d:"O fogo do Meteoro e as partículas de todos os feitiços desenhados por dois shaders, em píxeis do mundo."},
