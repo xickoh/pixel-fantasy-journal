@@ -291,6 +291,6 @@ window.SHOTS = [
  {f:"feitico_meteor_shader",t:"Partículas por shader",d:"O fogo do Meteoro e as partículas de todos os feitiços desenhados por dois shaders, em píxeis do mundo."},
  {f:"treinador_caixas",t:"Treinador em caixas",d:"Cada poder numa caixa: o que pede (tarefa e moedas), o que dás em troca e o estado."},
  {f:"equipamento_slots_direita",t:"Equipamento arrumado",d:"O boneco inteiro à esquerda e os slots numa grelha à direita."},
- {f:"rasto_meia_lua",t:"Rasto em meia-lua",d:"O rasto da espada (em cima, antes e depois) e do murro (em baixo, antes e depois) passa a uma meia-lua: grossa no alcance, em bico nas pontas, com a parte escura da lua; o do murro mais achatado."},
  {f:"barras_vida_ecra",t:"Barras de vida nítidas",d:"A barra dos inimigos, o nome, o nível e a vida desenhados à escala do mundo, nítidos e a andar juntos; por cima das árvores, escondidos no escuro da noite."},
+ {f:"rasto_capsula",t:"Um só rasto para todos os golpes",d:"A espada (em cima), a greatsword e o murro (em baixo), de lado e na diagonal, antes e depois: o golpe cortante e o murro deixam a meia-lua e passam à cápsula da lança e da picareta, à altura da hitbox de cada um."},
 ];
