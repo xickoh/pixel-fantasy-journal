@@ -11,7 +11,7 @@
     ['habilidades', 'Skills e feitiços'], ['mecanicas', 'Mecânicas'], ['numeros', 'Números'],
   ];
   const LEVELS = ['1', '10', '20', '30', '40'];
-  const ARCH = {balanced: 'Equilibrado', tank: 'Resistente', fast: 'Rápido', armored: 'Blindado', brute: 'Bruto'};
+  const ARCH = {balanced: 'Equilibrado', tank: 'Resistente', fast: 'Rápido', armored: 'Blindado', brute: 'Bruto', wild: 'Selvagem'};
   const FAM = {orc: 'Orcs', skeleton: 'Esqueletos', mummy: 'Múmias'};
   let tab = 'itens', cat = '';
 
