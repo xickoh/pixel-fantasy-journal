@@ -292,5 +292,6 @@ window.SHOTS = [
  {f:"treinador_caixas",t:"Treinador em caixas",d:"Cada poder numa caixa: o que pede (tarefa e moedas), o que dás em troca e o estado."},
  {f:"equipamento_slots_direita",t:"Equipamento arrumado",d:"O boneco inteiro à esquerda e os slots numa grelha à direita."},
  {f:"barras_vida_ecra",t:"Barras de vida nítidas",d:"A barra dos inimigos, o nome, o nível e a vida desenhados à escala do mundo, nítidos e a andar juntos; por cima das árvores, escondidos no escuro da noite."},
- {f:"rasto_capsula",t:"Um só rasto para todos os golpes",d:"A espada (em cima), a greatsword e o murro (em baixo), de lado e na diagonal, antes e depois: o golpe cortante e o murro deixam a meia-lua e passam à cápsula da lança e da picareta, à altura da hitbox de cada um."},
+ {f:"rasto_capsula",t:"Um só rasto para todos os golpes",d:"A espada (em cima), a greatsword e o murro (em baixo), de lado e na diagonal, antes e depois: o golpe cortante e o murro deixam a meia-lua e passam à cápsula da lança e da picareta, à altura da hitbox de cada um."}, {f:"torre_mago_dia",t:"Torre do mago nova",d:"Desenhada à mão: pedra em vista 3/4, telhado cónico roxo com friso dourado, orbe azul, medalhão com lua e porta com hera."},
+ {f:"torre_mago_noite",t:"Torre do mago à noite",d:"A mesma torre às 22h, na vila escura, com o mago à porta."},
 ];
