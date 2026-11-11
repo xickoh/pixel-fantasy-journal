@@ -294,6 +294,7 @@ window.SHOTS = [
  {f:"barras_vida_ecra",t:"Barras de vida nítidas",d:"A barra dos inimigos, o nome, o nível e a vida desenhados à escala do mundo, nítidos e a andar juntos; por cima das árvores, escondidos no escuro da noite."},
  {f:"rasto_capsula",t:"Um só rasto para todos os golpes",d:"A espada (em cima), a greatsword e o murro (em baixo), de lado e na diagonal, antes e depois: o golpe cortante e o murro deixam a meia-lua e passam à cápsula da lança e da picareta, à altura da hitbox de cada um."}, {f:"torre_mago_dia",t:"Torre do mago nova",d:"Desenhada à mão: pedra em vista 3/4, telhado cónico roxo com friso dourado, orbe azul, medalhão com lua e porta com hera."},
  {f:"torre_mago_noite",t:"Torre do mago à noite",d:"A mesma torre às 22h, na vila escura, com o mago à porta."},
+ {f:"torre_mago_paleta",t:"Torre do mago na paleta do jogo",d:"A mesma torre só com as cores da paleta: o telhado passa de cinco roxos a três violetas e a pedra escura ao tom mais escuro da rampa (compara com a torre do 703, de dia)."},
  {f:"rasto_arma_9",ext:"gif",t:"Rasto das armas +9",d:"Uma espada +9 a correr: as faíscas do brilho ficam no mundo onde nasceram e apagam-se em 1 s, um rasto atrás da arma; a cor da arma pulsa 3x mais devagar."},
  {f:"recall_particulas",ext:"gif",t:"Recall com partículas",d:"A Recall Stone: o jogador carrega no anel (fica azul e pisca), desfaz-se em píxeis dos pés para a cabeça com uma coluna de luz, um flash branco cobre o carregamento da vila e ele chega montado da cabeça para os pés."},
 ];
