@@ -297,4 +297,6 @@ window.SHOTS = [
  {f:"torre_mago_paleta",t:"Torre do mago na paleta do jogo",d:"A mesma torre só com as cores da paleta: o telhado passa de cinco roxos a três violetas e a pedra escura ao tom mais escuro da rampa (compara com a torre do 703, de dia)."},
  {f:"rasto_arma_9",ext:"gif",t:"Rasto das armas +9",d:"Uma espada +9 a correr: as faíscas do brilho ficam no mundo onde nasceram e apagam-se em 1 s, um rasto atrás da arma; a cor da arma pulsa 3x mais devagar."},
  {f:"recall_particulas",ext:"gif",t:"Recall com partículas",d:"A Recall Stone: o jogador carrega no anel (fica azul e pisca), desfaz-se em píxeis dos pés para a cabeça com uma coluna de luz, um flash branco cobre o carregamento da vila e ele chega montado da cabeça para os pés."},
+ {f:"animais_pixellab",ext:"gif",t:"Os animais do PixelLab",d:"O veado, o javali, o lobo e o coelho gerados no PixelLab no estilo do jogo, com as cores da paleta: antes à esquerda, agora à direita."},
+ {f:"animais_pixellab_jogo",t:"Os animais novos no jogo",d:"A correr ao lado do jogador, cada um com a sombra acertada aos cascos."}
 ];
