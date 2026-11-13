@@ -302,5 +302,6 @@ window.SHOTS = [
  {f:"ferreiro_taberna_711",t:"Ferreiro novo",d:"O ferreiro de pedra com a forja acesa; a taberna ao lado (prompt 711)."},
  {f:"buraco_dungeon",t:"Entrada da dungeon",d:"Um buraco no chão com escadas a descer para norte, um por bioma (prompt 717)."},
  {f:"barras_nivel_720",t:"Nível ao lado das espadas",d:"Antes (em cima) o número tapava as espadas e colava à vida; agora fica à esquerda (prompt 720)."},
- {f:"ataques_corpo_unico_719",ext:"gif",t:"Ataques novos",d:"Um só corpo para todas as armas, investida, smear da lâmina e golpes só em 4 direções: a espada de madeira contra o manequim, com ferro (prompt 719)."}
+ {f:"ataques_corpo_unico_719",ext:"gif",t:"Ataques novos",d:"Um só corpo para todas as armas, investida, smear da lâmina e golpes só em 4 direções: a espada de madeira contra o manequim, com ferro (prompt 719)."},
+ {f:"cavalo_novo_718",ext:"gif",t:"A cavalo, corpo novo",d:"O cavaleiro novo (PixelLab e à mão) sentado no cavalo, com a armadura de ferro feita das suas camadas (prompt 718)."}
 ];
