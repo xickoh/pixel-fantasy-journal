@@ -300,5 +300,6 @@ window.SHOTS = [
  {f:"animais_pixellab",ext:"gif",t:"Os animais do PixelLab",d:"O veado, o javali, o lobo e o coelho gerados no PixelLab no estilo do jogo, com as cores da paleta: antes à esquerda, agora à direita."},
  {f:"animais_pixellab_jogo",t:"Os animais novos no jogo",d:"A correr ao lado do jogador, cada um com a sombra acertada aos cascos."},
  {f:"ferreiro_taberna_711",t:"Ferreiro novo",d:"O ferreiro de pedra com a forja acesa; a taberna ao lado (prompt 711)."},
- {f:"buraco_dungeon",t:"Entrada da dungeon",d:"Um buraco no chão com escadas a descer para norte, um por bioma (prompt 717)."}
+ {f:"buraco_dungeon",t:"Entrada da dungeon",d:"Um buraco no chão com escadas a descer para norte, um por bioma (prompt 717)."},
+ {f:"barras_nivel_720",t:"Nível ao lado das espadas",d:"Antes (em cima) o número tapava as espadas e colava à vida; agora fica à esquerda (prompt 720)."}
 ];
