@@ -2,7 +2,7 @@
 // for das principais, e então substitui ou reescreve um ponto; nunca se acrescenta uma lista de pormenores.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com dash e stamina; feitiços de classe em Q, E, R e T (ninja, guerreiro), subidos no Santuário das Marés com a essência que se pesca","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, estradas e rios sinuosos, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas com teto, cogumelos luminosos e um troll","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, estradas e rios sinuosos, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas escondidas na rocha (fendas ou seladas), cogumelos luminosos e um troll","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","17 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
  {icon:"🎒",color:"blue",title:"Progressão",items:["Skills de 1 a 99 e a árvore da Natureza (36 skills e 5 auras), dada pela Árvore Anciã","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},
@@ -286,6 +286,8 @@ window.SHOTS = [
  {f:"icone_compendio",t:"Ícone do Compêndio",d:"O último separador do menu do Tab, o Compêndio, tem agora o livro azul com a estrela da folha de ícones."},
  {f:"rasto_slash_through",ext:"gif",t:"Dash do Slash Through",d:"Sem o poder (à esquerda) e com ele (à direita), na relva e na areia: um rasto branco cortante cobre o caminho da hitbox do dash, com cortes diagonais e um contorno escuro fino que o deixa ler na areia."},
  {f:"grutas_teto",t:"Grutas com teto",d:"De fora só se vê a boca na parede; lá dentro o teto desaparece. Só a marreta o parte."},
+ {f:"grutas_fenda",t:"Grutas sem teto: a fenda",d:"Uma gruta é uma cavidade na rocha: de fora vê-se só a falha de uma célula na face, com o chão de pedra da gruta a sair por ela; lá dentro escurece aos degraus conforme a distância ao céu aberto."},
+ {f:"grutas_selada",t:"Grutas sem teto: a selada",d:"Metade não tem entrada: a parede mais fina está rachada, pinga água e soa a oco sob a picareta. Aberta, a luz entra pelo buraco."},
  {f:"troll_gruta",t:"Troll das grutas",d:"Dorme numa galeria ou num poço; morto, deixa sempre o Fóssil Antigo."},
  {f:"minerios_forma",t:"Minérios com forma",d:"Cada metal com a sua forma, mais denso no centro do veio, com pó e um brilho de vez em quando."},
  {f:"feitico_meteor_shader",t:"Partículas por shader",d:"O fogo do Meteoro e as partículas de todos os feitiços desenhados por dois shaders, em píxeis do mundo."},
