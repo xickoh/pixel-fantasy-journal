@@ -307,6 +307,7 @@ window.SHOTS = [
  {f:"golpe_arma_volta_741",ext:"gif",t:"A arma à volta do boneco",d:"O boneco fica parado e a arma varre à volta dele: a espada um quarto de volta, a lança vira e estoca, o machado de guerra dá uma volta e um quarto. O rasto segue o caminho da arma e acaba em degraus quentes, com o ar cortado atrás (prompt 741)."},
  {f:"javali_novo_763",ext:"gif",t:"Javali novo",d:"O javali de pernas curtas (PixelLab, editado à mão no Aseprite), ao tamanho do antigo: o «!» e a investida contra o jogador (prompt 763)."},
  {f:"waypoint_novo_750",ext:"gif",t:"Waypoint novo",d:"Dois menires com um cristal a flutuar (PixelLab): cinzento e parado até ser descoberto, depois azul, a rodar, com um brilho suave (prompt 750)."},
+ {f:"taberna_maior_751",t:"Taberna maior",d:"A taberna nova do PixelLab, ao tamanho das casas: dois pisos e sótão, varanda, alpendre sobre a porta dupla e o fumo a sair da chaminé (prompt 751)."},
  {f:"golpe_cima_baixo_748",ext:"gif",t:"Golpe de cima para baixo",d:"De lado a arma sobe para trás do ombro e desce à frente até ao alvo, para a direita e para a esquerda: a espada e o machado de guerra de madeira contra o manequim (prompt 748)."},
  {f:"ataques_corpo_unico_719",ext:"gif",t:"Ataques novos",d:"Um só corpo para todas as armas, investida, smear da lâmina e golpes só em 4 direções: a espada de madeira contra o manequim, com ferro (prompt 719)."},
  {f:"cavalo_novo_718",ext:"gif",t:"A cavalo, corpo novo",d:"O cavaleiro novo (PixelLab e à mão) sentado no cavalo, com a armadura de ferro feita das suas camadas (prompt 718)."},
