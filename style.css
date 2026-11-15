@@ -16,30 +16,31 @@ h1,h2,h3,.btn,.num,.tag,.day>summary,.kicker,.topbar,footer p{font-family:"Press
 .links a{color:var(--light);text-decoration:none;padding:8px 10px;text-shadow:2px 2px 0 var(--line)}
 .links a:hover{background:var(--red);box-shadow:0 0 0 3px var(--line)}
 
-/* herói: crepúsculo, castelo, dragão e prado */
-.hero{position:relative;overflow:hidden;min-height:min(760px,92vh);background:linear-gradient(#1c1240 0 8%,#3a1f5e 8% 22%,#7a2f6e 22% 36%,#c9506a 36% 50%,#f08a52 50% 64%,#ffc46a 64%);isolation:isolate}
-.sun{position:absolute;right:14%;bottom:250px;width:240px;height:240px;background:radial-gradient(#fff0b8 0 38%,#ffd98a 38% 58%,#ffb55f 58% 100%);clip-path:polygon(30% 0,70% 0,70% 10%,85% 10%,85% 20%,100% 30%,100% 70%,85% 80%,85% 90%,70% 90%,70% 100%,30% 100%,30% 90%,15% 90%,15% 80%,0 70%,0 30%,15% 20%,15% 10%,30% 10%);z-index:-4}
-.mountains{position:absolute;left:0;right:0;bottom:190px;height:360px;background:#5a3f7a;z-index:-3;clip-path:polygon(0 70%,6% 70%,6% 55%,12% 55%,12% 38%,20% 38%,20% 22%,27% 22%,27% 40%,33% 40%,33% 55%,42% 55%,42% 45%,50% 45%,50% 30%,57% 30%,57% 18%,64% 18%,64% 34%,72% 34%,72% 52%,80% 52%,80% 40%,88% 40%,88% 58%,95% 58%,95% 66%,100% 66%,100% 100%,0 100%)}
-.castle{position:absolute;right:30%;bottom:200px;width:250px;z-index:-2}
-.hill{position:absolute;left:0;right:0;bottom:120px;height:170px;background:#3a7a3a;z-index:-1;clip-path:polygon(0 60%,10% 60%,10% 40%,22% 40%,22% 25%,34% 25%,34% 45%,48% 45%,48% 30%,60% 30%,60% 20%,72% 20%,72% 40%,84% 40%,84% 55%,100% 55%,100% 100%,0 100%)}
-.hero-grid{position:relative;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:10px;max-width:1180px;margin:0 auto;padding:54px 18px 190px}
-.hero-text{position:relative;z-index:2}
+/* herói: a vila do jogo ao anoitecer (img/banner_vila.webp, feito com make_banner.py da vault) */
+.hero{position:relative;overflow:hidden;height:600px;background:#141018;display:flex;align-items:center;isolation:isolate}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:6px;background:var(--line)}
+.hero .scene{position:absolute;left:50%;top:0;height:600px;width:1920px;max-width:none;transform:translateX(-50%);z-index:-3}
+.hero .veil{position:absolute;inset:0;z-index:-2;background:linear-gradient(90deg,#120c1ef2 0,#120c1ecc 26%,#120c1e55 48%,#120c1e00 66%),linear-gradient(#120c1e00 72%,#1b1140 100%)}
+.hero-text{position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;padding:0 18px}
 .kicker{font-size:11px;letter-spacing:3px;margin:0 0 20px;text-shadow:2px 2px 0 var(--line)}
-.hero h1{margin:0;font-size:clamp(28px,6.6vw,76px);line-height:1.15;letter-spacing:3px;color:var(--light);text-shadow:0 5px 0 var(--red2),4px 5px 0 var(--line),-3px 0 0 var(--line),3px 0 0 var(--line),0 -3px 0 var(--line)}
-.hero h1 span{color:var(--gold);text-shadow:0 5px 0 var(--gold2),4px 5px 0 var(--line),-3px 0 0 var(--line),3px 0 0 var(--line),0 -3px 0 var(--line)}
-.hero h1 small{display:block;font-size:.4em;letter-spacing:.55em;margin-top:12px;color:#ffd0c8;text-shadow:3px 3px 0 var(--line)}
+.hero h1{margin:0;line-height:1}
+.hero .logo{display:block;width:min(570px,86vw);filter:drop-shadow(4px 6px 0 #1a0f1f)}
+.hero .lead{max-width:470px;font-size:26px}
+.hero h1 small{display:block;font-size:22px;letter-spacing:.9em;margin:18px 0 0 6px;color:var(--gold);text-shadow:3px 3px 0 var(--line)}
 .lead{max-width:540px;margin:22px 0 26px;font-size:27px;text-shadow:2px 2px 0 var(--line),0 0 14px #1a0f1faa}
+/* pirilampos sobre o banner */
+.flies i{position:absolute;width:4px;height:4px;background:#ffe9a0;box-shadow:0 0 8px 3px #ffd36a88;z-index:-1;opacity:0;animation:fly 7s steps(14) infinite}
+.flies i:nth-child(1){left:58%;top:70%}.flies i:nth-child(2){left:66%;top:22%;animation-delay:-2s}.flies i:nth-child(3){left:74%;top:80%;animation-delay:-4s}
+.flies i:nth-child(4){left:83%;top:36%;animation-delay:-1s}.flies i:nth-child(5){left:91%;top:64%;animation-delay:-5s}.flies i:nth-child(6){left:48%;top:84%;animation-delay:-3s}
+.flies i:nth-child(7){left:38%;top:14%;animation-delay:-6s}.flies i:nth-child(8){left:96%;top:18%;animation-delay:-2.5s}
+@keyframes fly{0%{opacity:0;transform:translate(0,0)}20%{opacity:1}50%{transform:translate(16px,-24px);opacity:.9}80%{opacity:1}100%{opacity:0;transform:translate(-12px,-44px)}}
+@media(prefers-reduced-motion:reduce){.flies{display:none}}
 .cta{display:flex;gap:16px;flex-wrap:wrap}
 .btn{display:inline-block;background:var(--gold);color:var(--line);text-decoration:none;font-size:12px;padding:14px 18px;box-shadow:0 -4px 0 0 var(--line),0 4px 0 0 var(--line),-4px 0 0 0 var(--line),4px 0 0 0 var(--line),inset -4px -4px 0 0 #0003,inset 4px 4px 0 0 #fff5}
 .btn.alt{background:var(--red);color:var(--light)}
 .btn:hover{transform:translateY(-3px);filter:brightness(1.12)}
-.dragon{width:100%;max-width:520px;justify-self:center;filter:drop-shadow(0 12px 0 #0004) drop-shadow(0 0 28px #ff6a3a77);transform:rotate(-3deg)}
 .turf{position:absolute;left:0;right:0;bottom:0;height:150px;background:url(img/art/grass_edge.png) 0 0/128px 112px repeat-x,#6b4423;background-position:0 30px,0 0}
 .turf::after{content:"";position:absolute;left:0;right:0;bottom:0;height:calc(100% - 140px);background:#6b4423}
-.turf .s{position:absolute;bottom:34px;width:auto}
-.turf .wiz{left:12%;height:92px;bottom:46px}
-.turf .sl1{left:34%;height:44px}.turf .sl2{left:62%;height:44px;bottom:42px}.turf .sl3{left:82%;height:44px;bottom:38px}
-.turf .mu1{left:46%;height:42px;bottom:40px}.turf .mu2{left:50%;height:34px;bottom:34px}
 
 /* zonas */
 .zone{position:relative;padding:92px 0 70px}
@@ -192,6 +193,7 @@ h2.sub{margin:30px 0 14px;font-size:clamp(13px,2.4vw,18px)}
 .stamp{margin-top:40px;font-size:19px}
 @media(max-width:520px){.wgrid,.wgrid.mech{grid-template-columns:1fr}.wikihead-row>img.mini{display:none}.tab{font-size:10px;padding:10px}}
 
-@media(max-width:820px){.hero-grid{grid-template-columns:1fr;padding-top:34px}.dragon{max-width:340px}.castle{width:150px;right:4%}.sun{width:150px;height:150px}.topbar .brand span{display:none}}
-@media(max-width:520px){.shots{grid-template-columns:1fr}body{font-size:20px}.links a{padding:8px 6px}.turf .wiz{height:70px}.hero-grid{padding-bottom:160px}}
+@media(max-width:820px){.topbar .brand span{display:none}}
+@media(max-width:720px){.hero{height:520px}.hero .scene{height:520px;width:auto;left:62%}.hero .veil{background:linear-gradient(#120c1ecc,#120c1e88 60%,#1b1140)}}
+@media(max-width:520px){.shots{grid-template-columns:1fr}body{font-size:20px}.links a{padding:8px 6px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
