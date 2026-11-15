@@ -328,5 +328,15 @@ window.SHOTS = [
  {f:"cancelar_confirmacao_802",t:"Confirmar o cancelamento",d:"Cancelar pede sempre confirmação, com o foco na opção segura (prompt 802)."},
  {f:"retomar_quest_802",t:"Retomar a missão",d:"A secundária cancelada retoma-se a falar com o NPC, com o progresso que tinha (prompt 802)."},
  {f:"altar_grelha_803",t:"Altar em grelha",d:"Colocar vem primeiro; os itens em grelha como no inventário, com a tooltip por cima (prompt 803)."},
- {f:"altar_retirar_803",t:"Altar: retirar",d:"As armas com poderes em grelha, no separador Retirar (prompt 803)."}
+ {f:"altar_retirar_803",t:"Altar: retirar",d:"As armas com poderes em grelha, no separador Retirar (prompt 803)."},
+ {f:"gruta_dia_778",t:"Grutas de dia",d:"Sem escuro próprio: de dia tão claras como lá fora, só a linha de visão esconde o que está atrás das paredes (prompt 778)."},
+ {f:"gruta_noite_778",t:"Grutas de noite",d:"De noite vale a vista curta da noite, com as luzes a abrirem o seu raio (prompt 778)."},
+ {f:"forja_luz_antes_809",t:"Forja à noite (antes)",d:"A forja sem luz própria (prompt 809)."},
+ {f:"forja_luz_809",t:"Forja acesa",d:"A forja acende a luz cintilante da fornalha à noite, como no menu inicial (prompt 809)."},
+ {f:"cura_gradual_798",t:"Cura gradual",d:"As poções curam aos poucos: a vida a curar aparece na barra a 50% e vai enchendo (prompt 798)."},
+ {f:"dev_teleporte_mapa_787",t:"Dev mode: teletransporte",d:"Um clique no mapa leva o jogador ao ponto livre mais próximo (prompt 787)."},
+ {f:"cavalo_segue_780",ext:"gif",t:"O cavalo segue-te",d:"A montada do jogador, sem cavaleiro, segue o dono a 150 px (prompt 780)."},
+ {f:"brilho_nivel_788",ext:"gif",t:"Brilho pelo nível",d:"Peças de nível 1, 30, 60 e 90 de +5 a +9: as de nível alto começam a brilhar mais cedo (prompt 788)."},
+ {f:"brilho_andar_788",ext:"gif",t:"Rasto de faíscas",d:"Uma espada de nível 90 a +9: mais faíscas e um rasto mais comprido ao andar (prompt 788)."},
+ {f:"brilho_golpe_788",ext:"gif",t:"Golpe a +9",d:"A mesma espada a golpear (prompt 788)."}
 ];
