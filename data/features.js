@@ -347,10 +347,11 @@ window.SHOTS = [
  {f:"caixa_venda_792",t:"Caixa de Venda",d:"Vende em casa ao preço das lojas (prompt 792)."},
  {f:"contrato_extra_793",t:"Contrato extra",d:"O Salão do Aventureiro põe mais um contrato por dia no quadro, 1,5x mais bem pago (prompt 793)."},
  {f:"dois_pets_794",t:"Dois animais",d:"Com o Salão do Aventureiro, um segundo animal segue o primeiro (prompt 794)."},
- {f:"equipamento_dois_pets_794",t:"Segundo espaço de animal",d:"O espaço Pet2 no equipamento (prompt 794)."},
+ {f:"equipamento_acessorios_800",t:"Equipamento",d:"6 espaços de acessório de uma só classe (aqui com a Sacola), o animal e o segundo animal do Salão do Aventureiro (prompts 794, 799 e 800)."},
  {f:"critico_empurra_779",ext:"gif",t:"Crítico que mata",d:"Um crítico corpo a corpo que mata projeta o corpo 3x mais longe (em cima um golpe normal, em baixo um crítico) (prompt 779)."},
  {f:"as_15_casas_784",t:"As 15 casas",d:"Pedra e ardósia, enxaimel, troncos, palha, musgo, caiada, mago, anão, mercador, pescador, padeiro, herbanário, solar e sobrado (prompt 784)."},
  {f:"janelas_acesas_785",t:"Janelas acesas",d:"À noite as casas da vila acendem as janelas (prompt 785)."},
  {f:"plantas_altas_antes_801",t:"Plantas cortadas (antes)",d:"Só a metade de cima das plantas altas: uma espiga solta no chão (prompt 801)."},
- {f:"plantas_altas_801",t:"Plantas altas inteiras",d:"O feto, os rabos-de-gato junto à água e as flores roxas nos prados, inteiros e a abanar juntos (prompt 801)."}
+ {f:"plantas_altas_801",t:"Plantas altas inteiras",d:"O feto, os rabos-de-gato junto à água e as flores roxas nos prados, inteiros e a abanar juntos (prompt 801)."},
+ {f:"sacola_799",t:"A Sacola",d:"Um acessório de couro e corda: o que se apanha com Interagir vai direto para o inventário (prompt 799)."}
 ];
