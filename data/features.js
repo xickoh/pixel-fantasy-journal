@@ -347,5 +347,6 @@ window.SHOTS = [
  {f:"caixa_venda_792",t:"Caixa de Venda",d:"Vende em casa ao preço das lojas (prompt 792)."},
  {f:"contrato_extra_793",t:"Contrato extra",d:"O Salão do Aventureiro põe mais um contrato por dia no quadro, 1,5x mais bem pago (prompt 793)."},
  {f:"dois_pets_794",t:"Dois animais",d:"Com o Salão do Aventureiro, um segundo animal segue o primeiro (prompt 794)."},
- {f:"equipamento_dois_pets_794",t:"Segundo espaço de animal",d:"O espaço Pet2 no equipamento (prompt 794)."}
+ {f:"equipamento_dois_pets_794",t:"Segundo espaço de animal",d:"O espaço Pet2 no equipamento (prompt 794)."},
+ {f:"critico_empurra_779",ext:"gif",t:"Crítico que mata",d:"Um crítico corpo a corpo que mata projeta o corpo 3x mais longe (em cima um golpe normal, em baixo um crítico) (prompt 779)."}
 ];
