@@ -321,5 +321,12 @@ window.SHOTS = [
  {f:"crafting_selecao_773",t:"Crafting com seleção",d:"O crafting abre já com uma receita selecionada e com o contorno à vista (prompt 773)."},
  {f:"bomba_fumo_774",t:"Ninja: Bomba de Fumo",d:"Os inimigos ficam cegos e perdem o ninja, que fica translúcido até ao próximo golpe, sempre crítico (prompt 774)."},
  {f:"clone_sombra_774",ext:"gif",t:"Ninja: Clone de Sombra",d:"Uma cópia roxa do ninja, com o equipamento dele, luta ao lado como o esqueleto aliado (prompt 774)."},
- {f:"telhados_cinzentos_777",t:"Telhados de pedra",d:"O telhado verde-marinho passa a cinzento escuro: metade das casas de madeira, metade de pedra (prompt 777)."}
+ {f:"telhados_cinzentos_777",t:"Telhados de pedra",d:"O telhado verde-marinho passa a cinzento escuro: metade das casas de madeira, metade de pedra (prompt 777)."},
+ {f:"estrelas_requisitos_782",t:"Estrelas pelos requisitos",d:"Cinzenta enquanto faltam níveis; amarela (principal) ou azul (secundária) quando se cumprem; a cor esbatida em curso (prompt 782)."},
+ {f:"conversa_seguinte_805",t:"Conversa seguinte",d:"Ao entregar uma missão, o NPC passa logo à seguinte da mesma linha (prompt 805)."},
+ {f:"cancelar_quest_802",t:"Cancelar missões",d:"No diário, as secundárias e as tarefas têm Cancel; as principais não (prompt 802)."},
+ {f:"cancelar_confirmacao_802",t:"Confirmar o cancelamento",d:"Cancelar pede sempre confirmação, com o foco na opção segura (prompt 802)."},
+ {f:"retomar_quest_802",t:"Retomar a missão",d:"A secundária cancelada retoma-se a falar com o NPC, com o progresso que tinha (prompt 802)."},
+ {f:"altar_grelha_803",t:"Altar em grelha",d:"Colocar vem primeiro; os itens em grelha como no inventário, com a tooltip por cima (prompt 803)."},
+ {f:"altar_retirar_803",t:"Altar: retirar",d:"As armas com poderes em grelha, no separador Retirar (prompt 803)."}
 ];
