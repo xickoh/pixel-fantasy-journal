@@ -338,5 +338,14 @@ window.SHOTS = [
  {f:"cavalo_segue_780",ext:"gif",t:"O cavalo segue-te",d:"A montada do jogador, sem cavaleiro, segue o dono a 150 px (prompt 780)."},
  {f:"brilho_nivel_788",ext:"gif",t:"Brilho pelo nível",d:"Peças de nível 1, 30, 60 e 90 de +5 a +9: as de nível alto começam a brilhar mais cedo (prompt 788)."},
  {f:"brilho_andar_788",ext:"gif",t:"Rasto de faíscas",d:"Uma espada de nível 90 a +9: mais faíscas e um rasto mais comprido ao andar (prompt 788)."},
- {f:"brilho_golpe_788",ext:"gif",t:"Golpe a +9",d:"A mesma espada a golpear (prompt 788)."}
+ {f:"brilho_golpe_788",ext:"gif",t:"Golpe a +9",d:"A mesma espada a golpear (prompt 788)."},
+ {f:"casa_jogador_789",t:"A casa do jogador",d:"O pavilhão do aventureiro cresce com 2 melhoramentos do quadro: Casa Reforçada e Salão do Aventureiro (prompt 789)."},
+ {f:"quadro_melhoramentos_789",t:"Melhoramentos com imagem",d:"O quadro de avisos mostra cada melhoramento com a sua imagem; os 2 da casa (prompt 789)."},
+ {f:"descanso_em_casa_790",t:"Descanso em Casa",d:"Dormir na casa reforçada dá +10% de XP durante uma hora (prompt 790)."},
+ {f:"renascer_porta_790",t:"Renascer em casa",d:"Com a Casa Reforçada, a morte devolve-te à porta de casa (prompt 790)."},
+ {f:"arca_registo_791",t:"Arca de Registo",d:"Todos os itens dos baús da casa numa lista, com pesquisa; tira e põe sem andar de baú em baú (prompt 791)."},
+ {f:"caixa_venda_792",t:"Caixa de Venda",d:"Vende em casa ao preço das lojas (prompt 792)."},
+ {f:"contrato_extra_793",t:"Contrato extra",d:"O Salão do Aventureiro põe mais um contrato por dia no quadro, 1,5x mais bem pago (prompt 793)."},
+ {f:"dois_pets_794",t:"Dois animais",d:"Com o Salão do Aventureiro, um segundo animal segue o primeiro (prompt 794)."},
+ {f:"equipamento_dois_pets_794",t:"Segundo espaço de animal",d:"O espaço Pet2 no equipamento (prompt 794)."}
 ];
