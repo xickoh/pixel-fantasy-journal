@@ -353,5 +353,9 @@ window.SHOTS = [
  {f:"janelas_acesas_785",t:"Janelas acesas",d:"À noite as casas da vila acendem as janelas (prompt 785)."},
  {f:"plantas_altas_antes_801",t:"Plantas cortadas (antes)",d:"Só a metade de cima das plantas altas: uma espiga solta no chão (prompt 801)."},
  {f:"plantas_altas_801",t:"Plantas altas inteiras",d:"O feto, os rabos-de-gato junto à água e as flores roxas nos prados, inteiros e a abanar juntos (prompt 801)."},
- {f:"sacola_799",t:"A Sacola",d:"Um acessório de couro e corda: o que se apanha com Interagir vai direto para o inventário (prompt 799)."}
+ {f:"sacola_799",t:"A Sacola",d:"Um acessório de couro e corda: o que se apanha com Interagir vai direto para o inventário (prompt 799)."},
+ {f:"floresta_3_linhas_795",t:"Uma só floresta",d:"A floresta e a floresta escura passam a ser um bioma de 3 linhas, sem ecrã de loading entre elas (prompts 795-797)."},
+ {f:"pantano_nivel3_795",t:"Pântano: nível 3",d:"Perto da vila, a floresta sem pântano (prompt 795)."},
+ {f:"pantano_nivel18_795",t:"Pântano: nível 18",d:"Mais longe, com o nível dos monstros, crescem a lama, a relva escura e o nevoeiro (prompt 795)."},
+ {f:"pantano_toxico_796",t:"Lagos tóxicos",d:"A parte de lagos tóxicos cresce com o pântano; o Guardião e as fontes termais ficam no núcleo (prompt 796)."}
 ];
