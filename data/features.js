@@ -312,5 +312,14 @@ window.SHOTS = [
  {f:"golpe_cima_baixo_748",ext:"gif",t:"Golpe de cima para baixo",d:"De lado a arma sobe para trás do ombro e desce à frente até ao alvo, para a direita e para a esquerda: a espada e o machado de guerra de madeira contra o manequim (prompt 748)."},
  {f:"ataques_corpo_unico_719",ext:"gif",t:"Ataques novos",d:"Um só corpo para todas as armas, investida, smear da lâmina e golpes só em 4 direções: a espada de madeira contra o manequim, com ferro (prompt 719)."},
  {f:"cavalo_novo_718",ext:"gif",t:"A cavalo, corpo novo",d:"O cavaleiro novo (PixelLab e à mão) sentado no cavalo, com a armadura de ferro feita das suas camadas (prompt 718)."},
- {f:"agua_corpo_716",ext:"gif",t:"Corpo na água",d:"O corpo debaixo de água tingido nos tons da água, com espuma, anéis e uma shockwave subtil à volta (prompt 716)."}
+ {f:"agua_corpo_716",ext:"gif",t:"Corpo na água",d:"O corpo debaixo de água tingido nos tons da água, com espuma, anéis e uma shockwave subtil à volta (prompt 716)."},
+ {f:"menu_vila_noite_764",t:"Menu: a vila à noite",d:"O fundo do menu é agora um canto da vila à noite, com as peças e as luzes reais do jogo: taberna, forja acesa, casas, cerca, tochas e aldeões a passear (prompt 764)."},
+ {f:"tocha_v2_771",t:"Tocha nova",d:"O fogo da fogueira a metade do tamanho sobre um cabo pequeno, com a luz e as brasas no sítio da chama nova (prompt 771)."},
+ {f:"slash_through_acerto_768",ext:"gif",t:"Slash Through só com acerto",d:"O rasto branco e o corte do dash só aparecem quando o dash apanha um inimigo; em cima sem o poder, em baixo com ele (prompt 768)."},
+ {f:"faca_vai_e_vem_769",ext:"gif",t:"Facas: o vai e vem",d:"Dois cortes de 180° em 0,4 s, ida e volta, com o rasto, o vento reforçado e o remate em lascas (prompt 769)."},
+ {f:"loot_ressaltos_770",ext:"gif",t:"Loot com ressaltos",d:"O loot voa em arco até 2 tiles e dá dois ressaltos antes de pousar (prompt 770)."},
+ {f:"crafting_selecao_773",t:"Crafting com seleção",d:"O crafting abre já com uma receita selecionada e com o contorno à vista (prompt 773)."},
+ {f:"bomba_fumo_774",t:"Ninja: Bomba de Fumo",d:"Os inimigos ficam cegos e perdem o ninja, que fica translúcido até ao próximo golpe, sempre crítico (prompt 774)."},
+ {f:"clone_sombra_774",ext:"gif",t:"Ninja: Clone de Sombra",d:"Uma cópia roxa do ninja, com o equipamento dele, luta ao lado como o esqueleto aliado (prompt 774)."},
+ {f:"telhados_cinzentos_777",t:"Telhados de pedra",d:"O telhado verde-marinho passa a cinzento escuro: metade das casas de madeira, metade de pedra (prompt 777)."}
 ];
