@@ -321,7 +321,7 @@ window.SHOTS = [
  {f:"crafting_selecao_773",t:"Crafting com seleção",d:"O crafting abre já com uma receita selecionada e com o contorno à vista (prompt 773)."},
  {f:"bomba_fumo_774",t:"Ninja: Bomba de Fumo",d:"Os inimigos ficam cegos e perdem o ninja, que fica translúcido até ao próximo golpe, sempre crítico (prompt 774)."},
  {f:"clone_sombra_774",ext:"gif",t:"Ninja: Clone de Sombra",d:"Uma cópia roxa do ninja, com o equipamento dele, luta ao lado como o esqueleto aliado (prompt 774)."},
- {f:"telhados_cinzentos_777",t:"Telhados de pedra",d:"O telhado verde-marinho passa a cinzento escuro: metade das casas de madeira, metade de pedra (prompt 777)."},
+ {f:"casas_desenhadas_784",t:"As casas da vila",d:"As 60 casas geradas dão lugar a 15 casas desenhadas, cada uma com a sua chaminé a fumar (prompts 777 e 784)."},
  {f:"estrelas_requisitos_782",t:"Estrelas pelos requisitos",d:"Cinzenta enquanto faltam níveis; amarela (principal) ou azul (secundária) quando se cumprem; a cor esbatida em curso (prompt 782)."},
  {f:"conversa_seguinte_805",t:"Conversa seguinte",d:"Ao entregar uma missão, o NPC passa logo à seguinte da mesma linha (prompt 805)."},
  {f:"cancelar_quest_802",t:"Cancelar missões",d:"No diário, as secundárias e as tarefas têm Cancel; as principais não (prompt 802)."},
@@ -348,5 +348,9 @@ window.SHOTS = [
  {f:"contrato_extra_793",t:"Contrato extra",d:"O Salão do Aventureiro põe mais um contrato por dia no quadro, 1,5x mais bem pago (prompt 793)."},
  {f:"dois_pets_794",t:"Dois animais",d:"Com o Salão do Aventureiro, um segundo animal segue o primeiro (prompt 794)."},
  {f:"equipamento_dois_pets_794",t:"Segundo espaço de animal",d:"O espaço Pet2 no equipamento (prompt 794)."},
- {f:"critico_empurra_779",ext:"gif",t:"Crítico que mata",d:"Um crítico corpo a corpo que mata projeta o corpo 3x mais longe (em cima um golpe normal, em baixo um crítico) (prompt 779)."}
+ {f:"critico_empurra_779",ext:"gif",t:"Crítico que mata",d:"Um crítico corpo a corpo que mata projeta o corpo 3x mais longe (em cima um golpe normal, em baixo um crítico) (prompt 779)."},
+ {f:"as_15_casas_784",t:"As 15 casas",d:"Pedra e ardósia, enxaimel, troncos, palha, musgo, caiada, mago, anão, mercador, pescador, padeiro, herbanário, solar e sobrado (prompt 784)."},
+ {f:"janelas_acesas_785",t:"Janelas acesas",d:"À noite as casas da vila acendem as janelas (prompt 785)."},
+ {f:"plantas_altas_antes_801",t:"Plantas cortadas (antes)",d:"Só a metade de cima das plantas altas: uma espiga solta no chão (prompt 801)."},
+ {f:"plantas_altas_801",t:"Plantas altas inteiras",d:"O feto, os rabos-de-gato junto à água e as flores roxas nos prados, inteiros e a abanar juntos (prompt 801)."}
 ];
