@@ -378,5 +378,6 @@ window.SHOTS = [
  {f:"terreiro_chuva_820",t:"Mud in the rain",d:"The yard turns to mud when it rains (prompt 820)."},
  {f:"terreiro_sol_820",t:"Dust in the sun",d:"The same yard dusty in sunny weather (prompt 820)."},
  {f:"passos_chuva_820",ext:"gif",t:"Footsteps in the rain",d:"Footsteps kick up mud in the rain (prompt 820)."},
- {f:"cavalo_sol_820",ext:"gif",t:"Horse in the sun",d:"The horse raises dust in sunny weather (prompt 820)."}
+ {f:"cavalo_sol_820",ext:"gif",t:"Horse in the sun",d:"The horse raises dust in sunny weather (prompt 820)."},
+ {f:"banner_titulo",t:"Title banner",d:"New title art: castle on its mountain, the red dragon and the sword behind the logo; the logo alone replaces the journal's."}
 ];

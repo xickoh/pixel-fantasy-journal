@@ -24,7 +24,7 @@ h1,h2,h3,.btn,.num,.tag,.day>summary,.kicker,.topbar,footer p{font-family:"Press
 .hero-text{position:relative;z-index:2;width:100%;max-width:1180px;margin:0 auto;padding:0 18px}
 .kicker{font-size:11px;letter-spacing:3px;margin:0 0 20px;text-shadow:2px 2px 0 var(--line)}
 .hero h1{margin:0;line-height:1}
-.hero .logo{display:block;width:min(570px,86vw);filter:drop-shadow(4px 6px 0 #1a0f1f)}
+.hero .logo{display:block;width:min(440px,80vw);filter:drop-shadow(4px 6px 0 #1a0f1f)}
 .hero .lead{max-width:470px;font-size:26px}
 .hero h1 small{display:block;font-size:22px;letter-spacing:.9em;margin:18px 0 0 6px;color:var(--gold);text-shadow:3px 3px 0 var(--line)}
 .lead{max-width:540px;margin:22px 0 26px;font-size:27px;text-shadow:2px 2px 0 var(--line),0 0 14px #1a0f1faa}
