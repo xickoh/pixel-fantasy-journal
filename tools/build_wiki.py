@@ -24,8 +24,11 @@ def run_exporter():
     out = TMP / "wiki.json"
     if out.exists():
         out.unlink()
-    cmd = ["flatpak", "run", "org.godotengine.Godot", "--headless", "--path", str(GAME),
-           str(ROOT / "tools" / "export_wiki.tscn"), "--", str(out)]
+    godot = ["flatpak", "run", "org.godotengine.Godot", "--headless", "--path", str(GAME)]
+    # the game's new pictures imported first: an item whose icon isn't imported yet doesn't load, and the export
+    # left it out (2026-11-18: the five pets of prompt 847 and the fisherman's stock, back on the next run)
+    subprocess.run(godot + ["--import"], capture_output=True, text=True, timeout=600)
+    cmd = godot + [str(ROOT / "tools" / "export_wiki.tscn"), "--", str(out)]
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=600)
     if not out.exists():
         sys.exit("the exporter made no file:\n" + (r.stdout + r.stderr)[-2000:])

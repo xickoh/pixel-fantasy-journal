@@ -15,6 +15,13 @@ func _run() -> void:
 	var args := OS.get_cmdline_user_args()
 	var out_path: String = args[0] if not args.is_empty() else "res://wiki.json"
 	TranslationServer.set_locale("pt")
+	# an item that doesn't load (its picture not imported yet: a new asset before `godot --import`) would be left out
+	# of the wiki in silence, and the shops that sell it with no stock: the export stops instead
+	var broken := ItemData.all_ids().filter(func(id: StringName) -> bool: return ItemData.from_id(id) == null)
+	if not broken.is_empty():
+		push_error("items that don't load (run godot --import): %s" % [broken])
+		get_tree().quit(1)
+		return
 	var out := CompendiumData.build()
 	var f := FileAccess.open(out_path, FileAccess.WRITE)
 	if f == null:
