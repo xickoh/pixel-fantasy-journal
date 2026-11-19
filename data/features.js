@@ -402,5 +402,7 @@ window.SHOTS = [
  {f:"agua_jogador_854",ext:"gif",t:"Wading on foot",d:"Before and after: the player on foot has the horse's water, with rings at the body's scale, reaching ahead of the walk, and splashes close to the body (prompt 854)."},
  {f:"great_tree_vila_858",t:"New Great Tree in the plaza",d:"Before and after: the PixelLab oak replaces the old one in the plaza's bed (prompt 858)."},
  {f:"great_tree_mundo_858",t:"Great Tree in the world",d:"Before and after: the new drawing in the wild, with the hive hanging under the canopy (prompt 858)."},
- {f:"ancient_tree_858",t:"Ancient Tree v4",d:"Before and after: a mossy tree with a face, blue crystal fruit and a stone altar; the glow moves to the crystals (prompt 858)."}
+ {f:"ancient_tree_858",t:"Ancient Tree v4",d:"Before and after: a mossy tree with a face, blue crystal fruit and a stone altar; the glow moves to the crystals (prompt 858)."},
+ {f:"arranque_banner_859",t:"Start screen: only the banner",d:"The game opens on the new title banner at the game's scale and fades into the menu (prompt 859)."},
+ {f:"geracao_diorama_859",t:"World generation with the diorama",d:"Halfway through the bar, the diorama of the world's own seed builds in layers at the generation's pace (prompt 859)."}
 ];
