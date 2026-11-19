@@ -397,5 +397,7 @@ window.SHOTS = [
  {f:"rasto_chuva_849",ext:"gif",t:"Rain: only mud",d:"On wet earth the trail is only mud (prompt 849)."},
  {f:"luz_sala_827",t:"Room light cut at the door",d:"The hearth by the wall no longer leaves a warm glow on the grass outside (prompt 827)."},
  {f:"loading_arranque_842",ext:"gif",t:"Start loading screen",d:"From the start to the menu: a small diorama from the last world's seed builds in layers (ground, river, paths, trees, village, villagers, animals, monsters) under the logo's wooden plate and a 10-segment bar with the load's real progress, then the menu takes its place (prompt 842)."},
- {f:"menu_logo_843",t:"Title logo",d:"New title art: the logo with the sword stands at 1x in the main menu, the buttons below it, over the live village at night; the same logo replaces the journal's (prompt 843)."}
+ {f:"menu_logo_843",t:"Title logo",d:"New title art: the logo with the sword stands at 1x in the main menu, the buttons below it, over the live village at night; the same logo replaces the journal's (prompt 843)."},
+ {f:"agua_cavalo_853",ext:"gif",t:"Horse in the water",d:"The horse, ridden or alone, is tinted below a wavy water line with broken foam; rings are born from the line and spread out parallel to it (prompt 853)."},
+ {f:"agua_jogador_854",ext:"gif",t:"Wading on foot",d:"Before and after: the player on foot has the horse's water, with rings at the body's scale, reaching ahead of the walk, and splashes close to the body (prompt 854)."}
 ];
