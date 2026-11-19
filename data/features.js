@@ -399,5 +399,8 @@ window.SHOTS = [
  {f:"loading_arranque_842",ext:"gif",t:"Start loading screen",d:"From the start to the menu: a small diorama from the last world's seed builds in layers (ground, river, paths, trees, village, villagers, animals, monsters) under the logo's wooden plate and a 10-segment bar with the load's real progress, then the menu takes its place (prompt 842)."},
  {f:"menu_logo_843",t:"Title logo",d:"New title art: the logo with the sword stands at 1x in the main menu, the buttons below it, over the live village at night; the same logo replaces the journal's (prompt 843)."},
  {f:"agua_cavalo_853",ext:"gif",t:"Horse in the water",d:"The horse, ridden or alone, is tinted below a wavy water line with broken foam; rings are born from the line and spread out parallel to it (prompt 853)."},
- {f:"agua_jogador_854",ext:"gif",t:"Wading on foot",d:"Before and after: the player on foot has the horse's water, with rings at the body's scale, reaching ahead of the walk, and splashes close to the body (prompt 854)."}
+ {f:"agua_jogador_854",ext:"gif",t:"Wading on foot",d:"Before and after: the player on foot has the horse's water, with rings at the body's scale, reaching ahead of the walk, and splashes close to the body (prompt 854)."},
+ {f:"great_tree_vila_858",t:"New Great Tree in the plaza",d:"Before and after: the PixelLab oak replaces the old one in the plaza's bed (prompt 858)."},
+ {f:"great_tree_mundo_858",t:"Great Tree in the world",d:"Before and after: the new drawing in the wild, with the hive hanging under the canopy (prompt 858)."},
+ {f:"ancient_tree_858",t:"Ancient Tree v4",d:"Before and after: a mossy tree with a face, blue crystal fruit and a stone altar; the glow moves to the crystals (prompt 858)."}
 ];
