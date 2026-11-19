@@ -398,8 +398,8 @@ window.SHOTS = [
  {f:"luz_sala_827",t:"Room light cut at the door",d:"The hearth by the wall no longer leaves a warm glow on the grass outside (prompt 827)."},
  {f:"loading_arranque_842",ext:"gif",t:"Start loading screen",d:"From the start to the menu: a small diorama from the last world's seed builds in layers (ground, river, paths, trees, village, villagers, animals, monsters) under the logo's wooden plate and a 10-segment bar with the load's real progress, then the menu takes its place (prompt 842)."},
  {f:"menu_logo_843",t:"Title logo",d:"New title art: the logo with the sword stands at 1x in the main menu, the buttons below it, over the live village at night; the same logo replaces the journal's (prompt 843)."},
- {f:"agua_cavalo_853",ext:"gif",t:"Horse in the water",d:"The horse, ridden or alone, is tinted below a wavy water line with broken foam; rings are born from the line and spread out parallel to it (prompt 853)."},
- {f:"agua_jogador_854",ext:"gif",t:"Wading on foot",d:"Before and after: the player on foot has the horse's water, with rings at the body's scale, reaching ahead of the walk, and splashes close to the body (prompt 854)."},
+ {f:"agua_cavalo_853",ext:"gif",t:"Horse in the water",d:"Before and after: rings born of the movement, with energy, spreading and breaking into arcs; a bow wave when stopping and the water line rising at the front (prompts 853, 867)."},
+ {f:"agua_jogador_854",ext:"gif",t:"Wading on foot",d:"Before and after: the player's rings are born of the steps and the movement, and the water line on the body follows the walk (prompts 854, 867)."},
  {f:"great_tree_vila_858",t:"New Great Tree in the plaza",d:"Before and after: the PixelLab oak replaces the old one in the plaza's bed (prompt 858)."},
  {f:"great_tree_mundo_858",t:"Great Tree in the world",d:"Before and after: the new drawing in the wild, with the hive hanging under the canopy (prompt 858)."},
  {f:"ancient_tree_858",t:"Ancient Tree v4",d:"Before and after: a mossy tree with a face, blue crystal fruit and a stone altar; the glow moves to the crystals (prompt 858)."},
@@ -410,5 +410,8 @@ window.SHOTS = [
  {f:"interiores_porta_857",t:"Interior doors without a seam",d:"Before and after: the door's opening no longer sticks out of the wall; the floor ends flush with the bottom wall in the room's own pattern (prompt 857)."},
  {f:"taberna_escuro_865",t:"Resting at the inn: the fade",d:"After paying, the screen darkens like sleeping in a bed and the clock jumps to the morning in the dark (prompt 865)."},
  {f:"taberna_mensagem_865",t:"Well rested, by day",d:"The well-rested line only shows once the morning light is back (prompt 865)."},
- {f:"help_set_868",t:"/help set",d:"In Dev mode, /set <attribute> <value> changes the player's numbers and /help set lists them all (prompt 868)."}
+ {f:"help_set_868",t:"/help set",d:"In Dev mode, /set <attribute> <value> changes the player's numbers and /help set lists them all (prompt 868)."},
+ {f:"rasto_terra_869",ext:"gif",t:"Trail on earth, redone",d:"Before and after: a hand-drawn puff rolling back, grains and a veil, at the pace of the steps (prompt 869)."},
+ {f:"rasto_relva_869",ext:"gif",t:"Trail on grass, redone",d:"Before and after: blades that jump, spin and glide; a petal every 4 steps (prompt 869)."},
+ {f:"rasto_pedra_869",ext:"gif",t:"Trail on stone, redone",d:"Before and after: a touch ring on the ground, a bouncing pebble and a mini trail by the legs (prompt 869)."}
 ];
