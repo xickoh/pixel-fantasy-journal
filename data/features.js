@@ -404,5 +404,8 @@ window.SHOTS = [
  {f:"great_tree_mundo_858",t:"Great Tree in the world",d:"Before and after: the new drawing in the wild, with the hive hanging under the canopy (prompt 858)."},
  {f:"ancient_tree_858",t:"Ancient Tree v4",d:"Before and after: a mossy tree with a face, blue crystal fruit and a stone altar; the glow moves to the crystals (prompt 858)."},
  {f:"arranque_banner_859",t:"Start screen: only the banner",d:"The game opens on the new title banner at the game's scale and fades into the menu (prompt 859)."},
- {f:"geracao_diorama_859",t:"World generation with the diorama",d:"Halfway through the bar, the diorama of the world's own seed builds in layers at the generation's pace (prompt 859)."}
+ {f:"geracao_diorama_859",t:"World generation with the diorama",d:"Halfway through the bar, the diorama of the world's own seed builds in layers at the generation's pace (prompt 859)."},
+ {f:"interiores_contorno_855",t:"Interiors inside the house's outline",d:"In red, the old interior; in blue, the new outline, editable in Godot: no room passes its house's drawing (prompt 855)."},
+ {f:"interiores_material_856",t:"The interior has the house's material",d:"Before and after: wood, plaster or stone, the walls and floor inside match the house outside (prompt 856)."},
+ {f:"interiores_porta_857",t:"Interior doors without a seam",d:"Before and after: the door's opening no longer sticks out of the wall; the floor ends flush with the bottom wall in the room's own pattern (prompt 857)."}
 ];
