@@ -407,5 +407,8 @@ window.SHOTS = [
  {f:"geracao_diorama_859",t:"World generation with the diorama",d:"Halfway through the bar, the diorama of the world's own seed builds in layers at the generation's pace (prompt 859)."},
  {f:"interiores_contorno_855",t:"Interiors inside the house's outline",d:"In red, the old interior; in blue, the new outline, editable in Godot: no room passes its house's drawing (prompt 855)."},
  {f:"interiores_material_856",t:"The interior has the house's material",d:"Before and after: wood, plaster or stone, the walls and floor inside match the house outside (prompt 856)."},
- {f:"interiores_porta_857",t:"Interior doors without a seam",d:"Before and after: the door's opening no longer sticks out of the wall; the floor ends flush with the bottom wall in the room's own pattern (prompt 857)."}
+ {f:"interiores_porta_857",t:"Interior doors without a seam",d:"Before and after: the door's opening no longer sticks out of the wall; the floor ends flush with the bottom wall in the room's own pattern (prompt 857)."},
+ {f:"taberna_escuro_865",t:"Resting at the inn: the fade",d:"After paying, the screen darkens like sleeping in a bed and the clock jumps to the morning in the dark (prompt 865)."},
+ {f:"taberna_mensagem_865",t:"Well rested, by day",d:"The well-rested line only shows once the morning light is back (prompt 865)."},
+ {f:"help_set_868",t:"/help set",d:"In Dev mode, /set <attribute> <value> changes the player's numbers and /help set lists them all (prompt 868)."}
 ];
