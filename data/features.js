@@ -414,4 +414,5 @@ window.SHOTS = [
  {f:"rasto_terra_869",ext:"gif",t:"Trail on earth, redone",d:"Before and after: a hand-drawn puff rolling back, grains and a veil, at the pace of the steps (prompt 869)."},
  {f:"rasto_relva_869",ext:"gif",t:"Trail on grass, redone",d:"Before and after: blades that jump, spin and glide; a petal every 4 steps (prompt 869)."},
  {f:"rasto_pedra_869",ext:"gif",t:"Trail on stone, redone",d:"Before and after: a touch ring on the ground, a bouncing pebble and a mini trail by the legs (prompt 869)."}
+ {f:"feiticos_tank_870",t:"Tank spells",d:"The Iron Shield gives the tank its 4: Chain Hook (the chain drags the enemy, its heels furrowing the ground, and stuns it), Challenge (an iron shield, octagonal riveted rings, a plaque over the tank per enemy held and a fury mark over each), Bulwark (a stone wall that stops the enemies and their arrows, with its health bar and cracks) and Living Rock (a statue with a stone crust and glowing cracks that bursts in a ring of lifting slabs) (prompt 870)."},
 ];
