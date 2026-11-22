@@ -396,6 +396,7 @@ window.SHOTS = [
  {f:"rasto_pedra_849",ext:"gif",t:"Stone",d:"Chips and grey dust on stone (prompt 849)."},
  {f:"rasto_chuva_849",ext:"gif",t:"Rain: only mud",d:"On wet earth the trail is only mud (prompt 849)."},
  {f:"luz_sala_827",t:"Room light cut at the door",d:"The hearth by the wall no longer leaves a warm glow on the grass outside (prompt 827)."},
+ {f:"banner_titulo",t:"Title banner",d:"New title art: castle on its mountain, the red dragon and the sword behind the logo; the logo alone replaces the journal's."},
  {f:"loading_arranque_842",ext:"gif",t:"Start loading screen",d:"From the start to the menu: a small diorama from the last world's seed builds in layers (ground, river, paths, trees, village, villagers, animals, monsters) under the logo's wooden plate and a 10-segment bar with the load's real progress, then the menu takes its place (prompt 842)."},
  {f:"menu_logo_843",t:"Title logo",d:"New title art: the logo with the sword stands at 1x in the main menu, the buttons below it, over the live village at night; the same logo replaces the journal's (prompt 843)."},
  {f:"agua_cavalo_853",ext:"gif",t:"Horse in the water",d:"Before and after: rings born of the movement, with energy, spreading and breaking into arcs; a bow wave when stopping and the water line rising at the front (prompts 853, 867)."},
