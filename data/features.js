@@ -10,6 +10,7 @@ window.FEATURES = [
 ];
 // Capturas das mecânicas mais relevantes.
 window.SHOTS = [
+ {f:"escadas_vista_885",ext:"gif",t:"Down the stairs without leaving the house",d:"Before and after: going down from the upper storey the house no longer shows from outside; as soon as you step into the stairwell the storey below is shown (prompt 885)."},
  {f:"vila_casas",t:"A vila",d:"Praça com fogueira, estátua, taberna, aldeões, HUD e minimapa."},
  {f:"bancas_meio_dia",t:"Bancas",d:"Ao meio-dia, cada vendedor de comida na sua banca."},
  {f:"fogueira_21h",t:"Fogueira às 21h",d:"Os aldeões reúnem-se à volta da fogueira antes de dormir."},
