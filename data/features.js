@@ -437,4 +437,5 @@ window.SHOTS = [
  {f:"opcoes_modal_873",t:"Options window",d:"One fixed size on every tab (the key bindings tab's), a header with the tabs, a body that scrolls when the page doesn't fit and a footer that always stays; 40 px from the screen at most (prompt 873)."},
  {f:"feiticos_icones_872",t:"Class spell icons",d:"The three classes' spell bars with their own icons: the tank's Chain Hook, Challenge, Bulwark and Living Rock, the archer's Pinning Shot, Arrow Rain, Net & Leap and Crow's Nest, the mage's Echo Blink, Singularity, Levitate and Arcane Prison (prompts 870-872 decisions)."},
  {f:"escadas_vista_885",ext:"gif",t:"Down the stairs without leaving the house",d:"Before and after: going down from the upper storey the house no longer shows from outside; as soon as you step into the stairwell the storey below is shown (prompt 885)."},
+ {f:"pesca_abertura_884",ext:"gif",t:"Fishing opens from the bobber",d:"The bobber lands, the camera closes in and the window grows out of it; the round waits, still, for the first bite, and clicking the fish is the first catch and starts the clock (prompt 884)."},
 ];
