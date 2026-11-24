@@ -471,4 +471,6 @@ window.SHOTS = [
  {f:"painel_dev_917",t:"Dev mode panel",d:"Twice as wide, as tall as its content up to 80% of the screen, centred, with the wooden scrollbar when every tool is open (prompt 917)."},
  {f:"golpe_a_andar_911",ext:"gif",t:"Striking on the move",d:"In each view, a strike standing and the same strike walking: the body no longer slides, the legs walk and the swing goes on over them (prompt 911)."},
  {f:"dev_give_910",t:"Dev mode: Give item window",d:"Every item in a grid with category keys and search, like the crafting window; a click gives it, at no cost (prompt 910)."},
+ {f:"rasto_terra_913",ext:"gif",t:"Step trail: the ground keeps the step",d:"A pit in relief and dust on earth, next to the approved mock-up; the trail now costs ~2 ms a second instead of 11-12 (prompt 913)."},
+ {f:"rasto_relva_913",ext:"gif",t:"Trodden grass",d:"The patch closes from the outside in, with blades and leaves (prompt 913)."},
 ];
