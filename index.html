@@ -4,15 +4,18 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Pixel Fantasy Journal</title>
+<meta name="description" content="O diário de desenvolvimento do Pixel Fantasy: funcionalidades, capturas e o devlog por mês.">
+<meta name="theme-color" content="#0e0c14">
+<link rel="icon" type="image/png" href="img/art/sword.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <nav class="topbar">
-  <a class="brand" href="#top"><img src="img/art/sword.png" alt=""> Pixel Fantasy</a>
-  <div class="links"><a href="#features">Grimório</a><a href="#shots">Galeria</a><a href="#devlog">Crónicas</a><a href="wiki.html">Wiki</a><a href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></div>
+  <a class="brand" href="#top"><img src="img/art/sword.png" alt=""><span>Pixel Fantasy</span></a>
+  <div class="links"><a href="#features">Grimório</a><a href="#shots">Galeria</a><a href="#devlog">Crónicas</a><a href="wiki.html">Wiki</a><a class="ext" href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></div>
 </nav>
 
 <header class="hero" id="top">
@@ -20,47 +23,62 @@
   <div class="veil"></div>
   <div class="flies"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
   <div class="hero-text">
-    <p class="kicker">✦ Diário de desenvolvimento ✦</p>
-    <h1><img class="logo" src="img/logo_pixel_fantasy.png" alt="Pixel Fantasy"><small>JOURNAL</small></h1>
+    <p class="kicker">Diário de desenvolvimento</p>
+    <h1><img class="logo" src="img/logo_pixel_fantasy.png" alt="Pixel Fantasy"><small>Journal</small></h1>
     <p class="lead">Salva o mundo da ameaça de fantasia medieval do mago maligno.</p>
     <div class="cta"><a class="btn" href="#features">Abrir o grimório</a><a class="btn alt" href="#devlog">Ler as crónicas</a></div>
   </div>
 </header>
 
-<section id="features" class="zone magic">
+<section id="features" class="zone">
   <div class="wrap">
-    <div class="zone-head"><h2>Grimório de funcionalidades</h2><div class="deco"><img src="img/art/bat.png" alt=""><img src="img/art/potion.png" alt=""><img src="img/art/gem.png" alt=""></div></div>
-    <p class="intro">Só os pontos-chave do que o jogo já faz.</p>
+    <div class="zone-head">
+      <div><p class="eyebrow">Capítulo I</p><h2>Grimório de funcionalidades</h2></div>
+      <img class="orn" src="img/art/tome.png" alt="">
+    </div>
+    <div class="zone-sub"><p class="intro">Só os pontos-chave do que o jogo já faz. Abre um capítulo para o ler.</p><button type="button" id="featToggle" class="linkbtn">Abrir todos</button></div>
     <div id="featureGrid" class="grid"></div>
   </div>
 </section>
 
-<section id="shots" class="zone meadow">
+<section id="shots" class="zone alt">
   <div class="wrap">
-    <div class="zone-head"><h2>Galeria do reino</h2><div class="deco"><img src="img/art/slime_g2.png" alt=""><img src="img/art/mushroom.png" alt=""><img src="img/art/slime_b.png" alt=""></div></div>
-    <p class="intro">Capturas tiradas no próprio jogo, as mais recentes primeiro. Clica para ampliar.</p>
-    <div class="carousel">
-      <div class="carbar"><button type="button" id="shotPrev" class="carbtn" aria-label="Página anterior">◀</button><span id="shotInfo" class="carinfo"></span><button type="button" id="shotNext" class="carbtn" aria-label="Página seguinte">▶</button></div>
-      <div id="shotGrid" class="shots"></div>
-      <div class="carbar"><button type="button" class="carbtn" onclick="document.getElementById('shotPrev').click()" aria-label="Página anterior">◀</button><div id="shotDots" class="dots"></div><button type="button" class="carbtn" onclick="document.getElementById('shotNext').click()" aria-label="Página seguinte">▶</button></div>
+    <div class="zone-head">
+      <div><p class="eyebrow">Capítulo II</p><h2>Galeria do reino</h2></div>
+      <img class="orn" src="img/art/slime_g2.png" alt="">
     </div>
+    <div class="zone-sub"><p class="intro">Capturas tiradas no próprio jogo, as mais recentes primeiro. Toca numa para a ampliar.</p>
+      <div class="pager"><button type="button" class="pg" data-go="-1" aria-label="Página anterior">‹</button><span class="pginfo" id="shotInfo"></span><button type="button" class="pg" data-go="1" aria-label="Página seguinte">›</button></div></div>
+    <div id="shotGrid" class="shots"></div>
+    <div class="pager end"><button type="button" class="pg" data-go="-1" aria-label="Página anterior">‹</button><span class="pginfo" id="shotPage"></span><button type="button" class="pg" data-go="1" aria-label="Página seguinte">›</button></div>
   </div>
 </section>
 
-<section id="devlog" class="zone lair">
+<section id="devlog" class="zone">
   <div class="wrap">
-    <div class="zone-head"><h2>Crónicas do dragão</h2><div class="deco"><img src="img/art/skull.png" alt=""><img src="img/art/dragon_mid.png" class="mini" alt=""><img src="img/art/tome.png" alt=""></div></div>
-    <p class="intro">O devlog por dia: os prompts e os commits do jogo.</p>
-    <input id="q" type="search" placeholder="Procurar nos prompts e nos commits…">
+    <div class="zone-head">
+      <div><p class="eyebrow">Capítulo III</p><h2>Crónicas do dragão</h2></div>
+      <img class="orn big" src="img/art/dragon_mid.png" alt="">
+    </div>
+    <div class="zone-sub"><p class="intro">O devlog por mês e por dia: os prompts e os commits do jogo.</p></div>
+    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg><input id="q" type="search" placeholder="Procurar nos prompts e nos commits…" autocomplete="off"></label>
+    <p id="qInfo" class="qinfo" hidden></p>
     <div id="days"></div>
   </div>
 </section>
 
 <footer>
-  <div class="foot-row"><img src="img/art/skull.png" alt=""><img src="img/art/dragon_mid.png" class="mini" alt=""><img src="img/art/bat.png" alt=""></div>
-  <p>⚔ Pixel Fantasy Journal · forjado com pixels, magia e um dragão muito vermelho ⚔</p>
+  <img src="img/art/sword.png" alt="">
+  <p>Pixel Fantasy Journal · <a href="wiki.html">Wiki</a> · <a href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></p>
 </footer>
-<div id="lightbox" hidden><img alt=""><p></p></div>
+
+<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Captura ampliada">
+  <div class="lb-stage"><img alt="" draggable="false"></div>
+  <button type="button" class="lb-btn lb-close" aria-label="Fechar">✕</button>
+  <button type="button" class="lb-btn lb-prev" aria-label="Captura anterior">‹</button>
+  <button type="button" class="lb-btn lb-next" aria-label="Captura seguinte">›</button>
+  <div class="lb-cap"><div><b></b><span></span></div><small></small></div>
+</div>
 <script src="data/features.js"></script>
 <script src="data/prompts.js"></script>
 <script src="data/commits.js"></script>
