@@ -442,4 +442,6 @@ window.SHOTS = [
  {f:"pesca_strike_887",ext:"gif",t:"Fishing: the bobber stays and striking is a Strike",d:"The bobber stays in the middle of the water all round, in a faint ring. Now and then the nearest fish turns to it and bites: the bobber sinks, a \"!\" shows and the ring lights up. Click in time for a Strike: \"STRIKE\", 3x the points and the ring pulsing. Let it go and it swims on (prompt 887)."},
  {f:"pesca_mare_viva_888",ext:"gif",t:"Fishing: a Spring Tide when the deck runs out",d:"The round's cards are only gestures and helpers; the number bonuses became Fisher's Lore lessons. Once the deck is spent, each level gives a Spring Tide charge: Space, and golden fish come in from every side for 5 s (prompt 888)."},
  {f:"pesca_gestos_889",ext:"gif",t:"Fishing: four places, a tool in each",d:"The round now has a place per gesture (click, drag, right click, helper): the Wide Net cast on a school, the Harpoon dragged and let go, the Bait drawing fish around it and the gull following the cursor (prompt 889)."},
+ {f:"itens_chao_897",t:"Items on the ground at 1.0",d:"Before (0.75) and after (1.0): dropped items now draw at their icon's size, whole pixels only (prompt 897)."},
+ {f:"compendio_livro_901",t:"Compendium tab: the open book",d:"The Tab menu's Compendium tab now shows the open book from the item icon sheet (prompt 901)."},
 ];
