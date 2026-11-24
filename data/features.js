@@ -483,4 +483,6 @@ window.SHOTS = [
  {f:"help_lista_930",t:"/help as a list",d:"The chat's /help lists the commands one per line; with Dev mode on, a Dev mode section follows (prompt 930)."},
  {f:"barra_vida_934",t:"Enemy health bars",d:"Swords centred on the bar with the level on them, white 3x5 numbers inside a dark frame: levels 1, 9, 10 and 99, a long name and an elite (prompt 934)."},
  {f:"icones_abas_932",t:"New tab icons",d:"The Journal tab gets a scroll with a quill and the Glossary a magnifying glass (prompt 932)."},
+ {f:"fog_gradual_933",ext:"gif",t:"Gradual fog of war",d:"Before and after, walking: the darkness' edge now fades slowly, like smoke, over about 5 tiles (prompt 933)."},
+ {f:"fog_gradual_noite_933",ext:"gif",t:"Gradual fog at night",d:"At 23:00 the night's circle uses the same slow ramp (prompt 933)."},
 ];
