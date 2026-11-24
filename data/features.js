@@ -453,4 +453,6 @@ window.SHOTS = [
  {f:"pesca_ronda_892",ext:"gif",t:"A fishing v2 round",d:"Cast, strike, cards and the water tiring halfway through the round (prompt 892)."},
  {f:"aguas_cansadas_892",t:"Fresh and tired waters",d:"The bar empties; once tired, half the XP and no finds (prompt 892)."},
  {f:"revenda_poderes_902",t:"Selling a piece with powers",d:"Selling a piece with placed powers now warns that they stay with it, and the resale keeps them for whoever buys it back (prompt 902)."},
+ {f:"portas_viga_915",t:"Doors below the beam",d:"Before and after: the forge's arch no longer rises over the first floor's beam (prompt 915)."},
+ {f:"porta_caiada_915",t:"The whitewashed house's door",d:"The red door fits its wall and the beam above it loses its corbels (prompt 915)."},
 ];
