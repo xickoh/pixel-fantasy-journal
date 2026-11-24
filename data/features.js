@@ -469,4 +469,5 @@ window.SHOTS = [
  {f:"fog_fumo_906",ext:"gif",t:"Fog of war with smoke (day)",d:"Before and after: the edge billows and the dark has body; the pass is cheaper than before (0.68 to 0.40 ms) (prompt 906)."},
  {f:"fog_fumo_noite_906",ext:"gif",t:"Fog of war with smoke (night)",d:"The night circle with wisps of smoke too (prompt 906)."},
  {f:"painel_dev_917",t:"Dev mode panel",d:"Twice as wide, as tall as its content up to 80% of the screen, centred, with the wooden scrollbar when every tool is open (prompt 917)."},
+ {f:"golpe_a_andar_911",ext:"gif",t:"Striking on the move",d:"In each view, a strike standing and the same strike walking: the body no longer slides, the legs walk and the swing goes on over them (prompt 911)."},
 ];
