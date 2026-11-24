@@ -473,4 +473,6 @@ window.SHOTS = [
  {f:"dev_give_910",t:"Dev mode: Give item window",d:"Every item in a grid with category keys and search, like the crafting window; a click gives it, at no cost (prompt 910)."},
  {f:"rasto_terra_913",ext:"gif",t:"Step trail: the ground keeps the step",d:"A pit in relief and dust on earth, next to the approved mock-up; the trail now costs ~2 ms a second instead of 11-12 (prompt 913)."},
  {f:"rasto_relva_913",ext:"gif",t:"Trodden grass",d:"The patch closes from the outside in, with blades and leaves (prompt 913)."},
+ {f:"mira_comando_894",ext:"gif",t:"Aiming with the right stick",d:"The reticle goes round the player; LT holds the aim and LT + X casts Arrow Rain (prompt 894)."},
+ {f:"glifos_feiticos_894",t:"Spell bar keys",d:"With a gamepad LT + A, X, Y, B; with the keyboard Q, E, R, T (prompt 894)."},
 ];
