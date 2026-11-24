@@ -461,4 +461,7 @@ window.SHOTS = [
  {f:"descricoes_896",t:"Item descriptions",d:"The Short Bow's tooltip with its new description under the category; 102 items that had none now have one, in both languages (prompt 896)."},
  {f:"quadro_gerado_905",t:"Generated notice board",d:"Each day's board is generated for the player who reads it: targets at their level (dungeons, costly ores, mummies), the count that fits the target time and the estimator's pay (prompt 905)."},
  {f:"quadro_rara_905",t:"Rare and extra tasks",d:"The rare task, bigger and better paid, with the horn's blueprint, and the Adventurer's Hall's extra (prompt 905)."},
+ {f:"scrollbar_madeira_895",t:"Wooden scrollbar",d:"Godot's grey bar gives way to the wooden one in every list, and the stray line over Back is gone (prompt 895)."},
+ {f:"area_missao_895",t:"The quest area",d:"Two variants, by day and by night; the left one stayed: a thin frame, the quest's star and title, the other tasks below a rule (prompt 895)."},
+ {f:"menu_principal_895",t:"Confirm the main menu",d:"Leaving to the main menu now asks first; the host is told the world closes for the other players, and the game is saved (prompt 895)."},
 ];
