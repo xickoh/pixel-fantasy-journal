@@ -448,4 +448,6 @@ window.SHOTS = [
  {f:"tooltip_feiticos_918",t:"Spell tooltip",d:"Spell tooltips now have the item tooltip's max width, the spell's icon by its name and wrapped lines; the Chain Hook reaches three times as far (prompt 918)."},
  {f:"colisao_forja_919",t:"Forge collision = ground floor outline",d:"Blue the collision, yellow the outline; magenta, before, the hearth colliding 22 px behind the wall (prompt 919)."},
  {f:"colisao_norte_919",t:"Behind the forge",d:"Before, the player stopped 16 px above the wall, in mid-air; now 2 px from it (prompt 919)."},
+ {f:"graus_pescador_891",t:"Fisher's grades",d:"Fishing held at 9: what grade 2 asks, green what is done and red what is missing; Receive lights up when all is met (prompt 891)."},
+ {f:"cadeado_pesca_891",t:"Lock on Fishing",d:"At the cap, Fishing shows a lock and, on hover, what the next grade needs (prompt 891)."},
 ];
