@@ -477,4 +477,5 @@ window.SHOTS = [
  {f:"glifos_feiticos_894",t:"Spell bar keys",d:"With a gamepad LT + A, X, Y, B; with the keyboard Q, E, R, T (prompt 894)."},
  {f:"anilhas_margem_909",ext:"gif",t:"Rings only on the water",d:"By the shore, the part of a ring that meets the ground fades until it is gone; the rest goes on (prompt 909)."},
  {f:"anilhas_corpos_909",ext:"gif",t:"Rings under the bodies",d:"The player's rings no longer pass in front of a pet or an orc in the water (prompt 909)."},
+ {f:"muralha_vila_v16",t:"The village wall in the new logs",d:"The village's wall now uses the pieces of the log wall drawn in Aseprite: a corner, a gate in the top wall and a gate in a side; no gate piece, the runs end in corners."},
 ];
