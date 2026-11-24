@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Prompts · Pixel Fantasy Journal</title>
+<meta name="description" content="O histórico de prompts do Pixel Fantasy, por mês e por dia, com os commits.">
+<meta name="theme-color" content="#0e0c14">
+<link rel="icon" type="image/png" href="img/art/sword.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="index.html"><img src="img/art/sword.png" alt=""><span>Pixel Fantasy</span></a>
+  <div class="links"><a href="index.html#features">Grimório</a><a href="index.html#shots">Galeria</a><a href="index.html#devlog">Crónicas</a><a href="prompts.html" class="here">Prompts</a><a href="wiki.html">Wiki</a><a class="ext" href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></div>
+</nav>
+<section class="zone page">
+  <div class="wrap">
+    <div class="zone-head">
+      <div><p class="eyebrow">Arquivo</p><h2>Histórico de prompts</h2></div>
+      <img class="orn big" src="img/art/dragon_mid.png" alt="">
+    </div>
+    <div class="zone-sub"><p class="intro">Todos os pedidos feitos ao jogo, por mês e por dia, com os commits do dia. As <a href="index.html#devlog">crónicas</a> contam o resultado em linguagem simples.</p></div>
+    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg><input id="q" type="search" placeholder="Procurar nos prompts e nos commits…" autocomplete="off"></label>
+    <p id="qInfo" class="qinfo" hidden></p>
+    <div id="days"></div>
+  </div>
+</section>
+<footer>
+  <img src="img/art/sword.png" alt="">
+  <p>Pixel Fantasy Journal · <a href="prompts.html">Prompts</a> · <a href="wiki.html">Wiki</a> · <a href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></p>
+</footer>
+<script src="data/prompts.js"></script>
+<script src="data/commits.js"></script>
+<script src="data/devlog.js"></script>
+<script src="common.js"></script>
+<script src="prompts_page.js"></script>
+</body>
+</html>

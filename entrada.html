@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Crónica · Pixel Fantasy Journal</title>
+<meta name="description" content="Uma entrada das crónicas do Pixel Fantasy.">
+<meta name="theme-color" content="#0e0c14">
+<link rel="icon" type="image/png" href="img/art/sword.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<nav class="topbar">
+  <a class="brand" href="index.html"><img src="img/art/sword.png" alt=""><span>Pixel Fantasy</span></a>
+  <div class="links"><a href="index.html#features">Grimório</a><a href="index.html#shots">Galeria</a><a href="index.html#devlog">Crónicas</a><a href="prompts.html">Prompts</a><a href="wiki.html">Wiki</a><a class="ext" href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></div>
+</nav>
+<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Captura ampliada">
+  <div class="lb-stage"><img alt="" draggable="false"></div>
+  <button type="button" class="lb-btn lb-close" aria-label="Fechar">✕</button>
+  <button type="button" class="lb-btn lb-prev" aria-label="Captura anterior">‹</button>
+  <button type="button" class="lb-btn lb-next" aria-label="Captura seguinte">›</button>
+  <div class="lb-cap"><div><b></b><span></span></div><small></small></div>
+</div>
+
+<article class="zone page entry-page">
+  <div class="wrap narrow" id="entry"></div>
+</article>
+<footer>
+  <img src="img/art/sword.png" alt="">
+  <p>Pixel Fantasy Journal · <a href="prompts.html">Prompts</a> · <a href="wiki.html">Wiki</a> · <a href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></p>
+</footer>
+<script src="data/devlog.js"></script>
+<script src="common.js"></script>
+<script src="lightbox.js"></script>
+<script src="entrada.js"></script>
+</body>
+</html>

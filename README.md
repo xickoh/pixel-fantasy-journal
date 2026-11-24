@@ -20,3 +20,12 @@ Site estático (abrir `index.html`) com as funcionalidades do jogo Pixel Fantasy
 - `python3 tools/build_wiki.py --check`: diz se a wiki está desatualizada em relação ao jogo (exit 1 se estiver).
 - As mecânicas (morte, dormir, comércio...) escrevem-se **no jogo**, em `data/compendium/mechanics.json` (en e pt por texto); as marcas `{s.chave}`, `{r.chave}`, `{k.chave}`, `{u.chave}` e `{l.chave}` (com `|pct` e `|min`) são preenchidas pelo jogo a partir dos dados. Desde o prompt 649 já não há `wiki_mechanics.js` no journal.
 - Em modo dev (vault `jarvis.md`), cada mudança no jogo que altere a informação da wiki atualiza-a na mesma mudança.
+
+## Devlog, versões e páginas (2026-11-24)
+
+- **Home** (`index.html`): grimório, galeria e crónicas. As crónicas são o devlog em linguagem simples (título + descrição), por mês; já não mostram prompts. A galeria mostra as entradas que têm imagem; cada cartão abre a página da entrada.
+- **`entrada.html#0.001.xxx`**: título, descrição, imagens (com zoom, `lightbox.js`) e a ligação ao prompt em `prompts.html#N`.
+- **`prompts.html`**: a lista de prompts e commits por mês e dia (o que era a home).
+- **`data/devlog.js`**: as entradas, da mais antiga à mais recente. A versão sai da posição (0.001.000, 0.001.001...; aos 1000 sobe o bloco do meio), por isso **só se acrescenta no fim**. `python3 tools/devlog_add.py "Título" "Descrição" --prompt N --shot ficheiro.png` acrescenta uma e escreve a versão. Escrever sempre título e descrição em pt-PT, sem jargão.
+- Preenchido de 2026-11-01 (prompt 559) a 2026-11-24 (prompt 921); Outubro fica por preencher. As capturas antigas de `SHOTS` já não aparecem na galeria (só as ligadas a entradas).
+- `common.js` tem os auxiliares partilhados; `app.js` é só a home.

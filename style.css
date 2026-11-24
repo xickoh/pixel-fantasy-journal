@@ -269,3 +269,18 @@ h2.sub{margin:32px 0 14px;font-size:clamp(18px,2.6vw,22px)}
   .wikihead{padding:40px 0 28px}.wikihead-row{gap:14px}.wikihead-row>img{height:40px}.wikihead-row>img.mini{display:none}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.flies{display:none}}
+
+/* devlog: lista, cartões da galeria, página da entrada, ligação do prompt */
+.ver{font:500 12.5px/1.6 var(--mono);color:var(--gold)}
+.thumb{position:relative}.thumb .ver{position:absolute;left:8px;bottom:8px;padding:0 8px;border-radius:99px;background:#0e0c14d9}
+a.shot{display:block;color:inherit}.shot .cap{padding:14px 16px 16px}.shot .cap b{display:block;font-size:15px;font-weight:600;line-height:1.35}
+.shot .cap span{display:-webkit-box;margin-top:6px;overflow:hidden;color:var(--muted);font-size:13.5px;line-height:1.5;-webkit-line-clamp:3;line-clamp:3;-webkit-box-orient:vertical}
+.logday{margin:22px 0 4px;color:var(--muted);font:500 13px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase}
+.log{display:flex;gap:16px;align-items:flex-start;margin-top:8px;padding:14px 16px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);color:inherit}
+.log:hover{border-color:var(--line2)}.log .txt{flex:1;min-width:0}.log .txt b{display:block;font-weight:600}
+.log .txt span{display:block;margin-top:4px;color:var(--soft);font-size:14.5px}.log img{flex:none;width:96px;height:64px;object-fit:cover;border-radius:6px}
+.page{padding:56px 0 80px}.narrow{max-width:760px}.crumb{margin:0 0 20px}
+.entry-page h1{margin:6px 0 16px;font:600 clamp(26px,5vw,38px)/1.2 var(--serif)}.lead2{color:var(--soft);font-size:17px;line-height:1.7}
+.big{display:block;width:100%;margin:24px 0;padding:0;border:1px solid var(--line);border-radius:var(--r);background:var(--surface);cursor:zoom-in;overflow:hidden}.big img{display:block;width:100%}
+.nextprev{display:flex;justify-content:space-between;gap:16px;margin-top:40px;padding-top:20px;border-top:1px solid var(--line);font-size:14px}
+.entry.hit{border-color:var(--gold)}

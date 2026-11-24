@@ -15,7 +15,7 @@
 <body>
 <nav class="topbar">
   <a class="brand" href="#top"><img src="img/art/sword.png" alt=""><span>Pixel Fantasy</span></a>
-  <div class="links"><a href="#features">Grimório</a><a href="#shots">Galeria</a><a href="#devlog">Crónicas</a><a href="wiki.html">Wiki</a><a class="ext" href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></div>
+  <div class="links"><a href="#features">Grimório</a><a href="#shots">Galeria</a><a href="#devlog">Crónicas</a><a href="prompts.html">Prompts</a><a href="wiki.html">Wiki</a><a class="ext" href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></div>
 </nav>
 
 <header class="hero" id="top">
@@ -47,7 +47,7 @@
       <div><p class="eyebrow">Capítulo II</p><h2>Galeria do reino</h2></div>
       <img class="orn" src="img/art/slime_g2.png" alt="">
     </div>
-    <div class="zone-sub"><p class="intro">Capturas tiradas no próprio jogo, as mais recentes primeiro. Toca numa para a ampliar.</p>
+    <div class="zone-sub"><p class="intro">As imagens das crónicas, as mais recentes primeiro. Toca numa para abrir a entrada.</p>
       <div class="pager"><button type="button" class="pg" data-go="-1" aria-label="Página anterior">‹</button><span class="pginfo" id="shotInfo"></span><button type="button" class="pg" data-go="1" aria-label="Página seguinte">›</button></div></div>
     <div id="shotGrid" class="shots"></div>
     <div class="pager end"><button type="button" class="pg" data-go="-1" aria-label="Página anterior">‹</button><span class="pginfo" id="shotPage"></span><button type="button" class="pg" data-go="1" aria-label="Página seguinte">›</button></div>
@@ -60,8 +60,8 @@
       <div><p class="eyebrow">Capítulo III</p><h2>Crónicas do dragão</h2></div>
       <img class="orn big" src="img/art/dragon_mid.png" alt="">
     </div>
-    <div class="zone-sub"><p class="intro">O devlog por mês e por dia: os prompts e os commits do jogo.</p></div>
-    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg><input id="q" type="search" placeholder="Procurar nos prompts e nos commits…" autocomplete="off"></label>
+    <div class="zone-sub"><p class="intro">O que foi sendo implementado e alterado no jogo, em linguagem simples. Cada entrada tem versão e página própria; a lista de prompts está <a href="prompts.html">à parte</a>.</p></div>
+    <label class="search"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.8-3.8"/></svg><input id="q" type="search" placeholder="Procurar nas crónicas…" autocomplete="off"></label>
     <p id="qInfo" class="qinfo" hidden></p>
     <div id="days"></div>
   </div>
@@ -69,19 +69,12 @@
 
 <footer>
   <img src="img/art/sword.png" alt="">
-  <p>Pixel Fantasy Journal · <a href="wiki.html">Wiki</a> · <a href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></p>
+  <p>Pixel Fantasy Journal · <a href="prompts.html">Prompts</a> · <a href="wiki.html">Wiki</a> · <a href="https://xickoh.com" target="_blank" rel="noopener">xickoh.com</a></p>
 </footer>
 
-<div id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Captura ampliada">
-  <div class="lb-stage"><img alt="" draggable="false"></div>
-  <button type="button" class="lb-btn lb-close" aria-label="Fechar">✕</button>
-  <button type="button" class="lb-btn lb-prev" aria-label="Captura anterior">‹</button>
-  <button type="button" class="lb-btn lb-next" aria-label="Captura seguinte">›</button>
-  <div class="lb-cap"><div><b></b><span></span></div><small></small></div>
-</div>
 <script src="data/features.js"></script>
-<script src="data/prompts.js"></script>
-<script src="data/commits.js"></script>
+<script src="data/devlog.js"></script>
+<script src="common.js"></script>
 <script src="app.js"></script>
 </body>
 </html>
