@@ -452,4 +452,5 @@ window.SHOTS = [
  {f:"cadeado_pesca_891",t:"Lock on Fishing",d:"At the cap, Fishing shows a lock and, on hover, what the next grade needs (prompt 891)."},
  {f:"pesca_ronda_892",ext:"gif",t:"A fishing v2 round",d:"Cast, strike, cards and the water tiring halfway through the round (prompt 892)."},
  {f:"aguas_cansadas_892",t:"Fresh and tired waters",d:"The bar empties; once tired, half the XP and no finds (prompt 892)."},
+ {f:"revenda_poderes_902",t:"Selling a piece with powers",d:"Selling a piece with placed powers now warns that they stay with it, and the resale keeps them for whoever buys it back (prompt 902)."},
 ];
