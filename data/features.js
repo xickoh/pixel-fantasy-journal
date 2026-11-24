@@ -445,4 +445,5 @@ window.SHOTS = [
  {f:"itens_chao_897",t:"Items on the ground at 1.0",d:"Before (0.75) and after (1.0): dropped items now draw at their icon's size, whole pixels only (prompt 897)."},
  {f:"compendio_livro_901",t:"Compendium tab: the open book",d:"The Tab menu's Compendium tab now shows the open book from the item icon sheet (prompt 901)."},
  {f:"rasto_rede_899",ext:"gif",t:"Slash Through trail seen by others",d:"Another player's Slash Through dash now draws the same crescents on the screen of whoever watches it (prompt 899)."},
+ {f:"tooltip_feiticos_918",t:"Spell tooltip",d:"Spell tooltips now have the item tooltip's max width, the spell's icon by its name and wrapped lines; the Chain Hook reaches three times as far (prompt 918)."},
 ];
