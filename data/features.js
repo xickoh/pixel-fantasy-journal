@@ -444,4 +444,5 @@ window.SHOTS = [
  {f:"pesca_gestos_889",ext:"gif",t:"Fishing: four places, a tool in each",d:"The round now has a place per gesture (click, drag, right click, helper): the Wide Net cast on a school, the Harpoon dragged and let go, the Bait drawing fish around it and the gull following the cursor (prompt 889)."},
  {f:"itens_chao_897",t:"Items on the ground at 1.0",d:"Before (0.75) and after (1.0): dropped items now draw at their icon's size, whole pixels only (prompt 897)."},
  {f:"compendio_livro_901",t:"Compendium tab: the open book",d:"The Tab menu's Compendium tab now shows the open book from the item icon sheet (prompt 901)."},
+ {f:"rasto_rede_899",ext:"gif",t:"Slash Through trail seen by others",d:"Another player's Slash Through dash now draws the same crescents on the screen of whoever watches it (prompt 899)."},
 ];
