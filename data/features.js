@@ -464,4 +464,8 @@ window.SHOTS = [
  {f:"scrollbar_madeira_895",t:"Wooden scrollbar",d:"Godot's grey bar gives way to the wooden one in every list, and the stray line over Back is gone (prompt 895)."},
  {f:"area_missao_895",t:"The quest area",d:"Two variants, by day and by night; the left one stayed: a thin frame, the quest's star and title, the other tasks below a rule (prompt 895)."},
  {f:"menu_principal_895",t:"Confirm the main menu",d:"Leaving to the main menu now asks first; the host is told the world closes for the other players, and the game is saved (prompt 895)."},
+ {f:"itens_missao_914",t:"Quest items",d:"The 20 heirlooms and stolen belongings (PixelLab icons snapped to the palette), next to the bone and the leather for scale (prompt 914)."},
+ {f:"itens_missao_queda_914",t:"A quest item drops",d:"An orc's death gives back the baker's pocket watch: 2/3 for the task (prompt 914)."},
+ {f:"fog_fumo_906",ext:"gif",t:"Fog of war with smoke (day)",d:"Before and after: the edge billows and the dark has body; the pass is cheaper than before (0.68 to 0.40 ms) (prompt 906)."},
+ {f:"fog_fumo_noite_906",ext:"gif",t:"Fog of war with smoke (night)",d:"The night circle with wisps of smoke too (prompt 906)."},
 ];
