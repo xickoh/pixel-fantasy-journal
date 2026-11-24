@@ -456,4 +456,5 @@ window.SHOTS = [
  {f:"portas_viga_915",t:"Doors below the beam",d:"Before and after: the forge's arch no longer rises over the first floor's beam (prompt 915)."},
  {f:"porta_caiada_915",t:"The whitewashed house's door",d:"The red door fits its wall and the beam above it loses its corbels (prompt 915)."},
  {f:"raridade_903",t:"Item rarity",d:"A tooltip from each tier: Common, Uncommon, Rare, Super Rare and Mega Rare, the name in its colour and a line under it (prompt 903)."},
+ {f:"mobilia_aldeia_921",ext:"gif",t:"Village furniture breaks",d:"The axe breaks a table in a villager's house and the item goes to the inventory; beds, seats, work stations and shop signs stay (prompt 921)."},
 ];
