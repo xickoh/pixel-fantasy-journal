@@ -50,7 +50,7 @@ showShots(0);
 // ---------- Crónicas: o devlog, por mês (o mais recente primeiro e aberto) ----------
 // Um título e uma descrição por entrada; cada uma abre a sua página. Os prompts têm página própria (prompts.html).
 const daysEl=$('days'),qInfo=$('qInfo');
-const entryRow=e=>`<a class="log" href="${entryHref(e)}"><span class="ver">${e.v}</span><span class="txt"><b>${esc(e.title)}</b><span>${esc(e.desc)}</span></span>${e.shot?`<img src="${shotUrl(e.shot)}" alt="" loading="lazy">`:''}</a>`;
+const entryRow=e=>`<a class="log${e.shot?'':' noimg'}" href="${entryHref(e)}"><span class="ver">${e.v}</span><b>${esc(e.title)}</b>${e.shot?`<img src="${shotUrl(e.shot)}" alt="" loading="lazy">`:''}<span class="desc">${esc(e.desc)}</span></a>`;
 function render(q=''){
   q=norm(q.trim());
   const list=DEV.filter(e=>!q||(e._h??=norm(e.title+' '+e.desc+' '+e.v)).includes(q)).reverse(),months=[];
