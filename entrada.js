@@ -1,4 +1,4 @@
-// Página de uma entrada do devlog: entrada.html#0.001.003
+// Página de uma entrada do devlog: entrada.html#0.12.0
 const root=$('entry');
 function show(){
   const e=DEV_BY_V.get(location.hash.slice(1));

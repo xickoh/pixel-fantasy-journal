@@ -24,8 +24,8 @@ Site estático (abrir `index.html`) com as funcionalidades do jogo Pixel Fantasy
 ## Devlog, versões e páginas (2026-11-24)
 
 - **Home** (`index.html`): grimório, galeria e crónicas. As crónicas são o devlog em linguagem simples (título + descrição), por mês; já não mostram prompts. A galeria mostra as entradas que têm imagem; cada cartão abre a página da entrada.
-- **`entrada.html#0.001.xxx`**: título, descrição, imagens (com zoom, `lightbox.js`) e a ligação ao prompt em `prompts.html#N`.
+- **`entrada.html#0.X.Y`**: título, descrição, imagens (com zoom, `lightbox.js`) e a ligação ao prompt em `prompts.html#N`.
 - **`prompts.html`**: a lista de prompts e commits por mês e dia (o que era a home).
-- **`data/devlog.js`**: as entradas, da mais antiga à mais recente. A versão sai da posição (0.001.000, 0.001.001...; aos 1000 sobe o bloco do meio), por isso **só se acrescenta no fim**. `python3 tools/devlog_add.py "Título" "Descrição" --prompt N --shot ficheiro.png` acrescenta uma e escreve a versão. Escrever sempre título e descrição em pt-PT, sem jargão.
+- **`data/devlog.js`**: as entradas, da mais antiga à mais recente. Versão semver (semver.org) calculada pelo campo `t` de cada entrada: a primeira é 0.1.0; `"feat"` (novidade ou implementação nova) sobe o 2º número e zera o 3º; `"fix"` (correção de bug ou ajuste pequeno de valores) sobe o 3º. Por isso **só se acrescenta no fim**. `python3 tools/devlog_add.py "Título" "Descrição" --prompt N --shot ficheiro.png [--fix]` acrescenta uma e escreve a versão. Escrever sempre título e descrição em pt-PT, sem jargão.
 - Preenchido de 2026-11-01 (prompt 559) a 2026-11-24 (prompt 921); Outubro fica por preencher. As capturas antigas de `SHOTS` já não aparecem na galeria (só as ligadas a entradas).
 - `common.js` tem os auxiliares partilhados; `app.js` é só a home.

@@ -27,9 +27,9 @@ const plural=(n,one,many)=>`${n} ${n===1?one:many}`;
 const MONTH=['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'];
 const WEEKDAY=['domingo','segunda-feira','terça-feira','quarta-feira','quinta-feira','sexta-feira','sábado'];
 const norm=s=>String(s).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'');
-// versões do devlog: 0.001.000 é a primeira entrada; o último bloco sobe de 1 em 1 até 999 e depois passa ao do meio
-const fmtVersion=i=>`0.${String(1+Math.floor(i/1000)).padStart(3,'0')}.${String(i%1000).padStart(3,'0')}`;
-const DEV=(window.DEVLOG||[]).map((e,i)=>({...e,v:fmtVersion(i),i}));   // por ordem de escrita: do mais antigo ao mais recente
+// versões do devlog (semver): a primeira entrada é 0.1.0; cada entrada nova (t:'feat') sobe o 2º número e zera o 3º; cada correção ou ajuste de valores (t:'fix') sobe o 3º
+let _mi=0,_pa=-1;
+const DEV=(window.DEVLOG||[]).map((e,i)=>{if(e.t==='fix')_pa++;else{_mi++;_pa=0}return{...e,v:`0.${_mi}.${_pa}`,i}});   // por ordem de escrita: do mais antigo ao mais recente
 const DEV_BY_V=new Map(DEV.map(e=>[e.v,e]));
 const shotUrl=f=>`img/${f}`;   // f já traz a extensão (png ou gif)
 const dayLong=d=>{const[y,m,dd]=d.split('-');return `${+dd} de ${MONTH[m-1].toLowerCase()} de ${y}`};
