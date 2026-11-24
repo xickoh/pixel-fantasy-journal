@@ -459,4 +459,6 @@ window.SHOTS = [
  {f:"mobilia_aldeia_921",ext:"gif",t:"Village furniture breaks",d:"The axe breaks a table in a villager's house and the item goes to the inventory; beds, seats, work stations and shop signs stay (prompt 921)."},
  {f:"blocos_po_893",ext:"gif",t:"Dust when building and breaking blocks",d:"Each block placed raises dust; broken, it sheds wood or stone chips. The burst particles were never visible before (a pool bug), now fixed (prompt 893)."},
  {f:"descricoes_896",t:"Item descriptions",d:"The Short Bow's tooltip with its new description under the category; 102 items that had none now have one, in both languages (prompt 896)."},
+ {f:"quadro_gerado_905",t:"Generated notice board",d:"Each day's board is generated for the player who reads it: targets at their level (dungeons, costly ores, mummies), the count that fits the target time and the estimator's pay (prompt 905)."},
+ {f:"quadro_rara_905",t:"Rare and extra tasks",d:"The rare task, bigger and better paid, with the horn's blueprint, and the Adventurer's Hall's extra (prompt 905)."},
 ];
