@@ -4,7 +4,7 @@ window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com dash e stamina; feitiços de classe em Q, E, R e T (ninja, guerreiro, tanque, mago e arqueiro), subidos no Santuário das Marés com a essência que se pesca","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
  {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, estradas e rios sinuosos, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas escondidas na rocha (fendas ou seladas), cogumelos luminosos e um troll","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","17 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
- {icon:"🎒",color:"blue",title:"Progressão",items:["Skills de 1 a 99 e a árvore da Natureza (36 skills e 5 auras), dada pela Árvore Anciã","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca e gancho de abordagem"]},
+ {icon:"🎒",color:"blue",title:"Progressão",items:["Skills de 1 a 99 e a árvore da Natureza (36 skills e 5 auras), dada pela Árvore Anciã","Ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca (cinco graus de pescador e águas que cansam ao fim de uns minutos por dia) e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},
  {icon:"🛠️",color:"teal",title:"Ferramentas",items:["data_editor para inimigos, itens, missões e números do jogo","Testes automáticos a cada funcionalidade","Este journal, atualizado a cada commit"]}
 ];
@@ -450,4 +450,6 @@ window.SHOTS = [
  {f:"colisao_norte_919",t:"Behind the forge",d:"Before, the player stopped 16 px above the wall, in mid-air; now 2 px from it (prompt 919)."},
  {f:"graus_pescador_891",t:"Fisher's grades",d:"Fishing held at 9: what grade 2 asks, green what is done and red what is missing; Receive lights up when all is met (prompt 891)."},
  {f:"cadeado_pesca_891",t:"Lock on Fishing",d:"At the cap, Fishing shows a lock and, on hover, what the next grade needs (prompt 891)."},
+ {f:"pesca_ronda_892",ext:"gif",t:"A fishing v2 round",d:"Cast, strike, cards and the water tiring halfway through the round (prompt 892)."},
+ {f:"aguas_cansadas_892",t:"Fresh and tired waters",d:"The bar empties; once tired, half the XP and no finds (prompt 892)."},
 ];
