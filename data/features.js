@@ -478,4 +478,6 @@ window.SHOTS = [
  {f:"anilhas_margem_909",ext:"gif",t:"Rings only on the water",d:"By the shore, the part of a ring that meets the ground fades until it is gone; the rest goes on (prompt 909)."},
  {f:"anilhas_corpos_909",ext:"gif",t:"Rings under the bodies",d:"The player's rings no longer pass in front of a pet or an orc in the water (prompt 909)."},
  {f:"muralha_vila_v16",t:"The village wall in the new logs",d:"The village's wall now uses the pieces of the log wall drawn in Aseprite: a corner, a gate in the top wall and a gate in a side; no gate piece, the runs end in corners."},
+ {f:"dev_botoes_929",t:"Dev mode: buttons",d:"Give item and Teleport are now buttons in the Dev mode panel, not toggles (prompt 929)."},
+ {f:"dev_teleporte_929",t:"Teleport by coordinates",d:"The map opened by Teleport has X and Y fields and a Teleport button; a right click fills them (prompt 929)."},
 ];
