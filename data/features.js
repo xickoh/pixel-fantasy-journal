@@ -481,4 +481,5 @@ window.SHOTS = [
  {f:"dev_botoes_929",t:"Dev mode: buttons",d:"Give item and Teleport are now buttons in the Dev mode panel, not toggles (prompt 929)."},
  {f:"dev_teleporte_929",t:"Teleport by coordinates",d:"The map opened by Teleport has X and Y fields and a Teleport button; a right click fills them (prompt 929)."},
  {f:"help_lista_930",t:"/help as a list",d:"The chat's /help lists the commands one per line; with Dev mode on, a Dev mode section follows (prompt 930)."},
+ {f:"barra_vida_934",t:"Enemy health bars",d:"Swords centred on the bar with the level on them, white 3x5 numbers inside a dark frame: levels 1, 9, 10 and 99, a long name and an elite (prompt 934)."},
 ];
