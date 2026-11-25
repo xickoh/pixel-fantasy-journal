@@ -1,11 +1,11 @@
 // A história do Pixel Fantasy, para o separador «História» da wiki (wiki.js, renderStory).
 // Escrito à mão (não é gerado pelo jogo): a fonte é a nota 08-historia da vault. As secções com
-// spoiler:true aparecem fechadas. Cada secção tem parágrafos (paras) e/ou pontos (points: [título, texto]).
+// Cada secção tem parágrafos (paras) e/ou pontos (points: [título, texto]); aparecem todas abertas.
 // img/alt: a ilustração do capítulo (img/story/<id>.png, 1440x816, fundo transparente; feitas no PixelLab e recortadas pelo
 // make_recorte.py da vault, raw/pixel_fantasy/custom_assets/historia_ilustracoes/).
 window.WIKI_STORY = {
   updated: '2026-11-25',
-  lead: 'A história planeada para o jogo. Ainda não está toda no jogo e pode mudar. As secções fechadas contam tudo, incluindo o fim.',
+  lead: 'A história planeada para o jogo. Ainda não está toda no jogo e pode mudar. Contém spoilers: conta tudo, incluindo o fim.',
   sections: [
     {
       id: 'premissa', title: 'Premissa',
@@ -35,7 +35,7 @@ window.WIKI_STORY = {
       ],
     },
     {
-      id: 'antes', title: 'Antes do jogo: o futuro que correu mal', spoiler: true,
+      id: 'antes', title: 'Antes do jogo: o futuro que correu mal',
       img: 'img/story/antes.png', alt: 'O mago ajoelhado, com a pedra junto ao peito, enquanto figuras de sombra lhe são arrancadas das costas.',
       paras: [
         'O mago do portal é o mago da vila, vindo de um futuro em que nunca aceitou a morte da filha.',
@@ -45,7 +45,7 @@ window.WIKI_STORY = {
       ],
     },
     {
-      id: 'elite', title: 'Os cinco de elite', spoiler: true,
+      id: 'elite', title: 'Os cinco de elite',
       img: 'img/story/elite.png', alt: 'Guerreiros de armadura em fila, com o Rei Esqueleto ao centro, diante de um arco de pedra com um portal vermelho.',
       paras: [
         'Os cinco obedecem ao mago em tudo menos numa coisa: cada um guarda o portal do seu bioma meio fechado. São a parte dele que ainda o trava.',
@@ -54,7 +54,7 @@ window.WIKI_STORY = {
       ],
     },
     {
-      id: 'ato2', title: 'A grande melhoria', spoiler: true,
+      id: 'ato2', title: 'A grande melhoria',
       img: 'img/story/ato2.png', alt: 'Festa na praça da vila: bancas, lanternas vermelhas e aldeões a dançar à volta da fonte.',
       paras: [
         'O jogador lê tudo ao contrário: vê cinco generais a guardar portais e vai matá-los. A cada elite que cai, a horda desse bioma dispersa, a vila respira, as bancas voltam, há festa.',
@@ -62,7 +62,7 @@ window.WIKI_STORY = {
       ],
     },
     {
-      id: 'ato3', title: 'A queda', spoiler: true,
+      id: 'ato3', title: 'A queda',
       img: 'img/story/ato3.png', alt: 'Um portal enorme aberto no céu por cima da vila, a cúpula do feitiço a estalar e o vulto de um mago encapuzado, de costas.',
       paras: [
         'Com o quinto elite morto, o mago do portal já não tem dúvida, medo, piedade nem culpa, e pela primeira vez abre o portal por inteiro. O feitiço da muralha quebra e a vila é invadida.',
@@ -70,7 +70,7 @@ window.WIKI_STORY = {
       ],
     },
     {
-      id: 'ato4', title: 'O fim', spoiler: true,
+      id: 'ato4', title: 'O fim',
       img: 'img/story/ato4.png', alt: 'Um dragão vermelho de asas abertas baixa a cabeça para o escudeiro, que lhe mostra a pedra a brilhar.',
       paras: [
         'Do portal sai o dragão, e o mago acredita que é a filha a voltar. É, de certa forma: é a alma dela, puxada à força por uma magia sem medo, dúvida, piedade, culpa nem memória da morte, e por isso sem nada disso. O dragão é a filha feita à imagem daquilo em que o pai se tornou.',
@@ -80,7 +80,7 @@ window.WIKI_STORY = {
       ],
     },
     {
-      id: 'pedra', title: 'A pedra de regresso', spoiler: true,
+      id: 'pedra', title: 'A pedra de regresso',
       img: 'img/story/pedra.png', alt: 'Duas mãos abertas com a pedra de regresso a estalar, e luz dourada a sair das fendas.',
       paras: [
         'A magia do regresso é antiga e é deste mundo: uma pedra guarda um sítio e traz quem a usa de volta a ele. Era o ofício do mago da vila, e o que a filha aprendia com ele. A pedra do cavaleiro foi feita por ela, para ele voltar sempre a casa.',

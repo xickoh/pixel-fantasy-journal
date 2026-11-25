@@ -359,7 +359,7 @@
     return wrap;
   }
 
-  // --- história (data/wiki_story.js): as secções com spoiler nascem fechadas; a procura abre as que encontra
+  // --- história (data/wiki_story.js): um cartão por capítulo, sempre aberto
   function renderStory(f) {
     const S = window.WIKI_STORY;
     const wrap = h('div', 'story');
@@ -380,13 +380,7 @@
         s.points.forEach(([k, v]) => ul.appendChild(h('li', null, [h('b', null, k + ': '), v])));
         body.appendChild(ul);
       }
-      if (!s.spoiler) {
-        wrap.appendChild(h('article', 'wcard chapter', [h('header', null, h('h3', null, s.title)), body]));
-        return;
-      }
-      const d = h('details', 'wcard chapter spoiler', [h('summary', null, [h('h3', null, s.title), h('span', 'tag', 'spoiler'), h('span', 'chev')]), body]);
-      d.open = !!f;
-      wrap.appendChild(d);
+      wrap.appendChild(h('article', 'wcard chapter', [h('header', null, h('h3', null, s.title)), body]));
     });
     return wrap;
   }
