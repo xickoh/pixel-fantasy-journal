@@ -1,5 +1,6 @@
 // A wiki: lê WIKI (data/wiki_data.js, gerado pelo compêndio do jogo: CompendiumData, com as mecânicas já preenchidas).
 // Cada item, inimigo, aldeão e mecânica tem a sua página: wiki.html#itens/sword, #inimigos/orc_axe, #aldeoes/ferreiro, #mecanicas/morte.
+// O separador «História» (#historia) é o único que não vem do jogo: lê WIKI_STORY (data/wiki_story.js, escrito à mão).
 (function () {
   const $ = (id) => document.getElementById(id);
   // prompt 597: how each enemy meets the water (EnemyData.water())
@@ -8,7 +9,7 @@
   const out = $('out'), q = $('wq'), chips = $('chips'), count = $('count'), bar = $('wikibar'), tabsEl = $('tabs');
   const TABS = [
     ['itens', 'Itens'], ['inimigos', 'Inimigos'], ['aldeoes', 'Aldeões'],
-    ['habilidades', 'Skills e feitiços'], ['mecanicas', 'Mecânicas'], ['numeros', 'Números'],
+    ['habilidades', 'Skills e feitiços'], ['mecanicas', 'Mecânicas'], ['historia', 'História'], ['numeros', 'Números'],
   ];
   const LEVELS = ['1', '10', '20', '30', '40'];
   const ARCH = {balanced: 'Equilibrado', tank: 'Resistente', fast: 'Rápido', armored: 'Blindado', brute: 'Bruto', wild: 'Selvagem'};
@@ -358,6 +359,33 @@
     return wrap;
   }
 
+  // --- história (data/wiki_story.js): as secções com spoiler nascem fechadas; a procura abre as que encontra
+  function renderStory(f) {
+    const S = window.WIKI_STORY;
+    const wrap = h('div', 'story');
+    if (!S) { count.textContent = ''; return wrap; }
+    const text = (s) => s.title + ' ' + (s.paras || []).join(' ') + ' ' + (s.points || []).map((p) => p.join(' ')).join(' ');
+    const rows = S.sections.filter((s) => !f || norm(text(s)).includes(f));
+    count.textContent = S.lead + ' Atualizada a ' + S.updated + '.';
+    rows.forEach((s) => {
+      const body = h('div', 'storybody');
+      (s.paras || []).forEach((p) => body.appendChild(h('p', null, p)));
+      if (s.points) {
+        const ul = h('ul', 'info');
+        s.points.forEach(([k, v]) => ul.appendChild(h('li', null, [h('b', null, k + ': '), v])));
+        body.appendChild(ul);
+      }
+      if (!s.spoiler) {
+        wrap.appendChild(h('article', 'wcard chapter', [h('header', null, h('h3', null, s.title)), body]));
+        return;
+      }
+      const d = h('details', 'wcard chapter spoiler', [h('summary', null, [h('h3', null, s.title), h('span', 'tag', 'spoiler'), h('span', 'chev')]), body]);
+      d.open = !!f;
+      wrap.appendChild(d);
+    });
+    return wrap;
+  }
+
   // --- números
   function renderNumbers(f) {
     const entries = Object.entries(WIKI.s).map(([k, v]) => ['s.' + k, v]).concat(Object.entries(WIKI.r).map(([k, v]) => ['r.' + k, v]), Object.entries(WIKI.u || {}).map(([k, v]) => ['u.' + k, v]), Object.entries(WIKI.l || {}).map(([k, v]) => ['l.' + k, v]), Object.entries(WIKI.f || {}).map(([k, v]) => ['f.' + k, v]));
@@ -371,7 +399,7 @@
     return h('div', 'tablebox', t);
   }
 
-  const VIEWS = {itens: renderItems, inimigos: renderEnemies, aldeoes: renderVillagers, habilidades: renderSkills, mecanicas: renderMechanics, numeros: renderNumbers};
+  const VIEWS = {itens: renderItems, inimigos: renderEnemies, aldeoes: renderVillagers, habilidades: renderSkills, mecanicas: renderMechanics, historia: renderStory, numeros: renderNumbers};
   const DETAIL = {
     itens: [ITEMS, itemCard, 'Itens'], inimigos: [ENEMIES, enemyCard, 'Inimigos'],
     aldeoes: [VILLAGERS, villagerCard, 'Aldeões'], habilidades: [SKILLS, skillCard, 'Skills e feitiços'], mecanicas: [MECH, mechCard, 'Mecânicas'],

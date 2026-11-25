@@ -243,6 +243,15 @@ footer a{color:var(--soft)}footer a:hover{color:var(--gold2)}
 .wl.back{display:inline-block;margin:0 0 22px;padding:7px 14px;border:1px solid var(--line2);border-radius:99px;color:var(--soft);font-size:13.5px;font-weight:500}
 .wl.back:hover{border-color:var(--gold);color:var(--gold2)}
 .detailwrap{max-width:760px}
+.story{max-width:760px;display:grid;gap:14px;margin-bottom:36px}
+.wcard.chapter{--c:var(--gold)}
+.wcard.chapter header{margin-bottom:4px}
+.wcard.chapter p{margin:10px 0 0;color:var(--soft);line-height:1.65}
+.wcard.chapter>summary{display:flex;align-items:center;gap:12px}
+.wcard.chapter>summary h3{flex:1}
+.wcard.chapter>summary .tag{color:var(--faint);font-size:11.5px;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.wcard.chapter>summary:hover h3{color:var(--gold2)}
+.wcard.chapter[open]>summary{margin-bottom:4px}
 .wcard.detail{padding:26px 26px 22px;font-size:15.5px}
 .wcard.detail h1{margin:0;font:600 clamp(20px,3.6vw,26px)/1.3 var(--serif);letter-spacing:.02em}
 .wcard.detail .info li{font-size:15px}
