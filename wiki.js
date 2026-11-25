@@ -369,6 +369,11 @@
     count.textContent = S.lead + ' Atualizada a ' + S.updated + '.';
     rows.forEach((s) => {
       const body = h('div', 'storybody');
+      if (s.img) {
+        const im = h('img', 'plate');
+        im.src = s.img; im.alt = s.alt || ''; im.loading = 'lazy'; im.width = 1440; im.height = 816;
+        body.appendChild(im);
+      }
       (s.paras || []).forEach((p) => body.appendChild(h('p', null, p)));
       if (s.points) {
         const ul = h('ul', 'info');
