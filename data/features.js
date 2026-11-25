@@ -2,7 +2,7 @@
 // for das principais, e então substitui ou reescreve um ponto; nunca se acrescenta uma lista de pormenores.
 window.FEATURES = [
  {icon:"⚔️",color:"red",title:"Combate",items:["Espadas, machados, lanças, arcos e cajados mágicos, com dash e stamina; feitiços de classe em Q, E, R e T (ninja, guerreiro, tanque, mago e arqueiro), subidos no Santuário das Marés com a essência que se pesca","Orcs, esqueletos, múmias, bestas da floresta e criaturas da água, mais fortes quanto mais longe da vila","Três bosses: o Rei Esqueleto, o Orc Gigante e o Guardião do Lago"]},
- {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, estradas e rios sinuosos, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas escondidas na rocha (fendas ou seladas), cogumelos luminosos e um troll","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
+ {icon:"🌲",color:"green",title:"Mundo",items:["Mapa gerado por seed: floresta e deserto, metade em rocha, com zonas fechadas que se descobrem a escavar, 12 a 15 rios, cascatas, ilhas e oásis","Terreno sólido que se escava, com veios de minério e grutas escondidas na rocha (fendas ou seladas), cogumelos luminosos e um troll","Pontos de interesse, masmorras em labirinto e mapas do tesouro com emboscada"]},
  {icon:"🏘️",color:"orange",title:"Vila e história",items:["Aldeões com rotina e personalidade, lojas, ferreiro e taverna","17 missões até ao Rei Esqueleto e missões de cada aldeão","Quadro de tarefas e contratos, casa do jogador e melhorias da vila"]},
  {icon:"🎒",color:"blue",title:"Progressão",items:["Skills de 1 a 99 e a árvore da Natureza (36 skills e 5 auras), dada pela Árvore Anciã","Itens com raridade (comum, incomum, raro, super raro e mega raro); ferramentas, armas e armaduras de madeira a diamante; armas e armaduras de +0 a +9 no ferreiro","Cavalo, jangada e barco, animais de estimação, pesca (cinco graus de pescador e águas que cansam ao fim de uns minutos por dia) e gancho de abordagem"]},
  {icon:"🤝",color:"pink",title:"Multijogador",items:["Até 4 jogadores com host autoritativo","Mundo, inimigos e itens partilhados, com chat","PvP opcional; Steam no fim"]},
@@ -485,4 +485,5 @@ window.SHOTS = [
  {f:"icones_abas_932",t:"New tab icons",d:"The Journal tab gets a scroll with a quill and the Glossary a magnifying glass (prompt 932)."},
  {f:"fog_gradual_933",ext:"gif",t:"Gradual fog of war",d:"Before and after, walking: the darkness' edge now fades slowly, like smoke, over about 5 tiles (prompt 933)."},
  {f:"fog_gradual_noite_933",ext:"gif",t:"Gradual fog at night",d:"At 23:00 the night's circle uses the same slow ramp (prompt 933)."},
+ {f:"terreno_zonas_922",t:"Half the world in rock",d:"The map before and after: open ground in zones closed off by rock, found by digging, and 12 to 15 short rivers (prompt 922)."},
 ];
