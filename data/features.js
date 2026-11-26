@@ -486,4 +486,5 @@ window.SHOTS = [
  {f:"fog_gradual_933",ext:"gif",t:"Gradual fog of war",d:"Before and after, walking: the darkness' edge now fades slowly, like smoke, over about 5 tiles (prompt 933)."},
  {f:"fog_gradual_noite_933",ext:"gif",t:"Gradual fog at night",d:"At 23:00 the night's circle uses the same slow ramp (prompt 933)."},
  {f:"terreno_zonas_922",t:"Half the world in rock",d:"The map before and after: open ground in zones closed off by rock, found by digging, and 12 to 15 short rivers (prompt 922)."},
+ {f:"grutas_visao_941",t:"Entering a cave without a jump in the dark",d:"Before and after, at night: stepping into a cave used to change the whole darkness at once; now the vision dims slowly, as in the rest of the world, and caves keep no memory of their own (prompt 941)."},
 ];
