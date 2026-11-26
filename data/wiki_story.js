@@ -19,8 +19,7 @@ window.WIKI_STORY = {
     {
       id: 'lema', title: 'O lema',
       paras: [
-        'Às vezes é preciso aceitar a perda e saber seguir em frente, mesmo que isso implique abandonar alguma coisa que já nos fez muito bem.',
-        'E às vezes é preciso dar um passo atrás para dar dois para a frente.',
+        'Às vezes é preciso aceitar a perda e saber seguir em frente, mesmo que isso implique abandonar alguma coisa que já nos fez muito bem. Largar dói, mas é dar um passo atrás para depois dar dois para a frente.',
       ],
     },
     {
