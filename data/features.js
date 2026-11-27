@@ -490,4 +490,6 @@ window.SHOTS = [
  {f:"furia_javali_939",ext:"gif",t:"The boar's fury",d:"Before charging, the boar scrapes the ground, snorts and trembles, with the \"!\" and the red tint; it no longer leaves footprints on the ground (prompt 939)."},
  {f:"noite_escura_951",t:"Darker nights",d:"Before and after: the night sky is half as bright; torches, lamps and fires still light as before (prompt 951)."},
  {f:"placa_inimigos_945",t:"Minimal enemy plate",d:"Before (top) and after (bottom): level and name in 3x5 on one line over a 5 px wooden bar; the crossed swords and the numbers are gone (prompt 945)."},
+ {f:"estocada_lanca_940",ext:"gif",t:"Spear thrust",d:"Spear orcs and skeletons lunge along a narrow line, marked softly on the ground, without an outline (prompt 940)."},
+ {f:"golpe_bloco_943",ext:"gif",t:"Breaking blocks: only the struck block shakes",d:"Before/after (earth above, stone below; a quarter speed): the neighbours no longer shake, the struck block's rim stays still behind a soft edge, and each hit puffs a brief dust cloud (prompt 943)."},
 ];
