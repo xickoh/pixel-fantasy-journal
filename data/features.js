@@ -501,4 +501,6 @@ window.SHOTS = [
  {f:"poderes_equip_952",ext:"gif",t:"Equipment powers",d:"Helmets, chests and legs now take powers at the altar: Last Defense keeps you alive with 1 health (prompt 952)."},
  {f:"poderes_altar_952",t:"Powers at the altar",d:"Putting Last Defense into a helmet: one slot every 10 levels of a piece, shown as used/total (prompt 952)."},
  {f:"quadro_avisos_942",t:"Notice board with a tiled roof",d:"Before (top) and after (bottom), by day and night, the player in front and behind: the plaza's notice board gets its new art, a teal tiled roof on two black-outlined posts (prompt 942)."},
+ {f:"icone_cogumelo_956",t:"Mushroom icon: outlined foot",d:"The mushroom icon's stem now has the same dark outline as the rest of the icon (before left, after right, 12x) (prompt 956)."},
+ {f:"cast_time_957",t:"Cast Time only when there is one",d:"Before and after: the Charge, cast at once, no longer shows a \"Cast Time: 0\" line; spells with a cast time keep it (prompt 957)."},
 ];
