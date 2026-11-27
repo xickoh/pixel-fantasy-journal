@@ -489,4 +489,5 @@ window.SHOTS = [
  {f:"grutas_visao_941",t:"Entering a cave without a jump in the dark",d:"Before and after, at night: stepping into a cave used to change the whole darkness at once; now the vision dims slowly, as in the rest of the world, and caves keep no memory of their own (prompt 941)."},
  {f:"furia_javali_939",ext:"gif",t:"The boar's fury",d:"Before charging, the boar scrapes the ground, snorts and trembles, with the \"!\" and the red tint; it no longer leaves footprints on the ground (prompt 939)."},
  {f:"noite_escura_951",t:"Darker nights",d:"Before and after: the night sky is half as bright; torches, lamps and fires still light as before (prompt 951)."},
+ {f:"placa_inimigos_945",t:"Minimal enemy plate",d:"Before (top) and after (bottom): level and name in 3x5 on one line over a 5 px wooden bar; the crossed swords and the numbers are gone (prompt 945)."},
 ];
