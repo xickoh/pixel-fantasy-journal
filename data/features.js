@@ -494,4 +494,5 @@ window.SHOTS = [
  {f:"golpe_bloco_943",ext:"gif",t:"Breaking blocks: only the struck block shakes",d:"Before/after (earth above, stone below; a quarter speed): the neighbours no longer shake, the struck block's rim stays still behind a soft edge, and each hit puffs a brief dust cloud (prompt 943)."},
  {f:"facas_arco_954",ext:"gif",t:"Knives: a whole, round finale arc",d:"Left before, right after (slowed down): the knife's finale arc no longer breaks into shards; the whole arc flies out and fades in one piece (prompt 954)."},
  {f:"tapete_oclusao_946",t:"Rugs stay under your feet",d:"Before (top) and after (bottom): a placed rug no longer fades or draws over the player walking on it (prompt 946)."},
+ {f:"plantar_vila_947",t:"Trees planted in the village",d:"A seed's green ghost on the village's grass, and the tree grown there: seeds now grow on any grass or earth, in the village too, never on roads, sand or a villager's way (prompt 947)."},
 ];
