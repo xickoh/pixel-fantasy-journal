@@ -495,4 +495,5 @@ window.SHOTS = [
  {f:"facas_arco_954",ext:"gif",t:"Knives: a whole, round finale arc",d:"Left before, right after (slowed down): the knife's finale arc no longer breaks into shards; the whole arc flies out and fades in one piece (prompt 954)."},
  {f:"tapete_oclusao_946",t:"Rugs stay under your feet",d:"Before (top) and after (bottom): a placed rug no longer fades or draws over the player walking on it (prompt 946)."},
  {f:"plantar_vila_947",t:"Trees planted in the village",d:"A seed's green ghost on the village's grass, and the tree grown there: seeds now grow on any grass or earth, in the village too, never on roads, sand or a villager's way (prompt 947)."},
+ {f:"bancos_vila_949",t:"Village benches recut",d:"Stone bench by the lake and wooden bench in the village, before left and after right: no loose shadow strips, no stray edge, outlined feet (prompt 949)."},
 ];
