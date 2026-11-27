@@ -493,4 +493,5 @@ window.SHOTS = [
  {f:"estocada_lanca_940",ext:"gif",t:"Spear thrust",d:"Spear orcs and skeletons lunge along a narrow line, marked softly on the ground, without an outline (prompt 940)."},
  {f:"golpe_bloco_943",ext:"gif",t:"Breaking blocks: only the struck block shakes",d:"Before/after (earth above, stone below; a quarter speed): the neighbours no longer shake, the struck block's rim stays still behind a soft edge, and each hit puffs a brief dust cloud (prompt 943)."},
  {f:"facas_arco_954",ext:"gif",t:"Knives: a whole, round finale arc",d:"Left before, right after (slowed down): the knife's finale arc no longer breaks into shards; the whole arc flies out and fades in one piece (prompt 954)."},
+ {f:"tapete_oclusao_946",t:"Rugs stay under your feet",d:"Before (top) and after (bottom): a placed rug no longer fades or draws over the player walking on it (prompt 946)."},
 ];
