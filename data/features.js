@@ -496,4 +496,6 @@ window.SHOTS = [
  {f:"tapete_oclusao_946",t:"Rugs stay under your feet",d:"Before (top) and after (bottom): a placed rug no longer fades or draws over the player walking on it (prompt 946)."},
  {f:"plantar_vila_947",t:"Trees planted in the village",d:"A seed's green ghost on the village's grass, and the tree grown there: seeds now grow on any grass or earth, in the village too, never on roads, sand or a villager's way (prompt 947)."},
  {f:"bancos_vila_949",t:"Village benches recut",d:"Stone bench by the lake and wooden bench in the village, before left and after right: no loose shadow strips, no stray edge, outlined feet (prompt 949)."},
+ {f:"avisos_topo_948",ext:"gif",t:"Notices at the top",d:"Before and after: sentences to read (refusals, requirements, finds) leave the player's head for the top centre of the screen, text only; combat reactions stay in the world (prompt 948)."},
+ {f:"avisos_ribbon_948",t:"Notice under the area ribbon",d:"A notice sits right under the area ribbon while it shows (prompt 948)."},
 ];
