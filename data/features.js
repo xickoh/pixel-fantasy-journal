@@ -505,4 +505,5 @@ window.SHOTS = [
  {f:"icone_cogumelo_956",t:"Mushroom icon: outlined foot",d:"The mushroom icon's stem now has the same dark outline as the rest of the icon (before left, after right, 12x) (prompt 956)."},
  {f:"cast_time_957",t:"Cast Time only when there is one",d:"Before and after: the Charge, cast at once, no longer shows a \"Cast Time: 0\" line; spells with a cast time keep it (prompt 957)."},
  {f:"estrelas_missoes_938",t:"Quest stars: three colours",d:"Before left, after right. Yellow: a main quest to accept or ready to hand in. Blue: a side quest to accept or ready. Grey: any quest under way (the faint yellow and greyish blue are gone) (prompt 938)."},
+ {f:"novo_jogo_confirmar_937",t:"New game over a saved world asks first",d:"New Game on a slot with a world asks before replacing it, with the world's seed, day and play time; Cancel has the focus (prompt 937)."},
 ];
