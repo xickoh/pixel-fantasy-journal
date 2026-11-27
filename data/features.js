@@ -507,4 +507,8 @@ window.SHOTS = [
  {f:"estrelas_missoes_938",t:"Quest stars: three colours",d:"Before left, after right. Yellow: a main quest to accept or ready to hand in. Blue: a side quest to accept or ready. Grey: any quest under way (the faint yellow and greyish blue are gone) (prompt 938)."},
  {f:"novo_jogo_confirmar_937",t:"New game over a saved world asks first",d:"New Game on a slot with a world asks before replacing it, with the world's seed, day and play time; Cancel has the focus (prompt 937)."},
  {f:"corpo_agua_936",ext:"gif",t:"Body tinted by the water",d:"A swimmer's body now takes the colour of the water it is in: plain, toxic, hot spring and cave (prompt 936)."},
+ {f:"cartas_estado_926",t:"Water state cards",d:"Five rare cards, each drawn only in its water state: Skipping Stone (Still), Drift Net (Choppy), Rain Frog (Rain), Weir (Flood) and Lantern (Mist) (prompt 926)."},
+ {f:"carta_weir_926",ext:"gif",t:"The Weir",d:"In a flooded river, stakes across the current lead the fish into the basket (prompt 926)."},
+ {f:"pontos_quentes_927",ext:"gif",t:"Hot spots",d:"A patch of water with fish circling: the aim turns golden over a hot spot; cast where it will be (prompt 927)."},
+ {f:"lancamento_perfeito_927",ext:"gif",t:"Perfect cast",d:"A free card choice and the hot spot's school circling the bobber, a golden fish in the middle (prompt 927)."},
 ];
