@@ -498,4 +498,6 @@ window.SHOTS = [
  {f:"bancos_vila_949",t:"Village benches recut",d:"Stone bench by the lake and wooden bench in the village, before left and after right: no loose shadow strips, no stray edge, outlined feet (prompt 949)."},
  {f:"avisos_topo_948",ext:"gif",t:"Notices at the top",d:"Before and after: sentences to read (refusals, requirements, finds) leave the player's head for the top centre of the screen, text only; combat reactions stay in the world (prompt 948)."},
  {f:"avisos_ribbon_948",t:"Notice under the area ribbon",d:"A notice sits right under the area ribbon while it shows (prompt 948)."},
+ {f:"poderes_equip_952",ext:"gif",t:"Equipment powers",d:"Helmets, chests and legs now take powers at the altar: Last Defense keeps you alive with 1 health (prompt 952)."},
+ {f:"poderes_altar_952",t:"Powers at the altar",d:"Putting Last Defense into a helmet: one slot every 10 levels of a piece, shown as used/total (prompt 952)."},
 ];
